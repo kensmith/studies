@@ -1,0 +1,17 @@
+This is a study of animated gifs. I was curious about them.
+Building it requires gmake-recipes also on github.
+
+git clone git@github.com:kensmith/gmake-recipes.git
+
+Edit GNUmakefile to point the variable gmake-recipes to the
+filesystem path of your clone.
+
+'make run' will build and run the program. The output file
+glider.gif is an animated gif of a glider from the game of
+life.
+
+This code ignores LZW compression.
+
+The included Lua program generated the glider data.
+
+vim: tw=60:
