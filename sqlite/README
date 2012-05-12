@@ -1,0 +1,7 @@
+This is a study of performance tuning a SQLite database. It
+was a takehome exercise for an interview a long time ago. I
+keep it around because it was one of the more engaging and
+fascinating exercises I have been asked to do and I don't
+want to forget the optimization techniques.
+
+vim: tw=60:
