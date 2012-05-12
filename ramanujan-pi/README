@@ -1,3 +1,4 @@
-Study of an amazingly cool derivation for pi.
+Study of an amazingly cool derivation for pi. Requires
+gmake-recipes to build.
 
 vim: tw=60:
