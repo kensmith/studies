@@ -1,0 +1,56 @@
+#!/usr/bin/env lua
+
+local function cat_file(filename, amount)
+    amount = amount or '*l'
+    local contents = io.open(filename):read(amount)
+
+    return contents
+end
+
+local function cat_wireless_proc()
+    local fake = [[
+Inter-| sta-|   Quality        |   Discarded packets               | Missed | WE
+ face | tus | link level noise |  nwid  crypt   frag  retry   misc | beacon | 22
+ wlan0: 0000   63.  -47.  -256        0      0      0      0     18        0
+]]
+    --return cat_file('/proc/net/wireless', '*a')
+    return fake
+end
+
+local function cat_battery_proc(filename)
+    local battery_path = '/sys/bus/acpi/drivers/battery/PNP0C0A:00/power_supply/BAT0/'
+    return cat_file(battery_path .. filename)
+end
+
+local status = cat_battery_proc('status')
+local power_now = cat_battery_proc('power_now')
+local energy_now = cat_battery_proc('energy_now')
+local energy_full = cat_battery_proc('energy_full')
+
+local states = {}
+
+function states.Common(left_brace, hours_remaining, right_brace)
+    local seconds_remaining = 3600 * hours_remaining
+    local epoch_now = os.time()
+    local epoch_end = epoch_now + seconds_remaining
+    local time_end = os.date('%H:%M', epoch_end)
+    return left_brace .. time_end .. right_brace
+end
+
+function states.Charging()
+    local hours_remaining = (energy_full - energy_now) / power_now
+    return states.Common('[', hours_remaining, ']')
+end
+
+function states.Discharging()
+    local hours_remaining = energy_now / power_now
+    return states.Common('{', hours_remaining, '}')
+end
+
+function wireless_strength()
+    local contents = cat_wireless_proc()
+    contents = contents:match('.*wlan%d*: *%d* *(%d*)')
+end
+
+--wireless_strength()
+print((states[status] or function() end)())
