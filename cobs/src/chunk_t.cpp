@@ -27,5 +27,9 @@ chunk_t & operator<<(chunk_t & chunk, std::uint8_t byte)
 std::ostream & operator<<(std::ostream & stream, const chunk_t & chunk)
 {
    stream << std::uint8_t(chunk.next_i_);
+   for (int i = 0; i < std::max(0, chunk.next_i_ - 1); i++)
+   {
+      stream << chunk.bytes_[i];
+   }
    return stream;
 }
