@@ -23,17 +23,17 @@ private:
    std::uint8_t byte_;
 };
 
-bool operator==(const byte_t lhs, const byte_t rhs)
+inline bool operator==(const byte_t lhs, const byte_t rhs)
 {
    return lhs.byte_ == rhs.byte_;
 }
 
-bool operator!=(const byte_t lhs, const byte_t rhs)
+inline bool operator!=(const byte_t lhs, const byte_t rhs)
 {
    return !(lhs == rhs);
 }
 
-std::ostream & operator<<(std::ostream & stream, byte_t byte)
+inline std::ostream & operator<<(std::ostream & stream, byte_t byte)
 {
    static const char * conversions[] =
    {

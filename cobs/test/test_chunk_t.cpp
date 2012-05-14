@@ -17,7 +17,7 @@ BOOST_AUTO_TEST_CASE(single_zero)
 
    std::stringstream ss;
    ss << chunk;
-   BOOST_CHECK_EQUAL(std::string("\x01"), ss.str());
+   BOOST_CHECK_EQUAL(std::string("01"), ss.str());
 }
 
 BOOST_AUTO_TEST_CASE(single_nonzero_followed_by_zero)
@@ -32,7 +32,7 @@ BOOST_AUTO_TEST_CASE(single_nonzero_followed_by_zero)
 
    std::stringstream ss;
    ss << chunk;
-   std::string truth("\x02\x0a");
+   std::string truth("020a");
    BOOST_CHECK_EQUAL(truth, ss.str());
 }
 
