@@ -56,3 +56,7 @@ BOOST_AUTO_TEST_CASE(assignment)
    byte_copy = byte;
    BOOST_CHECK_EQUAL(byte, byte_copy);
 }
+
+BOOST_AUTO_TEST_CASE(relational)
+{
+}

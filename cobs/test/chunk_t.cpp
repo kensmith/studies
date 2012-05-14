@@ -1,4 +1,5 @@
 #include "chunk_t.hpp"
+#include "byte_t.hpp"
 
 #include <iostream>
 #include <sstream>
@@ -11,7 +12,7 @@ BOOST_AUTO_TEST_CASE(single_zero)
 {
    chunk_t chunk;
    BOOST_CHECK(!chunk.finished());
-   std::uint8_t byte = 0;
+   byte_t byte = 0;
    chunk << byte;
    BOOST_CHECK(chunk.finished());
 
@@ -23,7 +24,7 @@ BOOST_AUTO_TEST_CASE(single_zero)
 BOOST_AUTO_TEST_CASE(single_nonzero_followed_by_zero)
 {
    chunk_t chunk;
-   std::uint8_t byte = 10;
+   byte_t byte = 10;
    chunk << byte;
    BOOST_CHECK(!chunk.finished());
    byte = 0;
@@ -40,8 +41,8 @@ BOOST_AUTO_TEST_CASE(max_packet_explicit_zero)
 {
    chunk_t chunk;
    std::stringstream truth_ss;
-   truth_ss << std::uint8_t(0xff);
-   for (std::uint8_t byte = 1; byte < 255; byte++)
+   truth_ss << byte_t(0xff);
+   for (byte_t byte = 1; byte < 255; byte++)
    {
       chunk << byte;
       truth_ss << byte;

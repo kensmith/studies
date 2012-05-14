@@ -15,8 +15,22 @@ struct byte_t
    {
    }
 
+   byte_t operator++(int)
+   {
+      byte_t old_val = *this;
+      ++byte_;
+      return old_val;
+   }
+
+   byte_t & operator++()
+   {
+      ++byte_;
+      return *this;
+   }
+
    friend bool operator==(const byte_t lhs, const byte_t rhs);
    friend bool operator!=(const byte_t lhs, const byte_t rhs);
+   friend bool operator<(const byte_t lhs, const byte_t rhs);
    friend std::ostream & operator<<(std::ostream & stream, byte_t byte);
 
 private:
@@ -31,6 +45,11 @@ inline bool operator==(const byte_t lhs, const byte_t rhs)
 inline bool operator!=(const byte_t lhs, const byte_t rhs)
 {
    return !(lhs == rhs);
+}
+
+inline bool operator<(const byte_t lhs, const byte_t rhs)
+{
+   return lhs.byte_ < rhs.byte_;
 }
 
 inline std::ostream & operator<<(std::ostream & stream, byte_t byte)
