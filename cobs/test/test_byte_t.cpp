@@ -27,3 +27,12 @@ BOOST_AUTO_TEST_CASE(print_basic)
    truth = "ff";
    BOOST_CHECK_EQUAL(truth, ss.str());
 }
+
+BOOST_AUTO_TEST_CASE(logical)
+{
+   byte_t ten(10);
+   byte_t eleven(11);
+   byte_t ten_copy(ten);
+   BOOST_CHECK_EQUAL(ten, ten_copy);
+   BOOST_CHECK(ten != eleven);
+}

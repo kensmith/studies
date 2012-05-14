@@ -5,15 +5,28 @@
 
 struct byte_t
 {
-   explicit byte_t(std::uint8_t byte)
+   /* implicit */ byte_t(std::uint8_t byte)
       : byte_(byte)
    {
    }
 
+   friend bool operator==(const byte_t lhs, const byte_t rhs);
+   friend bool operator!=(const byte_t lhs, const byte_t rhs);
    friend std::ostream & operator<<(std::ostream & stream, byte_t byte);
+
 private:
    std::uint8_t byte_;
 };
+
+bool operator==(const byte_t lhs, const byte_t rhs)
+{
+   return lhs.byte_ == rhs.byte_;
+}
+
+bool operator!=(const byte_t lhs, const byte_t rhs)
+{
+   return !(lhs == rhs);
+}
 
 std::ostream & operator<<(std::ostream & stream, byte_t byte)
 {
