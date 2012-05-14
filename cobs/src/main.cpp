@@ -2,13 +2,11 @@
 #include <iostream>
 #include <boost/function.hpp>
 
-struct chunk_t
-{
-};
+#include "chunk_t.hpp"
 
 struct cobs_t
 {
-   explicit cobs_t(boost::function<void(const chunk_t &)> & callback)
+   explicit cobs_t(boost::function<void(const chunk_t &)> callback)
       : callback_(callback)
    {
    }
@@ -16,12 +14,17 @@ struct cobs_t
    friend cobs_t & operator<<(cobs_t & cobs, std::uint8_t byte);
 private:
    boost::function<void(const chunk_t &)> callback_;
+   chunk_t chunk_;
 };
 
 cobs_t & operator<<(cobs_t & cobs, std::uint8_t byte)
 {
-   cobs.callback_(chunk_t());
-   std::cout << int(byte) << std::endl;
+   if ((cobs.chunk_ << byte).finished())
+   {
+      cobs.callback_(cobs.chunk_);
+      cobs.chunk_.reset();
+   }
+   
    return cobs;
 }
 
