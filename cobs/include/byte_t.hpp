@@ -5,7 +5,12 @@
 
 struct byte_t
 {
-   /* implicit */ byte_t(std::uint8_t byte)
+   byte_t()
+      : byte_(0)
+   {
+   }
+
+   /* implicit conversion intended */ byte_t(std::uint8_t byte)
       : byte_(byte)
    {
    }
