@@ -27,6 +27,18 @@ struct chunk_t
    {
       next_i_ = 0;
    }
+
+   int length() const
+   {
+      if (finished())
+      {
+         return next_i_ + 1;
+      }
+      else
+      {
+         return 0;
+      }
+   }
 private:
    byte_t bytes_[size];
    int next_i_;

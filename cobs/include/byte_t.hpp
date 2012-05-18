@@ -32,6 +32,7 @@ struct byte_t
    friend bool operator!=(const byte_t lhs, const byte_t rhs);
    friend bool operator<(const byte_t lhs, const byte_t rhs);
    friend std::ostream & operator<<(std::ostream & stream, byte_t byte);
+   friend std::istream & operator>>(std::istream & stream, byte_t & byte);
 
 private:
    std::uint8_t byte_;
@@ -64,6 +65,13 @@ inline std::ostream & operator<<(std::ostream & stream, byte_t byte)
 
    stream << conversions[(byte.byte_ >> 4) & 0xf];
    stream << conversions[byte.byte_ & 0xf];
+
+   return stream;
+}
+
+inline std::istream & operator>>(std::istream & stream, byte_t & byte)
+{
+   stream >> byte.byte_;
 
    return stream;
 }

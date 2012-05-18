@@ -11,13 +11,13 @@ struct cobs_t
    {
    }
 
-   friend cobs_t & operator<<(cobs_t & cobs, std::uint8_t byte);
+   friend cobs_t & operator<<(cobs_t & cobs, byte_t byte);
 private:
    boost::function<void(const chunk_t &)> callback_;
    chunk_t chunk_;
 };
 
-cobs_t & operator<<(cobs_t & cobs, std::uint8_t byte)
+cobs_t & operator<<(cobs_t & cobs, byte_t byte)
 {
    if ((cobs.chunk_ << byte).finished())
    {
@@ -33,7 +33,7 @@ struct chunktor_t
    void operator()(const chunk_t & chunk)
    {
       (void) chunk;
-      std::cout << "got a chunk" << std::endl;
+      std::cout << "got a chunk, " << chunk.length() << " bytes: " << chunk << std::endl;
    }
 };
 
@@ -43,7 +43,7 @@ int main()
 
    chunktor_t chunktor;
    cobs_t cobs(chunktor);
-   std::uint8_t x;
+   byte_t x;
    while (1)
    {
       in >> x;

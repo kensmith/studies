@@ -1,6 +1,7 @@
 #include "byte_t.hpp"
 
 #include <iostream>
+#include <fstream>
 #include <sstream>
 
 #define BOOST_TEST_DYN_LINK
@@ -57,6 +58,11 @@ BOOST_AUTO_TEST_CASE(assignment)
    BOOST_CHECK_EQUAL(byte, byte_copy);
 }
 
-BOOST_AUTO_TEST_CASE(relational)
+BOOST_AUTO_TEST_CASE(input_streaming)
 {
+   std::ifstream in("/dev/zero");
+   byte_t b(10);
+   BOOST_CHECK_EQUAL(10, b);
+   in >> b;
+   BOOST_CHECK_EQUAL(0, b);
 }
