@@ -33,7 +33,6 @@ struct byte_t
    friend bool operator<(const byte_t lhs, const byte_t rhs);
    friend std::ostream & operator<<(std::ostream & stream, byte_t byte);
    friend std::istream & operator>>(std::istream & stream, byte_t & byte);
-
 private:
    std::uint8_t byte_;
 };

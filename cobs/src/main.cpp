@@ -1,6 +1,7 @@
 #include <fstream>
 #include <iostream>
 #include <boost/function.hpp>
+#include <boost/program_options.hpp>
 
 #include "chunk_t.hpp"
 
@@ -37,15 +38,25 @@ struct chunktor_t
    }
 };
 
-int main()
+int main(int argc, char ** argv)
 {
-   std::ifstream in("/dev/urandom");
+   if (argc != 2)
+   {
+      std::cerr
+         << "usage: "
+         << argv[0]
+         << " <file>"
+         << std::endl;
+      std::exit(1);
+   }
+   std::ifstream in(argv[1]);
 
    chunktor_t chunktor;
    cobs_t cobs(chunktor);
    byte_t x;
    while (1)
    {
+      std::cout << "x = " << x << std::endl;
       in >> x;
       cobs << x;
    }

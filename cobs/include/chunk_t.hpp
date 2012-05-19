@@ -26,6 +26,7 @@ struct chunk_t
    void reset()
    {
       next_i_ = 0;
+      finished_ = false;
    }
 
    int length() const
