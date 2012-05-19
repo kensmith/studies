@@ -53,11 +53,14 @@ int main(int argc, char ** argv)
 
    chunktor_t chunktor;
    cobs_t cobs(chunktor);
-   byte_t x;
+   char packet[1000];
+   const int packet_len = sizeof(packet)/sizeof(packet[0]);
    while (1)
    {
-      std::cout << "x = " << x << std::endl;
-      in >> x;
-      cobs << x;
+      in.read(packet, packet_len);
+      for (int i = 0; i < packet_len; i++)
+      {
+         cobs << packet[i];
+      }
    }
 }
