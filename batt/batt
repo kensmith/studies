@@ -2,7 +2,12 @@
 
 local function cat_file(filename, amount)
     amount = amount or '*l'
-    local contents = io.open(filename):read(amount)
+    local f = io.open(filename)
+    if f then
+        return true, f:read(amount)
+    else
+        return false
+    end
 
     return contents
 end
@@ -22,10 +27,25 @@ local function cat_battery_proc(filename)
     return cat_file(battery_path .. filename)
 end
 
-local status = cat_battery_proc('status')
-local power_now = cat_battery_proc('power_now')
-local energy_now = cat_battery_proc('energy_now')
-local energy_full = cat_battery_proc('energy_full')
+local _, status = cat_battery_proc('status')
+
+local result, rate_now = cat_battery_proc('power_now')
+if not result then
+    result, rate_now = cat_battery_proc('current_now')
+    assert(result, 'failed to get current rate')
+end
+
+local result, capacity_now = cat_battery_proc('energy_now')
+if not result then
+    result, capacity_now = cat_battery_proc('charge_now')
+    assert(result, 'failed to get current capacity')
+end
+
+local result, capacity_full = cat_battery_proc('energy_full')
+if not result then
+    result, capacity_full = cat_battery_proc('charge_full')
+    assert(result, 'failed to get total capacity')
+end
 
 local states = {}
 
@@ -38,12 +58,12 @@ function states.Common(left_brace, hours_remaining, right_brace)
 end
 
 function states.Charging()
-    local hours_remaining = (energy_full - energy_now) / power_now
+    local hours_remaining = (capacity_full - capacity_now) / rate_now
     return states.Common('[', hours_remaining, ']')
 end
 
 function states.Discharging()
-    local hours_remaining = energy_now / power_now
+    local hours_remaining = capacity_now / rate_now
     return states.Common('{', hours_remaining, '}')
 end
 
