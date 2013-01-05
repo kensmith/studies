@@ -35,7 +35,7 @@
 struct constants_t
 {
     enum {
-        sample_rate = 44100, ///< Hz
+        sample_rate = 48000, ///< Hz
         num_channels = 1, ///< 1 is monaural
         num_seconds = 1, ///< number of seconds to record before encoding
         num_samples = sample_rate * num_seconds
