@@ -1,0 +1,185 @@
+\hypertarget{classBotan_1_1EC__Group}{\section{Botan\-:\-:E\-C\-\_\-\-Group Class Reference}
+\label{classBotan_1_1EC__Group}\index{Botan\-::\-E\-C\-\_\-\-Group@{Botan\-::\-E\-C\-\_\-\-Group}}
+}
+
+
+{\ttfamily \#include $<$ec\-\_\-group.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1EC__Group_afbb27ab7cf957cf713531e4271da65cb}{E\-C\-\_\-\-Group} (const \hyperlink{classBotan_1_1CurveGFp}{Curve\-G\-Fp} \&curve, const \hyperlink{classBotan_1_1PointGFp}{Point\-G\-Fp} \&base\-\_\-point, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&order, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&cofactor)
+\item 
+\hyperlink{classBotan_1_1EC__Group_a5de280bf2bfd33779914c94bfb388cfa}{E\-C\-\_\-\-Group} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&ber\-\_\-encoding)
+\item 
+\hyperlink{classBotan_1_1EC__Group_aadd3cad8dff5b9207f13f26327d6ceae}{E\-C\-\_\-\-Group} (const \hyperlink{classBotan_1_1OID}{O\-I\-D} \&oid)
+\item 
+\hyperlink{classBotan_1_1EC__Group_a6f5cabb283056b643b6e7b4785c177ac}{E\-C\-\_\-\-Group} (const std\-::string \&pem\-\_\-or\-\_\-oid=\char`\"{}\char`\"{})
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1EC__Group_af4a37794588f918fec6df55333ab8cea}{D\-E\-R\-\_\-encode} (\hyperlink{namespaceBotan_ad0ee6307c8f311388a2bc00426a7f858}{E\-C\-\_\-\-Group\-\_\-\-Encoding} form) const 
+\item 
+std\-::string \hyperlink{classBotan_1_1EC__Group_a65471ea8260f5348e1664476ae0a06f9}{P\-E\-M\-\_\-encode} () const 
+\item 
+const \hyperlink{classBotan_1_1CurveGFp}{Curve\-G\-Fp} \& \hyperlink{classBotan_1_1EC__Group_af9e5beae6a59d527ff834169063468f6}{get\-\_\-curve} () const 
+\item 
+const \hyperlink{classBotan_1_1PointGFp}{Point\-G\-Fp} \& \hyperlink{classBotan_1_1EC__Group_aa5dbfd1be34e38470577a34ba1d2fb0f}{get\-\_\-base\-\_\-point} () const 
+\item 
+const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \& \hyperlink{classBotan_1_1EC__Group_a64e7915cd62226604bcfa0faea627b8e}{get\-\_\-order} () const 
+\item 
+const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \& \hyperlink{classBotan_1_1EC__Group_a76d6a7fd7a9a39ca5750b21ac4de63b4}{get\-\_\-cofactor} () const 
+\item 
+\hypertarget{classBotan_1_1EC__Group_a4cab47dc39f92ef4c8f73104c215ff73}{bool {\bfseries initialized} () const }\label{classBotan_1_1EC__Group_a4cab47dc39f92ef4c8f73104c215ff73}
+
+\item 
+std\-::string \hyperlink{classBotan_1_1EC__Group_aff4d681d32a66edf1079c965f046e912}{get\-\_\-oid} () const 
+\item 
+\hypertarget{classBotan_1_1EC__Group_a5720f66181fd3690f61eeb4e070dfa36}{bool {\bfseries operator==} (const \hyperlink{classBotan_1_1EC__Group}{E\-C\-\_\-\-Group} \&other) const }\label{classBotan_1_1EC__Group_a5720f66181fd3690f61eeb4e070dfa36}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing an elliptic curve 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1EC__Group_afbb27ab7cf957cf713531e4271da65cb}{\index{Botan\-::\-E\-C\-\_\-\-Group@{Botan\-::\-E\-C\-\_\-\-Group}!E\-C\-\_\-\-Group@{E\-C\-\_\-\-Group}}
+\index{E\-C\-\_\-\-Group@{E\-C\-\_\-\-Group}!Botan::EC_Group@{Botan\-::\-E\-C\-\_\-\-Group}}
+\subsubsection[{E\-C\-\_\-\-Group}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-E\-C\-\_\-\-Group\-::\-E\-C\-\_\-\-Group (
+\begin{DoxyParamCaption}
+\item[{const {\bf Curve\-G\-Fp} \&}]{curve, }
+\item[{const {\bf Point\-G\-Fp} \&}]{base\-\_\-point, }
+\item[{const {\bf Big\-Int} \&}]{order, }
+\item[{const {\bf Big\-Int} \&}]{cofactor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1EC__Group_afbb27ab7cf957cf713531e4271da65cb}
+Construct Domain paramers from specified parameters 
+\begin{DoxyParams}{Parameters}
+{\em curve} & elliptic curve \\
+\hline
+{\em base\-\_\-point} & a base point \\
+\hline
+{\em order} & the order of the base point \\
+\hline
+{\em cofactor} & the cofactor \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1EC__Group_a5de280bf2bfd33779914c94bfb388cfa}{\index{Botan\-::\-E\-C\-\_\-\-Group@{Botan\-::\-E\-C\-\_\-\-Group}!E\-C\-\_\-\-Group@{E\-C\-\_\-\-Group}}
+\index{E\-C\-\_\-\-Group@{E\-C\-\_\-\-Group}!Botan::EC_Group@{Botan\-::\-E\-C\-\_\-\-Group}}
+\subsubsection[{E\-C\-\_\-\-Group}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-E\-C\-\_\-\-Group\-::\-E\-C\-\_\-\-Group (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{ber\-\_\-encoding}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1EC__Group_a5de280bf2bfd33779914c94bfb388cfa}
+Decode a \hyperlink{namespaceBotan_1_1BER}{B\-E\-R} encoded E\-C\-C domain parameter set 
+\begin{DoxyParams}{Parameters}
+{\em ber\-\_\-encoding} & the bytes of the \hyperlink{namespaceBotan_1_1BER}{B\-E\-R} encoding \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1EC__Group_aadd3cad8dff5b9207f13f26327d6ceae}{\index{Botan\-::\-E\-C\-\_\-\-Group@{Botan\-::\-E\-C\-\_\-\-Group}!E\-C\-\_\-\-Group@{E\-C\-\_\-\-Group}}
+\index{E\-C\-\_\-\-Group@{E\-C\-\_\-\-Group}!Botan::EC_Group@{Botan\-::\-E\-C\-\_\-\-Group}}
+\subsubsection[{E\-C\-\_\-\-Group}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-E\-C\-\_\-\-Group\-::\-E\-C\-\_\-\-Group (
+\begin{DoxyParamCaption}
+\item[{const {\bf O\-I\-D} \&}]{oid}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1EC__Group_aadd3cad8dff5b9207f13f26327d6ceae}
+Create an E\-C domain by \hyperlink{classBotan_1_1OID}{O\-I\-D} (or throw if unknown) 
+\begin{DoxyParams}{Parameters}
+{\em oid} & the \hyperlink{classBotan_1_1OID}{O\-I\-D} of the E\-C domain to create \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1EC__Group_a6f5cabb283056b643b6e7b4785c177ac}{\index{Botan\-::\-E\-C\-\_\-\-Group@{Botan\-::\-E\-C\-\_\-\-Group}!E\-C\-\_\-\-Group@{E\-C\-\_\-\-Group}}
+\index{E\-C\-\_\-\-Group@{E\-C\-\_\-\-Group}!Botan::EC_Group@{Botan\-::\-E\-C\-\_\-\-Group}}
+\subsubsection[{E\-C\-\_\-\-Group}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-E\-C\-\_\-\-Group\-::\-E\-C\-\_\-\-Group (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{pem\-\_\-or\-\_\-oid = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1EC__Group_a6f5cabb283056b643b6e7b4785c177ac}
+Create an E\-C domain from P\-E\-M encoding (as from P\-E\-M\-\_\-encode), or from an \hyperlink{classBotan_1_1OID}{O\-I\-D} name (eg \char`\"{}secp160r1\char`\"{}, or \char`\"{}1.\-3.\-132.\-0.\-8\char`\"{}) 
+\begin{DoxyParams}{Parameters}
+{\em pem\-\_\-or\-\_\-oid} & P\-E\-M-\/encoded data, or an \hyperlink{classBotan_1_1OID}{O\-I\-D} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1EC__Group_af4a37794588f918fec6df55333ab8cea}{\index{Botan\-::\-E\-C\-\_\-\-Group@{Botan\-::\-E\-C\-\_\-\-Group}!D\-E\-R\-\_\-encode@{D\-E\-R\-\_\-encode}}
+\index{D\-E\-R\-\_\-encode@{D\-E\-R\-\_\-encode}!Botan::EC_Group@{Botan\-::\-E\-C\-\_\-\-Group}}
+\subsubsection[{D\-E\-R\-\_\-encode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<$ {\bf byte} $>$ Botan\-::\-E\-C\-\_\-\-Group\-::\-D\-E\-R\-\_\-encode (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-C\-\_\-\-Group\-\_\-\-Encoding}}]{form}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1EC__Group_af4a37794588f918fec6df55333ab8cea}
+Create the D\-E\-R encoding of this domain 
+\begin{DoxyParams}{Parameters}
+{\em form} & of encoding to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bytes encododed as D\-E\-R 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EC__Group_aa5dbfd1be34e38470577a34ba1d2fb0f}{\index{Botan\-::\-E\-C\-\_\-\-Group@{Botan\-::\-E\-C\-\_\-\-Group}!get\-\_\-base\-\_\-point@{get\-\_\-base\-\_\-point}}
+\index{get\-\_\-base\-\_\-point@{get\-\_\-base\-\_\-point}!Botan::EC_Group@{Botan\-::\-E\-C\-\_\-\-Group}}
+\subsubsection[{get\-\_\-base\-\_\-point}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Point\-G\-Fp}\& Botan\-::\-E\-C\-\_\-\-Group\-::get\-\_\-base\-\_\-point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1EC__Group_aa5dbfd1be34e38470577a34ba1d2fb0f}
+Return domain parameter curve \begin{DoxyReturn}{Returns}
+domain parameter curve 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EC__Group_a76d6a7fd7a9a39ca5750b21ac4de63b4}{\index{Botan\-::\-E\-C\-\_\-\-Group@{Botan\-::\-E\-C\-\_\-\-Group}!get\-\_\-cofactor@{get\-\_\-cofactor}}
+\index{get\-\_\-cofactor@{get\-\_\-cofactor}!Botan::EC_Group@{Botan\-::\-E\-C\-\_\-\-Group}}
+\subsubsection[{get\-\_\-cofactor}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Big\-Int}\& Botan\-::\-E\-C\-\_\-\-Group\-::get\-\_\-cofactor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1EC__Group_a76d6a7fd7a9a39ca5750b21ac4de63b4}
+Return the cofactor \begin{DoxyReturn}{Returns}
+the cofactor 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EC__Group_af9e5beae6a59d527ff834169063468f6}{\index{Botan\-::\-E\-C\-\_\-\-Group@{Botan\-::\-E\-C\-\_\-\-Group}!get\-\_\-curve@{get\-\_\-curve}}
+\index{get\-\_\-curve@{get\-\_\-curve}!Botan::EC_Group@{Botan\-::\-E\-C\-\_\-\-Group}}
+\subsubsection[{get\-\_\-curve}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Curve\-G\-Fp}\& Botan\-::\-E\-C\-\_\-\-Group\-::get\-\_\-curve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1EC__Group_af9e5beae6a59d527ff834169063468f6}
+Return domain parameter curve \begin{DoxyReturn}{Returns}
+domain parameter curve 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EC__Group_aff4d681d32a66edf1079c965f046e912}{\index{Botan\-::\-E\-C\-\_\-\-Group@{Botan\-::\-E\-C\-\_\-\-Group}!get\-\_\-oid@{get\-\_\-oid}}
+\index{get\-\_\-oid@{get\-\_\-oid}!Botan::EC_Group@{Botan\-::\-E\-C\-\_\-\-Group}}
+\subsubsection[{get\-\_\-oid}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-E\-C\-\_\-\-Group\-::get\-\_\-oid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1EC__Group_aff4d681d32a66edf1079c965f046e912}
+Return the \hyperlink{classBotan_1_1OID}{O\-I\-D} of these domain parameters \begin{DoxyReturn}{Returns}
+the \hyperlink{classBotan_1_1OID}{O\-I\-D} 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EC__Group_a64e7915cd62226604bcfa0faea627b8e}{\index{Botan\-::\-E\-C\-\_\-\-Group@{Botan\-::\-E\-C\-\_\-\-Group}!get\-\_\-order@{get\-\_\-order}}
+\index{get\-\_\-order@{get\-\_\-order}!Botan::EC_Group@{Botan\-::\-E\-C\-\_\-\-Group}}
+\subsubsection[{get\-\_\-order}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Big\-Int}\& Botan\-::\-E\-C\-\_\-\-Group\-::get\-\_\-order (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1EC__Group_a64e7915cd62226604bcfa0faea627b8e}
+Return the order of the base point \begin{DoxyReturn}{Returns}
+order of the base point 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EC__Group_a65471ea8260f5348e1664476ae0a06f9}{\index{Botan\-::\-E\-C\-\_\-\-Group@{Botan\-::\-E\-C\-\_\-\-Group}!P\-E\-M\-\_\-encode@{P\-E\-M\-\_\-encode}}
+\index{P\-E\-M\-\_\-encode@{P\-E\-M\-\_\-encode}!Botan::EC_Group@{Botan\-::\-E\-C\-\_\-\-Group}}
+\subsubsection[{P\-E\-M\-\_\-encode}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-E\-C\-\_\-\-Group\-::\-P\-E\-M\-\_\-encode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1EC__Group_a65471ea8260f5348e1664476ae0a06f9}
+Return the P\-E\-M encoding (always in explicit form) \begin{DoxyReturn}{Returns}
+string containing P\-E\-M data 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/pubkey/ec\-\_\-group/ec\-\_\-group.\-h\item 
+src/pubkey/ec\-\_\-group/ec\-\_\-group.\-cpp\end{DoxyCompactItemize}

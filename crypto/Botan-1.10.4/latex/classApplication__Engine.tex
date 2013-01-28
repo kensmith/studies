@@ -1,0 +1,60 @@
+\hypertarget{classApplication__Engine}{\section{Application\-\_\-\-Engine Class Reference}
+\label{classApplication__Engine}\index{Application\-\_\-\-Engine@{Application\-\_\-\-Engine}}
+}
+Inheritance diagram for Application\-\_\-\-Engine\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classApplication__Engine}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classApplication__Engine_aa421c664013f459fd865daa1f98da361}{provider\-\_\-name} () const 
+\item 
+\hyperlink{classBotan_1_1StreamCipher}{Stream\-Cipher} $\ast$ \hyperlink{classApplication__Engine_af2d27693993857e4fc153de8b68756d7}{find\-\_\-stream\-\_\-cipher} (const \hyperlink{classBotan_1_1SCAN__Name}{S\-C\-A\-N\-\_\-\-Name} \&request, \hyperlink{classBotan_1_1Algorithm__Factory}{Algorithm\-\_\-\-Factory} \&) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classApplication__Engine_af2d27693993857e4fc153de8b68756d7}{\index{Application\-\_\-\-Engine@{Application\-\_\-\-Engine}!find\-\_\-stream\-\_\-cipher@{find\-\_\-stream\-\_\-cipher}}
+\index{find\-\_\-stream\-\_\-cipher@{find\-\_\-stream\-\_\-cipher}!Application_Engine@{Application\-\_\-\-Engine}}
+\subsubsection[{find\-\_\-stream\-\_\-cipher}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stream\-Cipher}$\ast$ Application\-\_\-\-Engine\-::find\-\_\-stream\-\_\-cipher (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\-C\-A\-N\-\_\-\-Name} \&}]{algo\-\_\-spec, }
+\item[{{\bf Algorithm\-\_\-\-Factory} \&}]{af}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classApplication__Engine_af2d27693993857e4fc153de8b68756d7}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm name/specification \\
+\hline
+{\em af} & an algorithm factory object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+newly allocated object, or N\-U\-L\-L 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1Engine_a9643f23265e9505877e13487bd2e2b90}{Botan\-::\-Engine}.
+
+\hypertarget{classApplication__Engine_aa421c664013f459fd865daa1f98da361}{\index{Application\-\_\-\-Engine@{Application\-\_\-\-Engine}!provider\-\_\-name@{provider\-\_\-name}}
+\index{provider\-\_\-name@{provider\-\_\-name}!Application_Engine@{Application\-\_\-\-Engine}}
+\subsubsection[{provider\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Application\-\_\-\-Engine\-::provider\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classApplication__Engine_aa421c664013f459fd865daa1f98da361}
+\begin{DoxyReturn}{Returns}
+name of this engine 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Engine_a4c2c3ed7b3a2995e6cb8c238346b3a50}{Botan\-::\-Engine}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+doc/examples/new\-\_\-engine.\-cpp\end{DoxyCompactItemize}

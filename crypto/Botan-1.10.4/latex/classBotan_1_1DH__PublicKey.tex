@@ -1,0 +1,103 @@
+\hypertarget{classBotan_1_1DH__PublicKey}{\section{Botan\-:\-:D\-H\-\_\-\-Public\-Key Class Reference}
+\label{classBotan_1_1DH__PublicKey}\index{Botan\-::\-D\-H\-\_\-\-Public\-Key@{Botan\-::\-D\-H\-\_\-\-Public\-Key}}
+}
+
+
+{\ttfamily \#include $<$dh.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:D\-H\-\_\-\-Public\-Key\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classBotan_1_1DH__PublicKey}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1DH__PublicKey_a71d508fd04ea505e0689d895aac767b6}{algo\-\_\-name} () const 
+\item 
+\hypertarget{classBotan_1_1DH__PublicKey_a964bb434ef56a54a9527066fb7dc757b}{\hyperlink{classBotan_1_1MemoryVector}{Memory\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ {\bfseries public\-\_\-value} () const }\label{classBotan_1_1DH__PublicKey_a964bb434ef56a54a9527066fb7dc757b}
+
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1DH__PublicKey_a749769dbeb070362b23f1fe670a84f49}{max\-\_\-input\-\_\-bits} () const 
+\item 
+\hyperlink{classBotan_1_1DL__Group_ac602a30420ceec03fa181a10b09312a7}{D\-L\-\_\-\-Group\-::\-Format} \hyperlink{classBotan_1_1DH__PublicKey_ae28af47f3e7ab62937ddfeba4846ee0b}{group\-\_\-format} () const 
+\item 
+\hypertarget{classBotan_1_1DH__PublicKey_a2999e44b93542de594ce561783dba275}{{\bfseries D\-H\-\_\-\-Public\-Key} (const \hyperlink{classBotan_1_1AlgorithmIdentifier}{Algorithm\-Identifier} \&alg\-\_\-id, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&key\-\_\-bits)}\label{classBotan_1_1DH__PublicKey_a2999e44b93542de594ce561783dba275}
+
+\item 
+\hyperlink{classBotan_1_1DH__PublicKey_ac8575a25b158bcb063033c193acae93b}{D\-H\-\_\-\-Public\-Key} (const \hyperlink{classBotan_1_1DL__Group}{D\-L\-\_\-\-Group} \&grp, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&\hyperlink{classBotan_1_1DL__Scheme__PublicKey_ab4e7d9e233e3c89de236699ea5774802}{y})
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class represents Diffie-\/\-Hellman public keys. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1DH__PublicKey_ac8575a25b158bcb063033c193acae93b}{\index{Botan\-::\-D\-H\-\_\-\-Public\-Key@{Botan\-::\-D\-H\-\_\-\-Public\-Key}!D\-H\-\_\-\-Public\-Key@{D\-H\-\_\-\-Public\-Key}}
+\index{D\-H\-\_\-\-Public\-Key@{D\-H\-\_\-\-Public\-Key}!Botan::DH_PublicKey@{Botan\-::\-D\-H\-\_\-\-Public\-Key}}
+\subsubsection[{D\-H\-\_\-\-Public\-Key}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-D\-H\-\_\-\-Public\-Key\-::\-D\-H\-\_\-\-Public\-Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf D\-L\-\_\-\-Group} \&}]{grp, }
+\item[{const {\bf Big\-Int} \&}]{y}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1DH__PublicKey_ac8575a25b158bcb063033c193acae93b}
+Construct a public key with the specified parameters. 
+\begin{DoxyParams}{Parameters}
+{\em grp} & the D\-L group to use in the key \\
+\hline
+{\em y} & the public value y \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1DH__PublicKey_a71d508fd04ea505e0689d895aac767b6}{\index{Botan\-::\-D\-H\-\_\-\-Public\-Key@{Botan\-::\-D\-H\-\_\-\-Public\-Key}!algo\-\_\-name@{algo\-\_\-name}}
+\index{algo\-\_\-name@{algo\-\_\-name}!Botan::DH_PublicKey@{Botan\-::\-D\-H\-\_\-\-Public\-Key}}
+\subsubsection[{algo\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-D\-H\-\_\-\-Public\-Key\-::algo\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1DH__PublicKey_a71d508fd04ea505e0689d895aac767b6}
+Get the name of the underlying public key scheme. \begin{DoxyReturn}{Returns}
+name of the public key scheme 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Public__Key_aec4ee42d508712e05388eaa9200c630b}{Botan\-::\-Public\-\_\-\-Key}.
+
+\hypertarget{classBotan_1_1DH__PublicKey_ae28af47f3e7ab62937ddfeba4846ee0b}{\index{Botan\-::\-D\-H\-\_\-\-Public\-Key@{Botan\-::\-D\-H\-\_\-\-Public\-Key}!group\-\_\-format@{group\-\_\-format}}
+\index{group\-\_\-format@{group\-\_\-format}!Botan::DH_PublicKey@{Botan\-::\-D\-H\-\_\-\-Public\-Key}}
+\subsubsection[{group\-\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-L\-\_\-\-Group\-::\-Format} Botan\-::\-D\-H\-\_\-\-Public\-Key\-::group\-\_\-format (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1DH__PublicKey_ae28af47f3e7ab62937ddfeba4846ee0b}
+Get the underlying groups encoding format. \begin{DoxyReturn}{Returns}
+encoding format 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1DL__Scheme__PublicKey_adf0844f45b1a8ed790ad2b15f1ea4040}{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}.
+
+\hypertarget{classBotan_1_1DH__PublicKey_a749769dbeb070362b23f1fe670a84f49}{\index{Botan\-::\-D\-H\-\_\-\-Public\-Key@{Botan\-::\-D\-H\-\_\-\-Public\-Key}!max\-\_\-input\-\_\-bits@{max\-\_\-input\-\_\-bits}}
+\index{max\-\_\-input\-\_\-bits@{max\-\_\-input\-\_\-bits}!Botan::DH_PublicKey@{Botan\-::\-D\-H\-\_\-\-Public\-Key}}
+\subsubsection[{max\-\_\-input\-\_\-bits}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-D\-H\-\_\-\-Public\-Key\-::max\-\_\-input\-\_\-bits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1DH__PublicKey_a749769dbeb070362b23f1fe670a84f49}
+Get the maximum message size in bits supported by this public key. \begin{DoxyReturn}{Returns}
+maximum message size in bits 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Public__Key_a8de8523fe64e3b606e7f002057dcd662}{Botan\-::\-Public\-\_\-\-Key}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/pubkey/dh/dh.\-h\item 
+src/pubkey/dh/dh.\-cpp\end{DoxyCompactItemize}

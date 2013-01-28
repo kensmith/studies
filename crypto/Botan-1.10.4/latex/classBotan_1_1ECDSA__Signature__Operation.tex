@@ -1,0 +1,82 @@
+\hypertarget{classBotan_1_1ECDSA__Signature__Operation}{\section{Botan\-:\-:E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation Class Reference}
+\label{classBotan_1_1ECDSA__Signature__Operation}\index{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation@{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation}}
+}
+
+
+{\ttfamily \#include $<$ecdsa.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1ECDSA__Signature__Operation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1ECDSA__Signature__Operation_af66f09dee2312cd9923ea6752bb38e3b}{{\bfseries E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation} (const \hyperlink{classBotan_1_1ECDSA__PrivateKey}{E\-C\-D\-S\-A\-\_\-\-Private\-Key} \&ecdsa)}\label{classBotan_1_1ECDSA__Signature__Operation_af66f09dee2312cd9923ea6752bb38e3b}
+
+\item 
+\hypertarget{classBotan_1_1ECDSA__Signature__Operation_a21ff6d9a0dfbc5505d67a5da458e5a15}{\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ {\bfseries sign} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} msg\mbox{[}$\,$\mbox{]}, size\-\_\-t msg\-\_\-len, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)}\label{classBotan_1_1ECDSA__Signature__Operation_a21ff6d9a0dfbc5505d67a5da458e5a15}
+
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1ECDSA__Signature__Operation_a1a43fa9351b6050bd536514544f87399}{message\-\_\-parts} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1ECDSA__Signature__Operation_a0ac9d49979a460fff458f9b9ee96ab13}{message\-\_\-part\-\_\-size} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1ECDSA__Signature__Operation_ad829c871989c15150aec46c8ab9c03be}{max\-\_\-input\-\_\-bits} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+E\-C\-D\-S\-A signature operation 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1ECDSA__Signature__Operation_ad829c871989c15150aec46c8ab9c03be}{\index{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation@{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation}!max\-\_\-input\-\_\-bits@{max\-\_\-input\-\_\-bits}}
+\index{max\-\_\-input\-\_\-bits@{max\-\_\-input\-\_\-bits}!Botan::ECDSA_Signature_Operation@{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation}}
+\subsubsection[{max\-\_\-input\-\_\-bits}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation\-::max\-\_\-input\-\_\-bits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1ECDSA__Signature__Operation_ad829c871989c15150aec46c8ab9c03be}
+Get the maximum message size in bits supported by this public key. \begin{DoxyReturn}{Returns}
+maximum message in bits 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1PK__Ops_1_1Signature_ada6cef38a91e75e9f9048867d89d5e07}{Botan\-::\-P\-K\-\_\-\-Ops\-::\-Signature}.
+
+\hypertarget{classBotan_1_1ECDSA__Signature__Operation_a0ac9d49979a460fff458f9b9ee96ab13}{\index{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation@{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation}!message\-\_\-part\-\_\-size@{message\-\_\-part\-\_\-size}}
+\index{message\-\_\-part\-\_\-size@{message\-\_\-part\-\_\-size}!Botan::ECDSA_Signature_Operation@{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation}}
+\subsubsection[{message\-\_\-part\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation\-::message\-\_\-part\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1ECDSA__Signature__Operation_a0ac9d49979a460fff458f9b9ee96ab13}
+Find out the message part size supported by this scheme/key. \begin{DoxyReturn}{Returns}
+size of the message parts 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1PK__Ops_1_1Signature_ae83efb440f1bda16398e0b9cbf2ef1f4}{Botan\-::\-P\-K\-\_\-\-Ops\-::\-Signature}.
+
+\hypertarget{classBotan_1_1ECDSA__Signature__Operation_a1a43fa9351b6050bd536514544f87399}{\index{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation@{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation}!message\-\_\-parts@{message\-\_\-parts}}
+\index{message\-\_\-parts@{message\-\_\-parts}!Botan::ECDSA_Signature_Operation@{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation}}
+\subsubsection[{message\-\_\-parts}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Operation\-::message\-\_\-parts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1ECDSA__Signature__Operation_a1a43fa9351b6050bd536514544f87399}
+Find out the number of message parts supported by this scheme. \begin{DoxyReturn}{Returns}
+number of message parts 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1PK__Ops_1_1Signature_a0796a0e53462052c38c5cf961d272327}{Botan\-::\-P\-K\-\_\-\-Ops\-::\-Signature}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/pubkey/ecdsa/ecdsa.\-h\item 
+src/pubkey/ecdsa/ecdsa.\-cpp\end{DoxyCompactItemize}

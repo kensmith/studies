@@ -1,0 +1,267 @@
+\hypertarget{namespaceBotan_1_1PKCS8}{\section{Botan\-:\-:P\-K\-C\-S8 Namespace Reference}
+\label{namespaceBotan_1_1PKCS8}\index{Botan\-::\-P\-K\-C\-S8@{Botan\-::\-P\-K\-C\-S8}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{namespaceBotan_1_1PKCS8_a4796335c320788355dbb532972aa296a}{B\-E\-R\-\_\-encode} (const \hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} \&key)
+\item 
+std\-::string \hyperlink{namespaceBotan_1_1PKCS8_abd54a7212d021f33fea536f11ef1ca98}{P\-E\-M\-\_\-encode} (const \hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} \&key)
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{namespaceBotan_1_1PKCS8_ac2070bd916fb8f65318e191a34f3a59c}{B\-E\-R\-\_\-encode} (const \hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} \&key, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const std\-::string \&pass, const std\-::string \&pbe\-\_\-algo)
+\item 
+std\-::string \hyperlink{namespaceBotan_1_1PKCS8_a189b80a771b1dee046de73aecce0d48e}{P\-E\-M\-\_\-encode} (const \hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} \&key, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const std\-::string \&pass, const std\-::string \&pbe\-\_\-algo)
+\item 
+\hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} $\ast$ \hyperlink{namespaceBotan_1_1PKCS8_ab3853ea8ff150236505233cf5fdd1671}{load\-\_\-key} (\hyperlink{classBotan_1_1DataSource}{Data\-Source} \&source, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const \hyperlink{classBotan_1_1User__Interface}{User\-\_\-\-Interface} \&ui)
+\item 
+\hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} $\ast$ \hyperlink{namespaceBotan_1_1PKCS8_a62f0f414d2312ec05c93681b39d4fa03}{load\-\_\-key} (const std\-::string \&fsname, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const \hyperlink{classBotan_1_1User__Interface}{User\-\_\-\-Interface} \&ui)
+\item 
+\hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} $\ast$ \hyperlink{namespaceBotan_1_1PKCS8_a1c7f4ce91440edc8b3ede4353455f377}{load\-\_\-key} (\hyperlink{classBotan_1_1DataSource}{Data\-Source} \&source, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const std\-::string \&pass)
+\item 
+\hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} $\ast$ \hyperlink{namespaceBotan_1_1PKCS8_a578d0aa9ab39f1ee4454e7a0dbdc4f8d}{load\-\_\-key} (const std\-::string \&fsname, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const std\-::string \&pass)
+\item 
+\hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} $\ast$ \hyperlink{namespaceBotan_1_1PKCS8_a77386a2d53f49239933bbef17dad52ff}{copy\-\_\-key} (const \hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} \&key, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)
+\item 
+void \hyperlink{namespaceBotan_1_1PKCS8_abc883a2bead080767909d6c8cf236d9b}{encode} (const \hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} \&key, \hyperlink{classBotan_1_1Pipe}{Pipe} \&pipe, \hyperlink{namespaceBotan_a53759b4ed1fb93549f307fcf68729d2f}{X509\-\_\-\-Encoding} encoding=P\-E\-M)
+\item 
+void \hyperlink{namespaceBotan_1_1PKCS8_aa32c311f3cbb893014e402700405b8db}{encrypt\-\_\-key} (const \hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} \&key, \hyperlink{classBotan_1_1Pipe}{Pipe} \&pipe, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const std\-::string \&pass, const std\-::string \&pbe\-\_\-algo=\char`\"{}\char`\"{}, \hyperlink{namespaceBotan_a53759b4ed1fb93549f307fcf68729d2f}{X509\-\_\-\-Encoding} encoding=P\-E\-M)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This namespace contains functions for handling P\-K\-C\-S \#8 private keys 
+
+\subsection{Function Documentation}
+\hypertarget{namespaceBotan_1_1PKCS8_a4796335c320788355dbb532972aa296a}{\index{Botan\-::\-P\-K\-C\-S8@{Botan\-::\-P\-K\-C\-S8}!B\-E\-R\-\_\-encode@{B\-E\-R\-\_\-encode}}
+\index{B\-E\-R\-\_\-encode@{B\-E\-R\-\_\-encode}!Botan::PKCS8@{Botan\-::\-P\-K\-C\-S8}}
+\subsubsection[{B\-E\-R\-\_\-encode}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-T\-A\-N\-\_\-\-D\-L\-L {\bf Secure\-Vector}$<$ {\bf byte} $>$ Botan\-::\-P\-K\-C\-S8\-::\-B\-E\-R\-\_\-encode (
+\begin{DoxyParamCaption}
+\item[{const Private\-\_\-\-Key \&}]{key}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1PKCS8_a4796335c320788355dbb532972aa296a}
+\hyperlink{namespaceBotan_1_1BER}{B\-E\-R} encode a private key 
+\begin{DoxyParams}{Parameters}
+{\em key} & the private key to encode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{namespaceBotan_1_1BER}{B\-E\-R} encoded key 
+\end{DoxyReturn}
+\hypertarget{namespaceBotan_1_1PKCS8_ac2070bd916fb8f65318e191a34f3a59c}{\index{Botan\-::\-P\-K\-C\-S8@{Botan\-::\-P\-K\-C\-S8}!B\-E\-R\-\_\-encode@{B\-E\-R\-\_\-encode}}
+\index{B\-E\-R\-\_\-encode@{B\-E\-R\-\_\-encode}!Botan::PKCS8@{Botan\-::\-P\-K\-C\-S8}}
+\subsubsection[{B\-E\-R\-\_\-encode}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-T\-A\-N\-\_\-\-D\-L\-L {\bf Secure\-Vector}$<$ {\bf byte} $>$ Botan\-::\-P\-K\-C\-S8\-::\-B\-E\-R\-\_\-encode (
+\begin{DoxyParamCaption}
+\item[{const Private\-\_\-\-Key \&}]{key, }
+\item[{Random\-Number\-Generator \&}]{rng, }
+\item[{const std\-::string \&}]{pass, }
+\item[{const std\-::string \&}]{pbe\-\_\-algo = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1PKCS8_ac2070bd916fb8f65318e191a34f3a59c}
+Encrypt a key using P\-K\-C\-S \#8 encryption 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to encode \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+{\em pass} & the password to use for encryption \\
+\hline
+{\em pbe\-\_\-algo} & the name of the desired password-\/based encryption algorithm; if empty (\char`\"{}\char`\"{}) a reasonable (portable/secure) default will be chosen. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encrypted key in binary \hyperlink{namespaceBotan_1_1BER}{B\-E\-R} form 
+\end{DoxyReturn}
+\hypertarget{namespaceBotan_1_1PKCS8_a77386a2d53f49239933bbef17dad52ff}{\index{Botan\-::\-P\-K\-C\-S8@{Botan\-::\-P\-K\-C\-S8}!copy\-\_\-key@{copy\-\_\-key}}
+\index{copy\-\_\-key@{copy\-\_\-key}!Botan::PKCS8@{Botan\-::\-P\-K\-C\-S8}}
+\subsubsection[{copy\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-T\-A\-N\-\_\-\-D\-L\-L {\bf Private\-\_\-\-Key} $\ast$ Botan\-::\-P\-K\-C\-S8\-::copy\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{const Private\-\_\-\-Key \&}]{key, }
+\item[{Random\-Number\-Generator \&}]{rng}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1PKCS8_a77386a2d53f49239933bbef17dad52ff}
+Copy an existing encoded key object. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to copy \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new copy of the key 
+\end{DoxyReturn}
+\hypertarget{namespaceBotan_1_1PKCS8_abc883a2bead080767909d6c8cf236d9b}{\index{Botan\-::\-P\-K\-C\-S8@{Botan\-::\-P\-K\-C\-S8}!encode@{encode}}
+\index{encode@{encode}!Botan::PKCS8@{Botan\-::\-P\-K\-C\-S8}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-P\-K\-C\-S8\-::encode (
+\begin{DoxyParamCaption}
+\item[{const Private\-\_\-\-Key \&}]{key, }
+\item[{Pipe \&}]{pipe, }
+\item[{X509\-\_\-\-Encoding}]{encoding = {\ttfamily PEM}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceBotan_1_1PKCS8_abc883a2bead080767909d6c8cf236d9b}
+Encode a private key into a pipe. \begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000022}{Deprecated}]Use P\-E\-M\-\_\-encode or B\-E\-R\-\_\-encode instead\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the private key to encode \\
+\hline
+{\em pipe} & the pipe to feed the encoded key into \\
+\hline
+{\em encoding} & the encoding type to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespaceBotan_1_1PKCS8_aa32c311f3cbb893014e402700405b8db}{\index{Botan\-::\-P\-K\-C\-S8@{Botan\-::\-P\-K\-C\-S8}!encrypt\-\_\-key@{encrypt\-\_\-key}}
+\index{encrypt\-\_\-key@{encrypt\-\_\-key}!Botan::PKCS8@{Botan\-::\-P\-K\-C\-S8}}
+\subsubsection[{encrypt\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-P\-K\-C\-S8\-::encrypt\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{const Private\-\_\-\-Key \&}]{key, }
+\item[{Pipe \&}]{pipe, }
+\item[{Random\-Number\-Generator \&}]{rng, }
+\item[{const std\-::string \&}]{pass, }
+\item[{const std\-::string \&}]{pbe\-\_\-algo = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{X509\-\_\-\-Encoding}]{encoding = {\ttfamily PEM}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceBotan_1_1PKCS8_aa32c311f3cbb893014e402700405b8db}
+Encode and encrypt a private key into a pipe. \begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000023}{Deprecated}]Use P\-E\-M\-\_\-encode or B\-E\-R\-\_\-encode instead\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the private key to encode \\
+\hline
+{\em pipe} & the pipe to feed the encoded key into \\
+\hline
+{\em pass} & the password to use for encryption \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+{\em pbe\-\_\-algo} & the name of the desired password-\/based encryption algorithm; if empty (\char`\"{}\char`\"{}) a reasonable (portable/secure) default will be chosen. \\
+\hline
+{\em encoding} & the encoding type to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespaceBotan_1_1PKCS8_ab3853ea8ff150236505233cf5fdd1671}{\index{Botan\-::\-P\-K\-C\-S8@{Botan\-::\-P\-K\-C\-S8}!load\-\_\-key@{load\-\_\-key}}
+\index{load\-\_\-key@{load\-\_\-key}!Botan::PKCS8@{Botan\-::\-P\-K\-C\-S8}}
+\subsubsection[{load\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-T\-A\-N\-\_\-\-D\-L\-L {\bf Private\-\_\-\-Key} $\ast$ Botan\-::\-P\-K\-C\-S8\-::load\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{Data\-Source \&}]{source, }
+\item[{Random\-Number\-Generator \&}]{rng, }
+\item[{const User\-\_\-\-Interface \&}]{ui}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1PKCS8_ab3853ea8ff150236505233cf5fdd1671}
+Load a key from a data source. 
+\begin{DoxyParams}{Parameters}
+{\em source} & the data source providing the encoded key \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+{\em ui} & the user interface to be used for passphrase dialog \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+loaded private key object 
+\end{DoxyReturn}
+\hypertarget{namespaceBotan_1_1PKCS8_a62f0f414d2312ec05c93681b39d4fa03}{\index{Botan\-::\-P\-K\-C\-S8@{Botan\-::\-P\-K\-C\-S8}!load\-\_\-key@{load\-\_\-key}}
+\index{load\-\_\-key@{load\-\_\-key}!Botan::PKCS8@{Botan\-::\-P\-K\-C\-S8}}
+\subsubsection[{load\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-T\-A\-N\-\_\-\-D\-L\-L {\bf Private\-\_\-\-Key} $\ast$ Botan\-::\-P\-K\-C\-S8\-::load\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename, }
+\item[{Random\-Number\-Generator \&}]{rng, }
+\item[{const User\-\_\-\-Interface \&}]{ui}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1PKCS8_a62f0f414d2312ec05c93681b39d4fa03}
+Load a key from a file. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the path to the file containing the encoded key \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+{\em ui} & the user interface to be used for passphrase dialog \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+loaded private key object 
+\end{DoxyReturn}
+\hypertarget{namespaceBotan_1_1PKCS8_a1c7f4ce91440edc8b3ede4353455f377}{\index{Botan\-::\-P\-K\-C\-S8@{Botan\-::\-P\-K\-C\-S8}!load\-\_\-key@{load\-\_\-key}}
+\index{load\-\_\-key@{load\-\_\-key}!Botan::PKCS8@{Botan\-::\-P\-K\-C\-S8}}
+\subsubsection[{load\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-T\-A\-N\-\_\-\-D\-L\-L {\bf Private\-\_\-\-Key} $\ast$ Botan\-::\-P\-K\-C\-S8\-::load\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{Data\-Source \&}]{source, }
+\item[{Random\-Number\-Generator \&}]{rng, }
+\item[{const std\-::string \&}]{pass = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1PKCS8_a1c7f4ce91440edc8b3ede4353455f377}
+Load a key from a data source. 
+\begin{DoxyParams}{Parameters}
+{\em source} & the data source providing the encoded key \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+{\em pass} & the passphrase to decrypt the key. Provide an empty string if the key is not encoded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+loaded private key object 
+\end{DoxyReturn}
+\hypertarget{namespaceBotan_1_1PKCS8_a578d0aa9ab39f1ee4454e7a0dbdc4f8d}{\index{Botan\-::\-P\-K\-C\-S8@{Botan\-::\-P\-K\-C\-S8}!load\-\_\-key@{load\-\_\-key}}
+\index{load\-\_\-key@{load\-\_\-key}!Botan::PKCS8@{Botan\-::\-P\-K\-C\-S8}}
+\subsubsection[{load\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-T\-A\-N\-\_\-\-D\-L\-L {\bf Private\-\_\-\-Key} $\ast$ Botan\-::\-P\-K\-C\-S8\-::load\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename, }
+\item[{Random\-Number\-Generator \&}]{rng, }
+\item[{const std\-::string \&}]{pass = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1PKCS8_a578d0aa9ab39f1ee4454e7a0dbdc4f8d}
+Load a key from a file. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the path to the file containing the encoded key \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+{\em pass} & the passphrase to decrypt the key. Provide an empty string if the key is not encoded. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+loaded private key object 
+\end{DoxyReturn}
+\hypertarget{namespaceBotan_1_1PKCS8_abd54a7212d021f33fea536f11ef1ca98}{\index{Botan\-::\-P\-K\-C\-S8@{Botan\-::\-P\-K\-C\-S8}!P\-E\-M\-\_\-encode@{P\-E\-M\-\_\-encode}}
+\index{P\-E\-M\-\_\-encode@{P\-E\-M\-\_\-encode}!Botan::PKCS8@{Botan\-::\-P\-K\-C\-S8}}
+\subsubsection[{P\-E\-M\-\_\-encode}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-T\-A\-N\-\_\-\-D\-L\-L std\-::string Botan\-::\-P\-K\-C\-S8\-::\-P\-E\-M\-\_\-encode (
+\begin{DoxyParamCaption}
+\item[{const Private\-\_\-\-Key \&}]{key}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1PKCS8_abd54a7212d021f33fea536f11ef1ca98}
+Get a string containing a P\-E\-M encoded private key. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to encode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encoded key 
+\end{DoxyReturn}
+\hypertarget{namespaceBotan_1_1PKCS8_a189b80a771b1dee046de73aecce0d48e}{\index{Botan\-::\-P\-K\-C\-S8@{Botan\-::\-P\-K\-C\-S8}!P\-E\-M\-\_\-encode@{P\-E\-M\-\_\-encode}}
+\index{P\-E\-M\-\_\-encode@{P\-E\-M\-\_\-encode}!Botan::PKCS8@{Botan\-::\-P\-K\-C\-S8}}
+\subsubsection[{P\-E\-M\-\_\-encode}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-T\-A\-N\-\_\-\-D\-L\-L std\-::string Botan\-::\-P\-K\-C\-S8\-::\-P\-E\-M\-\_\-encode (
+\begin{DoxyParamCaption}
+\item[{const Private\-\_\-\-Key \&}]{key, }
+\item[{Random\-Number\-Generator \&}]{rng, }
+\item[{const std\-::string \&}]{pass, }
+\item[{const std\-::string \&}]{pbe\-\_\-algo = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1PKCS8_a189b80a771b1dee046de73aecce0d48e}
+Get a string containing a P\-E\-M encoded private key, encrypting it with a password. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to encode \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+{\em pass} & the password to use for encryption \\
+\hline
+{\em pbe\-\_\-algo} & the name of the desired password-\/based encryption algorithm; if empty (\char`\"{}\char`\"{}) a reasonable (portable/secure) default will be chosen. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encrypted key in P\-E\-M form 
+\end{DoxyReturn}

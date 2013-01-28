@@ -1,0 +1,155 @@
+\hypertarget{classBotan_1_1OID}{\section{Botan\-:\-:O\-I\-D Class Reference}
+\label{classBotan_1_1OID}\index{Botan\-::\-O\-I\-D@{Botan\-::\-O\-I\-D}}
+}
+
+
+{\ttfamily \#include $<$asn1\-\_\-oid.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:O\-I\-D\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1OID}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1OID_a8005ba9980d6ae55cb52855e2337eab0}{encode\-\_\-into} (class \hyperlink{classBotan_1_1DER__Encoder}{D\-E\-R\-\_\-\-Encoder} \&) const 
+\item 
+void \hyperlink{classBotan_1_1OID_a4a22280de830831c14bf146a0200e3bd}{decode\-\_\-from} (class \hyperlink{classBotan_1_1BER__Decoder}{B\-E\-R\-\_\-\-Decoder} \&)
+\item 
+bool \hyperlink{classBotan_1_1OID_aa92086f50c1a738fc2090c8135078f7f}{is\-\_\-empty} () const 
+\item 
+std\-::vector$<$ \hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} $>$ \hyperlink{classBotan_1_1OID_a16199447a7d99487f4cf7ca2f444b9b0}{get\-\_\-id} () const 
+\item 
+std\-::string \hyperlink{classBotan_1_1OID_a07817e61723bd45f103663cb1922676f}{as\-\_\-string} () const 
+\item 
+bool \hyperlink{classBotan_1_1OID_a33cacf5540c3dfd53f319d9f3c88893a}{operator==} (const \hyperlink{classBotan_1_1OID}{O\-I\-D} \&) const 
+\item 
+void \hyperlink{classBotan_1_1OID_acb40e3bf797139be9753fdc83d84c362}{clear} ()
+\item 
+\hyperlink{classBotan_1_1OID}{O\-I\-D} \& \hyperlink{classBotan_1_1OID_acc0c690698cd2bcadf044749001d5f23}{operator+=} (\hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} new\-\_\-comp)
+\item 
+\hyperlink{classBotan_1_1OID_aefca0a62c145266b0b7d05a485b6c793}{O\-I\-D} (const std\-::string \&str=\char`\"{}\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents A\-S\-N.\-1 object identifiers. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1OID_aefca0a62c145266b0b7d05a485b6c793}{\index{Botan\-::\-O\-I\-D@{Botan\-::\-O\-I\-D}!O\-I\-D@{O\-I\-D}}
+\index{O\-I\-D@{O\-I\-D}!Botan::OID@{Botan\-::\-O\-I\-D}}
+\subsubsection[{O\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-O\-I\-D\-::\-O\-I\-D (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1OID_aefca0a62c145266b0b7d05a485b6c793}
+Construct an \hyperlink{classBotan_1_1OID}{O\-I\-D} from a string. 
+\begin{DoxyParams}{Parameters}
+{\em str} & a string in the form \char`\"{}a.\-b.\-c\char`\"{} etc., where a,b,c are numbers \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1OID_a07817e61723bd45f103663cb1922676f}{\index{Botan\-::\-O\-I\-D@{Botan\-::\-O\-I\-D}!as\-\_\-string@{as\-\_\-string}}
+\index{as\-\_\-string@{as\-\_\-string}!Botan::OID@{Botan\-::\-O\-I\-D}}
+\subsubsection[{as\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-O\-I\-D\-::as\-\_\-string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1OID_a07817e61723bd45f103663cb1922676f}
+Get this \hyperlink{classBotan_1_1OID}{O\-I\-D} as a string \begin{DoxyReturn}{Returns}
+string representing this \hyperlink{classBotan_1_1OID}{O\-I\-D} 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1OID_acb40e3bf797139be9753fdc83d84c362}{\index{Botan\-::\-O\-I\-D@{Botan\-::\-O\-I\-D}!clear@{clear}}
+\index{clear@{clear}!Botan::OID@{Botan\-::\-O\-I\-D}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-O\-I\-D\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1OID_acb40e3bf797139be9753fdc83d84c362}
+Reset this instance to an empty \hyperlink{classBotan_1_1OID}{O\-I\-D}. \hypertarget{classBotan_1_1OID_a4a22280de830831c14bf146a0200e3bd}{\index{Botan\-::\-O\-I\-D@{Botan\-::\-O\-I\-D}!decode\-\_\-from@{decode\-\_\-from}}
+\index{decode\-\_\-from@{decode\-\_\-from}!Botan::OID@{Botan\-::\-O\-I\-D}}
+\subsubsection[{decode\-\_\-from}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-O\-I\-D\-::decode\-\_\-from (
+\begin{DoxyParamCaption}
+\item[{class {\bf B\-E\-R\-\_\-\-Decoder} \&}]{from}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1OID_a4a22280de830831c14bf146a0200e3bd}
+Decode whatever this object is from from 
+\begin{DoxyParams}{Parameters}
+{\em from} & the \hyperlink{classBotan_1_1BER__Decoder}{B\-E\-R\-\_\-\-Decoder} that will be read from \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1ASN1__Object_a9623f0d0f09c3ab4fb3ff44f1d42290f}{Botan\-::\-A\-S\-N1\-\_\-\-Object}.
+
+\hypertarget{classBotan_1_1OID_a8005ba9980d6ae55cb52855e2337eab0}{\index{Botan\-::\-O\-I\-D@{Botan\-::\-O\-I\-D}!encode\-\_\-into@{encode\-\_\-into}}
+\index{encode\-\_\-into@{encode\-\_\-into}!Botan::OID@{Botan\-::\-O\-I\-D}}
+\subsubsection[{encode\-\_\-into}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-O\-I\-D\-::encode\-\_\-into (
+\begin{DoxyParamCaption}
+\item[{class {\bf D\-E\-R\-\_\-\-Encoder} \&}]{to}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1OID_a8005ba9980d6ae55cb52855e2337eab0}
+Encode whatever this object is into to 
+\begin{DoxyParams}{Parameters}
+{\em to} & the \hyperlink{classBotan_1_1DER__Encoder}{D\-E\-R\-\_\-\-Encoder} that will be written to \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1ASN1__Object_a05db1180efe5c3acc30266d0032823ea}{Botan\-::\-A\-S\-N1\-\_\-\-Object}.
+
+\hypertarget{classBotan_1_1OID_a16199447a7d99487f4cf7ca2f444b9b0}{\index{Botan\-::\-O\-I\-D@{Botan\-::\-O\-I\-D}!get\-\_\-id@{get\-\_\-id}}
+\index{get\-\_\-id@{get\-\_\-id}!Botan::OID@{Botan\-::\-O\-I\-D}}
+\subsubsection[{get\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf u32bit}$>$ Botan\-::\-O\-I\-D\-::get\-\_\-id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1OID_a16199447a7d99487f4cf7ca2f444b9b0}
+Get this \hyperlink{classBotan_1_1OID}{O\-I\-D} as list (vector) of its components. \begin{DoxyReturn}{Returns}
+vector representing this \hyperlink{classBotan_1_1OID}{O\-I\-D} 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1OID_aa92086f50c1a738fc2090c8135078f7f}{\index{Botan\-::\-O\-I\-D@{Botan\-::\-O\-I\-D}!is\-\_\-empty@{is\-\_\-empty}}
+\index{is\-\_\-empty@{is\-\_\-empty}!Botan::OID@{Botan\-::\-O\-I\-D}}
+\subsubsection[{is\-\_\-empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-O\-I\-D\-::is\-\_\-empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1OID_aa92086f50c1a738fc2090c8135078f7f}
+Find out whether this \hyperlink{classBotan_1_1OID}{O\-I\-D} is empty \begin{DoxyReturn}{Returns}
+true is no \hyperlink{classBotan_1_1OID}{O\-I\-D} value is set 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1OID_acc0c690698cd2bcadf044749001d5f23}{\index{Botan\-::\-O\-I\-D@{Botan\-::\-O\-I\-D}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Botan::OID@{Botan\-::\-O\-I\-D}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf O\-I\-D} \& Botan\-::\-O\-I\-D\-::operator+= (
+\begin{DoxyParamCaption}
+\item[{{\bf u32bit}}]{new\-\_\-comp}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1OID_acc0c690698cd2bcadf044749001d5f23}
+Add a component to this \hyperlink{classBotan_1_1OID}{O\-I\-D}. 
+\begin{DoxyParams}{Parameters}
+{\em new\-\_\-comp} & the new component to add to the end of this \hyperlink{classBotan_1_1OID}{O\-I\-D} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to $\ast$this 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1OID_a33cacf5540c3dfd53f319d9f3c88893a}{\index{Botan\-::\-O\-I\-D@{Botan\-::\-O\-I\-D}!operator==@{operator==}}
+\index{operator==@{operator==}!Botan::OID@{Botan\-::\-O\-I\-D}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-O\-I\-D\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf O\-I\-D} \&}]{oid}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1OID_a33cacf5540c3dfd53f319d9f3c88893a}
+Compare two O\-I\-Ds. \begin{DoxyReturn}{Returns}
+true if they are equal, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/asn1/asn1\-\_\-oid.\-h\item 
+src/asn1/asn1\-\_\-oid.\-cpp\end{DoxyCompactItemize}

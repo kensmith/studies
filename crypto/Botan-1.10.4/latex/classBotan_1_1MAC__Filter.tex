@@ -1,0 +1,195 @@
+\hypertarget{classBotan_1_1MAC__Filter}{\section{Botan\-:\-:M\-A\-C\-\_\-\-Filter Class Reference}
+\label{classBotan_1_1MAC__Filter}\index{Botan\-::\-M\-A\-C\-\_\-\-Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}}
+}
+
+
+{\ttfamily \#include $<$filters.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:M\-A\-C\-\_\-\-Filter\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBotan_1_1MAC__Filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1MAC__Filter_aa5d6b9c589b93a96931af4e93a531a96}{write} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} input\mbox{[}$\,$\mbox{]}, size\-\_\-t len)
+\item 
+void \hyperlink{classBotan_1_1MAC__Filter_a5aa93f5eac49e5b0d706b3a6c52bea27}{end\-\_\-msg} ()
+\item 
+std\-::string \hyperlink{classBotan_1_1MAC__Filter_aed2f438c8a6eccaf5faa021c58121795}{name} () const 
+\item 
+void \hyperlink{classBotan_1_1MAC__Filter_aa4a3df14bccb37faf4e91a9c8aa3c7c0}{set\-\_\-key} (const \hyperlink{namespaceBotan_a00c78597211d5c63b63e2a57ddb96d38}{Symmetric\-Key} \&key)
+\item 
+bool \hyperlink{classBotan_1_1MAC__Filter_ab500e8c6e8d020634fae9f993ee58d7a}{valid\-\_\-keylength} (size\-\_\-t length) const 
+\item 
+\hyperlink{classBotan_1_1MAC__Filter_a704d18ab67042b528507804b1a66c320}{M\-A\-C\-\_\-\-Filter} (\hyperlink{classBotan_1_1MessageAuthenticationCode}{Message\-Authentication\-Code} $\ast$mac\-\_\-obj, size\-\_\-t out\-\_\-len=0)
+\item 
+\hyperlink{classBotan_1_1MAC__Filter_a60294d8b7d8f8c2b2695673a3d03bb8d}{M\-A\-C\-\_\-\-Filter} (\hyperlink{classBotan_1_1MessageAuthenticationCode}{Message\-Authentication\-Code} $\ast$mac\-\_\-obj, const \hyperlink{namespaceBotan_a00c78597211d5c63b63e2a57ddb96d38}{Symmetric\-Key} \&key, size\-\_\-t out\-\_\-len=0)
+\item 
+\hyperlink{classBotan_1_1MAC__Filter_a2594ab2c358bd6af6950f0a8524f39c7}{M\-A\-C\-\_\-\-Filter} (const std\-::string \&mac, size\-\_\-t len=0)
+\item 
+\hyperlink{classBotan_1_1MAC__Filter_aa84f445ad290dac760f0c06b44ca5e21}{M\-A\-C\-\_\-\-Filter} (const std\-::string \&mac, const \hyperlink{namespaceBotan_a00c78597211d5c63b63e2a57ddb96d38}{Symmetric\-Key} \&key, size\-\_\-t len=0)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1MessageAuthenticationCode}{Message\-Authentication\-Code} \hyperlink{classBotan_1_1Filter}{Filter}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1MAC__Filter_a704d18ab67042b528507804b1a66c320}{\index{Botan\-::\-M\-A\-C\-\_\-\-Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}!M\-A\-C\-\_\-\-Filter@{M\-A\-C\-\_\-\-Filter}}
+\index{M\-A\-C\-\_\-\-Filter@{M\-A\-C\-\_\-\-Filter}!Botan::MAC_Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}}
+\subsubsection[{M\-A\-C\-\_\-\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-M\-A\-C\-\_\-\-Filter\-::\-M\-A\-C\-\_\-\-Filter (
+\begin{DoxyParamCaption}
+\item[{{\bf Message\-Authentication\-Code} $\ast$}]{mac\-\_\-obj, }
+\item[{size\-\_\-t}]{out\-\_\-len = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1MAC__Filter_a704d18ab67042b528507804b1a66c320}
+Construct a M\-A\-C filter. The M\-A\-C key will be left empty. 
+\begin{DoxyParams}{Parameters}
+{\em mac\-\_\-obj} & the M\-A\-C to use \\
+\hline
+{\em out\-\_\-len} & the output length of this filter. Leave the default value 0 if you want to use the full output of the M\-A\-C. Otherwise, specify a smaller value here so that the output of the M\-A\-C will be cut off. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1MAC__Filter_a60294d8b7d8f8c2b2695673a3d03bb8d}{\index{Botan\-::\-M\-A\-C\-\_\-\-Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}!M\-A\-C\-\_\-\-Filter@{M\-A\-C\-\_\-\-Filter}}
+\index{M\-A\-C\-\_\-\-Filter@{M\-A\-C\-\_\-\-Filter}!Botan::MAC_Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}}
+\subsubsection[{M\-A\-C\-\_\-\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-M\-A\-C\-\_\-\-Filter\-::\-M\-A\-C\-\_\-\-Filter (
+\begin{DoxyParamCaption}
+\item[{{\bf Message\-Authentication\-Code} $\ast$}]{mac\-\_\-obj, }
+\item[{const {\bf Symmetric\-Key} \&}]{key, }
+\item[{size\-\_\-t}]{out\-\_\-len = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1MAC__Filter_a60294d8b7d8f8c2b2695673a3d03bb8d}
+Construct a M\-A\-C filter. 
+\begin{DoxyParams}{Parameters}
+{\em mac\-\_\-obj} & the M\-A\-C to use \\
+\hline
+{\em key} & the M\-A\-C key to use \\
+\hline
+{\em out\-\_\-len} & the output length of this filter. Leave the default value 0 if you want to use the full output of the M\-A\-C. Otherwise, specify a smaller value here so that the output of the M\-A\-C will be cut off. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1MAC__Filter_a2594ab2c358bd6af6950f0a8524f39c7}{\index{Botan\-::\-M\-A\-C\-\_\-\-Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}!M\-A\-C\-\_\-\-Filter@{M\-A\-C\-\_\-\-Filter}}
+\index{M\-A\-C\-\_\-\-Filter@{M\-A\-C\-\_\-\-Filter}!Botan::MAC_Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}}
+\subsubsection[{M\-A\-C\-\_\-\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-M\-A\-C\-\_\-\-Filter\-::\-M\-A\-C\-\_\-\-Filter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{mac, }
+\item[{size\-\_\-t}]{len = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1MAC__Filter_a2594ab2c358bd6af6950f0a8524f39c7}
+Construct a M\-A\-C filter. The M\-A\-C key will be left empty. 
+\begin{DoxyParams}{Parameters}
+{\em mac} & the name of the M\-A\-C to use \\
+\hline
+{\em len} & the output length of this filter. Leave the default value 0 if you want to use the full output of the M\-A\-C. Otherwise, specify a smaller value here so that the output of the M\-A\-C will be cut off. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1MAC__Filter_aa84f445ad290dac760f0c06b44ca5e21}{\index{Botan\-::\-M\-A\-C\-\_\-\-Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}!M\-A\-C\-\_\-\-Filter@{M\-A\-C\-\_\-\-Filter}}
+\index{M\-A\-C\-\_\-\-Filter@{M\-A\-C\-\_\-\-Filter}!Botan::MAC_Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}}
+\subsubsection[{M\-A\-C\-\_\-\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-M\-A\-C\-\_\-\-Filter\-::\-M\-A\-C\-\_\-\-Filter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{mac, }
+\item[{const {\bf Symmetric\-Key} \&}]{key, }
+\item[{size\-\_\-t}]{len = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1MAC__Filter_aa84f445ad290dac760f0c06b44ca5e21}
+Construct a M\-A\-C filter. 
+\begin{DoxyParams}{Parameters}
+{\em mac} & the name of the M\-A\-C to use \\
+\hline
+{\em key} & the M\-A\-C key to use \\
+\hline
+{\em len} & the output length of this filter. Leave the default value 0 if you want to use the full output of the M\-A\-C. Otherwise, specify a smaller value here so that the output of the M\-A\-C will be cut off. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1MAC__Filter_a5aa93f5eac49e5b0d706b3a6c52bea27}{\index{Botan\-::\-M\-A\-C\-\_\-\-Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}!end\-\_\-msg@{end\-\_\-msg}}
+\index{end\-\_\-msg@{end\-\_\-msg}!Botan::MAC_Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}}
+\subsubsection[{end\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-M\-A\-C\-\_\-\-Filter\-::end\-\_\-msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1MAC__Filter_a5aa93f5eac49e5b0d706b3a6c52bea27}
+Notify that the current message is finished; flush buffers and do end-\/of-\/message processing (if any). 
+
+Reimplemented from \hyperlink{classBotan_1_1Filter_a5378ec3bf4adf860a4cfa01cfc51e20e}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1MAC__Filter_aed2f438c8a6eccaf5faa021c58121795}{\index{Botan\-::\-M\-A\-C\-\_\-\-Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}!name@{name}}
+\index{name@{name}!Botan::MAC_Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-M\-A\-C\-\_\-\-Filter\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1MAC__Filter_aed2f438c8a6eccaf5faa021c58121795}
+\begin{DoxyReturn}{Returns}
+descriptive name for this filter 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Filter_a612efd6701e36df4902da3dc396ce62f}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1MAC__Filter_aa4a3df14bccb37faf4e91a9c8aa3c7c0}{\index{Botan\-::\-M\-A\-C\-\_\-\-Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}!set\-\_\-key@{set\-\_\-key}}
+\index{set\-\_\-key@{set\-\_\-key}!Botan::MAC_Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}}
+\subsubsection[{set\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-M\-A\-C\-\_\-\-Filter\-::set\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Symmetric\-Key} \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1MAC__Filter_aa4a3df14bccb37faf4e91a9c8aa3c7c0}
+Set the key of this filter. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to set \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1Keyed__Filter_a04f210f888f2603717e75742ce620e77}{Botan\-::\-Keyed\-\_\-\-Filter}.
+
+\hypertarget{classBotan_1_1MAC__Filter_ab500e8c6e8d020634fae9f993ee58d7a}{\index{Botan\-::\-M\-A\-C\-\_\-\-Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}!valid\-\_\-keylength@{valid\-\_\-keylength}}
+\index{valid\-\_\-keylength@{valid\-\_\-keylength}!Botan::MAC_Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}}
+\subsubsection[{valid\-\_\-keylength}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-M\-A\-C\-\_\-\-Filter\-::valid\-\_\-keylength (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1MAC__Filter_ab500e8c6e8d020634fae9f993ee58d7a}
+Check whether a key length is valid for this filter. 
+\begin{DoxyParams}{Parameters}
+{\em length} & the key length to be checked for validity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key length is valid, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Keyed__Filter_a9eaf5d9480445b85ffea8eb5474e2eb1}{Botan\-::\-Keyed\-\_\-\-Filter}.
+
+\hypertarget{classBotan_1_1MAC__Filter_aa5d6b9c589b93a96931af4e93a531a96}{\index{Botan\-::\-M\-A\-C\-\_\-\-Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}!write@{write}}
+\index{write@{write}!Botan::MAC_Filter@{Botan\-::\-M\-A\-C\-\_\-\-Filter}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-M\-A\-C\-\_\-\-Filter\-::write (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1MAC__Filter_aa5d6b9c589b93a96931af4e93a531a96}
+Write a portion of a message to this filter. 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input as a byte array \\
+\hline
+{\em length} & the length of the byte array input \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1Filter_ad856ce62d9bdcce8057da99cba606892}{Botan\-::\-Filter}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/filters/filters.\-h\item 
+src/filters/algo\-\_\-filt.\-cpp\end{DoxyCompactItemize}

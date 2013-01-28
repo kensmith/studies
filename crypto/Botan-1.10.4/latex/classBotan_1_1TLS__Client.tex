@@ -1,0 +1,118 @@
+\hypertarget{classBotan_1_1TLS__Client}{\section{Botan\-:\-:T\-L\-S\-\_\-\-Client Class Reference}
+\label{classBotan_1_1TLS__Client}\index{Botan\-::\-T\-L\-S\-\_\-\-Client@{Botan\-::\-T\-L\-S\-\_\-\-Client}}
+}
+
+
+{\ttfamily \#include $<$tls\-\_\-client.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:T\-L\-S\-\_\-\-Client\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1TLS__Client}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1TLS__Client_ac2520602f2da30b5e70011f9fa2e2eaa}{read} (\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} buf\mbox{[}$\,$\mbox{]}, size\-\_\-t buf\-\_\-len)
+\item 
+void \hyperlink{classBotan_1_1TLS__Client_ae0b5e5e3410a5b49ae6390056b2c6302}{write} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} buf\mbox{[}$\,$\mbox{]}, size\-\_\-t buf\-\_\-len)
+\item 
+void \hyperlink{classBotan_1_1TLS__Client_a7539b873cb54b6343c45d7602f53f3dc}{close} ()
+\item 
+bool \hyperlink{classBotan_1_1TLS__Client_af6d5232da57185a34446cdeba9e0e4ff}{is\-\_\-closed} () const 
+\item 
+std\-::vector$<$ \hyperlink{classBotan_1_1X509__Certificate}{X509\-\_\-\-Certificate} $>$ \hyperlink{classBotan_1_1TLS__Client_a53d8485c005f3ecc61994a5714252114}{peer\-\_\-cert\-\_\-chain} () const 
+\item 
+\hypertarget{classBotan_1_1TLS__Client_af4c3111e38f1c304fb2f060f0bbf59b4}{void {\bfseries add\-\_\-client\-\_\-cert} (const \hyperlink{classBotan_1_1X509__Certificate}{X509\-\_\-\-Certificate} \&cert, \hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} $\ast$cert\-\_\-key)}\label{classBotan_1_1TLS__Client_af4c3111e38f1c304fb2f060f0bbf59b4}
+
+\item 
+\hyperlink{classBotan_1_1TLS__Client_a46b4e8fb0a74b9c1f0e58df4c904cfa0}{T\-L\-S\-\_\-\-Client} (std\-::tr1\-::function$<$ size\-\_\-t(\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)$>$ input\-\_\-fn, std\-::tr1\-::function$<$ void(const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)$>$ output\-\_\-fn, const \hyperlink{classBotan_1_1TLS__Policy}{T\-L\-S\-\_\-\-Policy} \&policy, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)
+\item 
+\hyperlink{classBotan_1_1TLS__Client_af12ea661ca2ca8e832fbcc63c66eb6b6}{$\sim$\-T\-L\-S\-\_\-\-Client} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\-S\-L/\-T\-L\-S Client 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1TLS__Client_a46b4e8fb0a74b9c1f0e58df4c904cfa0}{\index{Botan\-::\-T\-L\-S\-\_\-\-Client@{Botan\-::\-T\-L\-S\-\_\-\-Client}!T\-L\-S\-\_\-\-Client@{T\-L\-S\-\_\-\-Client}}
+\index{T\-L\-S\-\_\-\-Client@{T\-L\-S\-\_\-\-Client}!Botan::TLS_Client@{Botan\-::\-T\-L\-S\-\_\-\-Client}}
+\subsubsection[{T\-L\-S\-\_\-\-Client}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-T\-L\-S\-\_\-\-Client\-::\-T\-L\-S\-\_\-\-Client (
+\begin{DoxyParamCaption}
+\item[{std\-::tr1\-::function$<$ size\-\_\-t({\bf byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)$>$}]{input\-\_\-fn, }
+\item[{std\-::tr1\-::function$<$ void(const {\bf byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)$>$}]{output\-\_\-fn, }
+\item[{const {\bf T\-L\-S\-\_\-\-Policy} \&}]{policy, }
+\item[{{\bf Random\-Number\-Generator} \&}]{rng}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1TLS__Client_a46b4e8fb0a74b9c1f0e58df4c904cfa0}
+T\-L\-S Client Constructor \hypertarget{classBotan_1_1TLS__Client_af12ea661ca2ca8e832fbcc63c66eb6b6}{\index{Botan\-::\-T\-L\-S\-\_\-\-Client@{Botan\-::\-T\-L\-S\-\_\-\-Client}!$\sim$\-T\-L\-S\-\_\-\-Client@{$\sim$\-T\-L\-S\-\_\-\-Client}}
+\index{$\sim$\-T\-L\-S\-\_\-\-Client@{$\sim$\-T\-L\-S\-\_\-\-Client}!Botan::TLS_Client@{Botan\-::\-T\-L\-S\-\_\-\-Client}}
+\subsubsection[{$\sim$\-T\-L\-S\-\_\-\-Client}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-T\-L\-S\-\_\-\-Client\-::$\sim$\-T\-L\-S\-\_\-\-Client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1TLS__Client_af12ea661ca2ca8e832fbcc63c66eb6b6}
+T\-L\-S Client Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1TLS__Client_a7539b873cb54b6343c45d7602f53f3dc}{\index{Botan\-::\-T\-L\-S\-\_\-\-Client@{Botan\-::\-T\-L\-S\-\_\-\-Client}!close@{close}}
+\index{close@{close}!Botan::TLS_Client@{Botan\-::\-T\-L\-S\-\_\-\-Client}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-T\-L\-S\-\_\-\-Client\-::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1TLS__Client_a7539b873cb54b6343c45d7602f53f3dc}
+Close a T\-L\-S connection 
+
+Implements \hyperlink{classBotan_1_1TLS__Connection}{Botan\-::\-T\-L\-S\-\_\-\-Connection}.
+
+\hypertarget{classBotan_1_1TLS__Client_af6d5232da57185a34446cdeba9e0e4ff}{\index{Botan\-::\-T\-L\-S\-\_\-\-Client@{Botan\-::\-T\-L\-S\-\_\-\-Client}!is\-\_\-closed@{is\-\_\-closed}}
+\index{is\-\_\-closed@{is\-\_\-closed}!Botan::TLS_Client@{Botan\-::\-T\-L\-S\-\_\-\-Client}}
+\subsubsection[{is\-\_\-closed}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-T\-L\-S\-\_\-\-Client\-::is\-\_\-closed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1TLS__Client_af6d5232da57185a34446cdeba9e0e4ff}
+Check connection status \hypertarget{classBotan_1_1TLS__Client_a53d8485c005f3ecc61994a5714252114}{\index{Botan\-::\-T\-L\-S\-\_\-\-Client@{Botan\-::\-T\-L\-S\-\_\-\-Client}!peer\-\_\-cert\-\_\-chain@{peer\-\_\-cert\-\_\-chain}}
+\index{peer\-\_\-cert\-\_\-chain@{peer\-\_\-cert\-\_\-chain}!Botan::TLS_Client@{Botan\-::\-T\-L\-S\-\_\-\-Client}}
+\subsubsection[{peer\-\_\-cert\-\_\-chain}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf X509\-\_\-\-Certificate} $>$ Botan\-::\-T\-L\-S\-\_\-\-Client\-::peer\-\_\-cert\-\_\-chain (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1TLS__Client_a53d8485c005f3ecc61994a5714252114}
+Return the peer's certificate chain 
+
+Implements \hyperlink{classBotan_1_1TLS__Connection}{Botan\-::\-T\-L\-S\-\_\-\-Connection}.
+
+\hypertarget{classBotan_1_1TLS__Client_ac2520602f2da30b5e70011f9fa2e2eaa}{\index{Botan\-::\-T\-L\-S\-\_\-\-Client@{Botan\-::\-T\-L\-S\-\_\-\-Client}!read@{read}}
+\index{read@{read}!Botan::TLS_Client@{Botan\-::\-T\-L\-S\-\_\-\-Client}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-T\-L\-S\-\_\-\-Client\-::read (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1TLS__Client_ac2520602f2da30b5e70011f9fa2e2eaa}
+Read from a T\-L\-S connection 
+
+Implements \hyperlink{classBotan_1_1TLS__Connection}{Botan\-::\-T\-L\-S\-\_\-\-Connection}.
+
+\hypertarget{classBotan_1_1TLS__Client_ae0b5e5e3410a5b49ae6390056b2c6302}{\index{Botan\-::\-T\-L\-S\-\_\-\-Client@{Botan\-::\-T\-L\-S\-\_\-\-Client}!write@{write}}
+\index{write@{write}!Botan::TLS_Client@{Botan\-::\-T\-L\-S\-\_\-\-Client}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-T\-L\-S\-\_\-\-Client\-::write (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{buf\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1TLS__Client_ae0b5e5e3410a5b49ae6390056b2c6302}
+Write to a T\-L\-S connection 
+
+Implements \hyperlink{classBotan_1_1TLS__Connection}{Botan\-::\-T\-L\-S\-\_\-\-Connection}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/ssl/tls\-\_\-client.\-h\item 
+src/ssl/tls\-\_\-client.\-cpp\end{DoxyCompactItemize}

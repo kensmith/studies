@@ -1,0 +1,108 @@
+\hypertarget{classBotan_1_1Tiger}{\section{Botan\-:\-:Tiger Class Reference}
+\label{classBotan_1_1Tiger}\index{Botan\-::\-Tiger@{Botan\-::\-Tiger}}
+}
+
+
+{\ttfamily \#include $<$tiger.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Tiger\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classBotan_1_1Tiger}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1Tiger_ab839b8a5269cc3aa4810854357eb3729}{name} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1Tiger_aca5a97a223654bfa95b16d2b4cc89148}{output\-\_\-length} () const 
+\item 
+\hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$ \hyperlink{classBotan_1_1Tiger_ab77a25d5b3e4b3de08ab9cda3209d21f}{clone} () const 
+\item 
+void \hyperlink{classBotan_1_1Tiger_a7e693e97cf2c5e96b04febcf0e8c6399}{clear} ()
+\item 
+\hyperlink{classBotan_1_1Tiger_a78dafddbd8b47927abdc49f4723af753}{Tiger} (size\-\_\-t out\-\_\-size=24, size\-\_\-t passes=3)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1Tiger}{Tiger} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Tiger_a78dafddbd8b47927abdc49f4723af753}{\index{Botan\-::\-Tiger@{Botan\-::\-Tiger}!Tiger@{Tiger}}
+\index{Tiger@{Tiger}!Botan::Tiger@{Botan\-::\-Tiger}}
+\subsubsection[{Tiger}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Tiger\-::\-Tiger (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{out\-\_\-size = {\ttfamily 24}, }
+\item[{size\-\_\-t}]{passes = {\ttfamily 3}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Tiger_a78dafddbd8b47927abdc49f4723af753}
+
+\begin{DoxyParams}{Parameters}
+{\em out\-\_\-size} & specifies the output length; can be 16, 20, or 24 \\
+\hline
+{\em passes} & to make in the algorithm \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Tiger_a7e693e97cf2c5e96b04febcf0e8c6399}{\index{Botan\-::\-Tiger@{Botan\-::\-Tiger}!clear@{clear}}
+\index{clear@{clear}!Botan::Tiger@{Botan\-::\-Tiger}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Tiger\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Tiger_a7e693e97cf2c5e96b04febcf0e8c6399}
+Zeroize internal state 
+
+Reimplemented from \hyperlink{classBotan_1_1MDx__HashFunction_ad32c3f024a4eba7bd1d53372dc248a86}{Botan\-::\-M\-Dx\-\_\-\-Hash\-Function}.
+
+\hypertarget{classBotan_1_1Tiger_ab77a25d5b3e4b3de08ab9cda3209d21f}{\index{Botan\-::\-Tiger@{Botan\-::\-Tiger}!clone@{clone}}
+\index{clone@{clone}!Botan::Tiger@{Botan\-::\-Tiger}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hash\-Function}$\ast$ Botan\-::\-Tiger\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Tiger_ab77a25d5b3e4b3de08ab9cda3209d21f}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1HashFunction_aaa2b17b63215ae970d9b5d5044cc208a}{Botan\-::\-Hash\-Function}.
+
+\hypertarget{classBotan_1_1Tiger_ab839b8a5269cc3aa4810854357eb3729}{\index{Botan\-::\-Tiger@{Botan\-::\-Tiger}!name@{name}}
+\index{name@{name}!Botan::Tiger@{Botan\-::\-Tiger}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Tiger\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Tiger_ab839b8a5269cc3aa4810854357eb3729}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1Tiger_aca5a97a223654bfa95b16d2b4cc89148}{\index{Botan\-::\-Tiger@{Botan\-::\-Tiger}!output\-\_\-length@{output\-\_\-length}}
+\index{output\-\_\-length@{output\-\_\-length}!Botan::Tiger@{Botan\-::\-Tiger}}
+\subsubsection[{output\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Tiger\-::output\-\_\-length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Tiger_aca5a97a223654bfa95b16d2b4cc89148}
+\begin{DoxyReturn}{Returns}
+length of the output of this function in bytes 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Buffered__Computation_a7b2e6776ea9ded2e3f9da5a760b7d34b}{Botan\-::\-Buffered\-\_\-\-Computation}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/hash/tiger/tiger.\-h\item 
+src/hash/tiger/tig\-\_\-tab.\-cpp\item 
+src/hash/tiger/tiger.\-cpp\end{DoxyCompactItemize}

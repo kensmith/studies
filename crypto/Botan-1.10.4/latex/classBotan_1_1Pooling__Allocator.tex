@@ -1,0 +1,101 @@
+\hypertarget{classBotan_1_1Pooling__Allocator}{\section{Botan\-:\-:Pooling\-\_\-\-Allocator Class Reference}
+\label{classBotan_1_1Pooling__Allocator}\index{Botan\-::\-Pooling\-\_\-\-Allocator@{Botan\-::\-Pooling\-\_\-\-Allocator}}
+}
+
+
+{\ttfamily \#include $<$mem\-\_\-pool.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Pooling\-\_\-\-Allocator\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBotan_1_1Pooling__Allocator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{classBotan_1_1Pooling__Allocator_a5e82d006bd4a205d576d5e0449bdb7ce}{allocate} (size\-\_\-t)
+\item 
+void \hyperlink{classBotan_1_1Pooling__Allocator_a9a8c770aa251a9d8a85457e679c8ce41}{deallocate} (void $\ast$, size\-\_\-t)
+\item 
+void \hyperlink{classBotan_1_1Pooling__Allocator_ad178ef1bbd542a8ec6ae4f9a4b00b020}{destroy} ()
+\item 
+\hyperlink{classBotan_1_1Pooling__Allocator_a33f3dbd3b6d191cfccdf138fd5e4039c}{Pooling\-\_\-\-Allocator} (\hyperlink{classBotan_1_1Mutex}{Mutex} $\ast$mutex)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Pooling \hyperlink{classBotan_1_1Allocator}{Allocator} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Pooling__Allocator_a33f3dbd3b6d191cfccdf138fd5e4039c}{\index{Botan\-::\-Pooling\-\_\-\-Allocator@{Botan\-::\-Pooling\-\_\-\-Allocator}!Pooling\-\_\-\-Allocator@{Pooling\-\_\-\-Allocator}}
+\index{Pooling\-\_\-\-Allocator@{Pooling\-\_\-\-Allocator}!Botan::Pooling_Allocator@{Botan\-::\-Pooling\-\_\-\-Allocator}}
+\subsubsection[{Pooling\-\_\-\-Allocator}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Pooling\-\_\-\-Allocator\-::\-Pooling\-\_\-\-Allocator (
+\begin{DoxyParamCaption}
+\item[{{\bf Mutex} $\ast$}]{mutex}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Pooling__Allocator_a33f3dbd3b6d191cfccdf138fd5e4039c}
+
+\begin{DoxyParams}{Parameters}
+{\em mutex} & used for internal locking \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Pooling__Allocator_a5e82d006bd4a205d576d5e0449bdb7ce}{\index{Botan\-::\-Pooling\-\_\-\-Allocator@{Botan\-::\-Pooling\-\_\-\-Allocator}!allocate@{allocate}}
+\index{allocate@{allocate}!Botan::Pooling_Allocator@{Botan\-::\-Pooling\-\_\-\-Allocator}}
+\subsubsection[{allocate}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Botan\-::\-Pooling\-\_\-\-Allocator\-::allocate (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Pooling__Allocator_a5e82d006bd4a205d576d5e0449bdb7ce}
+Allocate a block of memory 
+\begin{DoxyParams}{Parameters}
+{\em n} & how many bytes to allocate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to n bytes of memory 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Allocator_a2a67bd8efe4cd62f316396ed7e12227e}{Botan\-::\-Allocator}.
+
+\hypertarget{classBotan_1_1Pooling__Allocator_a9a8c770aa251a9d8a85457e679c8ce41}{\index{Botan\-::\-Pooling\-\_\-\-Allocator@{Botan\-::\-Pooling\-\_\-\-Allocator}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!Botan::Pooling_Allocator@{Botan\-::\-Pooling\-\_\-\-Allocator}}
+\subsubsection[{deallocate}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Pooling\-\_\-\-Allocator\-::deallocate (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Pooling__Allocator_a9a8c770aa251a9d8a85457e679c8ce41}
+Deallocate memory allocated with \hyperlink{classBotan_1_1Pooling__Allocator_a5e82d006bd4a205d576d5e0449bdb7ce}{allocate()} 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & the pointer returned by \hyperlink{classBotan_1_1Pooling__Allocator_a5e82d006bd4a205d576d5e0449bdb7ce}{allocate()} \\
+\hline
+{\em n} & the size of the block pointed to by ptr \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1Allocator_a585549ec6e7098881b2ccdb2aea04bc5}{Botan\-::\-Allocator}.
+
+\hypertarget{classBotan_1_1Pooling__Allocator_ad178ef1bbd542a8ec6ae4f9a4b00b020}{\index{Botan\-::\-Pooling\-\_\-\-Allocator@{Botan\-::\-Pooling\-\_\-\-Allocator}!destroy@{destroy}}
+\index{destroy@{destroy}!Botan::Pooling_Allocator@{Botan\-::\-Pooling\-\_\-\-Allocator}}
+\subsubsection[{destroy}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Pooling\-\_\-\-Allocator\-::destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Pooling__Allocator_ad178ef1bbd542a8ec6ae4f9a4b00b020}
+Shutdown the allocator 
+
+Reimplemented from \hyperlink{classBotan_1_1Allocator_aa2983098be356bb0dc284076036d4ac0}{Botan\-::\-Allocator}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/alloc/mem\-\_\-pool/mem\-\_\-pool.\-h\item 
+src/alloc/mem\-\_\-pool/mem\-\_\-pool.\-cpp\end{DoxyCompactItemize}

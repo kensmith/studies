@@ -1,0 +1,153 @@
+\hypertarget{classBotan_1_1Turing}{\section{Botan\-:\-:Turing Class Reference}
+\label{classBotan_1_1Turing}\index{Botan\-::\-Turing@{Botan\-::\-Turing}}
+}
+
+
+{\ttfamily \#include $<$turing.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Turing\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classBotan_1_1Turing}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1Turing_a336de01480b7ae4d6223001aa6c49bcb}{cipher} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t length)
+\item 
+void \hyperlink{classBotan_1_1Turing_ac04f4ac9c119ab1ef5f47c4de684b4da}{set\-\_\-iv} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} iv\mbox{[}$\,$\mbox{]}, size\-\_\-t iv\-\_\-length)
+\item 
+bool \hyperlink{classBotan_1_1Turing_a34da82793efbceb49c5f50d3f6d917ed}{valid\-\_\-iv\-\_\-length} (size\-\_\-t iv\-\_\-len) const 
+\item 
+\hyperlink{classBotan_1_1Key__Length__Specification}{Key\-\_\-\-Length\-\_\-\-Specification} \hyperlink{classBotan_1_1Turing_ae73b58efc5d9b13dedcf194490a9dd65}{key\-\_\-spec} () const 
+\item 
+void \hyperlink{classBotan_1_1Turing_ae1c85e9d3ffc19fb4011ae03a2c51d18}{clear} ()
+\item 
+std\-::string \hyperlink{classBotan_1_1Turing_aa7c74e1702123565237960c5b32eb9ba}{name} () const 
+\item 
+\hyperlink{classBotan_1_1StreamCipher}{Stream\-Cipher} $\ast$ \hyperlink{classBotan_1_1Turing_aa6cdd53f8d90376519b98917dff4c0fe}{clone} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1Turing}{Turing} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Turing_a336de01480b7ae4d6223001aa6c49bcb}{\index{Botan\-::\-Turing@{Botan\-::\-Turing}!cipher@{cipher}}
+\index{cipher@{cipher}!Botan::Turing@{Botan\-::\-Turing}}
+\subsubsection[{cipher}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Turing\-::cipher (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Turing_a336de01480b7ae4d6223001aa6c49bcb}
+Encrypt or decrypt a message 
+\begin{DoxyParams}{Parameters}
+{\em in} & the plaintext \\
+\hline
+{\em out} & the byte array to hold the output, i.\-e. the ciphertext \\
+\hline
+{\em len} & the length of both in and out in bytes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1StreamCipher_a447f265ece48d9af46f6947495ce3aeb}{Botan\-::\-Stream\-Cipher}.
+
+\hypertarget{classBotan_1_1Turing_ae1c85e9d3ffc19fb4011ae03a2c51d18}{\index{Botan\-::\-Turing@{Botan\-::\-Turing}!clear@{clear}}
+\index{clear@{clear}!Botan::Turing@{Botan\-::\-Turing}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Turing\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Turing_ae1c85e9d3ffc19fb4011ae03a2c51d18}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1Turing_aa6cdd53f8d90376519b98917dff4c0fe}{\index{Botan\-::\-Turing@{Botan\-::\-Turing}!clone@{clone}}
+\index{clone@{clone}!Botan::Turing@{Botan\-::\-Turing}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stream\-Cipher}$\ast$ Botan\-::\-Turing\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Turing_aa6cdd53f8d90376519b98917dff4c0fe}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1StreamCipher_aa25d9ce72725e8bb0cf6c36540412397}{Botan\-::\-Stream\-Cipher}.
+
+\hypertarget{classBotan_1_1Turing_ae73b58efc5d9b13dedcf194490a9dd65}{\index{Botan\-::\-Turing@{Botan\-::\-Turing}!key\-\_\-spec@{key\-\_\-spec}}
+\index{key\-\_\-spec@{key\-\_\-spec}!Botan::Turing@{Botan\-::\-Turing}}
+\subsubsection[{key\-\_\-spec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key\-\_\-\-Length\-\_\-\-Specification} Botan\-::\-Turing\-::key\-\_\-spec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Turing_ae73b58efc5d9b13dedcf194490a9dd65}
+\begin{DoxyReturn}{Returns}
+object describing limits on key size 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1SymmetricAlgorithm_aea45c0d248b3116d7a1ebbd086f14e1b}{Botan\-::\-Symmetric\-Algorithm}.
+
+\hypertarget{classBotan_1_1Turing_aa7c74e1702123565237960c5b32eb9ba}{\index{Botan\-::\-Turing@{Botan\-::\-Turing}!name@{name}}
+\index{name@{name}!Botan::Turing@{Botan\-::\-Turing}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Turing\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Turing_aa7c74e1702123565237960c5b32eb9ba}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1Turing_ac04f4ac9c119ab1ef5f47c4de684b4da}{\index{Botan\-::\-Turing@{Botan\-::\-Turing}!set\-\_\-iv@{set\-\_\-iv}}
+\index{set\-\_\-iv@{set\-\_\-iv}!Botan::Turing@{Botan\-::\-Turing}}
+\subsubsection[{set\-\_\-iv}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Turing\-::set\-\_\-iv (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{iv\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{iv\-\_\-len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Turing_ac04f4ac9c119ab1ef5f47c4de684b4da}
+Resync the cipher using the I\-V 
+\begin{DoxyParams}{Parameters}
+{\em iv} & the initialization vector \\
+\hline
+{\em iv\-\_\-len} & the length of the I\-V in bytes \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classBotan_1_1StreamCipher_a787dea4f477ea27e8ba0ed7e1da9120d}{Botan\-::\-Stream\-Cipher}.
+
+\hypertarget{classBotan_1_1Turing_a34da82793efbceb49c5f50d3f6d917ed}{\index{Botan\-::\-Turing@{Botan\-::\-Turing}!valid\-\_\-iv\-\_\-length@{valid\-\_\-iv\-\_\-length}}
+\index{valid\-\_\-iv\-\_\-length@{valid\-\_\-iv\-\_\-length}!Botan::Turing@{Botan\-::\-Turing}}
+\subsubsection[{valid\-\_\-iv\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-Turing\-::valid\-\_\-iv\-\_\-length (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{iv\-\_\-len}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Turing_a34da82793efbceb49c5f50d3f6d917ed}
+
+\begin{DoxyParams}{Parameters}
+{\em iv\-\_\-len} & the length of the I\-V in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if the length is valid for this algorithm 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1StreamCipher_aeb0aaa9c4248e22c8302b99b2dfa9e8d}{Botan\-::\-Stream\-Cipher}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/stream/turing/turing.\-h\item 
+src/stream/turing/tur\-\_\-tab.\-cpp\item 
+src/stream/turing/turing.\-cpp\end{DoxyCompactItemize}

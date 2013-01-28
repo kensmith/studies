@@ -1,0 +1,136 @@
+\hypertarget{classBotan_1_1GOST__28147__89}{\section{Botan\-:\-:G\-O\-S\-T\-\_\-28147\-\_\-89 Class Reference}
+\label{classBotan_1_1GOST__28147__89}\index{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89@{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89}}
+}
+
+
+{\ttfamily \#include $<$gost\-\_\-28147.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:G\-O\-S\-T\-\_\-28147\-\_\-89\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classBotan_1_1GOST__28147__89}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1GOST__28147__89_a64139f883a7d2b050ff6d7503f1312df}{encrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+void \hyperlink{classBotan_1_1GOST__28147__89_a618c710b55011e0ef9c8c6c8447c4705}{decrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+void \hyperlink{classBotan_1_1GOST__28147__89_aa006a753c666d49f2b37799c28fc863e}{clear} ()
+\item 
+std\-::string \hyperlink{classBotan_1_1GOST__28147__89_a681095d7de662ab48e796a96dfd5a9d0}{name} () const 
+\item 
+\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$ \hyperlink{classBotan_1_1GOST__28147__89_afea8d452bbb190b1094643f8a816343d}{clone} () const 
+\item 
+\hyperlink{classBotan_1_1GOST__28147__89_ab53cc8d7ba40b68b184afa9ad8bf0833}{G\-O\-S\-T\-\_\-28147\-\_\-89} (const \hyperlink{classBotan_1_1GOST__28147__89__Params}{G\-O\-S\-T\-\_\-28147\-\_\-89\-\_\-\-Params} \&params)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+G\-O\-S\-T 28147-\/89 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1GOST__28147__89_ab53cc8d7ba40b68b184afa9ad8bf0833}{\index{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89@{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89}!G\-O\-S\-T\-\_\-28147\-\_\-89@{G\-O\-S\-T\-\_\-28147\-\_\-89}}
+\index{G\-O\-S\-T\-\_\-28147\-\_\-89@{G\-O\-S\-T\-\_\-28147\-\_\-89}!Botan::GOST_28147_89@{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89}}
+\subsubsection[{G\-O\-S\-T\-\_\-28147\-\_\-89}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89 (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\-O\-S\-T\-\_\-28147\-\_\-89\-\_\-\-Params} \&}]{params}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1GOST__28147__89_ab53cc8d7ba40b68b184afa9ad8bf0833}
+
+\begin{DoxyParams}{Parameters}
+{\em params} & the sbox parameters to use \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1GOST__28147__89_aa006a753c666d49f2b37799c28fc863e}{\index{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89@{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89}!clear@{clear}}
+\index{clear@{clear}!Botan::GOST_28147_89@{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1GOST__28147__89_aa006a753c666d49f2b37799c28fc863e}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1GOST__28147__89_afea8d452bbb190b1094643f8a816343d}{\index{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89@{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89}!clone@{clone}}
+\index{clone@{clone}!Botan::GOST_28147_89@{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Cipher}$\ast$ Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1GOST__28147__89_afea8d452bbb190b1094643f8a816343d}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a9feaf7c1bfb5279a1652c849054e033c}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1GOST__28147__89_a618c710b55011e0ef9c8c6c8447c4705}{\index{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89@{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89}!decrypt\-\_\-n@{decrypt\-\_\-n}}
+\index{decrypt\-\_\-n@{decrypt\-\_\-n}!Botan::GOST_28147_89@{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89}}
+\subsubsection[{decrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89\-::decrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1GOST__28147__89_a618c710b55011e0ef9c8c6c8447c4705}
+Decrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a6ea709632f78d833484a4d67de25e1a8}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1GOST__28147__89_a64139f883a7d2b050ff6d7503f1312df}{\index{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89@{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89}!encrypt\-\_\-n@{encrypt\-\_\-n}}
+\index{encrypt\-\_\-n@{encrypt\-\_\-n}!Botan::GOST_28147_89@{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89}}
+\subsubsection[{encrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89\-::encrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1GOST__28147__89_a64139f883a7d2b050ff6d7503f1312df}
+Encrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a16a7005967a910407703c2899bd73ccf}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1GOST__28147__89_a681095d7de662ab48e796a96dfd5a9d0}{\index{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89@{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89}!name@{name}}
+\index{name@{name}!Botan::GOST_28147_89@{Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-G\-O\-S\-T\-\_\-28147\-\_\-89\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1GOST__28147__89_a681095d7de662ab48e796a96dfd5a9d0}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/block/gost\-\_\-28147/gost\-\_\-28147.\-h\item 
+src/block/gost\-\_\-28147/gost\-\_\-28147.\-cpp\end{DoxyCompactItemize}

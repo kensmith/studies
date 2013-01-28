@@ -1,0 +1,84 @@
+\hypertarget{namespaceBotan_1_1CVC__EAC}{\section{Botan\-:\-:C\-V\-C\-\_\-\-E\-A\-C Namespace Reference}
+\label{namespaceBotan_1_1CVC__EAC}\index{Botan\-::\-C\-V\-C\-\_\-\-E\-A\-C@{Botan\-::\-C\-V\-C\-\_\-\-E\-A\-C}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1EAC1__1__CVC}{E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C} \hyperlink{namespaceBotan_1_1CVC__EAC_a048724e211010c6b9b9162220280a88f}{create\-\_\-self\-\_\-signed\-\_\-cert} (\hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} const \&key, \hyperlink{classBotan_1_1EAC1__1__CVC__Options}{E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C\-\_\-\-Options} const \&opt, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)
+\item 
+\hyperlink{classBotan_1_1EAC1__1__Req}{E\-A\-C1\-\_\-1\-\_\-\-Req} \hyperlink{namespaceBotan_1_1CVC__EAC_ac5b77ee0ccf8310b42fd77d4c1157745}{create\-\_\-cvc\-\_\-req} (\hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} const \&key, \hyperlink{classBotan_1_1ASN1__Chr}{A\-S\-N1\-\_\-\-Chr} const \&chr, std\-::string const \&hash\-\_\-alg, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)
+\item 
+\hyperlink{classBotan_1_1EAC1__1__ADO}{E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O} \hyperlink{namespaceBotan_1_1CVC__EAC_a9a418aee5e7bc0f21507b36fb847f88f}{create\-\_\-ado\-\_\-req} (\hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} const \&key, \hyperlink{classBotan_1_1EAC1__1__Req}{E\-A\-C1\-\_\-1\-\_\-\-Req} const \&req, \hyperlink{classBotan_1_1ASN1__Car}{A\-S\-N1\-\_\-\-Car} const \&car, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This namespace represents general E\-A\-C 1.\-1 convenience functions. 
+
+\subsection{Function Documentation}
+\hypertarget{namespaceBotan_1_1CVC__EAC_a9a418aee5e7bc0f21507b36fb847f88f}{\index{Botan\-::\-C\-V\-C\-\_\-\-E\-A\-C@{Botan\-::\-C\-V\-C\-\_\-\-E\-A\-C}!create\-\_\-ado\-\_\-req@{create\-\_\-ado\-\_\-req}}
+\index{create\-\_\-ado\-\_\-req@{create\-\_\-ado\-\_\-req}!Botan::CVC_EAC@{Botan\-::\-C\-V\-C\-\_\-\-E\-A\-C}}
+\subsubsection[{create\-\_\-ado\-\_\-req}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O} B\-O\-T\-A\-N\-\_\-\-D\-L\-L Botan\-::\-C\-V\-C\-\_\-\-E\-A\-C\-::create\-\_\-ado\-\_\-req (
+\begin{DoxyParamCaption}
+\item[{Private\-\_\-\-Key const \&}]{priv\-\_\-key, }
+\item[{E\-A\-C1\-\_\-1\-\_\-\-Req const \&}]{req, }
+\item[{A\-S\-N1\-\_\-\-Car const \&}]{car, }
+\item[{Random\-Number\-Generator \&}]{rng}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1CVC__EAC_a9a418aee5e7bc0f21507b36fb847f88f}
+Create an A\-D\-O from a request object. 
+\begin{DoxyParams}{Parameters}
+{\em priv\-\_\-key} & the private key used to sign the A\-D\-O \\
+\hline
+{\em req} & the request forming the body of the A\-D\-O \\
+\hline
+{\em car} & the C\-A\-R forming the body of the A\-D\-O, i.\-e. the C\-H\-R of the entity associated with the provided private key \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespaceBotan_1_1CVC__EAC_ac5b77ee0ccf8310b42fd77d4c1157745}{\index{Botan\-::\-C\-V\-C\-\_\-\-E\-A\-C@{Botan\-::\-C\-V\-C\-\_\-\-E\-A\-C}!create\-\_\-cvc\-\_\-req@{create\-\_\-cvc\-\_\-req}}
+\index{create\-\_\-cvc\-\_\-req@{create\-\_\-cvc\-\_\-req}!Botan::CVC_EAC@{Botan\-::\-C\-V\-C\-\_\-\-E\-A\-C}}
+\subsubsection[{create\-\_\-cvc\-\_\-req}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-A\-C1\-\_\-1\-\_\-\-Req} B\-O\-T\-A\-N\-\_\-\-D\-L\-L Botan\-::\-C\-V\-C\-\_\-\-E\-A\-C\-::create\-\_\-cvc\-\_\-req (
+\begin{DoxyParamCaption}
+\item[{Private\-\_\-\-Key const \&}]{priv\-\_\-key, }
+\item[{A\-S\-N1\-\_\-\-Chr const \&}]{chr, }
+\item[{std\-::string const \&}]{hash\-\_\-alg, }
+\item[{Random\-Number\-Generator \&}]{rng}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1CVC__EAC_ac5b77ee0ccf8310b42fd77d4c1157745}
+Create a C\-V\-C request. The key encoding will be according to the provided private key. 
+\begin{DoxyParams}{Parameters}
+{\em priv\-\_\-key} & the private key associated with the requesting entity \\
+\hline
+{\em chr} & the chr to appear in the certificate (to be provided without sequence number) \\
+\hline
+{\em hash\-\_\-alg} & the string defining the hash algorithm to be used for the creation of the signature \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new request 
+\end{DoxyReturn}
+\hypertarget{namespaceBotan_1_1CVC__EAC_a048724e211010c6b9b9162220280a88f}{\index{Botan\-::\-C\-V\-C\-\_\-\-E\-A\-C@{Botan\-::\-C\-V\-C\-\_\-\-E\-A\-C}!create\-\_\-self\-\_\-signed\-\_\-cert@{create\-\_\-self\-\_\-signed\-\_\-cert}}
+\index{create\-\_\-self\-\_\-signed\-\_\-cert@{create\-\_\-self\-\_\-signed\-\_\-cert}!Botan::CVC_EAC@{Botan\-::\-C\-V\-C\-\_\-\-E\-A\-C}}
+\subsubsection[{create\-\_\-self\-\_\-signed\-\_\-cert}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C} B\-O\-T\-A\-N\-\_\-\-D\-L\-L Botan\-::\-C\-V\-C\-\_\-\-E\-A\-C\-::create\-\_\-self\-\_\-signed\-\_\-cert (
+\begin{DoxyParamCaption}
+\item[{Private\-\_\-\-Key const \&}]{key, }
+\item[{E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C\-\_\-\-Options const \&}]{opts, }
+\item[{Random\-Number\-Generator \&}]{rng}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1CVC__EAC_a048724e211010c6b9b9162220280a88f}
+Create a selfsigned C\-V\-C\-A 
+\begin{DoxyParams}{Parameters}
+{\em rng} & the rng to use \\
+\hline
+{\em key} & the E\-C\-D\-S\-A private key to be used to sign the certificate \\
+\hline
+{\em opts} & used to set several parameters. Necessary are\-: car, holder\-\_\-auth\-\_\-templ, hash\-\_\-alg, ced, cex and hash\-\_\-alg \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the self signed certificate 
+\end{DoxyReturn}

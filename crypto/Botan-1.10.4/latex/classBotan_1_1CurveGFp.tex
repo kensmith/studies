@@ -1,0 +1,180 @@
+\hypertarget{classBotan_1_1CurveGFp}{\section{Botan\-:\-:Curve\-G\-Fp Class Reference}
+\label{classBotan_1_1CurveGFp}\index{Botan\-::\-Curve\-G\-Fp@{Botan\-::\-Curve\-G\-Fp}}
+}
+
+
+{\ttfamily \#include $<$curve\-\_\-gfp.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1CurveGFp_ae43245ae3e46b9069e4f0c6218db9775}{Curve\-G\-Fp} ()
+\item 
+\hyperlink{classBotan_1_1CurveGFp_aaeb72bf32cd4e5169be11094c244f92b}{Curve\-G\-Fp} (const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&p, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&a, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&b)
+\item 
+const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \& \hyperlink{classBotan_1_1CurveGFp_a0f0d8b5ae722ef7bfccbe86fa1ca156d}{get\-\_\-a} () const 
+\item 
+const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \& \hyperlink{classBotan_1_1CurveGFp_abd0c2bdae40f90d825ea7be6c3f4cd97}{get\-\_\-b} () const 
+\item 
+const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \& \hyperlink{classBotan_1_1CurveGFp_a08b093db6d5b58124fa75ca56d7663d2}{get\-\_\-p} () const 
+\item 
+const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \& \hyperlink{classBotan_1_1CurveGFp_a03006c36f79432596efbd0ef79323d3a}{get\-\_\-r2} () const 
+\item 
+const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \& \hyperlink{classBotan_1_1CurveGFp_af2400431093f55f431d7e9b839fdbd27}{get\-\_\-a\-\_\-r} () const 
+\item 
+const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \& \hyperlink{classBotan_1_1CurveGFp_a6a9773e1662d3bd5aad77d642af32ac2}{get\-\_\-b\-\_\-r} () const 
+\item 
+word \hyperlink{classBotan_1_1CurveGFp_a08faa65c34ce26da6335eded44c9bfae}{get\-\_\-p\-\_\-dash} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1CurveGFp_a2dbb1f75143c7c417fadc70452c0b906}{get\-\_\-p\-\_\-words} () const 
+\item 
+void \hyperlink{classBotan_1_1CurveGFp_a58953b2563d8c6a59cd146820a83b13e}{swap} (\hyperlink{classBotan_1_1CurveGFp}{Curve\-G\-Fp} \&other)
+\item 
+bool \hyperlink{classBotan_1_1CurveGFp_a46ab6d256aaf77f5ebd3112382aaa6a4}{operator==} (const \hyperlink{classBotan_1_1CurveGFp}{Curve\-G\-Fp} \&other) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents an elliptic curve over G\-F(p) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1CurveGFp_ae43245ae3e46b9069e4f0c6218db9775}{\index{Botan\-::\-Curve\-G\-Fp@{Botan\-::\-Curve\-G\-Fp}!Curve\-G\-Fp@{Curve\-G\-Fp}}
+\index{Curve\-G\-Fp@{Curve\-G\-Fp}!Botan::CurveGFp@{Botan\-::\-Curve\-G\-Fp}}
+\subsubsection[{Curve\-G\-Fp}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Curve\-G\-Fp\-::\-Curve\-G\-Fp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1CurveGFp_ae43245ae3e46b9069e4f0c6218db9775}
+Create an uninitialized \hyperlink{classBotan_1_1CurveGFp}{Curve\-G\-Fp} \hypertarget{classBotan_1_1CurveGFp_aaeb72bf32cd4e5169be11094c244f92b}{\index{Botan\-::\-Curve\-G\-Fp@{Botan\-::\-Curve\-G\-Fp}!Curve\-G\-Fp@{Curve\-G\-Fp}}
+\index{Curve\-G\-Fp@{Curve\-G\-Fp}!Botan::CurveGFp@{Botan\-::\-Curve\-G\-Fp}}
+\subsubsection[{Curve\-G\-Fp}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Curve\-G\-Fp\-::\-Curve\-G\-Fp (
+\begin{DoxyParamCaption}
+\item[{const {\bf Big\-Int} \&}]{p, }
+\item[{const {\bf Big\-Int} \&}]{a, }
+\item[{const {\bf Big\-Int} \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1CurveGFp_aaeb72bf32cd4e5169be11094c244f92b}
+Construct the elliptic curve E\-: y$^\wedge$2 = x$^\wedge$3 + ax + b over G\-F(p) 
+\begin{DoxyParams}{Parameters}
+{\em p} & prime number of the field \\
+\hline
+{\em a} & first coefficient \\
+\hline
+{\em b} & second coefficient \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1CurveGFp_a0f0d8b5ae722ef7bfccbe86fa1ca156d}{\index{Botan\-::\-Curve\-G\-Fp@{Botan\-::\-Curve\-G\-Fp}!get\-\_\-a@{get\-\_\-a}}
+\index{get\-\_\-a@{get\-\_\-a}!Botan::CurveGFp@{Botan\-::\-Curve\-G\-Fp}}
+\subsubsection[{get\-\_\-a}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Big\-Int}\& Botan\-::\-Curve\-G\-Fp\-::get\-\_\-a (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1CurveGFp_a0f0d8b5ae722ef7bfccbe86fa1ca156d}
+\begin{DoxyReturn}{Returns}
+curve coefficient a 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1CurveGFp_af2400431093f55f431d7e9b839fdbd27}{\index{Botan\-::\-Curve\-G\-Fp@{Botan\-::\-Curve\-G\-Fp}!get\-\_\-a\-\_\-r@{get\-\_\-a\-\_\-r}}
+\index{get\-\_\-a\-\_\-r@{get\-\_\-a\-\_\-r}!Botan::CurveGFp@{Botan\-::\-Curve\-G\-Fp}}
+\subsubsection[{get\-\_\-a\-\_\-r}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Big\-Int}\& Botan\-::\-Curve\-G\-Fp\-::get\-\_\-a\-\_\-r (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1CurveGFp_af2400431093f55f431d7e9b839fdbd27}
+\begin{DoxyReturn}{Returns}
+a $\ast$ r mod p 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1CurveGFp_abd0c2bdae40f90d825ea7be6c3f4cd97}{\index{Botan\-::\-Curve\-G\-Fp@{Botan\-::\-Curve\-G\-Fp}!get\-\_\-b@{get\-\_\-b}}
+\index{get\-\_\-b@{get\-\_\-b}!Botan::CurveGFp@{Botan\-::\-Curve\-G\-Fp}}
+\subsubsection[{get\-\_\-b}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Big\-Int}\& Botan\-::\-Curve\-G\-Fp\-::get\-\_\-b (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1CurveGFp_abd0c2bdae40f90d825ea7be6c3f4cd97}
+\begin{DoxyReturn}{Returns}
+curve coefficient b 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1CurveGFp_a6a9773e1662d3bd5aad77d642af32ac2}{\index{Botan\-::\-Curve\-G\-Fp@{Botan\-::\-Curve\-G\-Fp}!get\-\_\-b\-\_\-r@{get\-\_\-b\-\_\-r}}
+\index{get\-\_\-b\-\_\-r@{get\-\_\-b\-\_\-r}!Botan::CurveGFp@{Botan\-::\-Curve\-G\-Fp}}
+\subsubsection[{get\-\_\-b\-\_\-r}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Big\-Int}\& Botan\-::\-Curve\-G\-Fp\-::get\-\_\-b\-\_\-r (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1CurveGFp_a6a9773e1662d3bd5aad77d642af32ac2}
+\begin{DoxyReturn}{Returns}
+b $\ast$ r mod p 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1CurveGFp_a08b093db6d5b58124fa75ca56d7663d2}{\index{Botan\-::\-Curve\-G\-Fp@{Botan\-::\-Curve\-G\-Fp}!get\-\_\-p@{get\-\_\-p}}
+\index{get\-\_\-p@{get\-\_\-p}!Botan::CurveGFp@{Botan\-::\-Curve\-G\-Fp}}
+\subsubsection[{get\-\_\-p}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Big\-Int}\& Botan\-::\-Curve\-G\-Fp\-::get\-\_\-p (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1CurveGFp_a08b093db6d5b58124fa75ca56d7663d2}
+Get prime modulus of the field of the curve \begin{DoxyReturn}{Returns}
+prime modulus of the field of the curve 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1CurveGFp_a08faa65c34ce26da6335eded44c9bfae}{\index{Botan\-::\-Curve\-G\-Fp@{Botan\-::\-Curve\-G\-Fp}!get\-\_\-p\-\_\-dash@{get\-\_\-p\-\_\-dash}}
+\index{get\-\_\-p\-\_\-dash@{get\-\_\-p\-\_\-dash}!Botan::CurveGFp@{Botan\-::\-Curve\-G\-Fp}}
+\subsubsection[{get\-\_\-p\-\_\-dash}]{\setlength{\rightskip}{0pt plus 5cm}word Botan\-::\-Curve\-G\-Fp\-::get\-\_\-p\-\_\-dash (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1CurveGFp_a08faa65c34ce26da6335eded44c9bfae}
+\begin{DoxyReturn}{Returns}
+Montgomery parameter p-\/dash 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1CurveGFp_a2dbb1f75143c7c417fadc70452c0b906}{\index{Botan\-::\-Curve\-G\-Fp@{Botan\-::\-Curve\-G\-Fp}!get\-\_\-p\-\_\-words@{get\-\_\-p\-\_\-words}}
+\index{get\-\_\-p\-\_\-words@{get\-\_\-p\-\_\-words}!Botan::CurveGFp@{Botan\-::\-Curve\-G\-Fp}}
+\subsubsection[{get\-\_\-p\-\_\-words}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Curve\-G\-Fp\-::get\-\_\-p\-\_\-words (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1CurveGFp_a2dbb1f75143c7c417fadc70452c0b906}
+\begin{DoxyReturn}{Returns}
+p.\-sig\-\_\-words() 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1CurveGFp_a03006c36f79432596efbd0ef79323d3a}{\index{Botan\-::\-Curve\-G\-Fp@{Botan\-::\-Curve\-G\-Fp}!get\-\_\-r2@{get\-\_\-r2}}
+\index{get\-\_\-r2@{get\-\_\-r2}!Botan::CurveGFp@{Botan\-::\-Curve\-G\-Fp}}
+\subsubsection[{get\-\_\-r2}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Big\-Int}\& Botan\-::\-Curve\-G\-Fp\-::get\-\_\-r2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1CurveGFp_a03006c36f79432596efbd0ef79323d3a}
+\begin{DoxyReturn}{Returns}
+Montgomery parameter r$^\wedge$2 \% p 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1CurveGFp_a46ab6d256aaf77f5ebd3112382aaa6a4}{\index{Botan\-::\-Curve\-G\-Fp@{Botan\-::\-Curve\-G\-Fp}!operator==@{operator==}}
+\index{operator==@{operator==}!Botan::CurveGFp@{Botan\-::\-Curve\-G\-Fp}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-Curve\-G\-Fp\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Curve\-G\-Fp} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1CurveGFp_a46ab6d256aaf77f5ebd3112382aaa6a4}
+Equality operator 
+\begin{DoxyParams}{Parameters}
+{\em other} & curve to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff this is the same curve as other 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1CurveGFp_a58953b2563d8c6a59cd146820a83b13e}{\index{Botan\-::\-Curve\-G\-Fp@{Botan\-::\-Curve\-G\-Fp}!swap@{swap}}
+\index{swap@{swap}!Botan::CurveGFp@{Botan\-::\-Curve\-G\-Fp}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Curve\-G\-Fp\-::swap (
+\begin{DoxyParamCaption}
+\item[{{\bf Curve\-G\-Fp} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1CurveGFp_a58953b2563d8c6a59cd146820a83b13e}
+swaps the states of $\ast$this and other, does not throw 
+\begin{DoxyParams}{Parameters}
+{\em other} & curve to swap values with \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/math/ec\-\_\-gfp/curve\-\_\-gfp.\-h\end{DoxyCompactItemize}

@@ -1,0 +1,78 @@
+\hypertarget{classXOR__Cipher}{\section{X\-O\-R\-\_\-\-Cipher Class Reference}
+\label{classXOR__Cipher}\index{X\-O\-R\-\_\-\-Cipher@{X\-O\-R\-\_\-\-Cipher}}
+}
+Inheritance diagram for X\-O\-R\-\_\-\-Cipher\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classXOR__Cipher}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classXOR__Cipher_a0788ac48859ab034ecb048ecb70fbb36}{clear} ()  throw ()
+\item 
+std\-::string \hyperlink{classXOR__Cipher_af583d5af330c4607722d6b554021b360}{name} () const 
+\item 
+\hyperlink{classBotan_1_1StreamCipher}{Stream\-Cipher} $\ast$ \hyperlink{classXOR__Cipher_abd8d0a15e54a33dd9ab01ebb0a8d7dea}{clone} () const 
+\item 
+\hyperlink{classBotan_1_1Key__Length__Specification}{Key\-\_\-\-Length\-\_\-\-Specification} \hyperlink{classXOR__Cipher_af10bea998e89d238bd771ceeac2ed1ec}{key\-\_\-spec} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classXOR__Cipher_a0788ac48859ab034ecb048ecb70fbb36}{\index{X\-O\-R\-\_\-\-Cipher@{X\-O\-R\-\_\-\-Cipher}!clear@{clear}}
+\index{clear@{clear}!XOR_Cipher@{X\-O\-R\-\_\-\-Cipher}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void X\-O\-R\-\_\-\-Cipher\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throw ()\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classXOR__Cipher_a0788ac48859ab034ecb048ecb70fbb36}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classXOR__Cipher_abd8d0a15e54a33dd9ab01ebb0a8d7dea}{\index{X\-O\-R\-\_\-\-Cipher@{X\-O\-R\-\_\-\-Cipher}!clone@{clone}}
+\index{clone@{clone}!XOR_Cipher@{X\-O\-R\-\_\-\-Cipher}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stream\-Cipher}$\ast$ X\-O\-R\-\_\-\-Cipher\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classXOR__Cipher_abd8d0a15e54a33dd9ab01ebb0a8d7dea}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1StreamCipher_aa25d9ce72725e8bb0cf6c36540412397}{Botan\-::\-Stream\-Cipher}.
+
+\hypertarget{classXOR__Cipher_af10bea998e89d238bd771ceeac2ed1ec}{\index{X\-O\-R\-\_\-\-Cipher@{X\-O\-R\-\_\-\-Cipher}!key\-\_\-spec@{key\-\_\-spec}}
+\index{key\-\_\-spec@{key\-\_\-spec}!XOR_Cipher@{X\-O\-R\-\_\-\-Cipher}}
+\subsubsection[{key\-\_\-spec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key\-\_\-\-Length\-\_\-\-Specification} X\-O\-R\-\_\-\-Cipher\-::key\-\_\-spec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classXOR__Cipher_af10bea998e89d238bd771ceeac2ed1ec}
+\begin{DoxyReturn}{Returns}
+object describing limits on key size 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1SymmetricAlgorithm_aea45c0d248b3116d7a1ebbd086f14e1b}{Botan\-::\-Symmetric\-Algorithm}.
+
+\hypertarget{classXOR__Cipher_af583d5af330c4607722d6b554021b360}{\index{X\-O\-R\-\_\-\-Cipher@{X\-O\-R\-\_\-\-Cipher}!name@{name}}
+\index{name@{name}!XOR_Cipher@{X\-O\-R\-\_\-\-Cipher}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string X\-O\-R\-\_\-\-Cipher\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classXOR__Cipher_af583d5af330c4607722d6b554021b360}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+doc/examples/new\-\_\-engine.\-cpp\end{DoxyCompactItemize}

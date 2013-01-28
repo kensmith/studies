@@ -1,0 +1,56 @@
+\hypertarget{classSocket}{\section{Socket Class Reference}
+\label{classSocket}\index{Socket@{Socket}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{classSocket_ae506f964e850a9daa0c876e800f98b47}{read} (unsigned char\mbox{[}$\,$\mbox{]}, size\-\_\-t)
+\item 
+void \hyperlink{classSocket_a2263192bf5131db34471df1697a018c9}{write} (const unsigned char\mbox{[}$\,$\mbox{]}, size\-\_\-t)
+\item 
+\hypertarget{classSocket_a9db092613f6e34df27298284461b3171}{std\-::string {\bfseries peer\-\_\-id} () const }\label{classSocket_a9db092613f6e34df27298284461b3171}
+
+\item 
+\hypertarget{classSocket_a75ee749264ccbcfc4dfbf5442e55dcb8}{void {\bfseries close} ()}\label{classSocket_a75ee749264ccbcfc4dfbf5442e55dcb8}
+
+\item 
+\hypertarget{classSocket_a071ad45b7f892e6eb75fe487ea8304a5}{{\bfseries Socket} (socket\-\_\-t fd, const std\-::string \&peer\-\_\-id=\char`\"{}\char`\"{})}\label{classSocket_a071ad45b7f892e6eb75fe487ea8304a5}
+
+\item 
+\hyperlink{classSocket_ab8b26e0f5e438e42c301d433117dd1fa}{Socket} (const std\-::string \&, unsigned short)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSocket_ab8b26e0f5e438e42c301d433117dd1fa}{\index{Socket@{Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!Socket@{Socket}}
+\subsubsection[{Socket}]{\setlength{\rightskip}{0pt plus 5cm}Socket\-::\-Socket (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{host, }
+\item[{unsigned short}]{port}
+\end{DoxyParamCaption}
+)}}\label{classSocket_ab8b26e0f5e438e42c301d433117dd1fa}
+Unix \hyperlink{classSocket}{Socket} Constructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSocket_ae506f964e850a9daa0c876e800f98b47}{\index{Socket@{Socket}!read@{read}}
+\index{read@{read}!Socket@{Socket}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Socket\-::read (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{buf\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{classSocket_ae506f964e850a9daa0c876e800f98b47}
+Read from a Unix socket \hypertarget{classSocket_a2263192bf5131db34471df1697a018c9}{\index{Socket@{Socket}!write@{write}}
+\index{write@{write}!Socket@{Socket}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Socket\-::write (
+\begin{DoxyParamCaption}
+\item[{const unsigned char}]{buf\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{classSocket_a2263192bf5131db34471df1697a018c9}
+Write to a Unix socket 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+doc/examples/socket.\-h\end{DoxyCompactItemize}

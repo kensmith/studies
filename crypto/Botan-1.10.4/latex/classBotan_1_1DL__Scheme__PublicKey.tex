@@ -1,0 +1,181 @@
+\hypertarget{classBotan_1_1DL__Scheme__PublicKey}{\section{Botan\-:\-:D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key Class Reference}
+\label{classBotan_1_1DL__Scheme__PublicKey}\index{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}}
+}
+
+
+{\ttfamily \#include $<$dl\-\_\-algo.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.350427cm]{classBotan_1_1DL__Scheme__PublicKey}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classBotan_1_1DL__Scheme__PublicKey_a606c7805b7b974f72ee39cc3f57bcb39}{check\-\_\-key} (\hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, bool) const 
+\item 
+\hyperlink{classBotan_1_1AlgorithmIdentifier}{Algorithm\-Identifier} \hyperlink{classBotan_1_1DL__Scheme__PublicKey_a22ea083040ddd700bc802df342d323bb}{algorithm\-\_\-identifier} () const 
+\item 
+\hyperlink{classBotan_1_1MemoryVector}{Memory\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1DL__Scheme__PublicKey_a80e06238a45ca3b04f1f67d0db6e9269}{x509\-\_\-subject\-\_\-public\-\_\-key} () const 
+\item 
+const \hyperlink{classBotan_1_1DL__Group}{D\-L\-\_\-\-Group} \& \hyperlink{classBotan_1_1DL__Scheme__PublicKey_a328a73cbfcf4b9faffeedcd14f676840}{get\-\_\-domain} () const 
+\item 
+const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \& \hyperlink{classBotan_1_1DL__Scheme__PublicKey_ad8b65b34e6faedc94a2246d4ba23f6ea}{get\-\_\-y} () const 
+\item 
+const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \& \hyperlink{classBotan_1_1DL__Scheme__PublicKey_a21b975521162f680659d522434cc3508}{group\-\_\-p} () const 
+\item 
+const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \& \hyperlink{classBotan_1_1DL__Scheme__PublicKey_ab424c5d9a84911438317b6af68f3967b}{group\-\_\-q} () const 
+\item 
+const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \& \hyperlink{classBotan_1_1DL__Scheme__PublicKey_a7fe29418515d6ca833d0f44f5e1dc696}{group\-\_\-g} () const 
+\item 
+virtual \hyperlink{classBotan_1_1DL__Group_ac602a30420ceec03fa181a10b09312a7}{D\-L\-\_\-\-Group\-::\-Format} \hyperlink{classBotan_1_1DL__Scheme__PublicKey_adf0844f45b1a8ed790ad2b15f1ea4040}{group\-\_\-format} () const =0
+\item 
+\hypertarget{classBotan_1_1DL__Scheme__PublicKey_a3533ebdc64cb9abcd638fda1170fa345}{{\bfseries D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key} (const \hyperlink{classBotan_1_1AlgorithmIdentifier}{Algorithm\-Identifier} \&alg\-\_\-id, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&key\-\_\-bits, \hyperlink{classBotan_1_1DL__Group_ac602a30420ceec03fa181a10b09312a7}{D\-L\-\_\-\-Group\-::\-Format} \hyperlink{classBotan_1_1DL__Scheme__PublicKey_adf0844f45b1a8ed790ad2b15f1ea4040}{group\-\_\-format})}\label{classBotan_1_1DL__Scheme__PublicKey_a3533ebdc64cb9abcd638fda1170fa345}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1BigInt}{Big\-Int} \hyperlink{classBotan_1_1DL__Scheme__PublicKey_ab4e7d9e233e3c89de236699ea5774802}{y}
+\item 
+\hyperlink{classBotan_1_1DL__Group}{D\-L\-\_\-\-Group} \hyperlink{classBotan_1_1DL__Scheme__PublicKey_a99e61704126f6c0fcdf5475027a46500}{group}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class represents discrete logarithm (D\-L) public keys. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1DL__Scheme__PublicKey_a22ea083040ddd700bc802df342d323bb}{\index{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}!algorithm\-\_\-identifier@{algorithm\-\_\-identifier}}
+\index{algorithm\-\_\-identifier@{algorithm\-\_\-identifier}!Botan::DL_Scheme_PublicKey@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}}
+\subsubsection[{algorithm\-\_\-identifier}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Algorithm\-Identifier} Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key\-::algorithm\-\_\-identifier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1DL__Scheme__PublicKey_a22ea083040ddd700bc802df342d323bb}
+\begin{DoxyReturn}{Returns}
+X.\-509 \hyperlink{classBotan_1_1AlgorithmIdentifier}{Algorithm\-Identifier} for this key 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Public__Key_a3b9a0e5c9301f9daa84cfee7e49ef660}{Botan\-::\-Public\-\_\-\-Key}.
+
+\hypertarget{classBotan_1_1DL__Scheme__PublicKey_a606c7805b7b974f72ee39cc3f57bcb39}{\index{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}!check\-\_\-key@{check\-\_\-key}}
+\index{check\-\_\-key@{check\-\_\-key}!Botan::DL_Scheme_PublicKey@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}}
+\subsubsection[{check\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key\-::check\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{{\bf Random\-Number\-Generator} \&}]{rng, }
+\item[{bool}]{strong}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1DL__Scheme__PublicKey_a606c7805b7b974f72ee39cc3f57bcb39}
+Test the key values for consistency. 
+\begin{DoxyParams}{Parameters}
+{\em rng} & rng to use \\
+\hline
+{\em strong} & whether to perform strong and lengthy version of the test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the test is passed 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Public__Key_a75a50182e188bf1398ac3f228c8ba58e}{Botan\-::\-Public\-\_\-\-Key}.
+
+
+
+Reimplemented in \hyperlink{classBotan_1_1DL__Scheme__PrivateKey_a4d0939286ac8135cb025c7316d771b7b}{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Private\-Key}, \hyperlink{classBotan_1_1DSA__PrivateKey_a1baf041bbb069dbf75ff40b8ae660118}{Botan\-::\-D\-S\-A\-\_\-\-Private\-Key}, \hyperlink{classBotan_1_1ElGamal__PrivateKey_a7f3b968dd41d6a586185675a57c8a2cc}{Botan\-::\-El\-Gamal\-\_\-\-Private\-Key}, and \hyperlink{classBotan_1_1NR__PrivateKey_a5e096cae4e87bce02eb57ef9875a84ff}{Botan\-::\-N\-R\-\_\-\-Private\-Key}.
+
+\hypertarget{classBotan_1_1DL__Scheme__PublicKey_a328a73cbfcf4b9faffeedcd14f676840}{\index{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}!get\-\_\-domain@{get\-\_\-domain}}
+\index{get\-\_\-domain@{get\-\_\-domain}!Botan::DL_Scheme_PublicKey@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}}
+\subsubsection[{get\-\_\-domain}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf D\-L\-\_\-\-Group}\& Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key\-::get\-\_\-domain (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1DL__Scheme__PublicKey_a328a73cbfcf4b9faffeedcd14f676840}
+Get the D\-L domain parameters of this key. \begin{DoxyReturn}{Returns}
+D\-L domain parameters of this key 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1DL__Scheme__PublicKey_ad8b65b34e6faedc94a2246d4ba23f6ea}{\index{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}!get\-\_\-y@{get\-\_\-y}}
+\index{get\-\_\-y@{get\-\_\-y}!Botan::DL_Scheme_PublicKey@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}}
+\subsubsection[{get\-\_\-y}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Big\-Int}\& Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key\-::get\-\_\-y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1DL__Scheme__PublicKey_ad8b65b34e6faedc94a2246d4ba23f6ea}
+Get the public value y with y = g$^\wedge$x mod p where x is the secret key. \hypertarget{classBotan_1_1DL__Scheme__PublicKey_adf0844f45b1a8ed790ad2b15f1ea4040}{\index{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}!group\-\_\-format@{group\-\_\-format}}
+\index{group\-\_\-format@{group\-\_\-format}!Botan::DL_Scheme_PublicKey@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}}
+\subsubsection[{group\-\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf D\-L\-\_\-\-Group\-::\-Format} Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key\-::group\-\_\-format (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1DL__Scheme__PublicKey_adf0844f45b1a8ed790ad2b15f1ea4040}
+Get the underlying groups encoding format. \begin{DoxyReturn}{Returns}
+encoding format 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classBotan_1_1DH__PublicKey_ae28af47f3e7ab62937ddfeba4846ee0b}{Botan\-::\-D\-H\-\_\-\-Public\-Key}, \hyperlink{classBotan_1_1DSA__PublicKey_a2d488cc78bd0530840598a325493d0b5}{Botan\-::\-D\-S\-A\-\_\-\-Public\-Key}, \hyperlink{classBotan_1_1ElGamal__PublicKey_ab5395b48e5debfc909204c75448b072d}{Botan\-::\-El\-Gamal\-\_\-\-Public\-Key}, and \hyperlink{classBotan_1_1NR__PublicKey_ab72e650d1b075e6925208b810b608b55}{Botan\-::\-N\-R\-\_\-\-Public\-Key}.
+
+\hypertarget{classBotan_1_1DL__Scheme__PublicKey_a7fe29418515d6ca833d0f44f5e1dc696}{\index{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}!group\-\_\-g@{group\-\_\-g}}
+\index{group\-\_\-g@{group\-\_\-g}!Botan::DL_Scheme_PublicKey@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}}
+\subsubsection[{group\-\_\-g}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Big\-Int}\& Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key\-::group\-\_\-g (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1DL__Scheme__PublicKey_a7fe29418515d6ca833d0f44f5e1dc696}
+Get the generator g of the underlying D\-L group. \begin{DoxyReturn}{Returns}
+generator g 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1DL__Scheme__PublicKey_a21b975521162f680659d522434cc3508}{\index{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}!group\-\_\-p@{group\-\_\-p}}
+\index{group\-\_\-p@{group\-\_\-p}!Botan::DL_Scheme_PublicKey@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}}
+\subsubsection[{group\-\_\-p}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Big\-Int}\& Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key\-::group\-\_\-p (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1DL__Scheme__PublicKey_a21b975521162f680659d522434cc3508}
+Get the prime p of the underlying D\-L group. \begin{DoxyReturn}{Returns}
+prime p 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1DL__Scheme__PublicKey_ab424c5d9a84911438317b6af68f3967b}{\index{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}!group\-\_\-q@{group\-\_\-q}}
+\index{group\-\_\-q@{group\-\_\-q}!Botan::DL_Scheme_PublicKey@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}}
+\subsubsection[{group\-\_\-q}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Big\-Int}\& Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key\-::group\-\_\-q (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1DL__Scheme__PublicKey_ab424c5d9a84911438317b6af68f3967b}
+Get the prime q of the underlying D\-L group. \begin{DoxyReturn}{Returns}
+prime q 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1DL__Scheme__PublicKey_a80e06238a45ca3b04f1f67d0db6e9269}{\index{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}!x509\-\_\-subject\-\_\-public\-\_\-key@{x509\-\_\-subject\-\_\-public\-\_\-key}}
+\index{x509\-\_\-subject\-\_\-public\-\_\-key@{x509\-\_\-subject\-\_\-public\-\_\-key}!Botan::DL_Scheme_PublicKey@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}}
+\subsubsection[{x509\-\_\-subject\-\_\-public\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memory\-Vector}$<$ {\bf byte} $>$ Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key\-::x509\-\_\-subject\-\_\-public\-\_\-key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1DL__Scheme__PublicKey_a80e06238a45ca3b04f1f67d0db6e9269}
+\begin{DoxyReturn}{Returns}
+X.\-509 subject key encoding for this key object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Public__Key_a9d71978d0891d73029eb016e2eb0da03}{Botan\-::\-Public\-\_\-\-Key}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classBotan_1_1DL__Scheme__PublicKey_a99e61704126f6c0fcdf5475027a46500}{\index{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}!group@{group}}
+\index{group@{group}!Botan::DL_Scheme_PublicKey@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}}
+\subsubsection[{group}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-L\-\_\-\-Group} Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key\-::group\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBotan_1_1DL__Scheme__PublicKey_a99e61704126f6c0fcdf5475027a46500}
+The D\-L group \hypertarget{classBotan_1_1DL__Scheme__PublicKey_ab4e7d9e233e3c89de236699ea5774802}{\index{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}!y@{y}}
+\index{y@{y}!Botan::DL_Scheme_PublicKey@{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Big\-Int} Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key\-::y\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBotan_1_1DL__Scheme__PublicKey_ab4e7d9e233e3c89de236699ea5774802}
+The D\-L public key 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/pubkey/dl\-\_\-algo/dl\-\_\-algo.\-h\item 
+src/pubkey/dl\-\_\-algo/dl\-\_\-algo.\-cpp\end{DoxyCompactItemize}

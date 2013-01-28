@@ -1,0 +1,138 @@
+\hypertarget{classBotan_1_1DataSource__Stream}{\section{Botan\-:\-:Data\-Source\-\_\-\-Stream Class Reference}
+\label{classBotan_1_1DataSource__Stream}\index{Botan\-::\-Data\-Source\-\_\-\-Stream@{Botan\-::\-Data\-Source\-\_\-\-Stream}}
+}
+
+
+{\ttfamily \#include $<$data\-\_\-src.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Data\-Source\-\_\-\-Stream\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1DataSource__Stream}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1DataSource__Stream_a77a7baaf1c42a84f11969b2c8dcbc241}{read} (\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1DataSource__Stream_a204d94b6d97c3e7606ddd7710d293dd2}{peek} (\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t, size\-\_\-t) const 
+\item 
+bool \hyperlink{classBotan_1_1DataSource__Stream_a3ed55d610b0ca585da2b419128cf343a}{end\-\_\-of\-\_\-data} () const 
+\item 
+std\-::string \hyperlink{classBotan_1_1DataSource__Stream_a0334301a87a9683e11e7291312e0935d}{id} () const 
+\item 
+\hypertarget{classBotan_1_1DataSource__Stream_a10c9cab5535e0a2bdc4907b3838b3536}{{\bfseries Data\-Source\-\_\-\-Stream} (std\-::istream \&, const std\-::string \&\hyperlink{classBotan_1_1DataSource__Stream_a0334301a87a9683e11e7291312e0935d}{id}=\char`\"{}$<$std\-::istream$>$\char`\"{})}\label{classBotan_1_1DataSource__Stream_a10c9cab5535e0a2bdc4907b3838b3536}
+
+\item 
+\hyperlink{classBotan_1_1DataSource__Stream_a4f049d96fb78c1c943378f9351c11d2e}{Data\-Source\-\_\-\-Stream} (const std\-::string \&file, bool use\-\_\-binary=false)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents a Stream-\/\-Based \hyperlink{classBotan_1_1DataSource}{Data\-Source}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1DataSource__Stream_a4f049d96fb78c1c943378f9351c11d2e}{\index{Botan\-::\-Data\-Source\-\_\-\-Stream@{Botan\-::\-Data\-Source\-\_\-\-Stream}!Data\-Source\-\_\-\-Stream@{Data\-Source\-\_\-\-Stream}}
+\index{Data\-Source\-\_\-\-Stream@{Data\-Source\-\_\-\-Stream}!Botan::DataSource_Stream@{Botan\-::\-Data\-Source\-\_\-\-Stream}}
+\subsubsection[{Data\-Source\-\_\-\-Stream}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Data\-Source\-\_\-\-Stream\-::\-Data\-Source\-\_\-\-Stream (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{file, }
+\item[{bool}]{use\-\_\-binary = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1DataSource__Stream_a4f049d96fb78c1c943378f9351c11d2e}
+Construct a Stream-\/\-Based \hyperlink{classBotan_1_1DataSource}{Data\-Source} from file 
+\begin{DoxyParams}{Parameters}
+{\em file} & the name of the file \\
+\hline
+{\em use\-\_\-binary} & whether to treat the file as binary or not \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1DataSource__Stream_a3ed55d610b0ca585da2b419128cf343a}{\index{Botan\-::\-Data\-Source\-\_\-\-Stream@{Botan\-::\-Data\-Source\-\_\-\-Stream}!end\-\_\-of\-\_\-data@{end\-\_\-of\-\_\-data}}
+\index{end\-\_\-of\-\_\-data@{end\-\_\-of\-\_\-data}!Botan::DataSource_Stream@{Botan\-::\-Data\-Source\-\_\-\-Stream}}
+\subsubsection[{end\-\_\-of\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-Data\-Source\-\_\-\-Stream\-::end\-\_\-of\-\_\-data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1DataSource__Stream_a3ed55d610b0ca585da2b419128cf343a}
+Test whether the source still has data that can be read. \begin{DoxyReturn}{Returns}
+true if there is still data to read, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1DataSource_ad9a325f928edd0f7e5eb937da46630d1}{Botan\-::\-Data\-Source}.
+
+\hypertarget{classBotan_1_1DataSource__Stream_a0334301a87a9683e11e7291312e0935d}{\index{Botan\-::\-Data\-Source\-\_\-\-Stream@{Botan\-::\-Data\-Source\-\_\-\-Stream}!id@{id}}
+\index{id@{id}!Botan::DataSource_Stream@{Botan\-::\-Data\-Source\-\_\-\-Stream}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Data\-Source\-\_\-\-Stream\-::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1DataSource__Stream_a0334301a87a9683e11e7291312e0935d}
+return the id of this data source \begin{DoxyReturn}{Returns}
+std\-::string representing the id of this data source 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1DataSource_a306147a28e70e2c8d8ef06bc3f94755a}{Botan\-::\-Data\-Source}.
+
+\hypertarget{classBotan_1_1DataSource__Stream_a204d94b6d97c3e7606ddd7710d293dd2}{\index{Botan\-::\-Data\-Source\-\_\-\-Stream@{Botan\-::\-Data\-Source\-\_\-\-Stream}!peek@{peek}}
+\index{peek@{peek}!Botan::DataSource_Stream@{Botan\-::\-Data\-Source\-\_\-\-Stream}}
+\subsubsection[{peek}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Data\-Source\-\_\-\-Stream\-::peek (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length, }
+\item[{size\-\_\-t}]{peek\-\_\-offset}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1DataSource__Stream_a204d94b6d97c3e7606ddd7710d293dd2}
+Read from the source but do not modify the internal offset. Consecutive calls to \hyperlink{classBotan_1_1DataSource__Stream_a204d94b6d97c3e7606ddd7710d293dd2}{peek()} will return portions of the source starting at the same position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & the byte array to write the output to \\
+\hline
+{\em length} & the length of the byte array out \\
+\hline
+{\em peek\-\_\-offset} & the offset into the stream to read at \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+length in bytes that was actually read and put into out 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1DataSource_a705621d58788cffbd187067aefddb611}{Botan\-::\-Data\-Source}.
+
+\hypertarget{classBotan_1_1DataSource__Stream_a77a7baaf1c42a84f11969b2c8dcbc241}{\index{Botan\-::\-Data\-Source\-\_\-\-Stream@{Botan\-::\-Data\-Source\-\_\-\-Stream}!read@{read}}
+\index{read@{read}!Botan::DataSource_Stream@{Botan\-::\-Data\-Source\-\_\-\-Stream}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Data\-Source\-\_\-\-Stream\-::read (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1DataSource__Stream_a77a7baaf1c42a84f11969b2c8dcbc241}
+Read from the source. Moves the internal offset so that every call to read will return a new portion of the source.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & the byte array to write the result to \\
+\hline
+{\em length} & the length of the byte array out \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+length in bytes that was actually read and put into out 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1DataSource_a6dd56e27187fd78447445b00a1eace10}{Botan\-::\-Data\-Source}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/filters/data\-\_\-src.\-h\item 
+src/filters/data\-\_\-src.\-cpp\end{DoxyCompactItemize}

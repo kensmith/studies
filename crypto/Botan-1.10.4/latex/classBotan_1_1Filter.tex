@@ -1,0 +1,181 @@
+\hypertarget{classBotan_1_1Filter}{\section{Botan\-:\-:Filter Class Reference}
+\label{classBotan_1_1Filter}\index{Botan\-::\-Filter@{Botan\-::\-Filter}}
+}
+
+
+{\ttfamily \#include $<$filter.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Filter\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classBotan_1_1Filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\-::string \hyperlink{classBotan_1_1Filter_a612efd6701e36df4902da3dc396ce62f}{name} () const =0
+\item 
+virtual void \hyperlink{classBotan_1_1Filter_ad856ce62d9bdcce8057da99cba606892}{write} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} input\mbox{[}$\,$\mbox{]}, size\-\_\-t length)=0
+\item 
+virtual void \hyperlink{classBotan_1_1Filter_ac4f64aaf61c461e65b554f0158902a3c}{start\-\_\-msg} ()
+\item 
+virtual void \hyperlink{classBotan_1_1Filter_a5378ec3bf4adf860a4cfa01cfc51e20e}{end\-\_\-msg} ()
+\item 
+virtual bool \hyperlink{classBotan_1_1Filter_a65dd0725cbacb03c584e415747bb99be}{attachable} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1Filter_a3ff552716008c9dc9f821ec5624a43f3}{send} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, size\-\_\-t length)
+\item 
+void \hyperlink{classBotan_1_1Filter_a294067bb28bb86f2c71ba074e09ee8a5}{send} (\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in)
+\item 
+void \hyperlink{classBotan_1_1Filter_aa312208004efad0038f2566b19ce76f1}{send} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&in)
+\item 
+void \hyperlink{classBotan_1_1Filter_a9a6d4f7b63ff9c1ec4aada6fe73854a6}{send} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&in, size\-\_\-t length)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1Filter_adb788d0aa2d64624d3602a985936d7da}{class {\bfseries Pipe}}\label{classBotan_1_1Filter_adb788d0aa2d64624d3602a985936d7da}
+
+\item 
+\hypertarget{classBotan_1_1Filter_a8dd45b1ea8f83b52448c478e2a170070}{class {\bfseries Fanout\-\_\-\-Filter}}\label{classBotan_1_1Filter_a8dd45b1ea8f83b52448c478e2a170070}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents general abstract filter objects. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Filter_a65dd0725cbacb03c584e415747bb99be}{\index{Botan\-::\-Filter@{Botan\-::\-Filter}!attachable@{attachable}}
+\index{attachable@{attachable}!Botan::Filter@{Botan\-::\-Filter}}
+\subsubsection[{attachable}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Botan\-::\-Filter\-::attachable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Filter_a65dd0725cbacb03c584e415747bb99be}
+Check whether this filter is an attachable filter. \begin{DoxyReturn}{Returns}
+true if this filter is attachable, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classBotan_1_1SecureQueue_aecb27eaaba310424907963d1d735253d}{Botan\-::\-Secure\-Queue}, and \hyperlink{classBotan_1_1DataSink_a9f74dbaaf572741d5994b29585f0c803}{Botan\-::\-Data\-Sink}.
+
+\hypertarget{classBotan_1_1Filter_a5378ec3bf4adf860a4cfa01cfc51e20e}{\index{Botan\-::\-Filter@{Botan\-::\-Filter}!end\-\_\-msg@{end\-\_\-msg}}
+\index{end\-\_\-msg@{end\-\_\-msg}!Botan::Filter@{Botan\-::\-Filter}}
+\subsubsection[{end\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Botan\-::\-Filter\-::end\-\_\-msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Filter_a5378ec3bf4adf860a4cfa01cfc51e20e}
+Notify that the current message is finished; flush buffers and do end-\/of-\/message processing (if any). 
+
+Reimplemented in \hyperlink{classBotan_1_1MAC__Filter_a5aa93f5eac49e5b0d706b3a6c52bea27}{Botan\-::\-M\-A\-C\-\_\-\-Filter}, \hyperlink{classBotan_1_1Hash__Filter_a83140a5d46d7826b448b4f9e05fb8a5f}{Botan\-::\-Hash\-\_\-\-Filter}, \hyperlink{classBotan_1_1PK__Verifier__Filter_a3ee9a74944f713790bf89a70e2f77095}{Botan\-::\-P\-K\-\_\-\-Verifier\-\_\-\-Filter}, \hyperlink{classBotan_1_1Base64__Decoder_a8a961f1989e44a50642a1a40eb5319a2}{Botan\-::\-Base64\-\_\-\-Decoder}, \hyperlink{classBotan_1_1Hex__Decoder_afcc4830fc393b78c50c2041e54bc4b2c}{Botan\-::\-Hex\-\_\-\-Decoder}, \hyperlink{classBotan_1_1Zlib__Decompression_afe5b9f8bbca9c49128e10deb1705b097}{Botan\-::\-Zlib\-\_\-\-Decompression}, \hyperlink{classBotan_1_1PK__Signer__Filter_a8d17f9c0f5e036f3a898c0f50e3ce6fc}{Botan\-::\-P\-K\-\_\-\-Signer\-\_\-\-Filter}, \hyperlink{classBotan_1_1Bzip__Decompression_a468b4c73700559238c314d6e37829d04}{Botan\-::\-Bzip\-\_\-\-Decompression}, \hyperlink{classFilterWrapper_a625394e5e352a4973cf62ef20a07f660}{Filter\-Wrapper}, \hyperlink{classBotan_1_1PK__Decryptor__Filter_ab96f94bdd27739bec5bc818d5206de7f}{Botan\-::\-P\-K\-\_\-\-Decryptor\-\_\-\-Filter}, \hyperlink{classBotan_1_1PBE__PKCS5v20_a8eb45326e180cd6807b01abb3e477345}{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v20}, \hyperlink{classBotan_1_1Base64__Encoder_a12b16ecb4124a3e9b9a2cb67ca53efb5}{Botan\-::\-Base64\-\_\-\-Encoder}, \hyperlink{classBotan_1_1Hex__Encoder_aeca7b4663d20663417eedfe5d2ea3b94}{Botan\-::\-Hex\-\_\-\-Encoder}, \hyperlink{classBotan_1_1PBE__PKCS5v15_ae5964560ed740da2ba1028e569a6f9cb}{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15}, \hyperlink{classBotan_1_1Bzip__Compression_a6a35855f0867ba072b842b3188398376}{Botan\-::\-Bzip\-\_\-\-Compression}, \hyperlink{classBotan_1_1Zlib__Compression_a141bf0c77e8dcdd8529a8f72635144a7}{Botan\-::\-Zlib\-\_\-\-Compression}, and \hyperlink{classBotan_1_1PK__Encryptor__Filter_aa17c87716a13b4b36d863f80c5932aa4}{Botan\-::\-P\-K\-\_\-\-Encryptor\-\_\-\-Filter}.
+
+\hypertarget{classBotan_1_1Filter_a612efd6701e36df4902da3dc396ce62f}{\index{Botan\-::\-Filter@{Botan\-::\-Filter}!name@{name}}
+\index{name@{name}!Botan::Filter@{Botan\-::\-Filter}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string Botan\-::\-Filter\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1Filter_a612efd6701e36df4902da3dc396ce62f}
+\begin{DoxyReturn}{Returns}
+descriptive name for this filter 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classBotan_1_1MAC__Filter_aed2f438c8a6eccaf5faa021c58121795}{Botan\-::\-M\-A\-C\-\_\-\-Filter}, \hyperlink{classBotan_1_1Hash__Filter_a22e47b9b2857439231a21079b0735288}{Botan\-::\-Hash\-\_\-\-Filter}, \hyperlink{classBotan_1_1XTS__Decryption_a3b7149a7ec50bfadb48e4d930ac28956}{Botan\-::\-X\-T\-S\-\_\-\-Decryption}, \hyperlink{classBotan_1_1CBC__Decryption_aab105c0f27f09fc247b691e9ed651fed}{Botan\-::\-C\-B\-C\-\_\-\-Decryption}, \hyperlink{classBotan_1_1Fork_a5e8f7af910dcb73acc9d7d23850d4ed1}{Botan\-::\-Fork}, \hyperlink{classBotan_1_1Hex__Decoder_a18c63adf2079bcc86abc0ee5ccb4537f}{Botan\-::\-Hex\-\_\-\-Decoder}, \hyperlink{classBotan_1_1Base64__Decoder_a8ad1087d886322d5d7c9f600ac40b6d8}{Botan\-::\-Base64\-\_\-\-Decoder}, \hyperlink{classBotan_1_1ECB__Decryption_a7d1ac4607a34ea28bfd9b978cfa206ec}{Botan\-::\-E\-C\-B\-\_\-\-Decryption}, \hyperlink{classBotan_1_1CTS__Decryption_a559583d7a9b6ac65216eafd962920fa5}{Botan\-::\-C\-T\-S\-\_\-\-Decryption}, \hyperlink{classBotan_1_1CFB__Decryption_ac5a39f21b97b0e11a73d50de7aa8eb56}{Botan\-::\-C\-F\-B\-\_\-\-Decryption}, \hyperlink{classBotan_1_1Zlib__Decompression_abc398ce66acb8581565432c59c51f5ec}{Botan\-::\-Zlib\-\_\-\-Decompression}, \hyperlink{classBotan_1_1Bzip__Decompression_a67aeb59b99dace11cdd6f4ab1b05b274}{Botan\-::\-Bzip\-\_\-\-Decompression}, \hyperlink{classBotan_1_1EAX__Base_a69b1b707a7cea14921e12f42989e2b9c}{Botan\-::\-E\-A\-X\-\_\-\-Base}, \hyperlink{classBotan_1_1StreamCipher__Filter_ac8d6368c8e186a04b09cc128611b0b11}{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}, \hyperlink{classBotan_1_1Chain_adff41cfb47851fe8da277ec6306c2274}{Botan\-::\-Chain}, \hyperlink{classBotan_1_1DataSink__Stream_a36b422bdd22cd9993e0f93b4eb84f537}{Botan\-::\-Data\-Sink\-\_\-\-Stream}, \hyperlink{classBotan_1_1XTS__Encryption_ae5e61f06d5e048b29465bca786235872}{Botan\-::\-X\-T\-S\-\_\-\-Encryption}, \hyperlink{classBotan_1_1PBE__PKCS5v20_a474c917227adc649c339690f23e1b82e}{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v20}, \hyperlink{classBotan_1_1Hex__Encoder_a57c120ea21ef15adbd92ff5da5faeb83}{Botan\-::\-Hex\-\_\-\-Encoder}, \hyperlink{classBotan_1_1CBC__Encryption_a273099d317b04ca1ffdd8f29bbb75905}{Botan\-::\-C\-B\-C\-\_\-\-Encryption}, \hyperlink{classBotan_1_1ECB__Encryption_a3139ce532abc80fdcc21c95b1fce5088}{Botan\-::\-E\-C\-B\-\_\-\-Encryption}, \hyperlink{classBotan_1_1PBE__PKCS5v15_a33f72dc5881a09d980cfe9ec5a1462da}{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15}, \hyperlink{structBotan_1_1BitBucket_a067a1d20339041fa434ef098ac7ac353}{Botan\-::\-Bit\-Bucket}, \hyperlink{classBotan_1_1Bzip__Compression_a2bb3e76efea9505fee7793f32bc8efea}{Botan\-::\-Bzip\-\_\-\-Compression}, \hyperlink{classBotan_1_1CFB__Encryption_a9acb2736f16ac07c949d58caae76ad86}{Botan\-::\-C\-F\-B\-\_\-\-Encryption}, \hyperlink{classBotan_1_1CTS__Encryption_a72121f8ed50d196522ee0e5fb6e78a7c}{Botan\-::\-C\-T\-S\-\_\-\-Encryption}, \hyperlink{classBotan_1_1SecureQueue_a92bcc269d9e52f3a4cf3af50a4752202}{Botan\-::\-Secure\-Queue}, \hyperlink{classBotan_1_1Zlib__Compression_a909794df973d63c60f5fff6fa685891f}{Botan\-::\-Zlib\-\_\-\-Compression}, \hyperlink{classBotan_1_1Base64__Encoder_a2e0135e3f3f62f2a3e427a93cc3e7eff}{Botan\-::\-Base64\-\_\-\-Encoder}, and \hyperlink{classPy__Filter_a62f5f5156f35a5ddc1619ceab56477bf}{Py\-\_\-\-Filter}.
+
+\hypertarget{classBotan_1_1Filter_a3ff552716008c9dc9f821ec5624a43f3}{\index{Botan\-::\-Filter@{Botan\-::\-Filter}!send@{send}}
+\index{send@{send}!Botan::Filter@{Botan\-::\-Filter}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Filter\-::send (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBotan_1_1Filter_a3ff552716008c9dc9f821ec5624a43f3}
+
+\begin{DoxyParams}{Parameters}
+{\em in} & some input for the filter \\
+\hline
+{\em length} & the length of in \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Filter_a294067bb28bb86f2c71ba074e09ee8a5}{\index{Botan\-::\-Filter@{Botan\-::\-Filter}!send@{send}}
+\index{send@{send}!Botan::Filter@{Botan\-::\-Filter}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Filter\-::send (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classBotan_1_1Filter_a294067bb28bb86f2c71ba074e09ee8a5}
+
+\begin{DoxyParams}{Parameters}
+{\em in} & some input for the filter \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Filter_aa312208004efad0038f2566b19ce76f1}{\index{Botan\-::\-Filter@{Botan\-::\-Filter}!send@{send}}
+\index{send@{send}!Botan::Filter@{Botan\-::\-Filter}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Filter\-::send (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classBotan_1_1Filter_aa312208004efad0038f2566b19ce76f1}
+
+\begin{DoxyParams}{Parameters}
+{\em in} & some input for the filter \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Filter_a9a6d4f7b63ff9c1ec4aada6fe73854a6}{\index{Botan\-::\-Filter@{Botan\-::\-Filter}!send@{send}}
+\index{send@{send}!Botan::Filter@{Botan\-::\-Filter}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Filter\-::send (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{in, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classBotan_1_1Filter_a9a6d4f7b63ff9c1ec4aada6fe73854a6}
+
+\begin{DoxyParams}{Parameters}
+{\em in} & some input for the filter \\
+\hline
+{\em length} & the number of bytes of in to send \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Filter_ac4f64aaf61c461e65b554f0158902a3c}{\index{Botan\-::\-Filter@{Botan\-::\-Filter}!start\-\_\-msg@{start\-\_\-msg}}
+\index{start\-\_\-msg@{start\-\_\-msg}!Botan::Filter@{Botan\-::\-Filter}}
+\subsubsection[{start\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Botan\-::\-Filter\-::start\-\_\-msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Filter_ac4f64aaf61c461e65b554f0158902a3c}
+Start a new message. Must be closed by \hyperlink{classBotan_1_1Filter_a5378ec3bf4adf860a4cfa01cfc51e20e}{end\-\_\-msg()} before another message can be started. 
+
+Reimplemented in \hyperlink{classBotan_1_1Zlib__Decompression_ae31a66a402390afd1fc0938d9249b448}{Botan\-::\-Zlib\-\_\-\-Decompression}, \hyperlink{classBotan_1_1EAX__Base_ae91753d8cc76dd7cb38edfbbf6a28ae7}{Botan\-::\-E\-A\-X\-\_\-\-Base}, \hyperlink{classBotan_1_1Bzip__Decompression_a8044ca19ddd25eced2d4fbd2100e73a0}{Botan\-::\-Bzip\-\_\-\-Decompression}, \hyperlink{classFilterWrapper_a9fd6465040bf01cf7e9a2c60d9481c38}{Filter\-Wrapper}, \hyperlink{classBotan_1_1PBE__PKCS5v20_afd666084f2ee950d5b73751bca66f726}{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v20}, \hyperlink{classBotan_1_1PBE__PKCS5v15_ae17c4268f38991883e456d284726378c}{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15}, \hyperlink{classBotan_1_1Bzip__Compression_a393495147879cd31d9896e057adad98b}{Botan\-::\-Bzip\-\_\-\-Compression}, and \hyperlink{classBotan_1_1Zlib__Compression_a574d43112973868f5013b01d2840a6bc}{Botan\-::\-Zlib\-\_\-\-Compression}.
+
+\hypertarget{classBotan_1_1Filter_ad856ce62d9bdcce8057da99cba606892}{\index{Botan\-::\-Filter@{Botan\-::\-Filter}!write@{write}}
+\index{write@{write}!Botan::Filter@{Botan\-::\-Filter}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Botan\-::\-Filter\-::write (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1Filter_ad856ce62d9bdcce8057da99cba606892}
+Write a portion of a message to this filter. 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input as a byte array \\
+\hline
+{\em length} & the length of the byte array input \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classBotan_1_1MAC__Filter_aa5d6b9c589b93a96931af4e93a531a96}{Botan\-::\-M\-A\-C\-\_\-\-Filter}, \hyperlink{classBotan_1_1Hash__Filter_a601f395b680e3bdb04977da8b6cd9d6a}{Botan\-::\-Hash\-\_\-\-Filter}, \hyperlink{classBotan_1_1PK__Verifier__Filter_a2378e077c1e1398ac2f7fbef380f7ba0}{Botan\-::\-P\-K\-\_\-\-Verifier\-\_\-\-Filter}, \hyperlink{classBotan_1_1Base64__Decoder_ac6be3c2990360afb835201b8d9984542}{Botan\-::\-Base64\-\_\-\-Decoder}, \hyperlink{classBotan_1_1Hex__Decoder_a4013e02f2bdc32bf978b0e9a7eb21d37}{Botan\-::\-Hex\-\_\-\-Decoder}, \hyperlink{classBotan_1_1Fork_a1fc14566d995c5091e15d7a34b8599a6}{Botan\-::\-Fork}, \hyperlink{classBotan_1_1PK__Signer__Filter_a78ebbc19d0f9ae8e919526b3d6012688}{Botan\-::\-P\-K\-\_\-\-Signer\-\_\-\-Filter}, \hyperlink{classBotan_1_1Zlib__Decompression_a58eebd3e9ff4dafed6b7b558d2f7d4e3}{Botan\-::\-Zlib\-\_\-\-Decompression}, \hyperlink{classBotan_1_1Bzip__Decompression_a3623a775f34f6c7f056a6b1277667b40}{Botan\-::\-Bzip\-\_\-\-Decompression}, \hyperlink{classBotan_1_1StreamCipher__Filter_a2c4a1f75eb09bae067765a1eba6ec195}{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}, \hyperlink{classBotan_1_1PK__Decryptor__Filter_afc1a918fb5745eb44ad0227bc208891f}{Botan\-::\-P\-K\-\_\-\-Decryptor\-\_\-\-Filter}, \hyperlink{classBotan_1_1DataSink__Stream_a680cea6422e4dc127da837cb69884689}{Botan\-::\-Data\-Sink\-\_\-\-Stream}, \hyperlink{classBotan_1_1Chain_a7e388d156e61e5e98ffd2ab6ceed91c7}{Botan\-::\-Chain}, \hyperlink{classBotan_1_1PBE__PKCS5v20_a9b1c2571eb21f3c2810f7261a139fcaf}{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v20}, \hyperlink{classBotan_1_1Hex__Encoder_a190571177aeee947e9cedac9300e1f55}{Botan\-::\-Hex\-\_\-\-Encoder}, \hyperlink{classBotan_1_1Base64__Encoder_abdc4e61afb33dcba4041563d75c91637}{Botan\-::\-Base64\-\_\-\-Encoder}, \hyperlink{classBotan_1_1PBE__PKCS5v15_a0f4588533525a0639dd923d3e494244e}{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15}, \hyperlink{classBotan_1_1Bzip__Compression_a9022d2312d8451c9d0ebf4b85310f50b}{Botan\-::\-Bzip\-\_\-\-Compression}, \hyperlink{classBotan_1_1SecureQueue_ad535dcaf36beb0549bf5d2ad527d45bb}{Botan\-::\-Secure\-Queue}, \hyperlink{classBotan_1_1Zlib__Compression_a32ee52534ab37d954063c09e9f048411}{Botan\-::\-Zlib\-\_\-\-Compression}, \hyperlink{classPy__Filter_a56d57ed8174163e5b7a44438d395f2f7}{Py\-\_\-\-Filter}, \hyperlink{classBotan_1_1PK__Encryptor__Filter_a7b39173e3f2474862935a19457552281}{Botan\-::\-P\-K\-\_\-\-Encryptor\-\_\-\-Filter}, and \hyperlink{structBotan_1_1BitBucket_af12f31d8bd6cebd9f2fbdd5c4de4fa31}{Botan\-::\-Bit\-Bucket}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/filters/filter.\-h\item 
+src/filters/filter.\-cpp\end{DoxyCompactItemize}

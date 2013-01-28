@@ -1,0 +1,115 @@
+\hypertarget{classBotan_1_1PBE__PKCS5v15}{\section{Botan\-:\-:P\-B\-E\-\_\-\-P\-K\-C\-S5v15 Class Reference}
+\label{classBotan_1_1PBE__PKCS5v15}\index{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15@{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15}}
+}
+
+
+{\ttfamily \#include $<$pbes1.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:P\-B\-E\-\_\-\-P\-K\-C\-S5v15\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBotan_1_1PBE__PKCS5v15}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1PBE__PKCS5v15_a33f72dc5881a09d980cfe9ec5a1462da}{name} () const 
+\item 
+void \hyperlink{classBotan_1_1PBE__PKCS5v15_a0f4588533525a0639dd923d3e494244e}{write} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)
+\item 
+void \hyperlink{classBotan_1_1PBE__PKCS5v15_ae17c4268f38991883e456d284726378c}{start\-\_\-msg} ()
+\item 
+void \hyperlink{classBotan_1_1PBE__PKCS5v15_ae5964560ed740da2ba1028e569a6f9cb}{end\-\_\-msg} ()
+\item 
+\hyperlink{classBotan_1_1PBE__PKCS5v15_a784dc6a99c5e05491f98d3c8874c43b3}{P\-B\-E\-\_\-\-P\-K\-C\-S5v15} (\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$cipher, \hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$hash, \hyperlink{namespaceBotan_ad9d14ffdc73fc19966421979b32ee759}{Cipher\-\_\-\-Dir} direction)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+P\-K\-C\-S \#5 v1.\-5 \hyperlink{classBotan_1_1PBE}{P\-B\-E} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1PBE__PKCS5v15_a784dc6a99c5e05491f98d3c8874c43b3}{\index{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15@{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15}!P\-B\-E\-\_\-\-P\-K\-C\-S5v15@{P\-B\-E\-\_\-\-P\-K\-C\-S5v15}}
+\index{P\-B\-E\-\_\-\-P\-K\-C\-S5v15@{P\-B\-E\-\_\-\-P\-K\-C\-S5v15}!Botan::PBE_PKCS5v15@{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15}}
+\subsubsection[{P\-B\-E\-\_\-\-P\-K\-C\-S5v15}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15 (
+\begin{DoxyParamCaption}
+\item[{{\bf Block\-Cipher} $\ast$}]{cipher, }
+\item[{{\bf Hash\-Function} $\ast$}]{hash, }
+\item[{{\bf Cipher\-\_\-\-Dir}}]{direction}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1PBE__PKCS5v15_a784dc6a99c5e05491f98d3c8874c43b3}
+
+\begin{DoxyParams}{Parameters}
+{\em cipher} & the block cipher to use (\hyperlink{classBotan_1_1DES}{D\-E\-S} or \hyperlink{classBotan_1_1RC2}{R\-C2}) \\
+\hline
+{\em hash} & the hash function to use \\
+\hline
+{\em direction} & are we encrypting or decrypting \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1PBE__PKCS5v15_ae5964560ed740da2ba1028e569a6f9cb}{\index{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15@{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15}!end\-\_\-msg@{end\-\_\-msg}}
+\index{end\-\_\-msg@{end\-\_\-msg}!Botan::PBE_PKCS5v15@{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15}}
+\subsubsection[{end\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15\-::end\-\_\-msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1PBE__PKCS5v15_ae5964560ed740da2ba1028e569a6f9cb}
+Notify that the current message is finished; flush buffers and do end-\/of-\/message processing (if any). 
+
+Reimplemented from \hyperlink{classBotan_1_1Filter_a5378ec3bf4adf860a4cfa01cfc51e20e}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1PBE__PKCS5v15_a33f72dc5881a09d980cfe9ec5a1462da}{\index{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15@{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15}!name@{name}}
+\index{name@{name}!Botan::PBE_PKCS5v15@{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1PBE__PKCS5v15_a33f72dc5881a09d980cfe9ec5a1462da}
+\begin{DoxyReturn}{Returns}
+descriptive name for this filter 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Filter_a612efd6701e36df4902da3dc396ce62f}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1PBE__PKCS5v15_ae17c4268f38991883e456d284726378c}{\index{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15@{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15}!start\-\_\-msg@{start\-\_\-msg}}
+\index{start\-\_\-msg@{start\-\_\-msg}!Botan::PBE_PKCS5v15@{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15}}
+\subsubsection[{start\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15\-::start\-\_\-msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1PBE__PKCS5v15_ae17c4268f38991883e456d284726378c}
+Start a new message. Must be closed by \hyperlink{classBotan_1_1PBE__PKCS5v15_ae5964560ed740da2ba1028e569a6f9cb}{end\-\_\-msg()} before another message can be started. 
+
+Reimplemented from \hyperlink{classBotan_1_1Filter_ac4f64aaf61c461e65b554f0158902a3c}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1PBE__PKCS5v15_a0f4588533525a0639dd923d3e494244e}{\index{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15@{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15}!write@{write}}
+\index{write@{write}!Botan::PBE_PKCS5v15@{Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-P\-B\-E\-\_\-\-P\-K\-C\-S5v15\-::write (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1PBE__PKCS5v15_a0f4588533525a0639dd923d3e494244e}
+Write a portion of a message to this filter. 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input as a byte array \\
+\hline
+{\em length} & the length of the byte array input \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1Filter_ad856ce62d9bdcce8057da99cba606892}{Botan\-::\-Filter}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/pbe/pbes1/pbes1.\-h\item 
+src/pbe/pbes1/pbes1.\-cpp\end{DoxyCompactItemize}

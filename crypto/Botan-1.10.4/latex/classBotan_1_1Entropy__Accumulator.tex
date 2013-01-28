@@ -1,0 +1,136 @@
+\hypertarget{classBotan_1_1Entropy__Accumulator}{\section{Botan\-:\-:Entropy\-\_\-\-Accumulator Class Reference}
+\label{classBotan_1_1Entropy__Accumulator}\index{Botan\-::\-Entropy\-\_\-\-Accumulator@{Botan\-::\-Entropy\-\_\-\-Accumulator}}
+}
+
+
+{\ttfamily \#include $<$entropy\-\_\-src.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Entropy\-\_\-\-Accumulator\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1Entropy__Accumulator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1Entropy__Accumulator_a3615d4bd634217dd75c873eff92511a5}{Entropy\-\_\-\-Accumulator} (size\-\_\-t goal)
+\item 
+\hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \& \hyperlink{classBotan_1_1Entropy__Accumulator_ad83609d00683d61f70ad0f002b7ef83c}{get\-\_\-io\-\_\-buffer} (size\-\_\-t size)
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1Entropy__Accumulator_a8969fa26d781a602ffd22f47a17a063a}{bits\-\_\-collected} () const 
+\item 
+bool \hyperlink{classBotan_1_1Entropy__Accumulator_a2af7dc8a8369ee4797bbc26465601acb}{polling\-\_\-goal\-\_\-achieved} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1Entropy__Accumulator_ac12a7540b201b7d08875147e3886124a}{desired\-\_\-remaining\-\_\-bits} () const 
+\item 
+void \hyperlink{classBotan_1_1Entropy__Accumulator_a53836d8915e21b9251725afc0a32b8c4}{add} (const void $\ast$bytes, size\-\_\-t length, double entropy\-\_\-bits\-\_\-per\-\_\-byte)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classBotan_1_1Entropy__Accumulator_a44eb485ed53ba7e5fb74bb712ca16a78}{add} (const T \&v, double entropy\-\_\-bits\-\_\-per\-\_\-byte)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used to accumulate the poll results of Entropy\-Sources 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Entropy__Accumulator_a3615d4bd634217dd75c873eff92511a5}{\index{Botan\-::\-Entropy\-\_\-\-Accumulator@{Botan\-::\-Entropy\-\_\-\-Accumulator}!Entropy\-\_\-\-Accumulator@{Entropy\-\_\-\-Accumulator}}
+\index{Entropy\-\_\-\-Accumulator@{Entropy\-\_\-\-Accumulator}!Botan::Entropy_Accumulator@{Botan\-::\-Entropy\-\_\-\-Accumulator}}
+\subsubsection[{Entropy\-\_\-\-Accumulator}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Entropy\-\_\-\-Accumulator\-::\-Entropy\-\_\-\-Accumulator (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{goal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1Entropy__Accumulator_a3615d4bd634217dd75c873eff92511a5}
+Initialize an \hyperlink{classBotan_1_1Entropy__Accumulator}{Entropy\-\_\-\-Accumulator} 
+\begin{DoxyParams}{Parameters}
+{\em goal} & is how many bits we would like to collect \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Entropy__Accumulator_a53836d8915e21b9251725afc0a32b8c4}{\index{Botan\-::\-Entropy\-\_\-\-Accumulator@{Botan\-::\-Entropy\-\_\-\-Accumulator}!add@{add}}
+\index{add@{add}!Botan::Entropy_Accumulator@{Botan\-::\-Entropy\-\_\-\-Accumulator}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Entropy\-\_\-\-Accumulator\-::add (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{bytes, }
+\item[{size\-\_\-t}]{length, }
+\item[{double}]{entropy\-\_\-bits\-\_\-per\-\_\-byte}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1Entropy__Accumulator_a53836d8915e21b9251725afc0a32b8c4}
+Add entropy to the accumulator 
+\begin{DoxyParams}{Parameters}
+{\em bytes} & the input bytes \\
+\hline
+{\em length} & specifies how many bytes the input is \\
+\hline
+{\em entropy\-\_\-bits\-\_\-per\-\_\-byte} & is a best guess at how much entropy per byte is in this input \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Entropy__Accumulator_a44eb485ed53ba7e5fb74bb712ca16a78}{\index{Botan\-::\-Entropy\-\_\-\-Accumulator@{Botan\-::\-Entropy\-\_\-\-Accumulator}!add@{add}}
+\index{add@{add}!Botan::Entropy_Accumulator@{Botan\-::\-Entropy\-\_\-\-Accumulator}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void Botan\-::\-Entropy\-\_\-\-Accumulator\-::add (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{v, }
+\item[{double}]{entropy\-\_\-bits\-\_\-per\-\_\-byte}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1Entropy__Accumulator_a44eb485ed53ba7e5fb74bb712ca16a78}
+Add entropy to the accumulator 
+\begin{DoxyParams}{Parameters}
+{\em v} & is some value \\
+\hline
+{\em entropy\-\_\-bits\-\_\-per\-\_\-byte} & is a best guess at how much entropy per byte is in this input \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Entropy__Accumulator_a8969fa26d781a602ffd22f47a17a063a}{\index{Botan\-::\-Entropy\-\_\-\-Accumulator@{Botan\-::\-Entropy\-\_\-\-Accumulator}!bits\-\_\-collected@{bits\-\_\-collected}}
+\index{bits\-\_\-collected@{bits\-\_\-collected}!Botan::Entropy_Accumulator@{Botan\-::\-Entropy\-\_\-\-Accumulator}}
+\subsubsection[{bits\-\_\-collected}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Entropy\-\_\-\-Accumulator\-::bits\-\_\-collected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1Entropy__Accumulator_a8969fa26d781a602ffd22f47a17a063a}
+\begin{DoxyReturn}{Returns}
+number of bits collected so far 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Entropy__Accumulator_ac12a7540b201b7d08875147e3886124a}{\index{Botan\-::\-Entropy\-\_\-\-Accumulator@{Botan\-::\-Entropy\-\_\-\-Accumulator}!desired\-\_\-remaining\-\_\-bits@{desired\-\_\-remaining\-\_\-bits}}
+\index{desired\-\_\-remaining\-\_\-bits@{desired\-\_\-remaining\-\_\-bits}!Botan::Entropy_Accumulator@{Botan\-::\-Entropy\-\_\-\-Accumulator}}
+\subsubsection[{desired\-\_\-remaining\-\_\-bits}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Entropy\-\_\-\-Accumulator\-::desired\-\_\-remaining\-\_\-bits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1Entropy__Accumulator_ac12a7540b201b7d08875147e3886124a}
+\begin{DoxyReturn}{Returns}
+how many bits we need to reach our polling goal 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Entropy__Accumulator_ad83609d00683d61f70ad0f002b7ef83c}{\index{Botan\-::\-Entropy\-\_\-\-Accumulator@{Botan\-::\-Entropy\-\_\-\-Accumulator}!get\-\_\-io\-\_\-buffer@{get\-\_\-io\-\_\-buffer}}
+\index{get\-\_\-io\-\_\-buffer@{get\-\_\-io\-\_\-buffer}!Botan::Entropy_Accumulator@{Botan\-::\-Entropy\-\_\-\-Accumulator}}
+\subsubsection[{get\-\_\-io\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memory\-Region}$<${\bf byte}$>$\& Botan\-::\-Entropy\-\_\-\-Accumulator\-::get\-\_\-io\-\_\-buffer (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1Entropy__Accumulator_ad83609d00683d61f70ad0f002b7ef83c}
+Get a cached I/\-O buffer (purely for minimizing allocation overhead to polls)
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & requested size for the I/\-O buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cached I/\-O buffer for repeated polls 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Entropy__Accumulator_a2af7dc8a8369ee4797bbc26465601acb}{\index{Botan\-::\-Entropy\-\_\-\-Accumulator@{Botan\-::\-Entropy\-\_\-\-Accumulator}!polling\-\_\-goal\-\_\-achieved@{polling\-\_\-goal\-\_\-achieved}}
+\index{polling\-\_\-goal\-\_\-achieved@{polling\-\_\-goal\-\_\-achieved}!Botan::Entropy_Accumulator@{Botan\-::\-Entropy\-\_\-\-Accumulator}}
+\subsubsection[{polling\-\_\-goal\-\_\-achieved}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-Entropy\-\_\-\-Accumulator\-::polling\-\_\-goal\-\_\-achieved (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1Entropy__Accumulator_a2af7dc8a8369ee4797bbc26465601acb}
+\begin{DoxyReturn}{Returns}
+if our polling goal has been achieved 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/entropy/entropy\-\_\-src.\-h\end{DoxyCompactItemize}

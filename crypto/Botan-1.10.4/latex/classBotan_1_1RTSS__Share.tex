@@ -1,0 +1,133 @@
+\hypertarget{classBotan_1_1RTSS__Share}{\section{Botan\-:\-:R\-T\-S\-S\-\_\-\-Share Class Reference}
+\label{classBotan_1_1RTSS__Share}\index{Botan\-::\-R\-T\-S\-S\-\_\-\-Share@{Botan\-::\-R\-T\-S\-S\-\_\-\-Share}}
+}
+
+
+{\ttfamily \#include $<$tss.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1RTSS__Share_a381bf458fbd946b045ce5b366ffacd96}{R\-T\-S\-S\-\_\-\-Share} (const std\-::string \&hex\-\_\-input)
+\item 
+std\-::string \hyperlink{classBotan_1_1RTSS__Share_a108dc712afea126fbbb4eec9283fe09b}{to\-\_\-string} () const 
+\item 
+\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} \hyperlink{classBotan_1_1RTSS__Share_a792ecfcdd84abfd1043893077a04e60a}{share\-\_\-id} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1RTSS__Share_a6fe3e2edf94a18975b6521e03984b1d5}{size} () const 
+\item 
+bool \hyperlink{classBotan_1_1RTSS__Share_ac250bd7b32c6431c67b938f84bbb3dbb}{initialized} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::vector$<$ \hyperlink{classBotan_1_1RTSS__Share}{R\-T\-S\-S\-\_\-\-Share} $>$ \hyperlink{classBotan_1_1RTSS__Share_a27a7e27636b70ae495a62c4722da8744}{split} (\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} M, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} N, const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} secret\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_ab07face63a00c39ea6ed97f203ee501c}{u16bit} secret\-\_\-len, const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} identifier\mbox{[}16\mbox{]}, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)
+\item 
+static \hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1RTSS__Share_aa6319c085dda85c72597ec31a2324599}{reconstruct} (const std\-::vector$<$ \hyperlink{classBotan_1_1RTSS__Share}{R\-T\-S\-S\-\_\-\-Share} $>$ \&shares)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A split secret, using the format from draft-\/mcgrew-\/tss-\/03 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1RTSS__Share_a381bf458fbd946b045ce5b366ffacd96}{\index{Botan\-::\-R\-T\-S\-S\-\_\-\-Share@{Botan\-::\-R\-T\-S\-S\-\_\-\-Share}!R\-T\-S\-S\-\_\-\-Share@{R\-T\-S\-S\-\_\-\-Share}}
+\index{R\-T\-S\-S\-\_\-\-Share@{R\-T\-S\-S\-\_\-\-Share}!Botan::RTSS_Share@{Botan\-::\-R\-T\-S\-S\-\_\-\-Share}}
+\subsubsection[{R\-T\-S\-S\-\_\-\-Share}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-R\-T\-S\-S\-\_\-\-Share\-::\-R\-T\-S\-S\-\_\-\-Share (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{hex\-\_\-input}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1RTSS__Share_a381bf458fbd946b045ce5b366ffacd96}
+
+\begin{DoxyParams}{Parameters}
+{\em hex\-\_\-input} & the share encoded in hexadecimal \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1RTSS__Share_ac250bd7b32c6431c67b938f84bbb3dbb}{\index{Botan\-::\-R\-T\-S\-S\-\_\-\-Share@{Botan\-::\-R\-T\-S\-S\-\_\-\-Share}!initialized@{initialized}}
+\index{initialized@{initialized}!Botan::RTSS_Share@{Botan\-::\-R\-T\-S\-S\-\_\-\-Share}}
+\subsubsection[{initialized}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-R\-T\-S\-S\-\_\-\-Share\-::initialized (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1RTSS__Share_ac250bd7b32c6431c67b938f84bbb3dbb}
+\begin{DoxyReturn}{Returns}
+if this T\-S\-S share was initialized or not 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1RTSS__Share_aa6319c085dda85c72597ec31a2324599}{\index{Botan\-::\-R\-T\-S\-S\-\_\-\-Share@{Botan\-::\-R\-T\-S\-S\-\_\-\-Share}!reconstruct@{reconstruct}}
+\index{reconstruct@{reconstruct}!Botan::RTSS_Share@{Botan\-::\-R\-T\-S\-S\-\_\-\-Share}}
+\subsubsection[{reconstruct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<$ {\bf byte} $>$ Botan\-::\-R\-T\-S\-S\-\_\-\-Share\-::reconstruct (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ {\bf R\-T\-S\-S\-\_\-\-Share} $>$ \&}]{shares}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classBotan_1_1RTSS__Share_aa6319c085dda85c72597ec31a2324599}
+
+\begin{DoxyParams}{Parameters}
+{\em shares} & the list of shares \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1RTSS__Share_a792ecfcdd84abfd1043893077a04e60a}{\index{Botan\-::\-R\-T\-S\-S\-\_\-\-Share@{Botan\-::\-R\-T\-S\-S\-\_\-\-Share}!share\-\_\-id@{share\-\_\-id}}
+\index{share\-\_\-id@{share\-\_\-id}!Botan::RTSS_Share@{Botan\-::\-R\-T\-S\-S\-\_\-\-Share}}
+\subsubsection[{share\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} Botan\-::\-R\-T\-S\-S\-\_\-\-Share\-::share\-\_\-id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1RTSS__Share_a792ecfcdd84abfd1043893077a04e60a}
+\begin{DoxyReturn}{Returns}
+share identifier 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1RTSS__Share_a6fe3e2edf94a18975b6521e03984b1d5}{\index{Botan\-::\-R\-T\-S\-S\-\_\-\-Share@{Botan\-::\-R\-T\-S\-S\-\_\-\-Share}!size@{size}}
+\index{size@{size}!Botan::RTSS_Share@{Botan\-::\-R\-T\-S\-S\-\_\-\-Share}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-R\-T\-S\-S\-\_\-\-Share\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1RTSS__Share_a6fe3e2edf94a18975b6521e03984b1d5}
+\begin{DoxyReturn}{Returns}
+size of this share in bytes 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1RTSS__Share_a27a7e27636b70ae495a62c4722da8744}{\index{Botan\-::\-R\-T\-S\-S\-\_\-\-Share@{Botan\-::\-R\-T\-S\-S\-\_\-\-Share}!split@{split}}
+\index{split@{split}!Botan::RTSS_Share@{Botan\-::\-R\-T\-S\-S\-\_\-\-Share}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf R\-T\-S\-S\-\_\-\-Share} $>$ Botan\-::\-R\-T\-S\-S\-\_\-\-Share\-::split (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{M, }
+\item[{{\bf byte}}]{N, }
+\item[{const {\bf byte}}]{secret\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf u16bit}}]{secret\-\_\-len, }
+\item[{const {\bf byte}}]{identifier\mbox{[}16\mbox{]}, }
+\item[{{\bf Random\-Number\-Generator} \&}]{rng}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classBotan_1_1RTSS__Share_a27a7e27636b70ae495a62c4722da8744}
+
+\begin{DoxyParams}{Parameters}
+{\em M} & the number of shares needed to reconstruct \\
+\hline
+{\em N} & the number of shares generated \\
+\hline
+{\em secret} & the secret to split \\
+\hline
+{\em secret\-\_\-len} & the length of the secret \\
+\hline
+{\em identifier} & the 16 byte share identifier \\
+\hline
+{\em rng} & the random number generator to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1RTSS__Share_a108dc712afea126fbbb4eec9283fe09b}{\index{Botan\-::\-R\-T\-S\-S\-\_\-\-Share@{Botan\-::\-R\-T\-S\-S\-\_\-\-Share}!to\-\_\-string@{to\-\_\-string}}
+\index{to\-\_\-string@{to\-\_\-string}!Botan::RTSS_Share@{Botan\-::\-R\-T\-S\-S\-\_\-\-Share}}
+\subsubsection[{to\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-R\-T\-S\-S\-\_\-\-Share\-::to\-\_\-string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1RTSS__Share_a108dc712afea126fbbb4eec9283fe09b}
+\begin{DoxyReturn}{Returns}
+hex representation 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/constructs/tss/tss.\-h\item 
+src/constructs/tss/tss.\-cpp\end{DoxyCompactItemize}

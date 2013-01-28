@@ -1,0 +1,95 @@
+\hypertarget{classBotan_1_1SecureVector}{\section{Botan\-:\-:Secure\-Vector$<$ T $>$ Class Template Reference}
+\label{classBotan_1_1SecureVector}\index{Botan\-::\-Secure\-Vector$<$ T $>$@{Botan\-::\-Secure\-Vector$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$secmem.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Secure\-Vector$<$ T $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1SecureVector}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ T $>$ \& \hyperlink{classBotan_1_1SecureVector_abdbf30bf25c67756ee898e3da669d0f8}{operator=} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ T $>$ \&other)
+\item 
+\hyperlink{classBotan_1_1SecureVector_a21b78f1a5df8bb98f0f719b96f64cfe4}{Secure\-Vector} (size\-\_\-t n=0)
+\item 
+\hyperlink{classBotan_1_1SecureVector_ac611e350a1e25f3117df75b6082e0b1a}{Secure\-Vector} (const T in\mbox{[}$\,$\mbox{]}, size\-\_\-t n)
+\item 
+\hyperlink{classBotan_1_1SecureVector_a3b3ff56b8a8165e4744e20d536f73f60}{Secure\-Vector} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ T $>$ \&in)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class Botan\-::\-Secure\-Vector$<$ T $>$}
+
+This class represents variable length buffers using the operating systems capability to lock memory, i.\-e. keeping it from being swapped out to disk. In this way, a security hole allowing attackers to find swapped out secret keys is closed. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1SecureVector_a21b78f1a5df8bb98f0f719b96f64cfe4}{\index{Botan\-::\-Secure\-Vector@{Botan\-::\-Secure\-Vector}!Secure\-Vector@{Secure\-Vector}}
+\index{Secure\-Vector@{Secure\-Vector}!Botan::SecureVector@{Botan\-::\-Secure\-Vector}}
+\subsubsection[{Secure\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Botan\-::\-Secure\-Vector}$<$ T $>$\-::{\bf Secure\-Vector} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{n = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1SecureVector_a21b78f1a5df8bb98f0f719b96f64cfe4}
+Create a buffer of the specified length. 
+\begin{DoxyParams}{Parameters}
+{\em n} & the length of the buffer to create. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1SecureVector_ac611e350a1e25f3117df75b6082e0b1a}{\index{Botan\-::\-Secure\-Vector@{Botan\-::\-Secure\-Vector}!Secure\-Vector@{Secure\-Vector}}
+\index{Secure\-Vector@{Secure\-Vector}!Botan::SecureVector@{Botan\-::\-Secure\-Vector}}
+\subsubsection[{Secure\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Botan\-::\-Secure\-Vector}$<$ T $>$\-::{\bf Secure\-Vector} (
+\begin{DoxyParamCaption}
+\item[{const T}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1SecureVector_ac611e350a1e25f3117df75b6082e0b1a}
+Create a buffer with the specified contents. 
+\begin{DoxyParams}{Parameters}
+{\em in} & the array containing the data to be initially copied into the newly created buffer \\
+\hline
+{\em n} & the size of the array in \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1SecureVector_a3b3ff56b8a8165e4744e20d536f73f60}{\index{Botan\-::\-Secure\-Vector@{Botan\-::\-Secure\-Vector}!Secure\-Vector@{Secure\-Vector}}
+\index{Secure\-Vector@{Secure\-Vector}!Botan::SecureVector@{Botan\-::\-Secure\-Vector}}
+\subsubsection[{Secure\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Botan\-::\-Secure\-Vector}$<$ T $>$\-::{\bf Secure\-Vector} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ T $>$ \&}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1SecureVector_a3b3ff56b8a8165e4744e20d536f73f60}
+Create a buffer with contents specified contents. 
+\begin{DoxyParams}{Parameters}
+{\em in} & the buffer holding the contents that will be copied into the newly created buffer. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1SecureVector_abdbf30bf25c67756ee898e3da669d0f8}{\index{Botan\-::\-Secure\-Vector@{Botan\-::\-Secure\-Vector}!operator=@{operator=}}
+\index{operator=@{operator=}!Botan::SecureVector@{Botan\-::\-Secure\-Vector}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Secure\-Vector}$<$T$>$\& {\bf Botan\-::\-Secure\-Vector}$<$ T $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1SecureVector_abdbf30bf25c67756ee898e3da669d0f8}
+Copy the contents of another buffer into this buffer. 
+\begin{DoxyParams}{Parameters}
+{\em other} & the buffer to copy the contents from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to $\ast$this 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/alloc/secmem.\-h\end{DoxyCompactItemize}

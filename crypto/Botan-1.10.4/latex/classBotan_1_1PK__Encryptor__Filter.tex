@@ -1,0 +1,66 @@
+\hypertarget{classBotan_1_1PK__Encryptor__Filter}{\section{Botan\-:\-:P\-K\-\_\-\-Encryptor\-\_\-\-Filter Class Reference}
+\label{classBotan_1_1PK__Encryptor__Filter}\index{Botan\-::\-P\-K\-\_\-\-Encryptor\-\_\-\-Filter@{Botan\-::\-P\-K\-\_\-\-Encryptor\-\_\-\-Filter}}
+}
+
+
+{\ttfamily \#include $<$pk\-\_\-filts.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:P\-K\-\_\-\-Encryptor\-\_\-\-Filter\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1PK__Encryptor__Filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1PK__Encryptor__Filter_a7b39173e3f2474862935a19457552281}{write} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)
+\item 
+void \hyperlink{classBotan_1_1PK__Encryptor__Filter_aa17c87716a13b4b36d863f80c5932aa4}{end\-\_\-msg} ()
+\item 
+\hypertarget{classBotan_1_1PK__Encryptor__Filter_afad309f39f59f49ec72d3e9056b463eb}{{\bfseries P\-K\-\_\-\-Encryptor\-\_\-\-Filter} (\hyperlink{classBotan_1_1PK__Encryptor}{P\-K\-\_\-\-Encryptor} $\ast$c, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng\-\_\-ref)}\label{classBotan_1_1PK__Encryptor__Filter_afad309f39f59f49ec72d3e9056b463eb}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1PK__Encryptor}{P\-K\-\_\-\-Encryptor} \hyperlink{classBotan_1_1Filter}{Filter} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1PK__Encryptor__Filter_aa17c87716a13b4b36d863f80c5932aa4}{\index{Botan\-::\-P\-K\-\_\-\-Encryptor\-\_\-\-Filter@{Botan\-::\-P\-K\-\_\-\-Encryptor\-\_\-\-Filter}!end\-\_\-msg@{end\-\_\-msg}}
+\index{end\-\_\-msg@{end\-\_\-msg}!Botan::PK_Encryptor_Filter@{Botan\-::\-P\-K\-\_\-\-Encryptor\-\_\-\-Filter}}
+\subsubsection[{end\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-P\-K\-\_\-\-Encryptor\-\_\-\-Filter\-::end\-\_\-msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1PK__Encryptor__Filter_aa17c87716a13b4b36d863f80c5932aa4}
+Notify that the current message is finished; flush buffers and do end-\/of-\/message processing (if any). 
+
+Reimplemented from \hyperlink{classBotan_1_1Filter_a5378ec3bf4adf860a4cfa01cfc51e20e}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1PK__Encryptor__Filter_a7b39173e3f2474862935a19457552281}{\index{Botan\-::\-P\-K\-\_\-\-Encryptor\-\_\-\-Filter@{Botan\-::\-P\-K\-\_\-\-Encryptor\-\_\-\-Filter}!write@{write}}
+\index{write@{write}!Botan::PK_Encryptor_Filter@{Botan\-::\-P\-K\-\_\-\-Encryptor\-\_\-\-Filter}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-P\-K\-\_\-\-Encryptor\-\_\-\-Filter\-::write (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1PK__Encryptor__Filter_a7b39173e3f2474862935a19457552281}
+Write a portion of a message to this filter. 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input as a byte array \\
+\hline
+{\em length} & the length of the byte array input \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1Filter_ad856ce62d9bdcce8057da99cba606892}{Botan\-::\-Filter}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/filters/pk\-\_\-filts/pk\-\_\-filts.\-h\item 
+src/filters/pk\-\_\-filts/pk\-\_\-filts.\-cpp\end{DoxyCompactItemize}

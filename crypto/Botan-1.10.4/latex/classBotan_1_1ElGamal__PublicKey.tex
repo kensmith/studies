@@ -1,0 +1,83 @@
+\hypertarget{classBotan_1_1ElGamal__PublicKey}{\section{Botan\-:\-:El\-Gamal\-\_\-\-Public\-Key Class Reference}
+\label{classBotan_1_1ElGamal__PublicKey}\index{Botan\-::\-El\-Gamal\-\_\-\-Public\-Key@{Botan\-::\-El\-Gamal\-\_\-\-Public\-Key}}
+}
+
+
+{\ttfamily \#include $<$elgamal.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:El\-Gamal\-\_\-\-Public\-Key\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classBotan_1_1ElGamal__PublicKey}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1ElGamal__PublicKey_aee61fa47d12dc71220a73d16642b6c84}{algo\-\_\-name} () const 
+\item 
+\hyperlink{classBotan_1_1DL__Group_ac602a30420ceec03fa181a10b09312a7}{D\-L\-\_\-\-Group\-::\-Format} \hyperlink{classBotan_1_1ElGamal__PublicKey_ab5395b48e5debfc909204c75448b072d}{group\-\_\-format} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1ElGamal__PublicKey_acdecc6598146478862e078b694ae3865}{max\-\_\-input\-\_\-bits} () const 
+\item 
+\hypertarget{classBotan_1_1ElGamal__PublicKey_afbbcc6e69f902289b6fd05d4e8573893}{{\bfseries El\-Gamal\-\_\-\-Public\-Key} (const \hyperlink{classBotan_1_1AlgorithmIdentifier}{Algorithm\-Identifier} \&alg\-\_\-id, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&key\-\_\-bits)}\label{classBotan_1_1ElGamal__PublicKey_afbbcc6e69f902289b6fd05d4e8573893}
+
+\item 
+\hypertarget{classBotan_1_1ElGamal__PublicKey_adff2f32b9f76ab9ef6e8fef2f8a7f18c}{{\bfseries El\-Gamal\-\_\-\-Public\-Key} (const \hyperlink{classBotan_1_1DL__Group}{D\-L\-\_\-\-Group} \&\hyperlink{classBotan_1_1DL__Scheme__PublicKey_a99e61704126f6c0fcdf5475027a46500}{group}, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&\hyperlink{classBotan_1_1DL__Scheme__PublicKey_ab4e7d9e233e3c89de236699ea5774802}{y})}\label{classBotan_1_1ElGamal__PublicKey_adff2f32b9f76ab9ef6e8fef2f8a7f18c}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+El\-Gamal Public Key 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1ElGamal__PublicKey_aee61fa47d12dc71220a73d16642b6c84}{\index{Botan\-::\-El\-Gamal\-\_\-\-Public\-Key@{Botan\-::\-El\-Gamal\-\_\-\-Public\-Key}!algo\-\_\-name@{algo\-\_\-name}}
+\index{algo\-\_\-name@{algo\-\_\-name}!Botan::ElGamal_PublicKey@{Botan\-::\-El\-Gamal\-\_\-\-Public\-Key}}
+\subsubsection[{algo\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-El\-Gamal\-\_\-\-Public\-Key\-::algo\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1ElGamal__PublicKey_aee61fa47d12dc71220a73d16642b6c84}
+Get the name of the underlying public key scheme. \begin{DoxyReturn}{Returns}
+name of the public key scheme 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Public__Key_aec4ee42d508712e05388eaa9200c630b}{Botan\-::\-Public\-\_\-\-Key}.
+
+\hypertarget{classBotan_1_1ElGamal__PublicKey_ab5395b48e5debfc909204c75448b072d}{\index{Botan\-::\-El\-Gamal\-\_\-\-Public\-Key@{Botan\-::\-El\-Gamal\-\_\-\-Public\-Key}!group\-\_\-format@{group\-\_\-format}}
+\index{group\-\_\-format@{group\-\_\-format}!Botan::ElGamal_PublicKey@{Botan\-::\-El\-Gamal\-\_\-\-Public\-Key}}
+\subsubsection[{group\-\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-L\-\_\-\-Group\-::\-Format} Botan\-::\-El\-Gamal\-\_\-\-Public\-Key\-::group\-\_\-format (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1ElGamal__PublicKey_ab5395b48e5debfc909204c75448b072d}
+Get the underlying groups encoding format. \begin{DoxyReturn}{Returns}
+encoding format 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1DL__Scheme__PublicKey_adf0844f45b1a8ed790ad2b15f1ea4040}{Botan\-::\-D\-L\-\_\-\-Scheme\-\_\-\-Public\-Key}.
+
+\hypertarget{classBotan_1_1ElGamal__PublicKey_acdecc6598146478862e078b694ae3865}{\index{Botan\-::\-El\-Gamal\-\_\-\-Public\-Key@{Botan\-::\-El\-Gamal\-\_\-\-Public\-Key}!max\-\_\-input\-\_\-bits@{max\-\_\-input\-\_\-bits}}
+\index{max\-\_\-input\-\_\-bits@{max\-\_\-input\-\_\-bits}!Botan::ElGamal_PublicKey@{Botan\-::\-El\-Gamal\-\_\-\-Public\-Key}}
+\subsubsection[{max\-\_\-input\-\_\-bits}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-El\-Gamal\-\_\-\-Public\-Key\-::max\-\_\-input\-\_\-bits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1ElGamal__PublicKey_acdecc6598146478862e078b694ae3865}
+Get the maximum message size in bits supported by this public key. \begin{DoxyReturn}{Returns}
+maximum message size in bits 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Public__Key_a8de8523fe64e3b606e7f002057dcd662}{Botan\-::\-Public\-\_\-\-Key}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/pubkey/elgamal/elgamal.\-h\item 
+src/pubkey/elgamal/elgamal.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,153 @@
+\hypertarget{classBotan_1_1EAC1__1__ADO}{\section{Botan\-:\-:E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O Class Reference}
+\label{classBotan_1_1EAC1__1__ADO}\index{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O@{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}}
+}
+
+
+{\ttfamily \#include $<$cvc\-\_\-ado.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBotan_1_1EAC1__1__ADO}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1EAC1__1__ADO_a04e266c6485041f3f0db368489ab27bd}{E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O} (const std\-::string \&str)
+\item 
+\hyperlink{classBotan_1_1EAC1__1__ADO_a1223923154efa2b1084ba3bde6a99aef}{E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O} (\hyperlink{classBotan_1_1DataSource}{Data\-Source} \&source)
+\item 
+\hyperlink{classBotan_1_1ASN1__Car}{A\-S\-N1\-\_\-\-Car} \hyperlink{classBotan_1_1EAC1__1__ADO_ac7d12bb84899d904bb33bff7615930bb}{get\-\_\-car} () const 
+\item 
+\hyperlink{classBotan_1_1EAC1__1__Req}{E\-A\-C1\-\_\-1\-\_\-\-Req} \hyperlink{classBotan_1_1EAC1__1__ADO_ad9d9d92e5740d81016720b28cc0b4668}{get\-\_\-request} () const 
+\item 
+void \hyperlink{classBotan_1_1EAC1__1__ADO_a0f22dc8fcbe3c1f4f5e89e090224d2fc}{encode} (\hyperlink{classBotan_1_1Pipe}{Pipe} \&out, \hyperlink{namespaceBotan_a53759b4ed1fb93549f307fcf68729d2f}{X509\-\_\-\-Encoding} encoding) const 
+\item 
+\hypertarget{classBotan_1_1EAC1__1__ADO_aa03eb784616655405944e7a20ec67a2f}{bool {\bfseries operator==} (\hyperlink{classBotan_1_1EAC1__1__ADO}{E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O} const \&rhs) const }\label{classBotan_1_1EAC1__1__ADO_aa03eb784616655405944e7a20ec67a2f}
+
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1EAC1__1__ADO_a04ba7c24bf6e7385fc73fe0d48496a2f}{tbs\-\_\-data} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classBotan_1_1MemoryVector}{Memory\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1EAC1__1__ADO_afac132428e88d7597d49de32647ab125}{make\-\_\-signed} (\hyperlink{classBotan_1_1PK__Signer}{P\-K\-\_\-\-Signer} \&signer, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&tbs\-\_\-bits, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1EAC1__1__ADO_a88c2158450feddd41d48d8dfc76570bb}{class {\bfseries E\-A\-C1\-\_\-1\-\_\-obj$<$ E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O $>$}}\label{classBotan_1_1EAC1__1__ADO_a88c2158450feddd41d48d8dfc76570bb}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class represents a T\-R03110 (E\-A\-C) v1.\-1 C\-V\-C A\-D\-O request 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1EAC1__1__ADO_a04e266c6485041f3f0db368489ab27bd}{\index{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O@{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}!E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O@{E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}}
+\index{E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O@{E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}!Botan::EAC1_1_ADO@{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}}
+\subsubsection[{E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1EAC1__1__ADO_a04e266c6485041f3f0db368489ab27bd}
+Construct a C\-V\-C A\-D\-O request from a D\-E\-R encoded C\-V\-C A\-D\-O request file. 
+\begin{DoxyParams}{Parameters}
+{\em str} & the path to the D\-E\-R encoded file \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1EAC1__1__ADO_a1223923154efa2b1084ba3bde6a99aef}{\index{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O@{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}!E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O@{E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}}
+\index{E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O@{E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}!Botan::EAC1_1_ADO@{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}}
+\subsubsection[{E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O (
+\begin{DoxyParamCaption}
+\item[{{\bf Data\-Source} \&}]{source}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1EAC1__1__ADO_a1223923154efa2b1084ba3bde6a99aef}
+Construct a C\-V\-C A\-D\-O request from a data source 
+\begin{DoxyParams}{Parameters}
+{\em source} & the data source \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1EAC1__1__ADO_a0f22dc8fcbe3c1f4f5e89e090224d2fc}{\index{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O@{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}!encode@{encode}}
+\index{encode@{encode}!Botan::EAC1_1_ADO@{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O\-::encode (
+\begin{DoxyParamCaption}
+\item[{{\bf Pipe} \&}]{out, }
+\item[{{\bf X509\-\_\-\-Encoding}}]{encoding}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1EAC1__1__ADO_a0f22dc8fcbe3c1f4f5e89e090224d2fc}
+Encode this object into a pipe. Only D\-E\-R is supported. 
+\begin{DoxyParams}{Parameters}
+{\em out} & the pipe to encode this object into \\
+\hline
+{\em encoding} & the encoding type to use, must be D\-E\-R \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1EAC__Signed__Object_af96951a0a562640e45ed2bc08edf6205}{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}.
+
+\hypertarget{classBotan_1_1EAC1__1__ADO_ac7d12bb84899d904bb33bff7615930bb}{\index{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O@{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}!get\-\_\-car@{get\-\_\-car}}
+\index{get\-\_\-car@{get\-\_\-car}!Botan::EAC1_1_ADO@{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}}
+\subsubsection[{get\-\_\-car}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\-S\-N1\-\_\-\-Car} Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O\-::get\-\_\-car (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1EAC1__1__ADO_ac7d12bb84899d904bb33bff7615930bb}
+Get the C\-A\-R of this C\-V\-C A\-D\-O request \begin{DoxyReturn}{Returns}
+the C\-A\-R of this C\-V\-C A\-D\-O request 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EAC1__1__ADO_ad9d9d92e5740d81016720b28cc0b4668}{\index{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O@{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}!get\-\_\-request@{get\-\_\-request}}
+\index{get\-\_\-request@{get\-\_\-request}!Botan::EAC1_1_ADO@{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}}
+\subsubsection[{get\-\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-A\-C1\-\_\-1\-\_\-\-Req} Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O\-::get\-\_\-request (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1EAC1__1__ADO_ad9d9d92e5740d81016720b28cc0b4668}
+Get the C\-V\-C request contained in this object. \begin{DoxyReturn}{Returns}
+the C\-V\-C request inside this C\-V\-C A\-D\-O request 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EAC1__1__ADO_afac132428e88d7597d49de32647ab125}{\index{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O@{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}!make\-\_\-signed@{make\-\_\-signed}}
+\index{make\-\_\-signed@{make\-\_\-signed}!Botan::EAC1_1_ADO@{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}}
+\subsubsection[{make\-\_\-signed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memory\-Vector}$<$ {\bf byte} $>$ Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O\-::make\-\_\-signed (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-K\-\_\-\-Signer} \&}]{signer, }
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{tbs\-\_\-bits, }
+\item[{{\bf Random\-Number\-Generator} \&}]{rng}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classBotan_1_1EAC1__1__ADO_afac132428e88d7597d49de32647ab125}
+Create a signed C\-V\-C A\-D\-O request from to be signed (T\-B\-S) data 
+\begin{DoxyParams}{Parameters}
+{\em signer} & the signer used to sign the C\-V\-C A\-D\-O request \\
+\hline
+{\em tbs\-\_\-bits} & the T\-B\-S data to sign \\
+\hline
+{\em rng} & a random number generator \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1EAC1__1__ADO_a04ba7c24bf6e7385fc73fe0d48496a2f}{\index{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O@{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}!tbs\-\_\-data@{tbs\-\_\-data}}
+\index{tbs\-\_\-data@{tbs\-\_\-data}!Botan::EAC1_1_ADO@{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}}
+\subsubsection[{tbs\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<$ {\bf byte} $>$ Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O\-::tbs\-\_\-data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1EAC1__1__ADO_a04ba7c24bf6e7385fc73fe0d48496a2f}
+Get the T\-B\-S data of this C\-V\-C A\-D\-O request. \begin{DoxyReturn}{Returns}
+the T\-B\-S data 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1EAC__Signed__Object_a024f30b08d7a83b328ec76d75e3c18a2}{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/cert/cvc/cvc\-\_\-ado.\-h\item 
+src/cert/cvc/cvc\-\_\-ado.\-cpp\end{DoxyCompactItemize}

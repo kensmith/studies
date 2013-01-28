@@ -1,0 +1,106 @@
+\hypertarget{classBotan_1_1Serpent__SIMD}{\section{Botan\-:\-:Serpent\-\_\-\-S\-I\-M\-D Class Reference}
+\label{classBotan_1_1Serpent__SIMD}\index{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D@{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D}}
+}
+
+
+{\ttfamily \#include $<$serp\-\_\-simd.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Serpent\-\_\-\-S\-I\-M\-D\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classBotan_1_1Serpent__SIMD}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1Serpent__SIMD_a61e8fa4a2a69719d049555a833d9ba81}{parallelism} () const 
+\item 
+void \hyperlink{classBotan_1_1Serpent__SIMD_a2b8c97fb8da84ca6c606083746840e1a}{encrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+void \hyperlink{classBotan_1_1Serpent__SIMD_a62ef06bb09d5b78042285602786cb8b2}{decrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$ \hyperlink{classBotan_1_1Serpent__SIMD_a5f6c6089e6598a2bf2a26caef87fdcea}{clone} () const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1Serpent}{Serpent} implementation using S\-I\-M\-D 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Serpent__SIMD_a5f6c6089e6598a2bf2a26caef87fdcea}{\index{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D@{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D}!clone@{clone}}
+\index{clone@{clone}!Botan::Serpent_SIMD@{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Cipher}$\ast$ Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Serpent__SIMD_a5f6c6089e6598a2bf2a26caef87fdcea}
+Get a new object representing the same algorithm as $\ast$this 
+
+Reimplemented from \hyperlink{classBotan_1_1Serpent_a37e5782d114c027f1db73898a8b96070}{Botan\-::\-Serpent}.
+
+\hypertarget{classBotan_1_1Serpent__SIMD_a62ef06bb09d5b78042285602786cb8b2}{\index{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D@{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D}!decrypt\-\_\-n@{decrypt\-\_\-n}}
+\index{decrypt\-\_\-n@{decrypt\-\_\-n}!Botan::Serpent_SIMD@{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D}}
+\subsubsection[{decrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D\-::decrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Serpent__SIMD_a62ef06bb09d5b78042285602786cb8b2}
+Decrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classBotan_1_1Serpent_a3eb047c3299fb267312d8663107a843e}{Botan\-::\-Serpent}.
+
+\hypertarget{classBotan_1_1Serpent__SIMD_a2b8c97fb8da84ca6c606083746840e1a}{\index{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D@{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D}!encrypt\-\_\-n@{encrypt\-\_\-n}}
+\index{encrypt\-\_\-n@{encrypt\-\_\-n}!Botan::Serpent_SIMD@{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D}}
+\subsubsection[{encrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D\-::encrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Serpent__SIMD_a2b8c97fb8da84ca6c606083746840e1a}
+Encrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classBotan_1_1Serpent_a108c16f4dfc0925ded52eba795cd5153}{Botan\-::\-Serpent}.
+
+\hypertarget{classBotan_1_1Serpent__SIMD_a61e8fa4a2a69719d049555a833d9ba81}{\index{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D@{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D}!parallelism@{parallelism}}
+\index{parallelism@{parallelism}!Botan::Serpent_SIMD@{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D}}
+\subsubsection[{parallelism}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D\-::parallelism (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Serpent__SIMD_a61e8fa4a2a69719d049555a833d9ba81}
+\begin{DoxyReturn}{Returns}
+native parallelism of this cipher in blocks 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1BlockCipher_a635a1c3ed1084be78cf1b9e655ab1465}{Botan\-::\-Block\-Cipher}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/block/serpent\-\_\-simd/serp\-\_\-simd.\-h\item 
+src/block/serpent\-\_\-simd/serp\-\_\-simd.\-cpp\end{DoxyCompactItemize}

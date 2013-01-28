@@ -1,0 +1,128 @@
+\hypertarget{classBotan_1_1Allocator}{\section{Botan\-:\-:Allocator Class Reference}
+\label{classBotan_1_1Allocator}\index{Botan\-::\-Allocator@{Botan\-::\-Allocator}}
+}
+
+
+{\ttfamily \#include $<$allocate.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Allocator\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.654028cm]{classBotan_1_1Allocator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void $\ast$ \hyperlink{classBotan_1_1Allocator_a2a67bd8efe4cd62f316396ed7e12227e}{allocate} (size\-\_\-t n)=0
+\item 
+virtual void \hyperlink{classBotan_1_1Allocator_a585549ec6e7098881b2ccdb2aea04bc5}{deallocate} (void $\ast$ptr, size\-\_\-t n)=0
+\item 
+virtual std\-::string \hyperlink{classBotan_1_1Allocator_aa3ade8ade033625cf1e4a790a72eea1e}{type} () const =0
+\item 
+virtual void \hyperlink{classBotan_1_1Allocator_a2f4f59036f1322a1b63613003bf4e338}{init} ()
+\item 
+virtual void \hyperlink{classBotan_1_1Allocator_aa2983098be356bb0dc284076036d4ac0}{destroy} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classBotan_1_1Allocator}{Allocator} $\ast$ \hyperlink{classBotan_1_1Allocator_af5467ea1365ca2bb347cb381f8665011}{get} (bool locking)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1Allocator}{Allocator} Interface 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Allocator_a2a67bd8efe4cd62f316396ed7e12227e}{\index{Botan\-::\-Allocator@{Botan\-::\-Allocator}!allocate@{allocate}}
+\index{allocate@{allocate}!Botan::Allocator@{Botan\-::\-Allocator}}
+\subsubsection[{allocate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void$\ast$ Botan\-::\-Allocator\-::allocate (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1Allocator_a2a67bd8efe4cd62f316396ed7e12227e}
+Allocate a block of memory 
+\begin{DoxyParams}{Parameters}
+{\em n} & how many bytes to allocate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to n bytes of memory 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classBotan_1_1Pooling__Allocator_a5e82d006bd4a205d576d5e0449bdb7ce}{Botan\-::\-Pooling\-\_\-\-Allocator}, and \hyperlink{classBotan_1_1Malloc__Allocator_a9e3e1ec65aa70c7ef7fb1881c5a5d5e7}{Botan\-::\-Malloc\-\_\-\-Allocator}.
+
+\hypertarget{classBotan_1_1Allocator_a585549ec6e7098881b2ccdb2aea04bc5}{\index{Botan\-::\-Allocator@{Botan\-::\-Allocator}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!Botan::Allocator@{Botan\-::\-Allocator}}
+\subsubsection[{deallocate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Botan\-::\-Allocator\-::deallocate (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1Allocator_a585549ec6e7098881b2ccdb2aea04bc5}
+Deallocate memory allocated with \hyperlink{classBotan_1_1Allocator_a2a67bd8efe4cd62f316396ed7e12227e}{allocate()} 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & the pointer returned by \hyperlink{classBotan_1_1Allocator_a2a67bd8efe4cd62f316396ed7e12227e}{allocate()} \\
+\hline
+{\em n} & the size of the block pointed to by ptr \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classBotan_1_1Pooling__Allocator_a9a8c770aa251a9d8a85457e679c8ce41}{Botan\-::\-Pooling\-\_\-\-Allocator}, and \hyperlink{classBotan_1_1Malloc__Allocator_a87decac6d77a2fa31d4ba1d78ca6e74e}{Botan\-::\-Malloc\-\_\-\-Allocator}.
+
+\hypertarget{classBotan_1_1Allocator_aa2983098be356bb0dc284076036d4ac0}{\index{Botan\-::\-Allocator@{Botan\-::\-Allocator}!destroy@{destroy}}
+\index{destroy@{destroy}!Botan::Allocator@{Botan\-::\-Allocator}}
+\subsubsection[{destroy}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Botan\-::\-Allocator\-::destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Allocator_aa2983098be356bb0dc284076036d4ac0}
+Shutdown the allocator 
+
+Reimplemented in \hyperlink{classBotan_1_1Pooling__Allocator_ad178ef1bbd542a8ec6ae4f9a4b00b020}{Botan\-::\-Pooling\-\_\-\-Allocator}.
+
+\hypertarget{classBotan_1_1Allocator_af5467ea1365ca2bb347cb381f8665011}{\index{Botan\-::\-Allocator@{Botan\-::\-Allocator}!get@{get}}
+\index{get@{get}!Botan::Allocator@{Botan\-::\-Allocator}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Allocator} $\ast$ Botan\-::\-Allocator\-::get (
+\begin{DoxyParamCaption}
+\item[{bool}]{locking}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classBotan_1_1Allocator_af5467ea1365ca2bb347cb381f8665011}
+Acquire a pointer to an allocator 
+\begin{DoxyParams}{Parameters}
+{\em locking} & is true if the allocator should attempt to secure the memory (eg for using to store keys) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to an allocator; ownership remains with library, so do not delete 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Allocator_a2f4f59036f1322a1b63613003bf4e338}{\index{Botan\-::\-Allocator@{Botan\-::\-Allocator}!init@{init}}
+\index{init@{init}!Botan::Allocator@{Botan\-::\-Allocator}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Botan\-::\-Allocator\-::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Allocator_a2f4f59036f1322a1b63613003bf4e338}
+Initialize the allocator \hypertarget{classBotan_1_1Allocator_aa3ade8ade033625cf1e4a790a72eea1e}{\index{Botan\-::\-Allocator@{Botan\-::\-Allocator}!type@{type}}
+\index{type@{type}!Botan::Allocator@{Botan\-::\-Allocator}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string Botan\-::\-Allocator\-::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1Allocator_aa3ade8ade033625cf1e4a790a72eea1e}
+\begin{DoxyReturn}{Returns}
+name of this allocator type 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classBotan_1_1Locking__Allocator_a184a544e406d641f288416c920df3440}{Botan\-::\-Locking\-\_\-\-Allocator}, \hyperlink{classBotan_1_1MemoryMapping__Allocator_a0ec1bd7d71ff4dff0bbb9c10f21b3b08}{Botan\-::\-Memory\-Mapping\-\_\-\-Allocator}, and \hyperlink{classBotan_1_1Malloc__Allocator_a9b14143c4852d304129e8c1f93faa9a1}{Botan\-::\-Malloc\-\_\-\-Allocator}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/alloc/allocate.\-h\item 
+src/alloc/system\-\_\-alloc/defalloc.\-cpp\end{DoxyCompactItemize}

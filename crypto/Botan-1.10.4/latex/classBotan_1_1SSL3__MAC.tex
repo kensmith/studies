@@ -1,0 +1,119 @@
+\hypertarget{classBotan_1_1SSL3__MAC}{\section{Botan\-:\-:S\-S\-L3\-\_\-\-M\-A\-C Class Reference}
+\label{classBotan_1_1SSL3__MAC}\index{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C@{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C}}
+}
+
+
+{\ttfamily \#include $<$ssl3\-\_\-mac.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:S\-S\-L3\-\_\-\-M\-A\-C\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classBotan_1_1SSL3__MAC}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1SSL3__MAC_aba5b648fefb35c752b8765064be6576d}{name} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1SSL3__MAC_a9d2211af680fe4eaaa7944d322ec9eae}{output\-\_\-length} () const 
+\item 
+\hyperlink{classBotan_1_1MessageAuthenticationCode}{Message\-Authentication\-Code} $\ast$ \hyperlink{classBotan_1_1SSL3__MAC_a195a02ee9068a8653c1d7e3b0aea5fc6}{clone} () const 
+\item 
+void \hyperlink{classBotan_1_1SSL3__MAC_aa5005464a925976b37d2e3386897dfdb}{clear} ()
+\item 
+\hyperlink{classBotan_1_1Key__Length__Specification}{Key\-\_\-\-Length\-\_\-\-Specification} \hyperlink{classBotan_1_1SSL3__MAC_a00dce7e8c85ee32d3fa1a5f443173ab2}{key\-\_\-spec} () const 
+\item 
+\hyperlink{classBotan_1_1SSL3__MAC_a217603163e5181cb291d2a00f14ed147}{S\-S\-L3\-\_\-\-M\-A\-C} (\hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$hash)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A M\-A\-C only used in S\-S\-Lv3. Do not use elsewhere! Use \hyperlink{classBotan_1_1HMAC}{H\-M\-A\-C} instead. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1SSL3__MAC_a217603163e5181cb291d2a00f14ed147}{\index{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C@{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C}!S\-S\-L3\-\_\-\-M\-A\-C@{S\-S\-L3\-\_\-\-M\-A\-C}}
+\index{S\-S\-L3\-\_\-\-M\-A\-C@{S\-S\-L3\-\_\-\-M\-A\-C}!Botan::SSL3_MAC@{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C}}
+\subsubsection[{S\-S\-L3\-\_\-\-M\-A\-C}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C\-::\-S\-S\-L3\-\_\-\-M\-A\-C (
+\begin{DoxyParamCaption}
+\item[{{\bf Hash\-Function} $\ast$}]{hash}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1SSL3__MAC_a217603163e5181cb291d2a00f14ed147}
+
+\begin{DoxyParams}{Parameters}
+{\em hash} & the underlying hash to use \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1SSL3__MAC_aa5005464a925976b37d2e3386897dfdb}{\index{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C@{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C}!clear@{clear}}
+\index{clear@{clear}!Botan::SSL3_MAC@{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1SSL3__MAC_aa5005464a925976b37d2e3386897dfdb}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1SSL3__MAC_a195a02ee9068a8653c1d7e3b0aea5fc6}{\index{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C@{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C}!clone@{clone}}
+\index{clone@{clone}!Botan::SSL3_MAC@{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message\-Authentication\-Code} $\ast$ Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1SSL3__MAC_a195a02ee9068a8653c1d7e3b0aea5fc6}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1MessageAuthenticationCode_aa5b3c755f4f1732b9c239abbc0a78b9c}{Botan\-::\-Message\-Authentication\-Code}.
+
+\hypertarget{classBotan_1_1SSL3__MAC_a00dce7e8c85ee32d3fa1a5f443173ab2}{\index{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C@{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C}!key\-\_\-spec@{key\-\_\-spec}}
+\index{key\-\_\-spec@{key\-\_\-spec}!Botan::SSL3_MAC@{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C}}
+\subsubsection[{key\-\_\-spec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key\-\_\-\-Length\-\_\-\-Specification} Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C\-::key\-\_\-spec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1SSL3__MAC_a00dce7e8c85ee32d3fa1a5f443173ab2}
+\begin{DoxyReturn}{Returns}
+object describing limits on key size 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1SymmetricAlgorithm_aea45c0d248b3116d7a1ebbd086f14e1b}{Botan\-::\-Symmetric\-Algorithm}.
+
+\hypertarget{classBotan_1_1SSL3__MAC_aba5b648fefb35c752b8765064be6576d}{\index{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C@{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C}!name@{name}}
+\index{name@{name}!Botan::SSL3_MAC@{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1SSL3__MAC_aba5b648fefb35c752b8765064be6576d}
+Get the name of this algorithm. \begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1MessageAuthenticationCode_ad55f85c233b06772d43a5115c7f2fc64}{Botan\-::\-Message\-Authentication\-Code}.
+
+\hypertarget{classBotan_1_1SSL3__MAC_a9d2211af680fe4eaaa7944d322ec9eae}{\index{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C@{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C}!output\-\_\-length@{output\-\_\-length}}
+\index{output\-\_\-length@{output\-\_\-length}!Botan::SSL3_MAC@{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C}}
+\subsubsection[{output\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C\-::output\-\_\-length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1SSL3__MAC_a9d2211af680fe4eaaa7944d322ec9eae}
+\begin{DoxyReturn}{Returns}
+length of the output of this function in bytes 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Buffered__Computation_a7b2e6776ea9ded2e3f9da5a760b7d34b}{Botan\-::\-Buffered\-\_\-\-Computation}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/mac/ssl3mac/ssl3\-\_\-mac.\-h\item 
+src/mac/ssl3mac/ssl3\-\_\-mac.\-cpp\end{DoxyCompactItemize}

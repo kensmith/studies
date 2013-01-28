@@ -1,0 +1,70 @@
+\hypertarget{classBotan_1_1ASN1__Ced}{\section{Botan\-:\-:A\-S\-N1\-\_\-\-Ced Class Reference}
+\label{classBotan_1_1ASN1__Ced}\index{Botan\-::\-A\-S\-N1\-\_\-\-Ced@{Botan\-::\-A\-S\-N1\-\_\-\-Ced}}
+}
+
+
+{\ttfamily \#include $<$eac\-\_\-asn\-\_\-obj.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:A\-S\-N1\-\_\-\-Ced\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBotan_1_1ASN1__Ced}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1ASN1__Ced_a06693252ad3227949e3d5c2a2bb4b2c4}{A\-S\-N1\-\_\-\-Ced} (std\-::string const \&str=\char`\"{}\char`\"{})
+\item 
+\hyperlink{classBotan_1_1ASN1__Ced_add013c502fddfe21deeaa82ac50bdcef}{A\-S\-N1\-\_\-\-Ced} (\hyperlink{namespaceBotan_a634063d9fb05e25262ca94ed927030f6}{u64bit} time)
+\item 
+\hyperlink{classBotan_1_1ASN1__Ced_a2d1af2015f9dc9c2b4d80653a412ab2c}{A\-S\-N1\-\_\-\-Ced} (\hyperlink{classBotan_1_1EAC__Time}{E\-A\-C\-\_\-\-Time} const \&other)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents C\-V\-C C\-E\-Ds. Only limited sanity checks of the inputted date value are performed. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1ASN1__Ced_a06693252ad3227949e3d5c2a2bb4b2c4}{\index{Botan\-::\-A\-S\-N1\-\_\-\-Ced@{Botan\-::\-A\-S\-N1\-\_\-\-Ced}!A\-S\-N1\-\_\-\-Ced@{A\-S\-N1\-\_\-\-Ced}}
+\index{A\-S\-N1\-\_\-\-Ced@{A\-S\-N1\-\_\-\-Ced}!Botan::ASN1_Ced@{Botan\-::\-A\-S\-N1\-\_\-\-Ced}}
+\subsubsection[{A\-S\-N1\-\_\-\-Ced}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-A\-S\-N1\-\_\-\-Ced\-::\-A\-S\-N1\-\_\-\-Ced (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{str = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1ASN1__Ced_a06693252ad3227949e3d5c2a2bb4b2c4}
+Construct a C\-E\-D from a string value. 
+\begin{DoxyParams}{Parameters}
+{\em str} & a string in the format \char`\"{}yyyy mm dd\char`\"{}, e.\-g. \char`\"{}2007 08 01\char`\"{} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1ASN1__Ced_add013c502fddfe21deeaa82ac50bdcef}{\index{Botan\-::\-A\-S\-N1\-\_\-\-Ced@{Botan\-::\-A\-S\-N1\-\_\-\-Ced}!A\-S\-N1\-\_\-\-Ced@{A\-S\-N1\-\_\-\-Ced}}
+\index{A\-S\-N1\-\_\-\-Ced@{A\-S\-N1\-\_\-\-Ced}!Botan::ASN1_Ced@{Botan\-::\-A\-S\-N1\-\_\-\-Ced}}
+\subsubsection[{A\-S\-N1\-\_\-\-Ced}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-A\-S\-N1\-\_\-\-Ced\-::\-A\-S\-N1\-\_\-\-Ced (
+\begin{DoxyParamCaption}
+\item[{{\bf u64bit}}]{time}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1ASN1__Ced_add013c502fddfe21deeaa82ac50bdcef}
+Construct a C\-E\-D from a timer value. 
+\begin{DoxyParams}{Parameters}
+{\em time} & the number of seconds elapsed midnight, 1st January 1970 G\-M\-T (or 7pm, 31st December 1969 E\-S\-T) up to the desired date \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1ASN1__Ced_a2d1af2015f9dc9c2b4d80653a412ab2c}{\index{Botan\-::\-A\-S\-N1\-\_\-\-Ced@{Botan\-::\-A\-S\-N1\-\_\-\-Ced}!A\-S\-N1\-\_\-\-Ced@{A\-S\-N1\-\_\-\-Ced}}
+\index{A\-S\-N1\-\_\-\-Ced@{A\-S\-N1\-\_\-\-Ced}!Botan::ASN1_Ced@{Botan\-::\-A\-S\-N1\-\_\-\-Ced}}
+\subsubsection[{A\-S\-N1\-\_\-\-Ced}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-A\-S\-N1\-\_\-\-Ced\-::\-A\-S\-N1\-\_\-\-Ced (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-A\-C\-\_\-\-Time} const \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1ASN1__Ced_a2d1af2015f9dc9c2b4d80653a412ab2c}
+Copy constructor (for general \hyperlink{classBotan_1_1EAC__Time}{E\-A\-C\-\_\-\-Time} objects). 
+\begin{DoxyParams}{Parameters}
+{\em other} & the object to copy from \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/cert/cvc/eac\-\_\-asn\-\_\-obj.\-h\item 
+src/cert/cvc/asn1\-\_\-eac\-\_\-tm.\-cpp\end{DoxyCompactItemize}

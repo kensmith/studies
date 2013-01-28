@@ -1,0 +1,401 @@
+\hypertarget{classBotan_1_1Algorithm__Factory}{\section{Botan\-:\-:Algorithm\-\_\-\-Factory Class Reference}
+\label{classBotan_1_1Algorithm__Factory}\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+}
+
+
+{\ttfamily \#include $<$algo\-\_\-factory.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classBotan_1_1Algorithm__Factory_1_1Engine__Iterator}{Engine\-\_\-\-Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1Algorithm__Factory_adab358732baf47c2ff13c3019bf0e3fb}{Algorithm\-\_\-\-Factory} (\hyperlink{classBotan_1_1Mutex__Factory}{Mutex\-\_\-\-Factory} \&mf)
+\item 
+\hyperlink{classBotan_1_1Algorithm__Factory_ab4a3f851fc98f7e26ed12901b9d57e7d}{$\sim$\-Algorithm\-\_\-\-Factory} ()
+\item 
+void \hyperlink{classBotan_1_1Algorithm__Factory_a9145cbe43c42dbb2477659634bffcbde}{add\-\_\-engine} (\hyperlink{classBotan_1_1Engine}{Engine} $\ast$engine)
+\item 
+void \hyperlink{classBotan_1_1Algorithm__Factory_acc0d90084366dd11a573e231e028f767}{clear\-\_\-caches} ()
+\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{classBotan_1_1Algorithm__Factory_a109e1c89927d077f4dc1d30158d79103}{providers\-\_\-of} (const std\-::string \&algo\-\_\-spec)
+\item 
+void \hyperlink{classBotan_1_1Algorithm__Factory_a4687e6e6c337113b208b9237ff62d89b}{set\-\_\-preferred\-\_\-provider} (const std\-::string \&algo\-\_\-spec, const std\-::string \&provider)
+\item 
+const \hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$ \hyperlink{classBotan_1_1Algorithm__Factory_aa5db86f98ab9ad9e77a8aae359e3ba36}{prototype\-\_\-block\-\_\-cipher} (const std\-::string \&algo\-\_\-spec, const std\-::string \&provider=\char`\"{}\char`\"{})
+\item 
+\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$ \hyperlink{classBotan_1_1Algorithm__Factory_ae01a710d7f27a5472eaaa302fa07b716}{make\-\_\-block\-\_\-cipher} (const std\-::string \&algo\-\_\-spec, const std\-::string \&provider=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classBotan_1_1Algorithm__Factory_ab7944b3822010318be6349366b7a6e1a}{add\-\_\-block\-\_\-cipher} (\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$algo, const std\-::string \&provider)
+\item 
+const \hyperlink{classBotan_1_1StreamCipher}{Stream\-Cipher} $\ast$ \hyperlink{classBotan_1_1Algorithm__Factory_ac7220ce376b713a9938857b96f34ba25}{prototype\-\_\-stream\-\_\-cipher} (const std\-::string \&algo\-\_\-spec, const std\-::string \&provider=\char`\"{}\char`\"{})
+\item 
+\hyperlink{classBotan_1_1StreamCipher}{Stream\-Cipher} $\ast$ \hyperlink{classBotan_1_1Algorithm__Factory_a0e34fa28cec72ec79accbd2ffe668ee3}{make\-\_\-stream\-\_\-cipher} (const std\-::string \&algo\-\_\-spec, const std\-::string \&provider=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classBotan_1_1Algorithm__Factory_a89b61ed1eb5e3626dafca1a55e4a217f}{add\-\_\-stream\-\_\-cipher} (\hyperlink{classBotan_1_1StreamCipher}{Stream\-Cipher} $\ast$algo, const std\-::string \&provider)
+\item 
+const \hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$ \hyperlink{classBotan_1_1Algorithm__Factory_a4b88ea4726cf0020fd4aa843f5339d39}{prototype\-\_\-hash\-\_\-function} (const std\-::string \&algo\-\_\-spec, const std\-::string \&provider=\char`\"{}\char`\"{})
+\item 
+\hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$ \hyperlink{classBotan_1_1Algorithm__Factory_a6c5fb62e2171b775cfe6de6dd9a6a9e8}{make\-\_\-hash\-\_\-function} (const std\-::string \&algo\-\_\-spec, const std\-::string \&provider=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classBotan_1_1Algorithm__Factory_a0ed0ff670735fc312113e2e84c030999}{add\-\_\-hash\-\_\-function} (\hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$algo, const std\-::string \&provider)
+\item 
+const \hyperlink{classBotan_1_1MessageAuthenticationCode}{Message\-Authentication\-Code} $\ast$ \hyperlink{classBotan_1_1Algorithm__Factory_aab26a652b7e0afe11ffd3194670f0f6a}{prototype\-\_\-mac} (const std\-::string \&algo\-\_\-spec, const std\-::string \&provider=\char`\"{}\char`\"{})
+\item 
+\hyperlink{classBotan_1_1MessageAuthenticationCode}{Message\-Authentication\-Code} $\ast$ \hyperlink{classBotan_1_1Algorithm__Factory_aa3952fbe10367252e97fcd2cb45e3c72}{make\-\_\-mac} (const std\-::string \&algo\-\_\-spec, const std\-::string \&provider=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classBotan_1_1Algorithm__Factory_a6d0a8697ae96af687dafbe476c6e522d}{add\-\_\-mac} (\hyperlink{classBotan_1_1MessageAuthenticationCode}{Message\-Authentication\-Code} $\ast$algo, const std\-::string \&provider)
+\item 
+const \hyperlink{classBotan_1_1PBKDF}{P\-B\-K\-D\-F} $\ast$ \hyperlink{classBotan_1_1Algorithm__Factory_ac3975290561e670f54fb832c893cb083}{prototype\-\_\-pbkdf} (const std\-::string \&algo\-\_\-spec, const std\-::string \&provider=\char`\"{}\char`\"{})
+\item 
+\hyperlink{classBotan_1_1PBKDF}{P\-B\-K\-D\-F} $\ast$ \hyperlink{classBotan_1_1Algorithm__Factory_a33107b044fd2c2def7518539a122c293}{make\-\_\-pbkdf} (const std\-::string \&algo\-\_\-spec, const std\-::string \&provider=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{classBotan_1_1Algorithm__Factory_a7d341efe1e6cd21cee3b07d65e9078a0}{add\-\_\-pbkdf} (\hyperlink{classBotan_1_1PBKDF}{P\-B\-K\-D\-F} $\ast$algo, const std\-::string \&provider)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1Algorithm__Factory_aaf2242afa147f6e873665e03a51d6efd}{class {\bfseries Engine\-\_\-\-Iterator}}\label{classBotan_1_1Algorithm__Factory_aaf2242afa147f6e873665e03a51d6efd}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1Algorithm}{Algorithm} Factory 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Algorithm__Factory_adab358732baf47c2ff13c3019bf0e3fb}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!Algorithm\-\_\-\-Factory@{Algorithm\-\_\-\-Factory}}
+\index{Algorithm\-\_\-\-Factory@{Algorithm\-\_\-\-Factory}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{Algorithm\-\_\-\-Factory}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Algorithm\-\_\-\-Factory\-::\-Algorithm\-\_\-\-Factory (
+\begin{DoxyParamCaption}
+\item[{{\bf Mutex\-\_\-\-Factory} \&}]{mf}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_adab358732baf47c2ff13c3019bf0e3fb}
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em mf} & a mutex factory \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Algorithm__Factory_ab4a3f851fc98f7e26ed12901b9d57e7d}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!$\sim$\-Algorithm\-\_\-\-Factory@{$\sim$\-Algorithm\-\_\-\-Factory}}
+\index{$\sim$\-Algorithm\-\_\-\-Factory@{$\sim$\-Algorithm\-\_\-\-Factory}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{$\sim$\-Algorithm\-\_\-\-Factory}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Algorithm\-\_\-\-Factory\-::$\sim$\-Algorithm\-\_\-\-Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_ab4a3f851fc98f7e26ed12901b9d57e7d}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Algorithm__Factory_ab7944b3822010318be6349366b7a6e1a}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!add\-\_\-block\-\_\-cipher@{add\-\_\-block\-\_\-cipher}}
+\index{add\-\_\-block\-\_\-cipher@{add\-\_\-block\-\_\-cipher}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{add\-\_\-block\-\_\-cipher}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Algorithm\-\_\-\-Factory\-::add\-\_\-block\-\_\-cipher (
+\begin{DoxyParamCaption}
+\item[{{\bf Block\-Cipher} $\ast$}]{algo, }
+\item[{const std\-::string \&}]{provider}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_ab7944b3822010318be6349366b7a6e1a}
+
+\begin{DoxyParams}{Parameters}
+{\em algo} & the algorithm to add \\
+\hline
+{\em provider} & the provider of this algorithm \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Algorithm__Factory_a9145cbe43c42dbb2477659634bffcbde}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!add\-\_\-engine@{add\-\_\-engine}}
+\index{add\-\_\-engine@{add\-\_\-engine}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{add\-\_\-engine}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Algorithm\-\_\-\-Factory\-::add\-\_\-engine (
+\begin{DoxyParamCaption}
+\item[{{\bf Engine} $\ast$}]{engine}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_a9145cbe43c42dbb2477659634bffcbde}
+
+\begin{DoxyParams}{Parameters}
+{\em engine} & to add (\hyperlink{classBotan_1_1Algorithm__Factory}{Algorithm\-\_\-\-Factory} takes ownership) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Algorithm__Factory_a0ed0ff670735fc312113e2e84c030999}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!add\-\_\-hash\-\_\-function@{add\-\_\-hash\-\_\-function}}
+\index{add\-\_\-hash\-\_\-function@{add\-\_\-hash\-\_\-function}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{add\-\_\-hash\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Algorithm\-\_\-\-Factory\-::add\-\_\-hash\-\_\-function (
+\begin{DoxyParamCaption}
+\item[{{\bf Hash\-Function} $\ast$}]{algo, }
+\item[{const std\-::string \&}]{provider}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_a0ed0ff670735fc312113e2e84c030999}
+
+\begin{DoxyParams}{Parameters}
+{\em algo} & the algorithm to add \\
+\hline
+{\em provider} & the provider of this algorithm \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Algorithm__Factory_a6d0a8697ae96af687dafbe476c6e522d}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!add\-\_\-mac@{add\-\_\-mac}}
+\index{add\-\_\-mac@{add\-\_\-mac}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{add\-\_\-mac}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Algorithm\-\_\-\-Factory\-::add\-\_\-mac (
+\begin{DoxyParamCaption}
+\item[{{\bf Message\-Authentication\-Code} $\ast$}]{algo, }
+\item[{const std\-::string \&}]{provider}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_a6d0a8697ae96af687dafbe476c6e522d}
+
+\begin{DoxyParams}{Parameters}
+{\em algo} & the algorithm to add \\
+\hline
+{\em provider} & the provider of this algorithm \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Algorithm__Factory_a7d341efe1e6cd21cee3b07d65e9078a0}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!add\-\_\-pbkdf@{add\-\_\-pbkdf}}
+\index{add\-\_\-pbkdf@{add\-\_\-pbkdf}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{add\-\_\-pbkdf}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Algorithm\-\_\-\-Factory\-::add\-\_\-pbkdf (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-B\-K\-D\-F} $\ast$}]{algo, }
+\item[{const std\-::string \&}]{provider}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_a7d341efe1e6cd21cee3b07d65e9078a0}
+
+\begin{DoxyParams}{Parameters}
+{\em algo} & the algorithm to add \\
+\hline
+{\em provider} & the provider of this algorithm \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Algorithm__Factory_a89b61ed1eb5e3626dafca1a55e4a217f}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!add\-\_\-stream\-\_\-cipher@{add\-\_\-stream\-\_\-cipher}}
+\index{add\-\_\-stream\-\_\-cipher@{add\-\_\-stream\-\_\-cipher}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{add\-\_\-stream\-\_\-cipher}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Algorithm\-\_\-\-Factory\-::add\-\_\-stream\-\_\-cipher (
+\begin{DoxyParamCaption}
+\item[{{\bf Stream\-Cipher} $\ast$}]{algo, }
+\item[{const std\-::string \&}]{provider}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_a89b61ed1eb5e3626dafca1a55e4a217f}
+
+\begin{DoxyParams}{Parameters}
+{\em algo} & the algorithm to add \\
+\hline
+{\em provider} & the provider of this algorithm \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Algorithm__Factory_acc0d90084366dd11a573e231e028f767}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!clear\-\_\-caches@{clear\-\_\-caches}}
+\index{clear\-\_\-caches@{clear\-\_\-caches}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{clear\-\_\-caches}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Algorithm\-\_\-\-Factory\-::clear\-\_\-caches (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_acc0d90084366dd11a573e231e028f767}
+Clear out any cached objects \hypertarget{classBotan_1_1Algorithm__Factory_ae01a710d7f27a5472eaaa302fa07b716}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!make\-\_\-block\-\_\-cipher@{make\-\_\-block\-\_\-cipher}}
+\index{make\-\_\-block\-\_\-cipher@{make\-\_\-block\-\_\-cipher}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{make\-\_\-block\-\_\-cipher}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Cipher} $\ast$ Botan\-::\-Algorithm\-\_\-\-Factory\-::make\-\_\-block\-\_\-cipher (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{algo\-\_\-spec, }
+\item[{const std\-::string \&}]{provider = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_ae01a710d7f27a5472eaaa302fa07b716}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm we want \\
+\hline
+{\em provider} & the provider we would like to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to freshly created instance of the request algorithm 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Algorithm__Factory_a6c5fb62e2171b775cfe6de6dd9a6a9e8}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!make\-\_\-hash\-\_\-function@{make\-\_\-hash\-\_\-function}}
+\index{make\-\_\-hash\-\_\-function@{make\-\_\-hash\-\_\-function}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{make\-\_\-hash\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hash\-Function} $\ast$ Botan\-::\-Algorithm\-\_\-\-Factory\-::make\-\_\-hash\-\_\-function (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{algo\-\_\-spec, }
+\item[{const std\-::string \&}]{provider = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_a6c5fb62e2171b775cfe6de6dd9a6a9e8}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm we want \\
+\hline
+{\em provider} & the provider we would like to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to freshly created instance of the request algorithm 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Algorithm__Factory_aa3952fbe10367252e97fcd2cb45e3c72}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!make\-\_\-mac@{make\-\_\-mac}}
+\index{make\-\_\-mac@{make\-\_\-mac}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{make\-\_\-mac}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message\-Authentication\-Code} $\ast$ Botan\-::\-Algorithm\-\_\-\-Factory\-::make\-\_\-mac (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{algo\-\_\-spec, }
+\item[{const std\-::string \&}]{provider = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_aa3952fbe10367252e97fcd2cb45e3c72}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm we want \\
+\hline
+{\em provider} & the provider we would like to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to freshly created instance of the request algorithm 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Algorithm__Factory_a33107b044fd2c2def7518539a122c293}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!make\-\_\-pbkdf@{make\-\_\-pbkdf}}
+\index{make\-\_\-pbkdf@{make\-\_\-pbkdf}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{make\-\_\-pbkdf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-B\-K\-D\-F} $\ast$ Botan\-::\-Algorithm\-\_\-\-Factory\-::make\-\_\-pbkdf (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{algo\-\_\-spec, }
+\item[{const std\-::string \&}]{provider = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_a33107b044fd2c2def7518539a122c293}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm we want \\
+\hline
+{\em provider} & the provider we would like to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to freshly created instance of the request algorithm 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Algorithm__Factory_a0e34fa28cec72ec79accbd2ffe668ee3}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!make\-\_\-stream\-\_\-cipher@{make\-\_\-stream\-\_\-cipher}}
+\index{make\-\_\-stream\-\_\-cipher@{make\-\_\-stream\-\_\-cipher}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{make\-\_\-stream\-\_\-cipher}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stream\-Cipher} $\ast$ Botan\-::\-Algorithm\-\_\-\-Factory\-::make\-\_\-stream\-\_\-cipher (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{algo\-\_\-spec, }
+\item[{const std\-::string \&}]{provider = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_a0e34fa28cec72ec79accbd2ffe668ee3}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm we want \\
+\hline
+{\em provider} & the provider we would like to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to freshly created instance of the request algorithm 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Algorithm__Factory_aa5db86f98ab9ad9e77a8aae359e3ba36}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!prototype\-\_\-block\-\_\-cipher@{prototype\-\_\-block\-\_\-cipher}}
+\index{prototype\-\_\-block\-\_\-cipher@{prototype\-\_\-block\-\_\-cipher}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{prototype\-\_\-block\-\_\-cipher}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Block\-Cipher} $\ast$ Botan\-::\-Algorithm\-\_\-\-Factory\-::prototype\-\_\-block\-\_\-cipher (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{algo\-\_\-spec, }
+\item[{const std\-::string \&}]{provider = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_aa5db86f98ab9ad9e77a8aae359e3ba36}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm we want \\
+\hline
+{\em provider} & the provider we would like to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to const prototype object, ready to clone(), or N\-U\-L\-L 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Algorithm__Factory_a4b88ea4726cf0020fd4aa843f5339d39}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!prototype\-\_\-hash\-\_\-function@{prototype\-\_\-hash\-\_\-function}}
+\index{prototype\-\_\-hash\-\_\-function@{prototype\-\_\-hash\-\_\-function}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{prototype\-\_\-hash\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Hash\-Function} $\ast$ Botan\-::\-Algorithm\-\_\-\-Factory\-::prototype\-\_\-hash\-\_\-function (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{algo\-\_\-spec, }
+\item[{const std\-::string \&}]{provider = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_a4b88ea4726cf0020fd4aa843f5339d39}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm we want \\
+\hline
+{\em provider} & the provider we would like to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to const prototype object, ready to clone(), or N\-U\-L\-L 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Algorithm__Factory_aab26a652b7e0afe11ffd3194670f0f6a}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!prototype\-\_\-mac@{prototype\-\_\-mac}}
+\index{prototype\-\_\-mac@{prototype\-\_\-mac}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{prototype\-\_\-mac}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Message\-Authentication\-Code} $\ast$ Botan\-::\-Algorithm\-\_\-\-Factory\-::prototype\-\_\-mac (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{algo\-\_\-spec, }
+\item[{const std\-::string \&}]{provider = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_aab26a652b7e0afe11ffd3194670f0f6a}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm we want \\
+\hline
+{\em provider} & the provider we would like to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to const prototype object, ready to clone(), or N\-U\-L\-L 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Algorithm__Factory_ac3975290561e670f54fb832c893cb083}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!prototype\-\_\-pbkdf@{prototype\-\_\-pbkdf}}
+\index{prototype\-\_\-pbkdf@{prototype\-\_\-pbkdf}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{prototype\-\_\-pbkdf}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf P\-B\-K\-D\-F} $\ast$ Botan\-::\-Algorithm\-\_\-\-Factory\-::prototype\-\_\-pbkdf (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{algo\-\_\-spec, }
+\item[{const std\-::string \&}]{provider = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_ac3975290561e670f54fb832c893cb083}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm we want \\
+\hline
+{\em provider} & the provider we would like to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to const prototype object, ready to clone(), or N\-U\-L\-L 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Algorithm__Factory_ac7220ce376b713a9938857b96f34ba25}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!prototype\-\_\-stream\-\_\-cipher@{prototype\-\_\-stream\-\_\-cipher}}
+\index{prototype\-\_\-stream\-\_\-cipher@{prototype\-\_\-stream\-\_\-cipher}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{prototype\-\_\-stream\-\_\-cipher}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Stream\-Cipher} $\ast$ Botan\-::\-Algorithm\-\_\-\-Factory\-::prototype\-\_\-stream\-\_\-cipher (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{algo\-\_\-spec, }
+\item[{const std\-::string \&}]{provider = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_ac7220ce376b713a9938857b96f34ba25}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm we want \\
+\hline
+{\em provider} & the provider we would like to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to const prototype object, ready to clone(), or N\-U\-L\-L 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Algorithm__Factory_a109e1c89927d077f4dc1d30158d79103}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!providers\-\_\-of@{providers\-\_\-of}}
+\index{providers\-\_\-of@{providers\-\_\-of}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{providers\-\_\-of}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ std\-::string $>$ Botan\-::\-Algorithm\-\_\-\-Factory\-::providers\-\_\-of (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{algo\-\_\-spec}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_a109e1c89927d077f4dc1d30158d79103}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm we are querying \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of providers of this algorithm 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Algorithm__Factory_a4687e6e6c337113b208b9237ff62d89b}{\index{Botan\-::\-Algorithm\-\_\-\-Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}!set\-\_\-preferred\-\_\-provider@{set\-\_\-preferred\-\_\-provider}}
+\index{set\-\_\-preferred\-\_\-provider@{set\-\_\-preferred\-\_\-provider}!Botan::Algorithm_Factory@{Botan\-::\-Algorithm\-\_\-\-Factory}}
+\subsubsection[{set\-\_\-preferred\-\_\-provider}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Algorithm\-\_\-\-Factory\-::set\-\_\-preferred\-\_\-provider (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{algo\-\_\-spec, }
+\item[{const std\-::string \&}]{provider}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Factory_a4687e6e6c337113b208b9237ff62d89b}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm we are setting a provider for \\
+\hline
+{\em provider} & the provider we would like to use \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/algo\-\_\-factory/algo\-\_\-factory.\-h\item 
+src/algo\-\_\-factory/algo\-\_\-factory.\-cpp\end{DoxyCompactItemize}

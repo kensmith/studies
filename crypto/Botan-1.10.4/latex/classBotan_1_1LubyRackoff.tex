@@ -1,0 +1,167 @@
+\hypertarget{classBotan_1_1LubyRackoff}{\section{Botan\-:\-:Luby\-Rackoff Class Reference}
+\label{classBotan_1_1LubyRackoff}\index{Botan\-::\-Luby\-Rackoff@{Botan\-::\-Luby\-Rackoff}}
+}
+
+
+{\ttfamily \#include $<$lubyrack.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Luby\-Rackoff\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classBotan_1_1LubyRackoff}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1LubyRackoff_a0230c1ae870822505ee897caa22a7386}{encrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+void \hyperlink{classBotan_1_1LubyRackoff_adba66035400e94f1acd007903d318886}{decrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1LubyRackoff_a324eae6f091ceb88926956079cd67976}{block\-\_\-size} () const 
+\item 
+\hyperlink{classBotan_1_1Key__Length__Specification}{Key\-\_\-\-Length\-\_\-\-Specification} \hyperlink{classBotan_1_1LubyRackoff_acfa3f54596e4799f99502386eb0b08d8}{key\-\_\-spec} () const 
+\item 
+void \hyperlink{classBotan_1_1LubyRackoff_a5cb710f200772c7858c7aa116d4abf00}{clear} ()
+\item 
+std\-::string \hyperlink{classBotan_1_1LubyRackoff_affd63caa27bf21edf487e8d5c9877e1c}{name} () const 
+\item 
+\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$ \hyperlink{classBotan_1_1LubyRackoff_a7960c9e89ced91473dfde920a335fd3b}{clone} () const 
+\item 
+\hyperlink{classBotan_1_1LubyRackoff_af07584b772b216e44eb45be313f932ce}{Luby\-Rackoff} (\hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$hash)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Luby-\/\-Rackoff block cipher construction 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1LubyRackoff_af07584b772b216e44eb45be313f932ce}{\index{Botan\-::\-Luby\-Rackoff@{Botan\-::\-Luby\-Rackoff}!Luby\-Rackoff@{Luby\-Rackoff}}
+\index{Luby\-Rackoff@{Luby\-Rackoff}!Botan::LubyRackoff@{Botan\-::\-Luby\-Rackoff}}
+\subsubsection[{Luby\-Rackoff}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Luby\-Rackoff\-::\-Luby\-Rackoff (
+\begin{DoxyParamCaption}
+\item[{{\bf Hash\-Function} $\ast$}]{hash}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1LubyRackoff_af07584b772b216e44eb45be313f932ce}
+
+\begin{DoxyParams}{Parameters}
+{\em hash} & function to use to form the block cipher \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1LubyRackoff_a324eae6f091ceb88926956079cd67976}{\index{Botan\-::\-Luby\-Rackoff@{Botan\-::\-Luby\-Rackoff}!block\-\_\-size@{block\-\_\-size}}
+\index{block\-\_\-size@{block\-\_\-size}!Botan::LubyRackoff@{Botan\-::\-Luby\-Rackoff}}
+\subsubsection[{block\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Luby\-Rackoff\-::block\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1LubyRackoff_a324eae6f091ceb88926956079cd67976}
+\begin{DoxyReturn}{Returns}
+block size of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_ae5e91c5b169252e67f466f6b6321a41e}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1LubyRackoff_a5cb710f200772c7858c7aa116d4abf00}{\index{Botan\-::\-Luby\-Rackoff@{Botan\-::\-Luby\-Rackoff}!clear@{clear}}
+\index{clear@{clear}!Botan::LubyRackoff@{Botan\-::\-Luby\-Rackoff}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Luby\-Rackoff\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1LubyRackoff_a5cb710f200772c7858c7aa116d4abf00}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1LubyRackoff_a7960c9e89ced91473dfde920a335fd3b}{\index{Botan\-::\-Luby\-Rackoff@{Botan\-::\-Luby\-Rackoff}!clone@{clone}}
+\index{clone@{clone}!Botan::LubyRackoff@{Botan\-::\-Luby\-Rackoff}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Cipher} $\ast$ Botan\-::\-Luby\-Rackoff\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1LubyRackoff_a7960c9e89ced91473dfde920a335fd3b}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a9feaf7c1bfb5279a1652c849054e033c}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1LubyRackoff_adba66035400e94f1acd007903d318886}{\index{Botan\-::\-Luby\-Rackoff@{Botan\-::\-Luby\-Rackoff}!decrypt\-\_\-n@{decrypt\-\_\-n}}
+\index{decrypt\-\_\-n@{decrypt\-\_\-n}!Botan::LubyRackoff@{Botan\-::\-Luby\-Rackoff}}
+\subsubsection[{decrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Luby\-Rackoff\-::decrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1LubyRackoff_adba66035400e94f1acd007903d318886}
+Decrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1LubyRackoff_a324eae6f091ceb88926956079cd67976}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a6ea709632f78d833484a4d67de25e1a8}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1LubyRackoff_a0230c1ae870822505ee897caa22a7386}{\index{Botan\-::\-Luby\-Rackoff@{Botan\-::\-Luby\-Rackoff}!encrypt\-\_\-n@{encrypt\-\_\-n}}
+\index{encrypt\-\_\-n@{encrypt\-\_\-n}!Botan::LubyRackoff@{Botan\-::\-Luby\-Rackoff}}
+\subsubsection[{encrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Luby\-Rackoff\-::encrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1LubyRackoff_a0230c1ae870822505ee897caa22a7386}
+Encrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1LubyRackoff_a324eae6f091ceb88926956079cd67976}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a16a7005967a910407703c2899bd73ccf}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1LubyRackoff_acfa3f54596e4799f99502386eb0b08d8}{\index{Botan\-::\-Luby\-Rackoff@{Botan\-::\-Luby\-Rackoff}!key\-\_\-spec@{key\-\_\-spec}}
+\index{key\-\_\-spec@{key\-\_\-spec}!Botan::LubyRackoff@{Botan\-::\-Luby\-Rackoff}}
+\subsubsection[{key\-\_\-spec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key\-\_\-\-Length\-\_\-\-Specification} Botan\-::\-Luby\-Rackoff\-::key\-\_\-spec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1LubyRackoff_acfa3f54596e4799f99502386eb0b08d8}
+\begin{DoxyReturn}{Returns}
+object describing limits on key size 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1SymmetricAlgorithm_aea45c0d248b3116d7a1ebbd086f14e1b}{Botan\-::\-Symmetric\-Algorithm}.
+
+\hypertarget{classBotan_1_1LubyRackoff_affd63caa27bf21edf487e8d5c9877e1c}{\index{Botan\-::\-Luby\-Rackoff@{Botan\-::\-Luby\-Rackoff}!name@{name}}
+\index{name@{name}!Botan::LubyRackoff@{Botan\-::\-Luby\-Rackoff}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Luby\-Rackoff\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1LubyRackoff_affd63caa27bf21edf487e8d5c9877e1c}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/block/lubyrack/lubyrack.\-h\item 
+src/block/lubyrack/lubyrack.\-cpp\end{DoxyCompactItemize}

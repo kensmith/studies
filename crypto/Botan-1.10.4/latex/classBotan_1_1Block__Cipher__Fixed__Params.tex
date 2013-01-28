@@ -1,0 +1,67 @@
+\hypertarget{classBotan_1_1Block__Cipher__Fixed__Params}{\section{Botan\-:\-:Block\-\_\-\-Cipher\-\_\-\-Fixed\-\_\-\-Params$<$ B\-S, K\-M\-I\-N, K\-M\-A\-X, K\-M\-O\-D $>$ Class Template Reference}
+\label{classBotan_1_1Block__Cipher__Fixed__Params}\index{Botan\-::\-Block\-\_\-\-Cipher\-\_\-\-Fixed\-\_\-\-Params$<$ B\-S, K\-M\-I\-N, K\-M\-A\-X, K\-M\-O\-D $>$@{Botan\-::\-Block\-\_\-\-Cipher\-\_\-\-Fixed\-\_\-\-Params$<$ B\-S, K\-M\-I\-N, K\-M\-A\-X, K\-M\-O\-D $>$}}
+}
+
+
+{\ttfamily \#include $<$block\-\_\-cipher.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Block\-\_\-\-Cipher\-\_\-\-Fixed\-\_\-\-Params$<$ B\-S, K\-M\-I\-N, K\-M\-A\-X, K\-M\-O\-D $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classBotan_1_1Block__Cipher__Fixed__Params}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E} = B\-S
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{block\-\_\-size} () const 
+\item 
+\hyperlink{classBotan_1_1Key__Length__Specification}{Key\-\_\-\-Length\-\_\-\-Specification} \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a585d9f6c14f0f09c93636c1f97197a94}{key\-\_\-spec} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$size\-\_\-t B\-S, size\-\_\-t K\-M\-I\-N, size\-\_\-t K\-M\-A\-X = 0, size\-\_\-t K\-M\-O\-D = 1$>$class Botan\-::\-Block\-\_\-\-Cipher\-\_\-\-Fixed\-\_\-\-Params$<$ B\-S, K\-M\-I\-N, K\-M\-A\-X, K\-M\-O\-D $>$}
+
+Represents a block cipher with a single fixed block size 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{\index{Botan\-::\-Block\-\_\-\-Cipher\-\_\-\-Fixed\-\_\-\-Params@{Botan\-::\-Block\-\_\-\-Cipher\-\_\-\-Fixed\-\_\-\-Params}!block\-\_\-size@{block\-\_\-size}}
+\index{block\-\_\-size@{block\-\_\-size}!Botan::Block_Cipher_Fixed_Params@{Botan\-::\-Block\-\_\-\-Cipher\-\_\-\-Fixed\-\_\-\-Params}}
+\subsubsection[{block\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$size\-\_\-t B\-S, size\-\_\-t K\-M\-I\-N, size\-\_\-t K\-M\-A\-X = 0, size\-\_\-t K\-M\-O\-D = 1$>$ size\-\_\-t {\bf Botan\-::\-Block\-\_\-\-Cipher\-\_\-\-Fixed\-\_\-\-Params}$<$ B\-S, K\-M\-I\-N, K\-M\-A\-X, K\-M\-O\-D $>$\-::block\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}
+\begin{DoxyReturn}{Returns}
+block size of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_ae5e91c5b169252e67f466f6b6321a41e}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1Block__Cipher__Fixed__Params_a585d9f6c14f0f09c93636c1f97197a94}{\index{Botan\-::\-Block\-\_\-\-Cipher\-\_\-\-Fixed\-\_\-\-Params@{Botan\-::\-Block\-\_\-\-Cipher\-\_\-\-Fixed\-\_\-\-Params}!key\-\_\-spec@{key\-\_\-spec}}
+\index{key\-\_\-spec@{key\-\_\-spec}!Botan::Block_Cipher_Fixed_Params@{Botan\-::\-Block\-\_\-\-Cipher\-\_\-\-Fixed\-\_\-\-Params}}
+\subsubsection[{key\-\_\-spec}]{\setlength{\rightskip}{0pt plus 5cm}template$<$size\-\_\-t B\-S, size\-\_\-t K\-M\-I\-N, size\-\_\-t K\-M\-A\-X = 0, size\-\_\-t K\-M\-O\-D = 1$>$ {\bf Key\-\_\-\-Length\-\_\-\-Specification} {\bf Botan\-::\-Block\-\_\-\-Cipher\-\_\-\-Fixed\-\_\-\-Params}$<$ B\-S, K\-M\-I\-N, K\-M\-A\-X, K\-M\-O\-D $>$\-::key\-\_\-spec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Block__Cipher__Fixed__Params_a585d9f6c14f0f09c93636c1f97197a94}
+\begin{DoxyReturn}{Returns}
+object describing limits on key size 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1SymmetricAlgorithm_aea45c0d248b3116d7a1ebbd086f14e1b}{Botan\-::\-Symmetric\-Algorithm}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/block/block\-\_\-cipher.\-h\end{DoxyCompactItemize}

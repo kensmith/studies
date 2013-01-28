@@ -1,0 +1,66 @@
+\hypertarget{classBotan_1_1RW__Verification__Operation}{\section{Botan\-:\-:R\-W\-\_\-\-Verification\-\_\-\-Operation Class Reference}
+\label{classBotan_1_1RW__Verification__Operation}\index{Botan\-::\-R\-W\-\_\-\-Verification\-\_\-\-Operation@{Botan\-::\-R\-W\-\_\-\-Verification\-\_\-\-Operation}}
+}
+
+
+{\ttfamily \#include $<$rw.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:R\-W\-\_\-\-Verification\-\_\-\-Operation\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1RW__Verification__Operation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1RW__Verification__Operation_abf429b3bd94c3d6654a0de2372a1826a}{{\bfseries R\-W\-\_\-\-Verification\-\_\-\-Operation} (const \hyperlink{classBotan_1_1RW__PublicKey}{R\-W\-\_\-\-Public\-Key} \&rw)}\label{classBotan_1_1RW__Verification__Operation_abf429b3bd94c3d6654a0de2372a1826a}
+
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1RW__Verification__Operation_a9919bda595f3be6a344ca028675986c8}{max\-\_\-input\-\_\-bits} () const 
+\item 
+bool \hyperlink{classBotan_1_1RW__Verification__Operation_a69cc5becd49383d478c4e3043bcfdc98}{with\-\_\-recovery} () const 
+\item 
+\hypertarget{classBotan_1_1RW__Verification__Operation_ac42a6056d7570047ab1e1fdfe82fd487}{\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ {\bfseries verify\-\_\-mr} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} msg\mbox{[}$\,$\mbox{]}, size\-\_\-t msg\-\_\-len)}\label{classBotan_1_1RW__Verification__Operation_ac42a6056d7570047ab1e1fdfe82fd487}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Rabin-\/\-Williams Verification Operation 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1RW__Verification__Operation_a9919bda595f3be6a344ca028675986c8}{\index{Botan\-::\-R\-W\-\_\-\-Verification\-\_\-\-Operation@{Botan\-::\-R\-W\-\_\-\-Verification\-\_\-\-Operation}!max\-\_\-input\-\_\-bits@{max\-\_\-input\-\_\-bits}}
+\index{max\-\_\-input\-\_\-bits@{max\-\_\-input\-\_\-bits}!Botan::RW_Verification_Operation@{Botan\-::\-R\-W\-\_\-\-Verification\-\_\-\-Operation}}
+\subsubsection[{max\-\_\-input\-\_\-bits}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-R\-W\-\_\-\-Verification\-\_\-\-Operation\-::max\-\_\-input\-\_\-bits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1RW__Verification__Operation_a9919bda595f3be6a344ca028675986c8}
+Get the maximum message size in bits supported by this public key. \begin{DoxyReturn}{Returns}
+maximum message in bits 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1PK__Ops_1_1Verification_a76a23969121f2ce0247ee431f25ddafa}{Botan\-::\-P\-K\-\_\-\-Ops\-::\-Verification}.
+
+\hypertarget{classBotan_1_1RW__Verification__Operation_a69cc5becd49383d478c4e3043bcfdc98}{\index{Botan\-::\-R\-W\-\_\-\-Verification\-\_\-\-Operation@{Botan\-::\-R\-W\-\_\-\-Verification\-\_\-\-Operation}!with\-\_\-recovery@{with\-\_\-recovery}}
+\index{with\-\_\-recovery@{with\-\_\-recovery}!Botan::RW_Verification_Operation@{Botan\-::\-R\-W\-\_\-\-Verification\-\_\-\-Operation}}
+\subsubsection[{with\-\_\-recovery}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-R\-W\-\_\-\-Verification\-\_\-\-Operation\-::with\-\_\-recovery (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1RW__Verification__Operation_a69cc5becd49383d478c4e3043bcfdc98}
+\begin{DoxyReturn}{Returns}
+boolean specifying if this key type supports message recovery and thus if you need to call verify() or verify\-\_\-mr() 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1PK__Ops_1_1Verification_af66d51b7b6ae5e9b851815df23f7db7c}{Botan\-::\-P\-K\-\_\-\-Ops\-::\-Verification}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/pubkey/rw/rw.\-h\item 
+src/pubkey/rw/rw.\-cpp\end{DoxyCompactItemize}

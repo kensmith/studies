@@ -1,0 +1,124 @@
+\hypertarget{classBotan_1_1StreamCipher}{\section{Botan\-:\-:Stream\-Cipher Class Reference}
+\label{classBotan_1_1StreamCipher}\index{Botan\-::\-Stream\-Cipher@{Botan\-::\-Stream\-Cipher}}
+}
+
+
+{\ttfamily \#include $<$stream\-\_\-cipher.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Stream\-Cipher\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.893491cm]{classBotan_1_1StreamCipher}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classBotan_1_1StreamCipher_a447f265ece48d9af46f6947495ce3aeb}{cipher} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t len)=0
+\item 
+void \hyperlink{classBotan_1_1StreamCipher_a915a10a5959653711060aece2dcce075}{cipher1} (\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} buf\mbox{[}$\,$\mbox{]}, size\-\_\-t len)
+\item 
+virtual void \hyperlink{classBotan_1_1StreamCipher_a787dea4f477ea27e8ba0ed7e1da9120d}{set\-\_\-iv} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} iv\mbox{[}$\,$\mbox{]}, size\-\_\-t iv\-\_\-len)
+\item 
+virtual bool \hyperlink{classBotan_1_1StreamCipher_aeb0aaa9c4248e22c8302b99b2dfa9e8d}{valid\-\_\-iv\-\_\-length} (size\-\_\-t iv\-\_\-len) const 
+\item 
+virtual \hyperlink{classBotan_1_1StreamCipher}{Stream\-Cipher} $\ast$ \hyperlink{classBotan_1_1StreamCipher_aa25d9ce72725e8bb0cf6c36540412397}{clone} () const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for all stream ciphers 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1StreamCipher_a447f265ece48d9af46f6947495ce3aeb}{\index{Botan\-::\-Stream\-Cipher@{Botan\-::\-Stream\-Cipher}!cipher@{cipher}}
+\index{cipher@{cipher}!Botan::StreamCipher@{Botan\-::\-Stream\-Cipher}}
+\subsubsection[{cipher}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Botan\-::\-Stream\-Cipher\-::cipher (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1StreamCipher_a447f265ece48d9af46f6947495ce3aeb}
+Encrypt or decrypt a message 
+\begin{DoxyParams}{Parameters}
+{\em in} & the plaintext \\
+\hline
+{\em out} & the byte array to hold the output, i.\-e. the ciphertext \\
+\hline
+{\em len} & the length of both in and out in bytes \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classBotan_1_1WiderWake__41__BE_a20f142d68480c29bb8f353bb60cf501f}{Botan\-::\-Wider\-Wake\-\_\-41\-\_\-\-B\-E}, \hyperlink{classBotan_1_1ARC4_a88e1abaa501753b7a642f2e75d5df9c7}{Botan\-::\-A\-R\-C4}, \hyperlink{classBotan_1_1CTR__BE_a83936f82d0e761c373b80d6d43b18880}{Botan\-::\-C\-T\-R\-\_\-\-B\-E}, \hyperlink{classBotan_1_1OFB_a95a63dc2f9a1adff1eaddb4531a0efe0}{Botan\-::\-O\-F\-B}, \hyperlink{classBotan_1_1Salsa20_ac100bcf5883f84b102231ed749c770fc}{Botan\-::\-Salsa20}, and \hyperlink{classBotan_1_1Turing_a336de01480b7ae4d6223001aa6c49bcb}{Botan\-::\-Turing}.
+
+\hypertarget{classBotan_1_1StreamCipher_a915a10a5959653711060aece2dcce075}{\index{Botan\-::\-Stream\-Cipher@{Botan\-::\-Stream\-Cipher}!cipher1@{cipher1}}
+\index{cipher1@{cipher1}!Botan::StreamCipher@{Botan\-::\-Stream\-Cipher}}
+\subsubsection[{cipher1}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Stream\-Cipher\-::cipher1 (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{buf\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1StreamCipher_a915a10a5959653711060aece2dcce075}
+Encrypt or decrypt a message 
+\begin{DoxyParams}{Parameters}
+{\em buf} & the plaintext / ciphertext \\
+\hline
+{\em len} & the length of buf in bytes \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1StreamCipher_aa25d9ce72725e8bb0cf6c36540412397}{\index{Botan\-::\-Stream\-Cipher@{Botan\-::\-Stream\-Cipher}!clone@{clone}}
+\index{clone@{clone}!Botan::StreamCipher@{Botan\-::\-Stream\-Cipher}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Stream\-Cipher}$\ast$ Botan\-::\-Stream\-Cipher\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1StreamCipher_aa25d9ce72725e8bb0cf6c36540412397}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implemented in \hyperlink{classBotan_1_1CTR__BE_ae360c204124f93dbfc3a51a0d18e0909}{Botan\-::\-C\-T\-R\-\_\-\-B\-E}, \hyperlink{classBotan_1_1OFB_a4217ffb89bf22123cd9bf12a1c9e0ae2}{Botan\-::\-O\-F\-B}, \hyperlink{classBotan_1_1WiderWake__41__BE_a14ed5259b30c6ce7728c7f3801efe467}{Botan\-::\-Wider\-Wake\-\_\-41\-\_\-\-B\-E}, \hyperlink{classBotan_1_1Salsa20_ac973d0e968a8877460de781a32c96b86}{Botan\-::\-Salsa20}, \hyperlink{classBotan_1_1Turing_aa6cdd53f8d90376519b98917dff4c0fe}{Botan\-::\-Turing}, \hyperlink{classBotan_1_1ARC4_a78ccda8818d929f13db86e97ebf06cfb}{Botan\-::\-A\-R\-C4}, and \hyperlink{classXOR__Cipher_abd8d0a15e54a33dd9ab01ebb0a8d7dea}{X\-O\-R\-\_\-\-Cipher}.
+
+\hypertarget{classBotan_1_1StreamCipher_a787dea4f477ea27e8ba0ed7e1da9120d}{\index{Botan\-::\-Stream\-Cipher@{Botan\-::\-Stream\-Cipher}!set\-\_\-iv@{set\-\_\-iv}}
+\index{set\-\_\-iv@{set\-\_\-iv}!Botan::StreamCipher@{Botan\-::\-Stream\-Cipher}}
+\subsubsection[{set\-\_\-iv}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Stream\-Cipher\-::set\-\_\-iv (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{iv\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{iv\-\_\-len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1StreamCipher_a787dea4f477ea27e8ba0ed7e1da9120d}
+Resync the cipher using the I\-V 
+\begin{DoxyParams}{Parameters}
+{\em iv} & the initialization vector \\
+\hline
+{\em iv\-\_\-len} & the length of the I\-V in bytes \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classBotan_1_1WiderWake__41__BE_a60438333be4334c3c1316517ee2c699c}{Botan\-::\-Wider\-Wake\-\_\-41\-\_\-\-B\-E}, \hyperlink{classBotan_1_1CTR__BE_a9fea731e55f3267789e85ecf733d0da9}{Botan\-::\-C\-T\-R\-\_\-\-B\-E}, \hyperlink{classBotan_1_1OFB_a5a834705404862e01e86bf83b2d26eeb}{Botan\-::\-O\-F\-B}, \hyperlink{classBotan_1_1Salsa20_a9c1b26b03d601ebabe8873e0c1155824}{Botan\-::\-Salsa20}, and \hyperlink{classBotan_1_1Turing_ac04f4ac9c119ab1ef5f47c4de684b4da}{Botan\-::\-Turing}.
+
+\hypertarget{classBotan_1_1StreamCipher_aeb0aaa9c4248e22c8302b99b2dfa9e8d}{\index{Botan\-::\-Stream\-Cipher@{Botan\-::\-Stream\-Cipher}!valid\-\_\-iv\-\_\-length@{valid\-\_\-iv\-\_\-length}}
+\index{valid\-\_\-iv\-\_\-length@{valid\-\_\-iv\-\_\-length}!Botan::StreamCipher@{Botan\-::\-Stream\-Cipher}}
+\subsubsection[{valid\-\_\-iv\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-Stream\-Cipher\-::valid\-\_\-iv\-\_\-length (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{iv\-\_\-len}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1StreamCipher_aeb0aaa9c4248e22c8302b99b2dfa9e8d}
+
+\begin{DoxyParams}{Parameters}
+{\em iv\-\_\-len} & the length of the I\-V in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if the length is valid for this algorithm 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classBotan_1_1WiderWake__41__BE_ac88514fcc75e8ebf25841eb5a89c8aed}{Botan\-::\-Wider\-Wake\-\_\-41\-\_\-\-B\-E}, \hyperlink{classBotan_1_1CTR__BE_aff10f4ae2f0d4054c78ab3d9dce7be31}{Botan\-::\-C\-T\-R\-\_\-\-B\-E}, \hyperlink{classBotan_1_1OFB_a9fa202cf66788f827a7a745ad8d4b07e}{Botan\-::\-O\-F\-B}, \hyperlink{classBotan_1_1Salsa20_a2a33127742dc2ace54e9d7e7d7c68b23}{Botan\-::\-Salsa20}, and \hyperlink{classBotan_1_1Turing_a34da82793efbceb49c5f50d3f6d917ed}{Botan\-::\-Turing}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/stream/stream\-\_\-cipher.\-h\item 
+src/stream/stream\-\_\-cipher.\-cpp\end{DoxyCompactItemize}

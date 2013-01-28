@@ -1,0 +1,119 @@
+\hypertarget{classBotan_1_1CBC__MAC}{\section{Botan\-:\-:C\-B\-C\-\_\-\-M\-A\-C Class Reference}
+\label{classBotan_1_1CBC__MAC}\index{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C@{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C}}
+}
+
+
+{\ttfamily \#include $<$cbc\-\_\-mac.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:C\-B\-C\-\_\-\-M\-A\-C\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classBotan_1_1CBC__MAC}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1CBC__MAC_ac81c88175ee94ce6c8f10f0a18a5be21}{name} () const 
+\item 
+\hyperlink{classBotan_1_1MessageAuthenticationCode}{Message\-Authentication\-Code} $\ast$ \hyperlink{classBotan_1_1CBC__MAC_a6b9a12f092faf4d3639c96c20efe57c7}{clone} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1CBC__MAC_aa272af383a4166632e4fc7fa35f8aea8}{output\-\_\-length} () const 
+\item 
+void \hyperlink{classBotan_1_1CBC__MAC_a831686904488a0da53e27c11e52abf69}{clear} ()
+\item 
+\hyperlink{classBotan_1_1Key__Length__Specification}{Key\-\_\-\-Length\-\_\-\-Specification} \hyperlink{classBotan_1_1CBC__MAC_a20e1e544487a59a53e22bf822a0c42f9}{key\-\_\-spec} () const 
+\item 
+\hyperlink{classBotan_1_1CBC__MAC_a5ee7533af808fe8c693fe2c1c1f6e740}{C\-B\-C\-\_\-\-M\-A\-C} (\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$cipher)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\-B\-C-\/\-M\-A\-C 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1CBC__MAC_a5ee7533af808fe8c693fe2c1c1f6e740}{\index{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C@{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C}!C\-B\-C\-\_\-\-M\-A\-C@{C\-B\-C\-\_\-\-M\-A\-C}}
+\index{C\-B\-C\-\_\-\-M\-A\-C@{C\-B\-C\-\_\-\-M\-A\-C}!Botan::CBC_MAC@{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C}}
+\subsubsection[{C\-B\-C\-\_\-\-M\-A\-C}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C\-::\-C\-B\-C\-\_\-\-M\-A\-C (
+\begin{DoxyParamCaption}
+\item[{{\bf Block\-Cipher} $\ast$}]{cipher}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1CBC__MAC_a5ee7533af808fe8c693fe2c1c1f6e740}
+
+\begin{DoxyParams}{Parameters}
+{\em cipher} & the underlying block cipher to use \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1CBC__MAC_a831686904488a0da53e27c11e52abf69}{\index{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C@{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C}!clear@{clear}}
+\index{clear@{clear}!Botan::CBC_MAC@{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1CBC__MAC_a831686904488a0da53e27c11e52abf69}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1CBC__MAC_a6b9a12f092faf4d3639c96c20efe57c7}{\index{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C@{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C}!clone@{clone}}
+\index{clone@{clone}!Botan::CBC_MAC@{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message\-Authentication\-Code} $\ast$ Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1CBC__MAC_a6b9a12f092faf4d3639c96c20efe57c7}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1MessageAuthenticationCode_aa5b3c755f4f1732b9c239abbc0a78b9c}{Botan\-::\-Message\-Authentication\-Code}.
+
+\hypertarget{classBotan_1_1CBC__MAC_a20e1e544487a59a53e22bf822a0c42f9}{\index{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C@{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C}!key\-\_\-spec@{key\-\_\-spec}}
+\index{key\-\_\-spec@{key\-\_\-spec}!Botan::CBC_MAC@{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C}}
+\subsubsection[{key\-\_\-spec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key\-\_\-\-Length\-\_\-\-Specification} Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C\-::key\-\_\-spec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1CBC__MAC_a20e1e544487a59a53e22bf822a0c42f9}
+\begin{DoxyReturn}{Returns}
+object describing limits on key size 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1SymmetricAlgorithm_aea45c0d248b3116d7a1ebbd086f14e1b}{Botan\-::\-Symmetric\-Algorithm}.
+
+\hypertarget{classBotan_1_1CBC__MAC_ac81c88175ee94ce6c8f10f0a18a5be21}{\index{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C@{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C}!name@{name}}
+\index{name@{name}!Botan::CBC_MAC@{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1CBC__MAC_ac81c88175ee94ce6c8f10f0a18a5be21}
+Get the name of this algorithm. \begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1MessageAuthenticationCode_ad55f85c233b06772d43a5115c7f2fc64}{Botan\-::\-Message\-Authentication\-Code}.
+
+\hypertarget{classBotan_1_1CBC__MAC_aa272af383a4166632e4fc7fa35f8aea8}{\index{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C@{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C}!output\-\_\-length@{output\-\_\-length}}
+\index{output\-\_\-length@{output\-\_\-length}!Botan::CBC_MAC@{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C}}
+\subsubsection[{output\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C\-::output\-\_\-length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1CBC__MAC_aa272af383a4166632e4fc7fa35f8aea8}
+\begin{DoxyReturn}{Returns}
+length of the output of this function in bytes 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Buffered__Computation_a7b2e6776ea9ded2e3f9da5a760b7d34b}{Botan\-::\-Buffered\-\_\-\-Computation}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/mac/cbc\-\_\-mac/cbc\-\_\-mac.\-h\item 
+src/mac/cbc\-\_\-mac/cbc\-\_\-mac.\-cpp\end{DoxyCompactItemize}

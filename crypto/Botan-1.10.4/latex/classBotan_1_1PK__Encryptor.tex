@@ -1,0 +1,86 @@
+\hypertarget{classBotan_1_1PK__Encryptor}{\section{Botan\-:\-:P\-K\-\_\-\-Encryptor Class Reference}
+\label{classBotan_1_1PK__Encryptor}\index{Botan\-::\-P\-K\-\_\-\-Encryptor@{Botan\-::\-P\-K\-\_\-\-Encryptor}}
+}
+
+
+{\ttfamily \#include $<$pubkey.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:P\-K\-\_\-\-Encryptor\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1PK__Encryptor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1PK__Encryptor_a555f0971e81ba7cb7e7933303bf295e0}{encrypt} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, size\-\_\-t length, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng) const 
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1PK__Encryptor_a122704a66b624b431b7dffe1ac6a9696}{encrypt} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&in, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng) const 
+\item 
+virtual size\-\_\-t \hyperlink{classBotan_1_1PK__Encryptor_a211f9f20b0812657fcaf7a60b991d650}{maximum\-\_\-input\-\_\-size} () const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Public Key Encryptor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1PK__Encryptor_a555f0971e81ba7cb7e7933303bf295e0}{\index{Botan\-::\-P\-K\-\_\-\-Encryptor@{Botan\-::\-P\-K\-\_\-\-Encryptor}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!Botan::PK_Encryptor@{Botan\-::\-P\-K\-\_\-\-Encryptor}}
+\subsubsection[{encrypt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<${\bf byte}$>$ Botan\-::\-P\-K\-\_\-\-Encryptor\-::encrypt (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length, }
+\item[{{\bf Random\-Number\-Generator} \&}]{rng}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1PK__Encryptor_a555f0971e81ba7cb7e7933303bf295e0}
+Encrypt a message. 
+\begin{DoxyParams}{Parameters}
+{\em in} & the message as a byte array \\
+\hline
+{\em length} & the length of the above byte array \\
+\hline
+{\em rng} & the random number source to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encrypted message 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1PK__Encryptor_a122704a66b624b431b7dffe1ac6a9696}{\index{Botan\-::\-P\-K\-\_\-\-Encryptor@{Botan\-::\-P\-K\-\_\-\-Encryptor}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!Botan::PK_Encryptor@{Botan\-::\-P\-K\-\_\-\-Encryptor}}
+\subsubsection[{encrypt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<${\bf byte}$>$ Botan\-::\-P\-K\-\_\-\-Encryptor\-::encrypt (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{in, }
+\item[{{\bf Random\-Number\-Generator} \&}]{rng}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1PK__Encryptor_a122704a66b624b431b7dffe1ac6a9696}
+Encrypt a message. 
+\begin{DoxyParams}{Parameters}
+{\em in} & the message \\
+\hline
+{\em rng} & the random number source to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encrypted message 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1PK__Encryptor_a211f9f20b0812657fcaf7a60b991d650}{\index{Botan\-::\-P\-K\-\_\-\-Encryptor@{Botan\-::\-P\-K\-\_\-\-Encryptor}!maximum\-\_\-input\-\_\-size@{maximum\-\_\-input\-\_\-size}}
+\index{maximum\-\_\-input\-\_\-size@{maximum\-\_\-input\-\_\-size}!Botan::PK_Encryptor@{Botan\-::\-P\-K\-\_\-\-Encryptor}}
+\subsubsection[{maximum\-\_\-input\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\-\_\-t Botan\-::\-P\-K\-\_\-\-Encryptor\-::maximum\-\_\-input\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1PK__Encryptor_a211f9f20b0812657fcaf7a60b991d650}
+Return the maximum allowed message size in bytes. \begin{DoxyReturn}{Returns}
+maximum message size in bytes 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classBotan_1_1PK__Encryptor__EME_ad0c6948c9a2e6001564213c1b8ee39c9}{Botan\-::\-P\-K\-\_\-\-Encryptor\-\_\-\-E\-M\-E}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/pubkey/pubkey.\-h\end{DoxyCompactItemize}

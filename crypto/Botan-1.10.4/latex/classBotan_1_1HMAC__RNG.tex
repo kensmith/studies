@@ -1,0 +1,172 @@
+\hypertarget{classBotan_1_1HMAC__RNG}{\section{Botan\-:\-:H\-M\-A\-C\-\_\-\-R\-N\-G Class Reference}
+\label{classBotan_1_1HMAC__RNG}\index{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}}
+}
+
+
+{\ttfamily \#include $<$hmac\-\_\-rng.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:H\-M\-A\-C\-\_\-\-R\-N\-G\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1HMAC__RNG}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1HMAC__RNG_a70cc900f156ee8de9eed010a00087677}{randomize} (\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} buf\mbox{[}$\,$\mbox{]}, size\-\_\-t len)
+\item 
+bool \hyperlink{classBotan_1_1HMAC__RNG_aaf20248771aced337d6764100825cded}{is\-\_\-seeded} () const 
+\item 
+void \hyperlink{classBotan_1_1HMAC__RNG_a4d17ebc5835675113fe974956a2858ed}{clear} ()
+\item 
+std\-::string \hyperlink{classBotan_1_1HMAC__RNG_a11b6292fdba3a43dbf0627fac1de5d67}{name} () const 
+\item 
+void \hyperlink{classBotan_1_1HMAC__RNG_acfead0dd1c84dd79594b71634986c767}{reseed} (size\-\_\-t poll\-\_\-bits)
+\item 
+void \hyperlink{classBotan_1_1HMAC__RNG_ad884434615e083203a1416cc42325e1a}{add\-\_\-entropy\-\_\-source} (\hyperlink{classBotan_1_1EntropySource}{Entropy\-Source} $\ast$es)
+\item 
+void \hyperlink{classBotan_1_1HMAC__RNG_a68838ec7a54aa4223f0a5f659f9a001a}{add\-\_\-entropy} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)
+\item 
+\hyperlink{classBotan_1_1HMAC__RNG_a0b7018ac1737fd8b6fae64511bc9413e}{H\-M\-A\-C\-\_\-\-R\-N\-G} (\hyperlink{classBotan_1_1MessageAuthenticationCode}{Message\-Authentication\-Code} $\ast$extractor, \hyperlink{classBotan_1_1MessageAuthenticationCode}{Message\-Authentication\-Code} $\ast$prf)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1HMAC__RNG}{H\-M\-A\-C\-\_\-\-R\-N\-G} -\/ based on the design described in \char`\"{}\-On Extract-\/then-\/\-Expand
+\-Key Derivation Functions and an H\-M\-A\-C-\/based K\-D\-F\char`\"{} by Hugo Krawczyk (henceforce, 'E-\/t-\/\-E')
+
+However it actually can be parameterized with any two M\-A\-C functions, not restricted to \hyperlink{classBotan_1_1HMAC}{H\-M\-A\-C} (this variation is also described in Krawczyk's paper), for instance one could use \hyperlink{classBotan_1_1HMAC}{H\-M\-A\-C}(S\-H\-A-\/512) as the extractor and \hyperlink{classBotan_1_1CMAC}{C\-M\-A\-C}(A\-E\-S-\/256) as the P\-R\-F. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1HMAC__RNG_a0b7018ac1737fd8b6fae64511bc9413e}{\index{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}!H\-M\-A\-C\-\_\-\-R\-N\-G@{H\-M\-A\-C\-\_\-\-R\-N\-G}}
+\index{H\-M\-A\-C\-\_\-\-R\-N\-G@{H\-M\-A\-C\-\_\-\-R\-N\-G}!Botan::HMAC_RNG@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}}
+\subsubsection[{H\-M\-A\-C\-\_\-\-R\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G (
+\begin{DoxyParamCaption}
+\item[{{\bf Message\-Authentication\-Code} $\ast$}]{extractor, }
+\item[{{\bf Message\-Authentication\-Code} $\ast$}]{prf}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1HMAC__RNG_a0b7018ac1737fd8b6fae64511bc9413e}
+
+\begin{DoxyParams}{Parameters}
+{\em extractor} & a M\-A\-C used for extracting the entropy \\
+\hline
+{\em prf} & a M\-A\-C used as a P\-R\-F using H\-K\-D\-F construction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1HMAC__RNG_a68838ec7a54aa4223f0a5f659f9a001a}{\index{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}!add\-\_\-entropy@{add\-\_\-entropy}}
+\index{add\-\_\-entropy@{add\-\_\-entropy}!Botan::HMAC_RNG@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}}
+\subsubsection[{add\-\_\-entropy}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G\-::add\-\_\-entropy (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1HMAC__RNG_a68838ec7a54aa4223f0a5f659f9a001a}
+Add entropy to this R\-N\-G. 
+\begin{DoxyParams}{Parameters}
+{\em in} & a byte array containg the entropy to be added \\
+\hline
+{\em length} & the length of the byte array in \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1RandomNumberGenerator_a92557ce6b709a0cf6a154b6f27844a6e}{Botan\-::\-Random\-Number\-Generator}.
+
+\hypertarget{classBotan_1_1HMAC__RNG_ad884434615e083203a1416cc42325e1a}{\index{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}!add\-\_\-entropy\-\_\-source@{add\-\_\-entropy\-\_\-source}}
+\index{add\-\_\-entropy\-\_\-source@{add\-\_\-entropy\-\_\-source}!Botan::HMAC_RNG@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}}
+\subsubsection[{add\-\_\-entropy\-\_\-source}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G\-::add\-\_\-entropy\-\_\-source (
+\begin{DoxyParamCaption}
+\item[{{\bf Entropy\-Source} $\ast$}]{source}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1HMAC__RNG_ad884434615e083203a1416cc42325e1a}
+Add this entropy source to the R\-N\-G object 
+\begin{DoxyParams}{Parameters}
+{\em source} & the entropy source which will be retained and used by R\-N\-G \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1RandomNumberGenerator_a4346c3e7ba316e7434d94e91919ee43e}{Botan\-::\-Random\-Number\-Generator}.
+
+\hypertarget{classBotan_1_1HMAC__RNG_a4d17ebc5835675113fe974956a2858ed}{\index{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}!clear@{clear}}
+\index{clear@{clear}!Botan::HMAC_RNG@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1HMAC__RNG_a4d17ebc5835675113fe974956a2858ed}
+Clear all internally held values of this R\-N\-G. 
+
+Implements \hyperlink{classBotan_1_1RandomNumberGenerator_a2aae6710baf18b5f1b1d59ad2597a3d3}{Botan\-::\-Random\-Number\-Generator}.
+
+\hypertarget{classBotan_1_1HMAC__RNG_aaf20248771aced337d6764100825cded}{\index{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}!is\-\_\-seeded@{is\-\_\-seeded}}
+\index{is\-\_\-seeded@{is\-\_\-seeded}!Botan::HMAC_RNG@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}}
+\subsubsection[{is\-\_\-seeded}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G\-::is\-\_\-seeded (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1HMAC__RNG_aaf20248771aced337d6764100825cded}
+Check whether this R\-N\-G is seeded. \begin{DoxyReturn}{Returns}
+true if this R\-N\-G was already seeded, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1RandomNumberGenerator_aa9fe8a7a46a50cb94068bb449801008d}{Botan\-::\-Random\-Number\-Generator}.
+
+\hypertarget{classBotan_1_1HMAC__RNG_a11b6292fdba3a43dbf0627fac1de5d67}{\index{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}!name@{name}}
+\index{name@{name}!Botan::HMAC_RNG@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1HMAC__RNG_a11b6292fdba3a43dbf0627fac1de5d67}
+Return the name of this object 
+
+Implements \hyperlink{classBotan_1_1RandomNumberGenerator_a9a6085d55e0d36b311fa4c18a5c07ea0}{Botan\-::\-Random\-Number\-Generator}.
+
+\hypertarget{classBotan_1_1HMAC__RNG_a70cc900f156ee8de9eed010a00087677}{\index{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}!randomize@{randomize}}
+\index{randomize@{randomize}!Botan::HMAC_RNG@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}}
+\subsubsection[{randomize}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G\-::randomize (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{output\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1HMAC__RNG_a70cc900f156ee8de9eed010a00087677}
+Randomize a byte array. 
+\begin{DoxyParams}{Parameters}
+{\em output} & the byte array to hold the random output. \\
+\hline
+{\em length} & the length of the byte array output. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1RandomNumberGenerator_a844a0607c33ec0580c93f06477e978fa}{Botan\-::\-Random\-Number\-Generator}.
+
+\hypertarget{classBotan_1_1HMAC__RNG_acfead0dd1c84dd79594b71634986c767}{\index{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}!reseed@{reseed}}
+\index{reseed@{reseed}!Botan::HMAC_RNG@{Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G}}
+\subsubsection[{reseed}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-H\-M\-A\-C\-\_\-\-R\-N\-G\-::reseed (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{bits\-\_\-to\-\_\-collect}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1HMAC__RNG_acfead0dd1c84dd79594b71634986c767}
+Seed this R\-N\-G using the entropy sources it contains. 
+\begin{DoxyParams}{Parameters}
+{\em bits\-\_\-to\-\_\-collect} & is the number of bits of entropy to attempt to gather from the entropy sources \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1RandomNumberGenerator_a2d4e91943829d64593ee4ce4251fd57b}{Botan\-::\-Random\-Number\-Generator}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/rng/hmac\-\_\-rng/hmac\-\_\-rng.\-h\item 
+src/rng/hmac\-\_\-rng/hmac\-\_\-rng.\-cpp\end{DoxyCompactItemize}

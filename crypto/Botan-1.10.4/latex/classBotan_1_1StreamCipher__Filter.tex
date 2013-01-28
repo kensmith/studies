@@ -1,0 +1,209 @@
+\hypertarget{classBotan_1_1StreamCipher__Filter}{\section{Botan\-:\-:Stream\-Cipher\-\_\-\-Filter Class Reference}
+\label{classBotan_1_1StreamCipher__Filter}\index{Botan\-::\-Stream\-Cipher\-\_\-\-Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}}
+}
+
+
+{\ttfamily \#include $<$filters.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Stream\-Cipher\-\_\-\-Filter\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBotan_1_1StreamCipher__Filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1StreamCipher__Filter_ac8d6368c8e186a04b09cc128611b0b11}{name} () const 
+\item 
+void \hyperlink{classBotan_1_1StreamCipher__Filter_a2c4a1f75eb09bae067765a1eba6ec195}{write} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} input\mbox{[}$\,$\mbox{]}, size\-\_\-t input\-\_\-len)
+\item 
+bool \hyperlink{classBotan_1_1StreamCipher__Filter_adc93b7c50ee1b3d0b3d757b0eecf547f}{valid\-\_\-iv\-\_\-length} (size\-\_\-t iv\-\_\-len) const 
+\item 
+void \hyperlink{classBotan_1_1StreamCipher__Filter_ad7c8d434f0dd33488f394a6d6be56cbd}{set\-\_\-iv} (const \hyperlink{namespaceBotan_ab6a07e859c4e3a2ccfd68308ec89497e}{Initialization\-Vector} \&iv)
+\item 
+void \hyperlink{classBotan_1_1StreamCipher__Filter_ac4273781445d2d3d48d060dcb510e41a}{set\-\_\-key} (const \hyperlink{namespaceBotan_a00c78597211d5c63b63e2a57ddb96d38}{Symmetric\-Key} \&key)
+\item 
+bool \hyperlink{classBotan_1_1StreamCipher__Filter_ad1c94c9803467ed412dd4e0fe7c7fd4d}{valid\-\_\-keylength} (size\-\_\-t length) const 
+\item 
+\hyperlink{classBotan_1_1StreamCipher__Filter_aee65369504d15514fbe83641255c66b6}{Stream\-Cipher\-\_\-\-Filter} (\hyperlink{classBotan_1_1StreamCipher}{Stream\-Cipher} $\ast$cipher\-\_\-obj)
+\item 
+\hyperlink{classBotan_1_1StreamCipher__Filter_aa835da01eef7ebefb617e41f82a818fa}{Stream\-Cipher\-\_\-\-Filter} (\hyperlink{classBotan_1_1StreamCipher}{Stream\-Cipher} $\ast$cipher\-\_\-obj, const \hyperlink{namespaceBotan_a00c78597211d5c63b63e2a57ddb96d38}{Symmetric\-Key} \&key)
+\item 
+\hyperlink{classBotan_1_1StreamCipher__Filter_a456872ccaee4149d2398f52debf75869}{Stream\-Cipher\-\_\-\-Filter} (const std\-::string \&cipher)
+\item 
+\hyperlink{classBotan_1_1StreamCipher__Filter_a5ba4bb0f7235600a033df6f721898c61}{Stream\-Cipher\-\_\-\-Filter} (const std\-::string \&cipher, const \hyperlink{namespaceBotan_a00c78597211d5c63b63e2a57ddb96d38}{Symmetric\-Key} \&key)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Stream Cipher \hyperlink{classBotan_1_1Filter}{Filter}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1StreamCipher__Filter_aee65369504d15514fbe83641255c66b6}{\index{Botan\-::\-Stream\-Cipher\-\_\-\-Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}!Stream\-Cipher\-\_\-\-Filter@{Stream\-Cipher\-\_\-\-Filter}}
+\index{Stream\-Cipher\-\_\-\-Filter@{Stream\-Cipher\-\_\-\-Filter}!Botan::StreamCipher_Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}}
+\subsubsection[{Stream\-Cipher\-\_\-\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Stream\-Cipher\-\_\-\-Filter\-::\-Stream\-Cipher\-\_\-\-Filter (
+\begin{DoxyParamCaption}
+\item[{{\bf Stream\-Cipher} $\ast$}]{cipher\-\_\-obj}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1StreamCipher__Filter_aee65369504d15514fbe83641255c66b6}
+Construct a stream cipher filter. 
+\begin{DoxyParams}{Parameters}
+{\em cipher\-\_\-obj} & a cipher object to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1StreamCipher__Filter_aa835da01eef7ebefb617e41f82a818fa}{\index{Botan\-::\-Stream\-Cipher\-\_\-\-Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}!Stream\-Cipher\-\_\-\-Filter@{Stream\-Cipher\-\_\-\-Filter}}
+\index{Stream\-Cipher\-\_\-\-Filter@{Stream\-Cipher\-\_\-\-Filter}!Botan::StreamCipher_Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}}
+\subsubsection[{Stream\-Cipher\-\_\-\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Stream\-Cipher\-\_\-\-Filter\-::\-Stream\-Cipher\-\_\-\-Filter (
+\begin{DoxyParamCaption}
+\item[{{\bf Stream\-Cipher} $\ast$}]{cipher\-\_\-obj, }
+\item[{const {\bf Symmetric\-Key} \&}]{key}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1StreamCipher__Filter_aa835da01eef7ebefb617e41f82a818fa}
+Construct a stream cipher filter. 
+\begin{DoxyParams}{Parameters}
+{\em cipher\-\_\-obj} & a cipher object to use \\
+\hline
+{\em key} & the key to use inside this filter \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1StreamCipher__Filter_a456872ccaee4149d2398f52debf75869}{\index{Botan\-::\-Stream\-Cipher\-\_\-\-Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}!Stream\-Cipher\-\_\-\-Filter@{Stream\-Cipher\-\_\-\-Filter}}
+\index{Stream\-Cipher\-\_\-\-Filter@{Stream\-Cipher\-\_\-\-Filter}!Botan::StreamCipher_Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}}
+\subsubsection[{Stream\-Cipher\-\_\-\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Stream\-Cipher\-\_\-\-Filter\-::\-Stream\-Cipher\-\_\-\-Filter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{cipher}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1StreamCipher__Filter_a456872ccaee4149d2398f52debf75869}
+Construct a stream cipher filter. 
+\begin{DoxyParams}{Parameters}
+{\em cipher} & the name of the desired cipher \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1StreamCipher__Filter_a5ba4bb0f7235600a033df6f721898c61}{\index{Botan\-::\-Stream\-Cipher\-\_\-\-Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}!Stream\-Cipher\-\_\-\-Filter@{Stream\-Cipher\-\_\-\-Filter}}
+\index{Stream\-Cipher\-\_\-\-Filter@{Stream\-Cipher\-\_\-\-Filter}!Botan::StreamCipher_Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}}
+\subsubsection[{Stream\-Cipher\-\_\-\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Stream\-Cipher\-\_\-\-Filter\-::\-Stream\-Cipher\-\_\-\-Filter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{cipher, }
+\item[{const {\bf Symmetric\-Key} \&}]{key}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1StreamCipher__Filter_a5ba4bb0f7235600a033df6f721898c61}
+Construct a stream cipher filter. 
+\begin{DoxyParams}{Parameters}
+{\em cipher} & the name of the desired cipher \\
+\hline
+{\em key} & the key to use inside this filter \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1StreamCipher__Filter_ac8d6368c8e186a04b09cc128611b0b11}{\index{Botan\-::\-Stream\-Cipher\-\_\-\-Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}!name@{name}}
+\index{name@{name}!Botan::StreamCipher_Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Stream\-Cipher\-\_\-\-Filter\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1StreamCipher__Filter_ac8d6368c8e186a04b09cc128611b0b11}
+\begin{DoxyReturn}{Returns}
+descriptive name for this filter 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Filter_a612efd6701e36df4902da3dc396ce62f}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1StreamCipher__Filter_ad7c8d434f0dd33488f394a6d6be56cbd}{\index{Botan\-::\-Stream\-Cipher\-\_\-\-Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}!set\-\_\-iv@{set\-\_\-iv}}
+\index{set\-\_\-iv@{set\-\_\-iv}!Botan::StreamCipher_Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}}
+\subsubsection[{set\-\_\-iv}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Stream\-Cipher\-\_\-\-Filter\-::set\-\_\-iv (
+\begin{DoxyParamCaption}
+\item[{const {\bf Initialization\-Vector} \&}]{iv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1StreamCipher__Filter_ad7c8d434f0dd33488f394a6d6be56cbd}
+Set the initialization vector for this filter. 
+\begin{DoxyParams}{Parameters}
+{\em iv} & the initialization vector to set \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classBotan_1_1Keyed__Filter_a3c877447e43e8ccd17bc1e2d1e7b2dd6}{Botan\-::\-Keyed\-\_\-\-Filter}.
+
+\hypertarget{classBotan_1_1StreamCipher__Filter_ac4273781445d2d3d48d060dcb510e41a}{\index{Botan\-::\-Stream\-Cipher\-\_\-\-Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}!set\-\_\-key@{set\-\_\-key}}
+\index{set\-\_\-key@{set\-\_\-key}!Botan::StreamCipher_Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}}
+\subsubsection[{set\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Stream\-Cipher\-\_\-\-Filter\-::set\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Symmetric\-Key} \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1StreamCipher__Filter_ac4273781445d2d3d48d060dcb510e41a}
+Set the key of this filter. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to set \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1Keyed__Filter_a04f210f888f2603717e75742ce620e77}{Botan\-::\-Keyed\-\_\-\-Filter}.
+
+\hypertarget{classBotan_1_1StreamCipher__Filter_adc93b7c50ee1b3d0b3d757b0eecf547f}{\index{Botan\-::\-Stream\-Cipher\-\_\-\-Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}!valid\-\_\-iv\-\_\-length@{valid\-\_\-iv\-\_\-length}}
+\index{valid\-\_\-iv\-\_\-length@{valid\-\_\-iv\-\_\-length}!Botan::StreamCipher_Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}}
+\subsubsection[{valid\-\_\-iv\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-Stream\-Cipher\-\_\-\-Filter\-::valid\-\_\-iv\-\_\-length (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1StreamCipher__Filter_adc93b7c50ee1b3d0b3d757b0eecf547f}
+Check whether an I\-V length is valid for this filter 
+\begin{DoxyParams}{Parameters}
+{\em length} & the I\-V length to be checked for validity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the I\-V length is valid, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1Keyed__Filter_ae121bce75726c0b86269b703d9327d53}{Botan\-::\-Keyed\-\_\-\-Filter}.
+
+\hypertarget{classBotan_1_1StreamCipher__Filter_ad1c94c9803467ed412dd4e0fe7c7fd4d}{\index{Botan\-::\-Stream\-Cipher\-\_\-\-Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}!valid\-\_\-keylength@{valid\-\_\-keylength}}
+\index{valid\-\_\-keylength@{valid\-\_\-keylength}!Botan::StreamCipher_Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}}
+\subsubsection[{valid\-\_\-keylength}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-Stream\-Cipher\-\_\-\-Filter\-::valid\-\_\-keylength (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1StreamCipher__Filter_ad1c94c9803467ed412dd4e0fe7c7fd4d}
+Check whether a key length is valid for this filter. 
+\begin{DoxyParams}{Parameters}
+{\em length} & the key length to be checked for validity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key length is valid, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Keyed__Filter_a9eaf5d9480445b85ffea8eb5474e2eb1}{Botan\-::\-Keyed\-\_\-\-Filter}.
+
+\hypertarget{classBotan_1_1StreamCipher__Filter_a2c4a1f75eb09bae067765a1eba6ec195}{\index{Botan\-::\-Stream\-Cipher\-\_\-\-Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}!write@{write}}
+\index{write@{write}!Botan::StreamCipher_Filter@{Botan\-::\-Stream\-Cipher\-\_\-\-Filter}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Stream\-Cipher\-\_\-\-Filter\-::write (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{input\-\_\-len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1StreamCipher__Filter_a2c4a1f75eb09bae067765a1eba6ec195}
+Write input data 
+\begin{DoxyParams}{Parameters}
+{\em input} & data \\
+\hline
+{\em input\-\_\-len} & length of input in bytes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1Filter_ad856ce62d9bdcce8057da99cba606892}{Botan\-::\-Filter}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/filters/filters.\-h\item 
+src/filters/algo\-\_\-filt.\-cpp\end{DoxyCompactItemize}

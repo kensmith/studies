@@ -1,0 +1,156 @@
+\hypertarget{classBotan_1_1KDF}{\section{Botan\-:\-:K\-D\-F Class Reference}
+\label{classBotan_1_1KDF}\index{Botan\-::\-K\-D\-F@{Botan\-::\-K\-D\-F}}
+}
+
+
+{\ttfamily \#include $<$kdf.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:K\-D\-F\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.121212cm]{classBotan_1_1KDF}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1KDF_aa3b8256bf5bd06641936c7509fdcbbd6}{derive\-\_\-key} (size\-\_\-t key\-\_\-len, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&secret, const std\-::string \&salt=\char`\"{}\char`\"{}) const 
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1KDF_adb6a3e30d795dfe5296c3664c6dc6729}{derive\-\_\-key} (size\-\_\-t key\-\_\-len, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&secret, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&salt) const 
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1KDF_a0c9663079752c839d6d83480c1f2ebf5}{derive\-\_\-key} (size\-\_\-t key\-\_\-len, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&secret, const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} salt\mbox{[}$\,$\mbox{]}, size\-\_\-t salt\-\_\-len) const 
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1KDF_ae5f9ef438932d55ba6cd23df12027a6b}{derive\-\_\-key} (size\-\_\-t key\-\_\-len, const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} secret\mbox{[}$\,$\mbox{]}, size\-\_\-t secret\-\_\-len, const std\-::string \&salt=\char`\"{}\char`\"{}) const 
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1KDF_a518fdf4371b88bb2e31623fbe97f9745}{derive\-\_\-key} (size\-\_\-t key\-\_\-len, const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} secret\mbox{[}$\,$\mbox{]}, size\-\_\-t secret\-\_\-len, const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} salt\mbox{[}$\,$\mbox{]}, size\-\_\-t salt\-\_\-len) const 
+\item 
+void \hyperlink{classBotan_1_1KDF_a8c59d113a7329ef98d30bbd097254f62}{clear} ()
+\item 
+\hypertarget{classBotan_1_1KDF_a31915ff612007a718ac05dba8be56842}{virtual \hyperlink{classBotan_1_1KDF}{K\-D\-F} $\ast$ {\bfseries clone} () const =0}\label{classBotan_1_1KDF_a31915ff612007a718ac05dba8be56842}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Key Derivation Function 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1KDF_a8c59d113a7329ef98d30bbd097254f62}{\index{Botan\-::\-K\-D\-F@{Botan\-::\-K\-D\-F}!clear@{clear}}
+\index{clear@{clear}!Botan::KDF@{Botan\-::\-K\-D\-F}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-K\-D\-F\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1KDF_a8c59d113a7329ef98d30bbd097254f62}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1KDF_aa3b8256bf5bd06641936c7509fdcbbd6}{\index{Botan\-::\-K\-D\-F@{Botan\-::\-K\-D\-F}!derive\-\_\-key@{derive\-\_\-key}}
+\index{derive\-\_\-key@{derive\-\_\-key}!Botan::KDF@{Botan\-::\-K\-D\-F}}
+\subsubsection[{derive\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<$ {\bf byte} $>$ Botan\-::\-K\-D\-F\-::derive\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{key\-\_\-len, }
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{secret, }
+\item[{const std\-::string \&}]{salt = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1KDF_aa3b8256bf5bd06641936c7509fdcbbd6}
+Derive a key 
+\begin{DoxyParams}{Parameters}
+{\em key\-\_\-len} & the desired output length in bytes \\
+\hline
+{\em secret} & the secret input \\
+\hline
+{\em salt} & a diversifier \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1KDF_adb6a3e30d795dfe5296c3664c6dc6729}{\index{Botan\-::\-K\-D\-F@{Botan\-::\-K\-D\-F}!derive\-\_\-key@{derive\-\_\-key}}
+\index{derive\-\_\-key@{derive\-\_\-key}!Botan::KDF@{Botan\-::\-K\-D\-F}}
+\subsubsection[{derive\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<$ {\bf byte} $>$ Botan\-::\-K\-D\-F\-::derive\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{key\-\_\-len, }
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{secret, }
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{salt}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1KDF_adb6a3e30d795dfe5296c3664c6dc6729}
+Derive a key 
+\begin{DoxyParams}{Parameters}
+{\em key\-\_\-len} & the desired output length in bytes \\
+\hline
+{\em secret} & the secret input \\
+\hline
+{\em salt} & a diversifier \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1KDF_a0c9663079752c839d6d83480c1f2ebf5}{\index{Botan\-::\-K\-D\-F@{Botan\-::\-K\-D\-F}!derive\-\_\-key@{derive\-\_\-key}}
+\index{derive\-\_\-key@{derive\-\_\-key}!Botan::KDF@{Botan\-::\-K\-D\-F}}
+\subsubsection[{derive\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<$ {\bf byte} $>$ Botan\-::\-K\-D\-F\-::derive\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{key\-\_\-len, }
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{secret, }
+\item[{const {\bf byte}}]{salt\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{salt\-\_\-len}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1KDF_a0c9663079752c839d6d83480c1f2ebf5}
+Derive a key 
+\begin{DoxyParams}{Parameters}
+{\em key\-\_\-len} & the desired output length in bytes \\
+\hline
+{\em secret} & the secret input \\
+\hline
+{\em salt} & a diversifier \\
+\hline
+{\em salt\-\_\-len} & size of salt in bytes \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1KDF_ae5f9ef438932d55ba6cd23df12027a6b}{\index{Botan\-::\-K\-D\-F@{Botan\-::\-K\-D\-F}!derive\-\_\-key@{derive\-\_\-key}}
+\index{derive\-\_\-key@{derive\-\_\-key}!Botan::KDF@{Botan\-::\-K\-D\-F}}
+\subsubsection[{derive\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<$ {\bf byte} $>$ Botan\-::\-K\-D\-F\-::derive\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{key\-\_\-len, }
+\item[{const {\bf byte}}]{secret\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{secret\-\_\-len, }
+\item[{const std\-::string \&}]{salt = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1KDF_ae5f9ef438932d55ba6cd23df12027a6b}
+Derive a key 
+\begin{DoxyParams}{Parameters}
+{\em key\-\_\-len} & the desired output length in bytes \\
+\hline
+{\em secret} & the secret input \\
+\hline
+{\em secret\-\_\-len} & size of secret in bytes \\
+\hline
+{\em salt} & a diversifier \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1KDF_a518fdf4371b88bb2e31623fbe97f9745}{\index{Botan\-::\-K\-D\-F@{Botan\-::\-K\-D\-F}!derive\-\_\-key@{derive\-\_\-key}}
+\index{derive\-\_\-key@{derive\-\_\-key}!Botan::KDF@{Botan\-::\-K\-D\-F}}
+\subsubsection[{derive\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<$ {\bf byte} $>$ Botan\-::\-K\-D\-F\-::derive\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{key\-\_\-len, }
+\item[{const {\bf byte}}]{secret\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{secret\-\_\-len, }
+\item[{const {\bf byte}}]{salt\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{salt\-\_\-len}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1KDF_a518fdf4371b88bb2e31623fbe97f9745}
+Derive a key 
+\begin{DoxyParams}{Parameters}
+{\em key\-\_\-len} & the desired output length in bytes \\
+\hline
+{\em secret} & the secret input \\
+\hline
+{\em secret\-\_\-len} & size of secret in bytes \\
+\hline
+{\em salt} & a diversifier \\
+\hline
+{\em salt\-\_\-len} & size of salt in bytes \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/kdf/kdf.\-h\item 
+src/kdf/kdf.\-cpp\end{DoxyCompactItemize}

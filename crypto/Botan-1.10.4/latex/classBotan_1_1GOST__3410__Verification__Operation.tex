@@ -1,0 +1,98 @@
+\hypertarget{classBotan_1_1GOST__3410__Verification__Operation}{\section{Botan\-:\-:G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation Class Reference}
+\label{classBotan_1_1GOST__3410__Verification__Operation}\index{Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation@{Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation}}
+}
+
+
+{\ttfamily \#include $<$gost\-\_\-3410.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1GOST__3410__Verification__Operation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1GOST__3410__Verification__Operation_a7cde6eaf0a2e4cd378bc9822ed5e6b31}{{\bfseries G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation} (const \hyperlink{classBotan_1_1GOST__3410__PublicKey}{G\-O\-S\-T\-\_\-3410\-\_\-\-Public\-Key} \&gost)}\label{classBotan_1_1GOST__3410__Verification__Operation_a7cde6eaf0a2e4cd378bc9822ed5e6b31}
+
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1GOST__3410__Verification__Operation_a11ff8b91845b838fe77bc6e17b579ec1}{message\-\_\-parts} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1GOST__3410__Verification__Operation_a61ba703e22239cc09ea43c0c7faeffda}{message\-\_\-part\-\_\-size} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1GOST__3410__Verification__Operation_a81ef701b5e4497e7ab89a27788193bc2}{max\-\_\-input\-\_\-bits} () const 
+\item 
+bool \hyperlink{classBotan_1_1GOST__3410__Verification__Operation_aeda94ec5760c44eb1d57eccf75a20f5e}{with\-\_\-recovery} () const 
+\item 
+\hypertarget{classBotan_1_1GOST__3410__Verification__Operation_aa62f9dd3a786c464bbb1c0b425eb651c}{bool {\bfseries verify} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} msg\mbox{[}$\,$\mbox{]}, size\-\_\-t msg\-\_\-len, const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} sig\mbox{[}$\,$\mbox{]}, size\-\_\-t sig\-\_\-len)}\label{classBotan_1_1GOST__3410__Verification__Operation_aa62f9dd3a786c464bbb1c0b425eb651c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+G\-O\-S\-T-\/34.\-10 verification operation 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1GOST__3410__Verification__Operation_a81ef701b5e4497e7ab89a27788193bc2}{\index{Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation@{Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation}!max\-\_\-input\-\_\-bits@{max\-\_\-input\-\_\-bits}}
+\index{max\-\_\-input\-\_\-bits@{max\-\_\-input\-\_\-bits}!Botan::GOST_3410_Verification_Operation@{Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation}}
+\subsubsection[{max\-\_\-input\-\_\-bits}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation\-::max\-\_\-input\-\_\-bits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1GOST__3410__Verification__Operation_a81ef701b5e4497e7ab89a27788193bc2}
+Get the maximum message size in bits supported by this public key. \begin{DoxyReturn}{Returns}
+maximum message in bits 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1PK__Ops_1_1Verification_a76a23969121f2ce0247ee431f25ddafa}{Botan\-::\-P\-K\-\_\-\-Ops\-::\-Verification}.
+
+\hypertarget{classBotan_1_1GOST__3410__Verification__Operation_a61ba703e22239cc09ea43c0c7faeffda}{\index{Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation@{Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation}!message\-\_\-part\-\_\-size@{message\-\_\-part\-\_\-size}}
+\index{message\-\_\-part\-\_\-size@{message\-\_\-part\-\_\-size}!Botan::GOST_3410_Verification_Operation@{Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation}}
+\subsubsection[{message\-\_\-part\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation\-::message\-\_\-part\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1GOST__3410__Verification__Operation_a61ba703e22239cc09ea43c0c7faeffda}
+Find out the message part size supported by this scheme/key. \begin{DoxyReturn}{Returns}
+size of the message parts 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1PK__Ops_1_1Verification_af8b9f40b8f091f7d3cc027c0ac4a8e68}{Botan\-::\-P\-K\-\_\-\-Ops\-::\-Verification}.
+
+\hypertarget{classBotan_1_1GOST__3410__Verification__Operation_a11ff8b91845b838fe77bc6e17b579ec1}{\index{Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation@{Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation}!message\-\_\-parts@{message\-\_\-parts}}
+\index{message\-\_\-parts@{message\-\_\-parts}!Botan::GOST_3410_Verification_Operation@{Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation}}
+\subsubsection[{message\-\_\-parts}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation\-::message\-\_\-parts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1GOST__3410__Verification__Operation_a11ff8b91845b838fe77bc6e17b579ec1}
+Find out the number of message parts supported by this scheme. \begin{DoxyReturn}{Returns}
+number of message parts 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1PK__Ops_1_1Verification_a58e1cb1b89a48967f15a591af9d8603d}{Botan\-::\-P\-K\-\_\-\-Ops\-::\-Verification}.
+
+\hypertarget{classBotan_1_1GOST__3410__Verification__Operation_aeda94ec5760c44eb1d57eccf75a20f5e}{\index{Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation@{Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation}!with\-\_\-recovery@{with\-\_\-recovery}}
+\index{with\-\_\-recovery@{with\-\_\-recovery}!Botan::GOST_3410_Verification_Operation@{Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation}}
+\subsubsection[{with\-\_\-recovery}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-G\-O\-S\-T\-\_\-3410\-\_\-\-Verification\-\_\-\-Operation\-::with\-\_\-recovery (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1GOST__3410__Verification__Operation_aeda94ec5760c44eb1d57eccf75a20f5e}
+\begin{DoxyReturn}{Returns}
+boolean specifying if this key type supports message recovery and thus if you need to call verify() or verify\-\_\-mr() 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1PK__Ops_1_1Verification_af66d51b7b6ae5e9b851815df23f7db7c}{Botan\-::\-P\-K\-\_\-\-Ops\-::\-Verification}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/pubkey/gost\-\_\-3410/gost\-\_\-3410.\-h\item 
+src/pubkey/gost\-\_\-3410/gost\-\_\-3410.\-cpp\end{DoxyCompactItemize}

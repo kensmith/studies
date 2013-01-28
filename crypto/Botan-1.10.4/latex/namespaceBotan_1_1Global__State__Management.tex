@@ -1,0 +1,84 @@
+\hypertarget{namespaceBotan_1_1Global__State__Management}{\section{Botan\-:\-:Global\-\_\-\-State\-\_\-\-Management Namespace Reference}
+\label{namespaceBotan_1_1Global__State__Management}\index{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management@{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1Library__State}{Library\-\_\-\-State} \& \hyperlink{namespaceBotan_1_1Global__State__Management_ab58f33e6885a7aa905a9291578408c84}{global\-\_\-state} ()
+\item 
+void \hyperlink{namespaceBotan_1_1Global__State__Management_a8c28c0da3fe7fa017521cafeccc1425f}{set\-\_\-global\-\_\-state} (\hyperlink{classBotan_1_1Library__State}{Library\-\_\-\-State} $\ast$new\-\_\-state)
+\item 
+bool \hyperlink{namespaceBotan_1_1Global__State__Management_a7da7a309df42621ce768e5d959b69e7b}{set\-\_\-global\-\_\-state\-\_\-unless\-\_\-set} (\hyperlink{classBotan_1_1Library__State}{Library\-\_\-\-State} $\ast$new\-\_\-state)
+\item 
+\hyperlink{classBotan_1_1Library__State}{Library\-\_\-\-State} $\ast$ \hyperlink{namespaceBotan_1_1Global__State__Management_a5c346237ce90126dc0ae9652020d0239}{swap\-\_\-global\-\_\-state} (\hyperlink{classBotan_1_1Library__State}{Library\-\_\-\-State} $\ast$new\-\_\-state)
+\item 
+bool \hyperlink{namespaceBotan_1_1Global__State__Management_a47668ba931be3511b55a7f4f88dcac7d}{global\-\_\-state\-\_\-exists} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Namespace for management of the global state 
+
+\subsection{Function Documentation}
+\hypertarget{namespaceBotan_1_1Global__State__Management_ab58f33e6885a7aa905a9291578408c84}{\index{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management@{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management}!global\-\_\-state@{global\-\_\-state}}
+\index{global\-\_\-state@{global\-\_\-state}!Botan::Global_State_Management@{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management}}
+\subsubsection[{global\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-T\-A\-N\-\_\-\-D\-L\-L {\bf Library\-\_\-\-State} \& Botan\-::\-Global\-\_\-\-State\-\_\-\-Management\-::global\-\_\-state (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1Global__State__Management_ab58f33e6885a7aa905a9291578408c84}
+Access the global library state \begin{DoxyReturn}{Returns}
+reference to the global library state 
+\end{DoxyReturn}
+\hypertarget{namespaceBotan_1_1Global__State__Management_a47668ba931be3511b55a7f4f88dcac7d}{\index{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management@{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management}!global\-\_\-state\-\_\-exists@{global\-\_\-state\-\_\-exists}}
+\index{global\-\_\-state\-\_\-exists@{global\-\_\-state\-\_\-exists}!Botan::Global_State_Management@{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management}}
+\subsubsection[{global\-\_\-state\-\_\-exists}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-T\-A\-N\-\_\-\-D\-L\-L bool Botan\-::\-Global\-\_\-\-State\-\_\-\-Management\-::global\-\_\-state\-\_\-exists (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1Global__State__Management_a47668ba931be3511b55a7f4f88dcac7d}
+Query if the library is currently initialized \begin{DoxyReturn}{Returns}
+true iff the library is initialized 
+\end{DoxyReturn}
+\hypertarget{namespaceBotan_1_1Global__State__Management_a8c28c0da3fe7fa017521cafeccc1425f}{\index{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management@{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management}!set\-\_\-global\-\_\-state@{set\-\_\-global\-\_\-state}}
+\index{set\-\_\-global\-\_\-state@{set\-\_\-global\-\_\-state}!Botan::Global_State_Management@{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management}}
+\subsubsection[{set\-\_\-global\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-T\-A\-N\-\_\-\-D\-L\-L void Botan\-::\-Global\-\_\-\-State\-\_\-\-Management\-::set\-\_\-global\-\_\-state (
+\begin{DoxyParamCaption}
+\item[{Library\-\_\-\-State $\ast$}]{state}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1Global__State__Management_a8c28c0da3fe7fa017521cafeccc1425f}
+Set the global state object 
+\begin{DoxyParams}{Parameters}
+{\em state} & the new global state to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespaceBotan_1_1Global__State__Management_a7da7a309df42621ce768e5d959b69e7b}{\index{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management@{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management}!set\-\_\-global\-\_\-state\-\_\-unless\-\_\-set@{set\-\_\-global\-\_\-state\-\_\-unless\-\_\-set}}
+\index{set\-\_\-global\-\_\-state\-\_\-unless\-\_\-set@{set\-\_\-global\-\_\-state\-\_\-unless\-\_\-set}!Botan::Global_State_Management@{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management}}
+\subsubsection[{set\-\_\-global\-\_\-state\-\_\-unless\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-T\-A\-N\-\_\-\-D\-L\-L bool Botan\-::\-Global\-\_\-\-State\-\_\-\-Management\-::set\-\_\-global\-\_\-state\-\_\-unless\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{Library\-\_\-\-State $\ast$}]{state}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1Global__State__Management_a7da7a309df42621ce768e5d959b69e7b}
+Set the global state object unless it is already set 
+\begin{DoxyParams}{Parameters}
+{\em state} & the new global state to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the state parameter is now being used as the global state, or false if one was already set, in which case the parameter was deleted immediately 
+\end{DoxyReturn}
+\hypertarget{namespaceBotan_1_1Global__State__Management_a5c346237ce90126dc0ae9652020d0239}{\index{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management@{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management}!swap\-\_\-global\-\_\-state@{swap\-\_\-global\-\_\-state}}
+\index{swap\-\_\-global\-\_\-state@{swap\-\_\-global\-\_\-state}!Botan::Global_State_Management@{Botan\-::\-Global\-\_\-\-State\-\_\-\-Management}}
+\subsubsection[{swap\-\_\-global\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-T\-A\-N\-\_\-\-D\-L\-L {\bf Library\-\_\-\-State} $\ast$ Botan\-::\-Global\-\_\-\-State\-\_\-\-Management\-::swap\-\_\-global\-\_\-state (
+\begin{DoxyParamCaption}
+\item[{Library\-\_\-\-State $\ast$}]{new\-\_\-state}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1Global__State__Management_a5c346237ce90126dc0ae9652020d0239}
+Swap the current state for another 
+\begin{DoxyParams}{Parameters}
+{\em new\-\_\-state} & the new state object to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+previous state (or N\-U\-L\-L if none) 
+\end{DoxyReturn}

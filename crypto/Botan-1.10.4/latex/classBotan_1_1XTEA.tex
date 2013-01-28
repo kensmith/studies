@@ -1,0 +1,146 @@
+\hypertarget{classBotan_1_1XTEA}{\section{Botan\-:\-:X\-T\-E\-A Class Reference}
+\label{classBotan_1_1XTEA}\index{Botan\-::\-X\-T\-E\-A@{Botan\-::\-X\-T\-E\-A}}
+}
+
+
+{\ttfamily \#include $<$xtea.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:X\-T\-E\-A\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classBotan_1_1XTEA}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1XTEA_ae0fe0c8b76bc8d25809756249b984152}{encrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+void \hyperlink{classBotan_1_1XTEA_a1b1481b18d8745ec314025ec6b023f50}{decrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+void \hyperlink{classBotan_1_1XTEA_a5590604a649e7273c61b281f8edf6c3e}{clear} ()
+\item 
+std\-::string \hyperlink{classBotan_1_1XTEA_a3bd46fdd16cc23719cc60ff2537353b3}{name} () const 
+\item 
+\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$ \hyperlink{classBotan_1_1XTEA_adad786965739b18b7b8c5034c7ca93f2}{clone} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} $>$ \& \hyperlink{classBotan_1_1XTEA_a8f7375a108efe9a306dfe679c5c0545f}{get\-\_\-\-E\-K} () const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1XTEA}{X\-T\-E\-A} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1XTEA_a5590604a649e7273c61b281f8edf6c3e}{\index{Botan\-::\-X\-T\-E\-A@{Botan\-::\-X\-T\-E\-A}!clear@{clear}}
+\index{clear@{clear}!Botan::XTEA@{Botan\-::\-X\-T\-E\-A}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-X\-T\-E\-A\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1XTEA_a5590604a649e7273c61b281f8edf6c3e}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1XTEA_adad786965739b18b7b8c5034c7ca93f2}{\index{Botan\-::\-X\-T\-E\-A@{Botan\-::\-X\-T\-E\-A}!clone@{clone}}
+\index{clone@{clone}!Botan::XTEA@{Botan\-::\-X\-T\-E\-A}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Cipher}$\ast$ Botan\-::\-X\-T\-E\-A\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1XTEA_adad786965739b18b7b8c5034c7ca93f2}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a9feaf7c1bfb5279a1652c849054e033c}{Botan\-::\-Block\-Cipher}.
+
+
+
+Reimplemented in \hyperlink{classBotan_1_1XTEA__SIMD_a543af6f76eb321b393f3d6b5aa2c6a75}{Botan\-::\-X\-T\-E\-A\-\_\-\-S\-I\-M\-D}.
+
+\hypertarget{classBotan_1_1XTEA_a1b1481b18d8745ec314025ec6b023f50}{\index{Botan\-::\-X\-T\-E\-A@{Botan\-::\-X\-T\-E\-A}!decrypt\-\_\-n@{decrypt\-\_\-n}}
+\index{decrypt\-\_\-n@{decrypt\-\_\-n}!Botan::XTEA@{Botan\-::\-X\-T\-E\-A}}
+\subsubsection[{decrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-X\-T\-E\-A\-::decrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1XTEA_a1b1481b18d8745ec314025ec6b023f50}
+Decrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a6ea709632f78d833484a4d67de25e1a8}{Botan\-::\-Block\-Cipher}.
+
+
+
+Reimplemented in \hyperlink{classBotan_1_1XTEA__SIMD_a00ee778c3e753e84af180f14ae441b96}{Botan\-::\-X\-T\-E\-A\-\_\-\-S\-I\-M\-D}.
+
+\hypertarget{classBotan_1_1XTEA_ae0fe0c8b76bc8d25809756249b984152}{\index{Botan\-::\-X\-T\-E\-A@{Botan\-::\-X\-T\-E\-A}!encrypt\-\_\-n@{encrypt\-\_\-n}}
+\index{encrypt\-\_\-n@{encrypt\-\_\-n}!Botan::XTEA@{Botan\-::\-X\-T\-E\-A}}
+\subsubsection[{encrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-X\-T\-E\-A\-::encrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1XTEA_ae0fe0c8b76bc8d25809756249b984152}
+Encrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a16a7005967a910407703c2899bd73ccf}{Botan\-::\-Block\-Cipher}.
+
+
+
+Reimplemented in \hyperlink{classBotan_1_1XTEA__SIMD_abba1f0478dee131f80bff4c63c3b07e8}{Botan\-::\-X\-T\-E\-A\-\_\-\-S\-I\-M\-D}.
+
+\hypertarget{classBotan_1_1XTEA_a8f7375a108efe9a306dfe679c5c0545f}{\index{Botan\-::\-X\-T\-E\-A@{Botan\-::\-X\-T\-E\-A}!get\-\_\-\-E\-K@{get\-\_\-\-E\-K}}
+\index{get\-\_\-\-E\-K@{get\-\_\-\-E\-K}!Botan::XTEA@{Botan\-::\-X\-T\-E\-A}}
+\subsubsection[{get\-\_\-\-E\-K}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Secure\-Vector}$<${\bf u32bit}$>$\& Botan\-::\-X\-T\-E\-A\-::get\-\_\-\-E\-K (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classBotan_1_1XTEA_a8f7375a108efe9a306dfe679c5c0545f}
+\begin{DoxyReturn}{Returns}
+const reference to the key schedule 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1XTEA_a3bd46fdd16cc23719cc60ff2537353b3}{\index{Botan\-::\-X\-T\-E\-A@{Botan\-::\-X\-T\-E\-A}!name@{name}}
+\index{name@{name}!Botan::XTEA@{Botan\-::\-X\-T\-E\-A}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-X\-T\-E\-A\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1XTEA_a3bd46fdd16cc23719cc60ff2537353b3}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/block/xtea/xtea.\-h\item 
+src/block/xtea/xtea.\-cpp\end{DoxyCompactItemize}

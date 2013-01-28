@@ -1,0 +1,108 @@
+\hypertarget{classBotan_1_1RSA__PrivateKey}{\section{Botan\-:\-:R\-S\-A\-\_\-\-Private\-Key Class Reference}
+\label{classBotan_1_1RSA__PrivateKey}\index{Botan\-::\-R\-S\-A\-\_\-\-Private\-Key@{Botan\-::\-R\-S\-A\-\_\-\-Private\-Key}}
+}
+
+
+{\ttfamily \#include $<$rsa.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:R\-S\-A\-\_\-\-Private\-Key\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.929825cm]{classBotan_1_1RSA__PrivateKey}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classBotan_1_1RSA__PrivateKey_ad25e35ed7bf2c00194546030157f8286}{check\-\_\-key} (\hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, bool) const 
+\item 
+\hypertarget{classBotan_1_1RSA__PrivateKey_acc39ee4d7dc5151837315f3c5dc79d74}{{\bfseries R\-S\-A\-\_\-\-Private\-Key} (const \hyperlink{classBotan_1_1AlgorithmIdentifier}{Algorithm\-Identifier} \&alg\-\_\-id, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&key\-\_\-bits, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)}\label{classBotan_1_1RSA__PrivateKey_acc39ee4d7dc5151837315f3c5dc79d74}
+
+\item 
+\hyperlink{classBotan_1_1RSA__PrivateKey_a730b7179cd58a9f00acab1c65df54241}{R\-S\-A\-\_\-\-Private\-Key} (\hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&p, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&q, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&e, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&d=0, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&n=0)
+\item 
+\hyperlink{classBotan_1_1RSA__PrivateKey_acd7b366cd79320103c1c7c449fb02483}{R\-S\-A\-\_\-\-Private\-Key} (\hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, size\-\_\-t bits, size\-\_\-t exp=65537)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+R\-S\-A Private Key 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1RSA__PrivateKey_a730b7179cd58a9f00acab1c65df54241}{\index{Botan\-::\-R\-S\-A\-\_\-\-Private\-Key@{Botan\-::\-R\-S\-A\-\_\-\-Private\-Key}!R\-S\-A\-\_\-\-Private\-Key@{R\-S\-A\-\_\-\-Private\-Key}}
+\index{R\-S\-A\-\_\-\-Private\-Key@{R\-S\-A\-\_\-\-Private\-Key}!Botan::RSA_PrivateKey@{Botan\-::\-R\-S\-A\-\_\-\-Private\-Key}}
+\subsubsection[{R\-S\-A\-\_\-\-Private\-Key}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-R\-S\-A\-\_\-\-Private\-Key\-::\-R\-S\-A\-\_\-\-Private\-Key (
+\begin{DoxyParamCaption}
+\item[{{\bf Random\-Number\-Generator} \&}]{rng, }
+\item[{const {\bf Big\-Int} \&}]{p, }
+\item[{const {\bf Big\-Int} \&}]{q, }
+\item[{const {\bf Big\-Int} \&}]{e, }
+\item[{const {\bf Big\-Int} \&}]{d = {\ttfamily 0}, }
+\item[{const {\bf Big\-Int} \&}]{n = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1RSA__PrivateKey_a730b7179cd58a9f00acab1c65df54241}
+Construct a private key from the specified parameters. 
+\begin{DoxyParams}{Parameters}
+{\em rng} & a random number generator \\
+\hline
+{\em p} & the first prime \\
+\hline
+{\em q} & the second prime \\
+\hline
+{\em e} & the exponent \\
+\hline
+{\em d} & if specified, this has to be d with exp $\ast$ d = 1 mod (p -\/ 1, q -\/ 1). Leave it as 0 if you wish to the constructor to calculate it. \\
+\hline
+{\em n} & if specified, this must be n = p $\ast$ q. Leave it as 0 if you wish to the constructor to calculate it. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1RSA__PrivateKey_acd7b366cd79320103c1c7c449fb02483}{\index{Botan\-::\-R\-S\-A\-\_\-\-Private\-Key@{Botan\-::\-R\-S\-A\-\_\-\-Private\-Key}!R\-S\-A\-\_\-\-Private\-Key@{R\-S\-A\-\_\-\-Private\-Key}}
+\index{R\-S\-A\-\_\-\-Private\-Key@{R\-S\-A\-\_\-\-Private\-Key}!Botan::RSA_PrivateKey@{Botan\-::\-R\-S\-A\-\_\-\-Private\-Key}}
+\subsubsection[{R\-S\-A\-\_\-\-Private\-Key}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-R\-S\-A\-\_\-\-Private\-Key\-::\-R\-S\-A\-\_\-\-Private\-Key (
+\begin{DoxyParamCaption}
+\item[{{\bf Random\-Number\-Generator} \&}]{rng, }
+\item[{size\-\_\-t}]{bits, }
+\item[{size\-\_\-t}]{exp = {\ttfamily 65537}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1RSA__PrivateKey_acd7b366cd79320103c1c7c449fb02483}
+Create a new private key with the specified bit length 
+\begin{DoxyParams}{Parameters}
+{\em rng} & the random number generator to use \\
+\hline
+{\em bits} & the desired bit length of the private key \\
+\hline
+{\em exp} & the public exponent to be used \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1RSA__PrivateKey_ad25e35ed7bf2c00194546030157f8286}{\index{Botan\-::\-R\-S\-A\-\_\-\-Private\-Key@{Botan\-::\-R\-S\-A\-\_\-\-Private\-Key}!check\-\_\-key@{check\-\_\-key}}
+\index{check\-\_\-key@{check\-\_\-key}!Botan::RSA_PrivateKey@{Botan\-::\-R\-S\-A\-\_\-\-Private\-Key}}
+\subsubsection[{check\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-R\-S\-A\-\_\-\-Private\-Key\-::check\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{{\bf Random\-Number\-Generator} \&}]{rng, }
+\item[{bool}]{strong}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1RSA__PrivateKey_ad25e35ed7bf2c00194546030157f8286}
+Test the key values for consistency. 
+\begin{DoxyParams}{Parameters}
+{\em rng} & rng to use \\
+\hline
+{\em strong} & whether to perform strong and lengthy version of the test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the test is passed 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1IF__Scheme__PrivateKey_a42567a60cd7dd299e3f9781404f3203d}{Botan\-::\-I\-F\-\_\-\-Scheme\-\_\-\-Private\-Key}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/pubkey/rsa/rsa.\-h\item 
+src/pubkey/rsa/rsa.\-cpp\end{DoxyCompactItemize}

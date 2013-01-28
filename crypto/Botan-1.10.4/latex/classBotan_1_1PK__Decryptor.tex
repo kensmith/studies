@@ -1,0 +1,64 @@
+\hypertarget{classBotan_1_1PK__Decryptor}{\section{Botan\-:\-:P\-K\-\_\-\-Decryptor Class Reference}
+\label{classBotan_1_1PK__Decryptor}\index{Botan\-::\-P\-K\-\_\-\-Decryptor@{Botan\-::\-P\-K\-\_\-\-Decryptor}}
+}
+
+
+{\ttfamily \#include $<$pubkey.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:P\-K\-\_\-\-Decryptor\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1PK__Decryptor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1PK__Decryptor_a9792b02161f569ed276be24a365d1f3b}{decrypt} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, size\-\_\-t length) const 
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1PK__Decryptor_a8f2fbe5ba5b6be2e980c8c126b4a1676}{decrypt} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&in) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Public Key Decryptor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1PK__Decryptor_a9792b02161f569ed276be24a365d1f3b}{\index{Botan\-::\-P\-K\-\_\-\-Decryptor@{Botan\-::\-P\-K\-\_\-\-Decryptor}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!Botan::PK_Decryptor@{Botan\-::\-P\-K\-\_\-\-Decryptor}}
+\subsubsection[{decrypt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<${\bf byte}$>$ Botan\-::\-P\-K\-\_\-\-Decryptor\-::decrypt (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1PK__Decryptor_a9792b02161f569ed276be24a365d1f3b}
+Decrypt a ciphertext. 
+\begin{DoxyParams}{Parameters}
+{\em in} & the ciphertext as a byte array \\
+\hline
+{\em length} & the length of the above byte array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+decrypted message 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1PK__Decryptor_a8f2fbe5ba5b6be2e980c8c126b4a1676}{\index{Botan\-::\-P\-K\-\_\-\-Decryptor@{Botan\-::\-P\-K\-\_\-\-Decryptor}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!Botan::PK_Decryptor@{Botan\-::\-P\-K\-\_\-\-Decryptor}}
+\subsubsection[{decrypt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<${\bf byte}$>$ Botan\-::\-P\-K\-\_\-\-Decryptor\-::decrypt (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{in}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1PK__Decryptor_a8f2fbe5ba5b6be2e980c8c126b4a1676}
+Decrypt a ciphertext. 
+\begin{DoxyParams}{Parameters}
+{\em in} & the ciphertext \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+decrypted message 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/pubkey/pubkey.\-h\end{DoxyCompactItemize}

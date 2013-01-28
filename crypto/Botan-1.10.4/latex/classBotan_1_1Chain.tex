@@ -1,0 +1,98 @@
+\hypertarget{classBotan_1_1Chain}{\section{Botan\-:\-:Chain Class Reference}
+\label{classBotan_1_1Chain}\index{Botan\-::\-Chain@{Botan\-::\-Chain}}
+}
+
+
+{\ttfamily \#include $<$basefilt.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Chain\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBotan_1_1Chain}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1Chain_a7e388d156e61e5e98ffd2ab6ceed91c7}{write} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} input\mbox{[}$\,$\mbox{]}, size\-\_\-t length)
+\item 
+std\-::string \hyperlink{classBotan_1_1Chain_adff41cfb47851fe8da277ec6306c2274}{name} () const 
+\item 
+\hyperlink{classBotan_1_1Chain_a32cc4fc8e57ead4ff2d3c911b3b72d33}{Chain} (\hyperlink{classBotan_1_1Filter}{Filter} $\ast$=0, \hyperlink{classBotan_1_1Filter}{Filter} $\ast$=0, \hyperlink{classBotan_1_1Filter}{Filter} $\ast$=0, \hyperlink{classBotan_1_1Filter}{Filter} $\ast$=0)
+\item 
+\hyperlink{classBotan_1_1Chain_a056efdfd41facdf256782820237a1b58}{Chain} (\hyperlink{classBotan_1_1Filter}{Filter} $\ast$filter\-\_\-arr\mbox{[}$\,$\mbox{]}, size\-\_\-t length)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class represents \hyperlink{classBotan_1_1Filter}{Filter} chains. A \hyperlink{classBotan_1_1Filter}{Filter} chain is an ordered concatenation of Filters, the input to a \hyperlink{classBotan_1_1Chain}{Chain} sequentially passes through all the Filters contained in the \hyperlink{classBotan_1_1Chain}{Chain}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Chain_a32cc4fc8e57ead4ff2d3c911b3b72d33}{\index{Botan\-::\-Chain@{Botan\-::\-Chain}!Chain@{Chain}}
+\index{Chain@{Chain}!Botan::Chain@{Botan\-::\-Chain}}
+\subsubsection[{Chain}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Chain\-::\-Chain (
+\begin{DoxyParamCaption}
+\item[{{\bf Filter} $\ast$}]{f1 = {\ttfamily 0}, }
+\item[{{\bf Filter} $\ast$}]{f2 = {\ttfamily 0}, }
+\item[{{\bf Filter} $\ast$}]{f3 = {\ttfamily 0}, }
+\item[{{\bf Filter} $\ast$}]{f4 = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Chain_a32cc4fc8e57ead4ff2d3c911b3b72d33}
+Construct a chain of up to four filters. The filters are set up in the same order as the arguments. \hypertarget{classBotan_1_1Chain_a056efdfd41facdf256782820237a1b58}{\index{Botan\-::\-Chain@{Botan\-::\-Chain}!Chain@{Chain}}
+\index{Chain@{Chain}!Botan::Chain@{Botan\-::\-Chain}}
+\subsubsection[{Chain}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Chain\-::\-Chain (
+\begin{DoxyParamCaption}
+\item[{{\bf Filter} $\ast$}]{filter\-\_\-arr\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Chain_a056efdfd41facdf256782820237a1b58}
+Construct a chain from range of filters 
+\begin{DoxyParams}{Parameters}
+{\em filter\-\_\-arr} & the list of filters \\
+\hline
+{\em length} & how many filters \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Chain_adff41cfb47851fe8da277ec6306c2274}{\index{Botan\-::\-Chain@{Botan\-::\-Chain}!name@{name}}
+\index{name@{name}!Botan::Chain@{Botan\-::\-Chain}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Chain\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Chain_adff41cfb47851fe8da277ec6306c2274}
+\begin{DoxyReturn}{Returns}
+descriptive name for this filter 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Filter_a612efd6701e36df4902da3dc396ce62f}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1Chain_a7e388d156e61e5e98ffd2ab6ceed91c7}{\index{Botan\-::\-Chain@{Botan\-::\-Chain}!write@{write}}
+\index{write@{write}!Botan::Chain@{Botan\-::\-Chain}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Chain\-::write (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Chain_a7e388d156e61e5e98ffd2ab6ceed91c7}
+Write a portion of a message to this filter. 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input as a byte array \\
+\hline
+{\em length} & the length of the byte array input \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1Filter_ad856ce62d9bdcce8057da99cba606892}{Botan\-::\-Filter}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/filters/basefilt.\-h\item 
+src/filters/basefilt.\-cpp\end{DoxyCompactItemize}

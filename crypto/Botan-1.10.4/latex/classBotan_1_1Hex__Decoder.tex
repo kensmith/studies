@@ -1,0 +1,96 @@
+\hypertarget{classBotan_1_1Hex__Decoder}{\section{Botan\-:\-:Hex\-\_\-\-Decoder Class Reference}
+\label{classBotan_1_1Hex__Decoder}\index{Botan\-::\-Hex\-\_\-\-Decoder@{Botan\-::\-Hex\-\_\-\-Decoder}}
+}
+
+
+{\ttfamily \#include $<$hex\-\_\-filt.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Hex\-\_\-\-Decoder\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1Hex__Decoder}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1Hex__Decoder_a18c63adf2079bcc86abc0ee5ccb4537f}{name} () const 
+\item 
+void \hyperlink{classBotan_1_1Hex__Decoder_a4013e02f2bdc32bf978b0e9a7eb21d37}{write} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)
+\item 
+void \hyperlink{classBotan_1_1Hex__Decoder_afcc4830fc393b78c50c2041e54bc4b2c}{end\-\_\-msg} ()
+\item 
+\hyperlink{classBotan_1_1Hex__Decoder_a274b20e88ffab46e134c13002f0303aa}{Hex\-\_\-\-Decoder} (\hyperlink{namespaceBotan_acd5baf937a9984c39f8b44104dde76ae}{Decoder\-\_\-\-Checking} checking=N\-O\-N\-E)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Converts hex strings to bytes 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Hex__Decoder_a274b20e88ffab46e134c13002f0303aa}{\index{Botan\-::\-Hex\-\_\-\-Decoder@{Botan\-::\-Hex\-\_\-\-Decoder}!Hex\-\_\-\-Decoder@{Hex\-\_\-\-Decoder}}
+\index{Hex\-\_\-\-Decoder@{Hex\-\_\-\-Decoder}!Botan::Hex_Decoder@{Botan\-::\-Hex\-\_\-\-Decoder}}
+\subsubsection[{Hex\-\_\-\-Decoder}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Hex\-\_\-\-Decoder\-::\-Hex\-\_\-\-Decoder (
+\begin{DoxyParamCaption}
+\item[{{\bf Decoder\-\_\-\-Checking}}]{checking = {\ttfamily NONE}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Hex__Decoder_a274b20e88ffab46e134c13002f0303aa}
+Construct a Hex Decoder using the specified character checking. 
+\begin{DoxyParams}{Parameters}
+{\em checking} & the checking to use during decoding. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Hex__Decoder_afcc4830fc393b78c50c2041e54bc4b2c}{\index{Botan\-::\-Hex\-\_\-\-Decoder@{Botan\-::\-Hex\-\_\-\-Decoder}!end\-\_\-msg@{end\-\_\-msg}}
+\index{end\-\_\-msg@{end\-\_\-msg}!Botan::Hex_Decoder@{Botan\-::\-Hex\-\_\-\-Decoder}}
+\subsubsection[{end\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Hex\-\_\-\-Decoder\-::end\-\_\-msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Hex__Decoder_afcc4830fc393b78c50c2041e54bc4b2c}
+Notify that the current message is finished; flush buffers and do end-\/of-\/message processing (if any). 
+
+Reimplemented from \hyperlink{classBotan_1_1Filter_a5378ec3bf4adf860a4cfa01cfc51e20e}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1Hex__Decoder_a18c63adf2079bcc86abc0ee5ccb4537f}{\index{Botan\-::\-Hex\-\_\-\-Decoder@{Botan\-::\-Hex\-\_\-\-Decoder}!name@{name}}
+\index{name@{name}!Botan::Hex_Decoder@{Botan\-::\-Hex\-\_\-\-Decoder}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Hex\-\_\-\-Decoder\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Hex__Decoder_a18c63adf2079bcc86abc0ee5ccb4537f}
+\begin{DoxyReturn}{Returns}
+descriptive name for this filter 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Filter_a612efd6701e36df4902da3dc396ce62f}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1Hex__Decoder_a4013e02f2bdc32bf978b0e9a7eb21d37}{\index{Botan\-::\-Hex\-\_\-\-Decoder@{Botan\-::\-Hex\-\_\-\-Decoder}!write@{write}}
+\index{write@{write}!Botan::Hex_Decoder@{Botan\-::\-Hex\-\_\-\-Decoder}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Hex\-\_\-\-Decoder\-::write (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Hex__Decoder_a4013e02f2bdc32bf978b0e9a7eb21d37}
+Write a portion of a message to this filter. 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input as a byte array \\
+\hline
+{\em length} & the length of the byte array input \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1Filter_ad856ce62d9bdcce8057da99cba606892}{Botan\-::\-Filter}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/filters/codec\-\_\-filt/hex\-\_\-filt.\-h\item 
+src/filters/codec\-\_\-filt/hex\-\_\-filt.\-cpp\end{DoxyCompactItemize}

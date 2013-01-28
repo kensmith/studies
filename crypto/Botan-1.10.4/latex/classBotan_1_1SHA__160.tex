@@ -1,0 +1,165 @@
+\hypertarget{classBotan_1_1SHA__160}{\section{Botan\-:\-:S\-H\-A\-\_\-160 Class Reference}
+\label{classBotan_1_1SHA__160}\index{Botan\-::\-S\-H\-A\-\_\-160@{Botan\-::\-S\-H\-A\-\_\-160}}
+}
+
+
+{\ttfamily \#include $<$sha160.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:S\-H\-A\-\_\-160\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classBotan_1_1SHA__160}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1SHA__160_aef92b3e2dce3e332c411983a1b00bc12}{name} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1SHA__160_ab377faaebaea31fea878804c5d640f9f}{output\-\_\-length} () const 
+\item 
+\hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$ \hyperlink{classBotan_1_1SHA__160_a7303294d56fb49893385bbf3afe959ef}{clone} () const 
+\item 
+void \hyperlink{classBotan_1_1SHA__160_a96d3deedc6b26b13e048523ccdc957a2}{clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1SHA__160_a7a2fde8c8908572318d4f47df8f2aac3}{S\-H\-A\-\_\-160} (size\-\_\-t W\-\_\-size)
+\item 
+void \hyperlink{classBotan_1_1SHA__160_acdc60bfafc2455f5146f0a5c3f20aa83}{compress\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks)
+\item 
+void \hyperlink{classBotan_1_1SHA__160_a650b2c5a6f7b8cf1010e414ac9feba89}{copy\-\_\-out} (\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} $>$ \hyperlink{classBotan_1_1SHA__160_a839026853038eb4c05808907bcdb00cf}{digest}
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} $>$ \hyperlink{classBotan_1_1SHA__160_a65ca83685049a564d97f22ac80dcc007}{W}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+N\-I\-S\-T's S\-H\-A-\/160 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1SHA__160_a7a2fde8c8908572318d4f47df8f2aac3}{\index{Botan\-::\-S\-H\-A\-\_\-160@{Botan\-::\-S\-H\-A\-\_\-160}!S\-H\-A\-\_\-160@{S\-H\-A\-\_\-160}}
+\index{S\-H\-A\-\_\-160@{S\-H\-A\-\_\-160}!Botan::SHA_160@{Botan\-::\-S\-H\-A\-\_\-160}}
+\subsubsection[{S\-H\-A\-\_\-160}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-S\-H\-A\-\_\-160\-::\-S\-H\-A\-\_\-160 (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{W\-\_\-size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classBotan_1_1SHA__160_a7a2fde8c8908572318d4f47df8f2aac3}
+Set a custom size for the W array. Normally 80, but some subclasses need slightly more for best performance/internal constraints 
+\begin{DoxyParams}{Parameters}
+{\em W\-\_\-size} & how big to make W \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1SHA__160_a96d3deedc6b26b13e048523ccdc957a2}{\index{Botan\-::\-S\-H\-A\-\_\-160@{Botan\-::\-S\-H\-A\-\_\-160}!clear@{clear}}
+\index{clear@{clear}!Botan::SHA_160@{Botan\-::\-S\-H\-A\-\_\-160}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-S\-H\-A\-\_\-160\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1SHA__160_a96d3deedc6b26b13e048523ccdc957a2}
+Zeroize internal state 
+
+Reimplemented from \hyperlink{classBotan_1_1MDx__HashFunction_ad32c3f024a4eba7bd1d53372dc248a86}{Botan\-::\-M\-Dx\-\_\-\-Hash\-Function}.
+
+\hypertarget{classBotan_1_1SHA__160_a7303294d56fb49893385bbf3afe959ef}{\index{Botan\-::\-S\-H\-A\-\_\-160@{Botan\-::\-S\-H\-A\-\_\-160}!clone@{clone}}
+\index{clone@{clone}!Botan::SHA_160@{Botan\-::\-S\-H\-A\-\_\-160}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hash\-Function}$\ast$ Botan\-::\-S\-H\-A\-\_\-160\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1SHA__160_a7303294d56fb49893385bbf3afe959ef}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1HashFunction_aaa2b17b63215ae970d9b5d5044cc208a}{Botan\-::\-Hash\-Function}.
+
+
+
+Reimplemented in \hyperlink{classBotan_1_1SHA__160__SSE2_aeadcb7e662c26203cc4ec79062fe0e59}{Botan\-::\-S\-H\-A\-\_\-160\-\_\-\-S\-S\-E2}, \hyperlink{classBotan_1_1SHA__160__X86__32_ae8aa92f0b32c56c9640ff430dab217f2}{Botan\-::\-S\-H\-A\-\_\-160\-\_\-\-X86\-\_\-32}, and \hyperlink{classBotan_1_1SHA__160__X86__64_af48aa48e23048debdfddcada1b5146e2}{Botan\-::\-S\-H\-A\-\_\-160\-\_\-\-X86\-\_\-64}.
+
+\hypertarget{classBotan_1_1SHA__160_acdc60bfafc2455f5146f0a5c3f20aa83}{\index{Botan\-::\-S\-H\-A\-\_\-160@{Botan\-::\-S\-H\-A\-\_\-160}!compress\-\_\-n@{compress\-\_\-n}}
+\index{compress\-\_\-n@{compress\-\_\-n}!Botan::SHA_160@{Botan\-::\-S\-H\-A\-\_\-160}}
+\subsubsection[{compress\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-S\-H\-A\-\_\-160\-::compress\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{blocks\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{block\-\_\-n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classBotan_1_1SHA__160_acdc60bfafc2455f5146f0a5c3f20aa83}
+Run the hash's compression function over a set of blocks 
+\begin{DoxyParams}{Parameters}
+{\em blocks} & the input \\
+\hline
+{\em block\-\_\-n} & the number of blocks \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1MDx__HashFunction_a6b8d4468c51210a8b4686eb1a2d63bdb}{Botan\-::\-M\-Dx\-\_\-\-Hash\-Function}.
+
+\hypertarget{classBotan_1_1SHA__160_a650b2c5a6f7b8cf1010e414ac9feba89}{\index{Botan\-::\-S\-H\-A\-\_\-160@{Botan\-::\-S\-H\-A\-\_\-160}!copy\-\_\-out@{copy\-\_\-out}}
+\index{copy\-\_\-out@{copy\-\_\-out}!Botan::SHA_160@{Botan\-::\-S\-H\-A\-\_\-160}}
+\subsubsection[{copy\-\_\-out}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-S\-H\-A\-\_\-160\-::copy\-\_\-out (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{buffer\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classBotan_1_1SHA__160_a650b2c5a6f7b8cf1010e414ac9feba89}
+Copy the output to the buffer 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & to put the output into \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1MDx__HashFunction_ab2f1da9783cfcf5970e468f846196686}{Botan\-::\-M\-Dx\-\_\-\-Hash\-Function}.
+
+\hypertarget{classBotan_1_1SHA__160_aef92b3e2dce3e332c411983a1b00bc12}{\index{Botan\-::\-S\-H\-A\-\_\-160@{Botan\-::\-S\-H\-A\-\_\-160}!name@{name}}
+\index{name@{name}!Botan::SHA_160@{Botan\-::\-S\-H\-A\-\_\-160}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-S\-H\-A\-\_\-160\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1SHA__160_aef92b3e2dce3e332c411983a1b00bc12}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1SHA__160_ab377faaebaea31fea878804c5d640f9f}{\index{Botan\-::\-S\-H\-A\-\_\-160@{Botan\-::\-S\-H\-A\-\_\-160}!output\-\_\-length@{output\-\_\-length}}
+\index{output\-\_\-length@{output\-\_\-length}!Botan::SHA_160@{Botan\-::\-S\-H\-A\-\_\-160}}
+\subsubsection[{output\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-S\-H\-A\-\_\-160\-::output\-\_\-length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1SHA__160_ab377faaebaea31fea878804c5d640f9f}
+\begin{DoxyReturn}{Returns}
+length of the output of this function in bytes 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Buffered__Computation_a7b2e6776ea9ded2e3f9da5a760b7d34b}{Botan\-::\-Buffered\-\_\-\-Computation}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classBotan_1_1SHA__160_a839026853038eb4c05808907bcdb00cf}{\index{Botan\-::\-S\-H\-A\-\_\-160@{Botan\-::\-S\-H\-A\-\_\-160}!digest@{digest}}
+\index{digest@{digest}!Botan::SHA_160@{Botan\-::\-S\-H\-A\-\_\-160}}
+\subsubsection[{digest}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<${\bf u32bit}$>$ Botan\-::\-S\-H\-A\-\_\-160\-::digest\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBotan_1_1SHA__160_a839026853038eb4c05808907bcdb00cf}
+The digest value, exposed for use by subclasses (asm, S\-S\-E2) \hypertarget{classBotan_1_1SHA__160_a65ca83685049a564d97f22ac80dcc007}{\index{Botan\-::\-S\-H\-A\-\_\-160@{Botan\-::\-S\-H\-A\-\_\-160}!W@{W}}
+\index{W@{W}!Botan::SHA_160@{Botan\-::\-S\-H\-A\-\_\-160}}
+\subsubsection[{W}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<${\bf u32bit}$>$ Botan\-::\-S\-H\-A\-\_\-160\-::\-W\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBotan_1_1SHA__160_a65ca83685049a564d97f22ac80dcc007}
+The message buffer, exposed for use by subclasses (asm, S\-S\-E2) 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/hash/sha1/sha160.\-h\item 
+src/hash/sha1/sha160.\-cpp\end{DoxyCompactItemize}

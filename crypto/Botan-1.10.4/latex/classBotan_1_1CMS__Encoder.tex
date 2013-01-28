@@ -1,0 +1,73 @@
+\hypertarget{classBotan_1_1CMS__Encoder}{\section{Botan\-:\-:C\-M\-S\-\_\-\-Encoder Class Reference}
+\label{classBotan_1_1CMS__Encoder}\index{Botan\-::\-C\-M\-S\-\_\-\-Encoder@{Botan\-::\-C\-M\-S\-\_\-\-Encoder}}
+}
+
+
+{\ttfamily \#include $<$cms\-\_\-enc.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_a76ddf7bfa8ba2e51bbcc2e63f2d22f4e}{void {\bfseries encrypt} (\hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&, const \hyperlink{classBotan_1_1X509__Certificate}{X509\-\_\-\-Certificate} \&, const std\-::string=\char`\"{}\char`\"{})}\label{classBotan_1_1CMS__Encoder_a76ddf7bfa8ba2e51bbcc2e63f2d22f4e}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_ad6897f6950d4ef435e31df2efa6e251a}{void {\bfseries encrypt} (\hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const std\-::string \&, const std\-::string \&=\char`\"{}\char`\"{})}\label{classBotan_1_1CMS__Encoder_ad6897f6950d4ef435e31df2efa6e251a}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_a3da8a6e51265e687f898d815bc79bcf7}{void {\bfseries encrypt} (\hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const \hyperlink{namespaceBotan_a00c78597211d5c63b63e2a57ddb96d38}{Symmetric\-Key} \&, const std\-::string \&=\char`\"{}\char`\"{})}\label{classBotan_1_1CMS__Encoder_a3da8a6e51265e687f898d815bc79bcf7}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_af6050d8db5334fd9a71192e1847c8a18}{void {\bfseries authenticate} (const \hyperlink{classBotan_1_1X509__Certificate}{X509\-\_\-\-Certificate} \&, const std\-::string \&=\char`\"{}\char`\"{})}\label{classBotan_1_1CMS__Encoder_af6050d8db5334fd9a71192e1847c8a18}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_a19cf83c172220968aaef8880d3e22062}{void {\bfseries authenticate} (const std\-::string \&, const std\-::string \&=\char`\"{}\char`\"{})}\label{classBotan_1_1CMS__Encoder_a19cf83c172220968aaef8880d3e22062}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_adf2de32c64f3e42c1f164d3f1f4471c9}{void {\bfseries authenticate} (const \hyperlink{namespaceBotan_a00c78597211d5c63b63e2a57ddb96d38}{Symmetric\-Key} \&, const std\-::string \&=\char`\"{}\char`\"{})}\label{classBotan_1_1CMS__Encoder_adf2de32c64f3e42c1f164d3f1f4471c9}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_a977e1df47741091f19e83f74e3f760e8}{void {\bfseries sign} (const \hyperlink{classBotan_1_1X509__Certificate}{X509\-\_\-\-Certificate} \&cert, const \hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} \&key, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const std\-::vector$<$ \hyperlink{classBotan_1_1X509__Certificate}{X509\-\_\-\-Certificate} $>$ \&cert\-\_\-chain, const std\-::string \&hash, const std\-::string \&padding)}\label{classBotan_1_1CMS__Encoder_a977e1df47741091f19e83f74e3f760e8}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_a6bb435dc936b7d6efed6b417ff478171}{void {\bfseries digest} (const std\-::string \&=\char`\"{}\char`\"{})}\label{classBotan_1_1CMS__Encoder_a6bb435dc936b7d6efed6b417ff478171}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_a517f2125a9e9c23ebe6d3d63f9c53be0}{void {\bfseries compress} (const std\-::string \&)}\label{classBotan_1_1CMS__Encoder_a517f2125a9e9c23ebe6d3d63f9c53be0}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_ab8a9dbc2118fd3c0a123526907e984f8}{\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ {\bfseries get\-\_\-contents} ()}\label{classBotan_1_1CMS__Encoder_ab8a9dbc2118fd3c0a123526907e984f8}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_ad4c4c865201f2e834106b7185fe4216f}{std\-::string {\bfseries P\-E\-M\-\_\-contents} ()}\label{classBotan_1_1CMS__Encoder_ad4c4c865201f2e834106b7185fe4216f}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_a71262c86cb9fa0387b2142acbcccabf1}{void {\bfseries set\-\_\-data} (const std\-::string \&)}\label{classBotan_1_1CMS__Encoder_a71262c86cb9fa0387b2142acbcccabf1}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_aad94f925666d66e7ec54e760942d1b40}{void {\bfseries set\-\_\-data} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)}\label{classBotan_1_1CMS__Encoder_aad94f925666d66e7ec54e760942d1b40}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_a9c4743acc95fbbadcda5951bedbfc505}{{\bfseries C\-M\-S\-\_\-\-Encoder} (const std\-::string \&str)}\label{classBotan_1_1CMS__Encoder_a9c4743acc95fbbadcda5951bedbfc505}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_a731ec102895cdb0d8ea36bafc9d210fc}{{\bfseries C\-M\-S\-\_\-\-Encoder} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} buf\mbox{[}$\,$\mbox{]}, size\-\_\-t length)}\label{classBotan_1_1CMS__Encoder_a731ec102895cdb0d8ea36bafc9d210fc}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1CMS__Encoder_a9cc705436e976542301549a2e726549e}{static bool {\bfseries can\-\_\-compress\-\_\-with} (const std\-::string \&)}\label{classBotan_1_1CMS__Encoder_a9cc705436e976542301549a2e726549e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\-M\-S Encoding Operation 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/cms/cms\-\_\-enc.\-h\item 
+src/cms/cms\-\_\-algo.\-cpp\item 
+src/cms/cms\-\_\-comp.\-cpp\item 
+src/cms/cms\-\_\-ealg.\-cpp\item 
+src/cms/cms\-\_\-enc.\-cpp\end{DoxyCompactItemize}

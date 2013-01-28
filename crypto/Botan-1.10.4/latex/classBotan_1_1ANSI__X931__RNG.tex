@@ -1,0 +1,169 @@
+\hypertarget{classBotan_1_1ANSI__X931__RNG}{\section{Botan\-:\-:A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G Class Reference}
+\label{classBotan_1_1ANSI__X931__RNG}\index{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}}
+}
+
+
+{\ttfamily \#include $<$x931\-\_\-rng.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1ANSI__X931__RNG}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1ANSI__X931__RNG_aa467e6846004e72e3032c07192b5c4b0}{randomize} (\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)
+\item 
+bool \hyperlink{classBotan_1_1ANSI__X931__RNG_ae8be7ca130c608b1612edf4cf7e22d69}{is\-\_\-seeded} () const 
+\item 
+void \hyperlink{classBotan_1_1ANSI__X931__RNG_a194063e8336a972571e2360c60d8f2e1}{clear} ()
+\item 
+std\-::string \hyperlink{classBotan_1_1ANSI__X931__RNG_a9ce10e0ff163da11a9c4e85f23347c3b}{name} () const 
+\item 
+void \hyperlink{classBotan_1_1ANSI__X931__RNG_a826e4f3a6fdd9bc1de5c27d2e4ce38db}{reseed} (size\-\_\-t poll\-\_\-bits)
+\item 
+void \hyperlink{classBotan_1_1ANSI__X931__RNG_acacdeae2432b2e25420bb2121d4052c0}{add\-\_\-entropy\-\_\-source} (\hyperlink{classBotan_1_1EntropySource}{Entropy\-Source} $\ast$)
+\item 
+void \hyperlink{classBotan_1_1ANSI__X931__RNG_aa0aec44d5cefe106e26ffd5a9e1493a2}{add\-\_\-entropy} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)
+\item 
+\hyperlink{classBotan_1_1ANSI__X931__RNG_a8edc36aa1cd88bed21071b1ddd645979}{A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G} (\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$cipher, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} $\ast$rng)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A\-N\-S\-I X9.\-31 R\-N\-G 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1ANSI__X931__RNG_a8edc36aa1cd88bed21071b1ddd645979}{\index{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}!A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G@{A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}}
+\index{A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G@{A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}!Botan::ANSI_X931_RNG@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}}
+\subsubsection[{A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G (
+\begin{DoxyParamCaption}
+\item[{{\bf Block\-Cipher} $\ast$}]{cipher, }
+\item[{{\bf Random\-Number\-Generator} $\ast$}]{rng}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1ANSI__X931__RNG_a8edc36aa1cd88bed21071b1ddd645979}
+
+\begin{DoxyParams}{Parameters}
+{\em cipher} & the block cipher to use in this P\-R\-N\-G \\
+\hline
+{\em rng} & the underlying P\-R\-N\-G for generating inputs (eg, an \hyperlink{classBotan_1_1HMAC__RNG}{H\-M\-A\-C\-\_\-\-R\-N\-G}) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1ANSI__X931__RNG_aa0aec44d5cefe106e26ffd5a9e1493a2}{\index{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}!add\-\_\-entropy@{add\-\_\-entropy}}
+\index{add\-\_\-entropy@{add\-\_\-entropy}!Botan::ANSI_X931_RNG@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}}
+\subsubsection[{add\-\_\-entropy}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G\-::add\-\_\-entropy (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1ANSI__X931__RNG_aa0aec44d5cefe106e26ffd5a9e1493a2}
+Add entropy to this R\-N\-G. 
+\begin{DoxyParams}{Parameters}
+{\em in} & a byte array containg the entropy to be added \\
+\hline
+{\em length} & the length of the byte array in \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1RandomNumberGenerator_a92557ce6b709a0cf6a154b6f27844a6e}{Botan\-::\-Random\-Number\-Generator}.
+
+\hypertarget{classBotan_1_1ANSI__X931__RNG_acacdeae2432b2e25420bb2121d4052c0}{\index{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}!add\-\_\-entropy\-\_\-source@{add\-\_\-entropy\-\_\-source}}
+\index{add\-\_\-entropy\-\_\-source@{add\-\_\-entropy\-\_\-source}!Botan::ANSI_X931_RNG@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}}
+\subsubsection[{add\-\_\-entropy\-\_\-source}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G\-::add\-\_\-entropy\-\_\-source (
+\begin{DoxyParamCaption}
+\item[{{\bf Entropy\-Source} $\ast$}]{source}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1ANSI__X931__RNG_acacdeae2432b2e25420bb2121d4052c0}
+Add this entropy source to the R\-N\-G object 
+\begin{DoxyParams}{Parameters}
+{\em source} & the entropy source which will be retained and used by R\-N\-G \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1RandomNumberGenerator_a4346c3e7ba316e7434d94e91919ee43e}{Botan\-::\-Random\-Number\-Generator}.
+
+\hypertarget{classBotan_1_1ANSI__X931__RNG_a194063e8336a972571e2360c60d8f2e1}{\index{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}!clear@{clear}}
+\index{clear@{clear}!Botan::ANSI_X931_RNG@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1ANSI__X931__RNG_a194063e8336a972571e2360c60d8f2e1}
+Clear all internally held values of this R\-N\-G. 
+
+Implements \hyperlink{classBotan_1_1RandomNumberGenerator_a2aae6710baf18b5f1b1d59ad2597a3d3}{Botan\-::\-Random\-Number\-Generator}.
+
+\hypertarget{classBotan_1_1ANSI__X931__RNG_ae8be7ca130c608b1612edf4cf7e22d69}{\index{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}!is\-\_\-seeded@{is\-\_\-seeded}}
+\index{is\-\_\-seeded@{is\-\_\-seeded}!Botan::ANSI_X931_RNG@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}}
+\subsubsection[{is\-\_\-seeded}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G\-::is\-\_\-seeded (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1ANSI__X931__RNG_ae8be7ca130c608b1612edf4cf7e22d69}
+Check whether this R\-N\-G is seeded. \begin{DoxyReturn}{Returns}
+true if this R\-N\-G was already seeded, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1RandomNumberGenerator_aa9fe8a7a46a50cb94068bb449801008d}{Botan\-::\-Random\-Number\-Generator}.
+
+\hypertarget{classBotan_1_1ANSI__X931__RNG_a9ce10e0ff163da11a9c4e85f23347c3b}{\index{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}!name@{name}}
+\index{name@{name}!Botan::ANSI_X931_RNG@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1ANSI__X931__RNG_a9ce10e0ff163da11a9c4e85f23347c3b}
+Return the name of this object 
+
+Implements \hyperlink{classBotan_1_1RandomNumberGenerator_a9a6085d55e0d36b311fa4c18a5c07ea0}{Botan\-::\-Random\-Number\-Generator}.
+
+\hypertarget{classBotan_1_1ANSI__X931__RNG_aa467e6846004e72e3032c07192b5c4b0}{\index{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}!randomize@{randomize}}
+\index{randomize@{randomize}!Botan::ANSI_X931_RNG@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}}
+\subsubsection[{randomize}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G\-::randomize (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{output\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1ANSI__X931__RNG_aa467e6846004e72e3032c07192b5c4b0}
+Randomize a byte array. 
+\begin{DoxyParams}{Parameters}
+{\em output} & the byte array to hold the random output. \\
+\hline
+{\em length} & the length of the byte array output. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1RandomNumberGenerator_a844a0607c33ec0580c93f06477e978fa}{Botan\-::\-Random\-Number\-Generator}.
+
+\hypertarget{classBotan_1_1ANSI__X931__RNG_a826e4f3a6fdd9bc1de5c27d2e4ce38db}{\index{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}!reseed@{reseed}}
+\index{reseed@{reseed}!Botan::ANSI_X931_RNG@{Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G}}
+\subsubsection[{reseed}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-A\-N\-S\-I\-\_\-\-X931\-\_\-\-R\-N\-G\-::reseed (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{bits\-\_\-to\-\_\-collect}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1ANSI__X931__RNG_a826e4f3a6fdd9bc1de5c27d2e4ce38db}
+Seed this R\-N\-G using the entropy sources it contains. 
+\begin{DoxyParams}{Parameters}
+{\em bits\-\_\-to\-\_\-collect} & is the number of bits of entropy to attempt to gather from the entropy sources \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1RandomNumberGenerator_a2d4e91943829d64593ee4ce4251fd57b}{Botan\-::\-Random\-Number\-Generator}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/rng/x931\-\_\-rng/x931\-\_\-rng.\-h\item 
+src/rng/x931\-\_\-rng/x931\-\_\-rng.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,187 @@
+\hypertarget{classBotan_1_1PK__Verifier}{\section{Botan\-:\-:P\-K\-\_\-\-Verifier Class Reference}
+\label{classBotan_1_1PK__Verifier}\index{Botan\-::\-P\-K\-\_\-\-Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}}
+}
+
+
+{\ttfamily \#include $<$pubkey.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classBotan_1_1PK__Verifier_a4896301365efb244a68b2f4b3e56afe3}{verify\-\_\-message} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} msg\mbox{[}$\,$\mbox{]}, size\-\_\-t msg\-\_\-length, const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} sig\mbox{[}$\,$\mbox{]}, size\-\_\-t sig\-\_\-length)
+\item 
+bool \hyperlink{classBotan_1_1PK__Verifier_a0f160cc498d2e0d4f43e65365e0da201}{verify\-\_\-message} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&msg, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&sig)
+\item 
+void \hyperlink{classBotan_1_1PK__Verifier_a16bfc86a78f3bb311fd9e78c6ed50722}{update} (\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in)
+\item 
+void \hyperlink{classBotan_1_1PK__Verifier_a98e1f12a6972272ee7bb3f87a8ec0b39}{update} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} msg\-\_\-part\mbox{[}$\,$\mbox{]}, size\-\_\-t length)
+\item 
+void \hyperlink{classBotan_1_1PK__Verifier_a393ec44958f9854c9c308f26fe85683c}{update} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&in)
+\item 
+bool \hyperlink{classBotan_1_1PK__Verifier_ac99869786a0e49521794c7dd5e24aa7a}{check\-\_\-signature} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} sig\mbox{[}$\,$\mbox{]}, size\-\_\-t length)
+\item 
+bool \hyperlink{classBotan_1_1PK__Verifier_aceccfef940e206b3fc766ad2a5972dc8}{check\-\_\-signature} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&sig)
+\item 
+void \hyperlink{classBotan_1_1PK__Verifier_a1765c9fb0db16465b324fd6e80b63bbe}{set\-\_\-input\-\_\-format} (\hyperlink{namespaceBotan_ad8a9578625edf847cbcba3ae15648cda}{Signature\-\_\-\-Format} format)
+\item 
+\hyperlink{classBotan_1_1PK__Verifier_aed77c237e03f46e84dc5478a7fa8635e}{P\-K\-\_\-\-Verifier} (const \hyperlink{classBotan_1_1Public__Key}{Public\-\_\-\-Key} \&pub\-\_\-key, const std\-::string \&emsa, \hyperlink{namespaceBotan_ad8a9578625edf847cbcba3ae15648cda}{Signature\-\_\-\-Format} format=I\-E\-E\-E\-\_\-1363)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Public Key Verifier. Use the \hyperlink{classBotan_1_1PK__Verifier_a4896301365efb244a68b2f4b3e56afe3}{verify\-\_\-message()} functions for small messages. Use multiple calls \hyperlink{classBotan_1_1PK__Verifier_a16bfc86a78f3bb311fd9e78c6ed50722}{update()} to process large messages and verify the signature by finally calling \hyperlink{classBotan_1_1PK__Verifier_ac99869786a0e49521794c7dd5e24aa7a}{check\-\_\-signature()}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1PK__Verifier_aed77c237e03f46e84dc5478a7fa8635e}{\index{Botan\-::\-P\-K\-\_\-\-Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}!P\-K\-\_\-\-Verifier@{P\-K\-\_\-\-Verifier}}
+\index{P\-K\-\_\-\-Verifier@{P\-K\-\_\-\-Verifier}!Botan::PK_Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}}
+\subsubsection[{P\-K\-\_\-\-Verifier}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-P\-K\-\_\-\-Verifier\-::\-P\-K\-\_\-\-Verifier (
+\begin{DoxyParamCaption}
+\item[{const {\bf Public\-\_\-\-Key} \&}]{pub\-\_\-key, }
+\item[{const std\-::string \&}]{emsa, }
+\item[{{\bf Signature\-\_\-\-Format}}]{format = {\ttfamily IEEE\-\_\-1363}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1PK__Verifier_aed77c237e03f46e84dc5478a7fa8635e}
+Construct a P\-K Verifier. 
+\begin{DoxyParams}{Parameters}
+{\em pub\-\_\-key} & the public key to verify against \\
+\hline
+{\em emsa} & the \hyperlink{classBotan_1_1EMSA}{E\-M\-S\-A} to use (eg \char`\"{}\-E\-M\-S\-A3(\-S\-H\-A-\/1)\char`\"{}) \\
+\hline
+{\em format} & the signature format to use \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1PK__Verifier_ac99869786a0e49521794c7dd5e24aa7a}{\index{Botan\-::\-P\-K\-\_\-\-Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}!check\-\_\-signature@{check\-\_\-signature}}
+\index{check\-\_\-signature@{check\-\_\-signature}!Botan::PK_Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}}
+\subsubsection[{check\-\_\-signature}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-P\-K\-\_\-\-Verifier\-::check\-\_\-signature (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{sig\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1PK__Verifier_ac99869786a0e49521794c7dd5e24aa7a}
+Check the signature of the buffered message, i.\-e. the one build by successive calls to update. 
+\begin{DoxyParams}{Parameters}
+{\em sig} & the signature to be verified as a byte array \\
+\hline
+{\em length} & the length of the above byte array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the signature is valid, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1PK__Verifier_aceccfef940e206b3fc766ad2a5972dc8}{\index{Botan\-::\-P\-K\-\_\-\-Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}!check\-\_\-signature@{check\-\_\-signature}}
+\index{check\-\_\-signature@{check\-\_\-signature}!Botan::PK_Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}}
+\subsubsection[{check\-\_\-signature}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-P\-K\-\_\-\-Verifier\-::check\-\_\-signature (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{sig}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1PK__Verifier_aceccfef940e206b3fc766ad2a5972dc8}
+Check the signature of the buffered message, i.\-e. the one build by successive calls to update. 
+\begin{DoxyParams}{Parameters}
+{\em sig} & the signature to be verified \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the signature is valid, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1PK__Verifier_a1765c9fb0db16465b324fd6e80b63bbe}{\index{Botan\-::\-P\-K\-\_\-\-Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}!set\-\_\-input\-\_\-format@{set\-\_\-input\-\_\-format}}
+\index{set\-\_\-input\-\_\-format@{set\-\_\-input\-\_\-format}!Botan::PK_Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}}
+\subsubsection[{set\-\_\-input\-\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-P\-K\-\_\-\-Verifier\-::set\-\_\-input\-\_\-format (
+\begin{DoxyParamCaption}
+\item[{{\bf Signature\-\_\-\-Format}}]{format}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1PK__Verifier_a1765c9fb0db16465b324fd6e80b63bbe}
+Set the format of the signatures fed to this verifier. 
+\begin{DoxyParams}{Parameters}
+{\em format} & the signature format to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1PK__Verifier_a16bfc86a78f3bb311fd9e78c6ed50722}{\index{Botan\-::\-P\-K\-\_\-\-Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}!update@{update}}
+\index{update@{update}!Botan::PK_Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-P\-K\-\_\-\-Verifier\-::update (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1PK__Verifier_a16bfc86a78f3bb311fd9e78c6ed50722}
+Add a message part (single byte) of the message corresponding to the signature to be verified. 
+\begin{DoxyParams}{Parameters}
+{\em in} & the byte to add \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1PK__Verifier_a98e1f12a6972272ee7bb3f87a8ec0b39}{\index{Botan\-::\-P\-K\-\_\-\-Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}!update@{update}}
+\index{update@{update}!Botan::PK_Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-P\-K\-\_\-\-Verifier\-::update (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{msg\-\_\-part\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1PK__Verifier_a98e1f12a6972272ee7bb3f87a8ec0b39}
+Add a message part of the message corresponding to the signature to be verified. 
+\begin{DoxyParams}{Parameters}
+{\em msg\-\_\-part} & the new message part as a byte array \\
+\hline
+{\em length} & the length of the above byte array \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1PK__Verifier_a393ec44958f9854c9c308f26fe85683c}{\index{Botan\-::\-P\-K\-\_\-\-Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}!update@{update}}
+\index{update@{update}!Botan::PK_Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-P\-K\-\_\-\-Verifier\-::update (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1PK__Verifier_a393ec44958f9854c9c308f26fe85683c}
+Add a message part of the message corresponding to the signature to be verified. 
+\begin{DoxyParams}{Parameters}
+{\em in} & the new message part \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1PK__Verifier_a4896301365efb244a68b2f4b3e56afe3}{\index{Botan\-::\-P\-K\-\_\-\-Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}!verify\-\_\-message@{verify\-\_\-message}}
+\index{verify\-\_\-message@{verify\-\_\-message}!Botan::PK_Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}}
+\subsubsection[{verify\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-P\-K\-\_\-\-Verifier\-::verify\-\_\-message (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{msg\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{msg\-\_\-length, }
+\item[{const {\bf byte}}]{sig\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{sig\-\_\-length}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1PK__Verifier_a4896301365efb244a68b2f4b3e56afe3}
+Verify a signature. 
+\begin{DoxyParams}{Parameters}
+{\em msg} & the message that the signature belongs to, as a byte array \\
+\hline
+{\em msg\-\_\-length} & the length of the above byte array msg \\
+\hline
+{\em sig} & the signature as a byte array \\
+\hline
+{\em sig\-\_\-length} & the length of the above byte array sig \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the signature is valid 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1PK__Verifier_a0f160cc498d2e0d4f43e65365e0da201}{\index{Botan\-::\-P\-K\-\_\-\-Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}!verify\-\_\-message@{verify\-\_\-message}}
+\index{verify\-\_\-message@{verify\-\_\-message}!Botan::PK_Verifier@{Botan\-::\-P\-K\-\_\-\-Verifier}}
+\subsubsection[{verify\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-P\-K\-\_\-\-Verifier\-::verify\-\_\-message (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{msg, }
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{sig}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1PK__Verifier_a0f160cc498d2e0d4f43e65365e0da201}
+Verify a signature. 
+\begin{DoxyParams}{Parameters}
+{\em msg} & the message that the signature belongs to \\
+\hline
+{\em sig} & the signature \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the signature is valid 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/pubkey/pubkey.\-h\item 
+src/pubkey/pubkey.\-cpp\end{DoxyCompactItemize}

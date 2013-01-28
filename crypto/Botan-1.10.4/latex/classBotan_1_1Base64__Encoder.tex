@@ -1,0 +1,102 @@
+\hypertarget{classBotan_1_1Base64__Encoder}{\section{Botan\-:\-:Base64\-\_\-\-Encoder Class Reference}
+\label{classBotan_1_1Base64__Encoder}\index{Botan\-::\-Base64\-\_\-\-Encoder@{Botan\-::\-Base64\-\_\-\-Encoder}}
+}
+
+
+{\ttfamily \#include $<$b64\-\_\-filt.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Base64\-\_\-\-Encoder\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1Base64__Encoder}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1Base64__Encoder_a2e0135e3f3f62f2a3e427a93cc3e7eff}{name} () const 
+\item 
+void \hyperlink{classBotan_1_1Base64__Encoder_abdc4e61afb33dcba4041563d75c91637}{write} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} input\mbox{[}$\,$\mbox{]}, size\-\_\-t length)
+\item 
+void \hyperlink{classBotan_1_1Base64__Encoder_a12b16ecb4124a3e9b9a2cb67ca53efb5}{end\-\_\-msg} ()
+\item 
+\hyperlink{classBotan_1_1Base64__Encoder_a123d6ba8ff59c02636e00f87a5dc9a8c}{Base64\-\_\-\-Encoder} (bool breaks=false, size\-\_\-t length=72, bool t\-\_\-n=false)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class represents a Base64 encoder. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Base64__Encoder_a123d6ba8ff59c02636e00f87a5dc9a8c}{\index{Botan\-::\-Base64\-\_\-\-Encoder@{Botan\-::\-Base64\-\_\-\-Encoder}!Base64\-\_\-\-Encoder@{Base64\-\_\-\-Encoder}}
+\index{Base64\-\_\-\-Encoder@{Base64\-\_\-\-Encoder}!Botan::Base64_Encoder@{Botan\-::\-Base64\-\_\-\-Encoder}}
+\subsubsection[{Base64\-\_\-\-Encoder}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Base64\-\_\-\-Encoder\-::\-Base64\-\_\-\-Encoder (
+\begin{DoxyParamCaption}
+\item[{bool}]{breaks = {\ttfamily false}, }
+\item[{size\-\_\-t}]{length = {\ttfamily 72}, }
+\item[{bool}]{t\-\_\-n = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Base64__Encoder_a123d6ba8ff59c02636e00f87a5dc9a8c}
+Create a base64 encoder. 
+\begin{DoxyParams}{Parameters}
+{\em breaks} & whether to use line breaks in the output \\
+\hline
+{\em length} & the length of the lines of the output \\
+\hline
+{\em t\-\_\-n} & whether to use a trailing newline \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Base64__Encoder_a12b16ecb4124a3e9b9a2cb67ca53efb5}{\index{Botan\-::\-Base64\-\_\-\-Encoder@{Botan\-::\-Base64\-\_\-\-Encoder}!end\-\_\-msg@{end\-\_\-msg}}
+\index{end\-\_\-msg@{end\-\_\-msg}!Botan::Base64_Encoder@{Botan\-::\-Base64\-\_\-\-Encoder}}
+\subsubsection[{end\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Base64\-\_\-\-Encoder\-::end\-\_\-msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Base64__Encoder_a12b16ecb4124a3e9b9a2cb67ca53efb5}
+Inform the Encoder that the current message shall be closed. 
+
+Reimplemented from \hyperlink{classBotan_1_1Filter_a5378ec3bf4adf860a4cfa01cfc51e20e}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1Base64__Encoder_a2e0135e3f3f62f2a3e427a93cc3e7eff}{\index{Botan\-::\-Base64\-\_\-\-Encoder@{Botan\-::\-Base64\-\_\-\-Encoder}!name@{name}}
+\index{name@{name}!Botan::Base64_Encoder@{Botan\-::\-Base64\-\_\-\-Encoder}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Base64\-\_\-\-Encoder\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Base64__Encoder_a2e0135e3f3f62f2a3e427a93cc3e7eff}
+\begin{DoxyReturn}{Returns}
+descriptive name for this filter 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Filter_a612efd6701e36df4902da3dc396ce62f}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1Base64__Encoder_abdc4e61afb33dcba4041563d75c91637}{\index{Botan\-::\-Base64\-\_\-\-Encoder@{Botan\-::\-Base64\-\_\-\-Encoder}!write@{write}}
+\index{write@{write}!Botan::Base64_Encoder@{Botan\-::\-Base64\-\_\-\-Encoder}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Base64\-\_\-\-Encoder\-::write (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Base64__Encoder_abdc4e61afb33dcba4041563d75c91637}
+Input a part of a message to the encoder. 
+\begin{DoxyParams}{Parameters}
+{\em input} & the message to input as a byte array \\
+\hline
+{\em length} & the length of the byte array input \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1Filter_ad856ce62d9bdcce8057da99cba606892}{Botan\-::\-Filter}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/filters/codec\-\_\-filt/b64\-\_\-filt.\-h\item 
+src/filters/codec\-\_\-filt/b64\-\_\-filt.\-cpp\end{DoxyCompactItemize}

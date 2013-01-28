@@ -1,0 +1,64 @@
+\hypertarget{classPy__Filter}{\section{Py\-\_\-\-Filter Class Reference}
+\label{classPy__Filter}\index{Py\-\_\-\-Filter@{Py\-\_\-\-Filter}}
+}
+Inheritance diagram for Py\-\_\-\-Filter\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPy__Filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPy__Filter_a3dee95dc5e5a7790213869252e0ca0b6}{virtual void {\bfseries write\-\_\-str} (const std\-::string \&)=0}\label{classPy__Filter_a3dee95dc5e5a7790213869252e0ca0b6}
+
+\item 
+std\-::string \hyperlink{classPy__Filter_a62f5f5156f35a5ddc1619ceab56477bf}{name} () const 
+\item 
+void \hyperlink{classPy__Filter_a56d57ed8174163e5b7a44438d395f2f7}{write} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} data\mbox{[}$\,$\mbox{]}, size\-\_\-t length)
+\item 
+\hypertarget{classPy__Filter_af3530e4d4283f7b1d6a06eb57685c3ff}{void {\bfseries send\-\_\-str} (const std\-::string \&str)}\label{classPy__Filter_af3530e4d4283f7b1d6a06eb57685c3ff}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPy__Filter_a62f5f5156f35a5ddc1619ceab56477bf}{\index{Py\-\_\-\-Filter@{Py\-\_\-\-Filter}!name@{name}}
+\index{name@{name}!Py_Filter@{Py\-\_\-\-Filter}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Py\-\_\-\-Filter\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classPy__Filter_a62f5f5156f35a5ddc1619ceab56477bf}
+\begin{DoxyReturn}{Returns}
+descriptive name for this filter 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Filter_a612efd6701e36df4902da3dc396ce62f}{Botan\-::\-Filter}.
+
+\hypertarget{classPy__Filter_a56d57ed8174163e5b7a44438d395f2f7}{\index{Py\-\_\-\-Filter@{Py\-\_\-\-Filter}!write@{write}}
+\index{write@{write}!Py_Filter@{Py\-\_\-\-Filter}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Py\-\_\-\-Filter\-::write (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classPy__Filter_a56d57ed8174163e5b7a44438d395f2f7}
+Write a portion of a message to this filter. 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input as a byte array \\
+\hline
+{\em length} & the length of the byte array input \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1Filter_ad856ce62d9bdcce8057da99cba606892}{Botan\-::\-Filter}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/wrap/python/filter.\-cpp\end{DoxyCompactItemize}

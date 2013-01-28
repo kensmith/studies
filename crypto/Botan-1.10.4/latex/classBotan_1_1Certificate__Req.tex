@@ -1,0 +1,51 @@
+\hypertarget{classBotan_1_1Certificate__Req}{\section{Botan\-:\-:Certificate\-\_\-\-Req Class Reference}
+\label{classBotan_1_1Certificate__Req}\index{Botan\-::\-Certificate\-\_\-\-Req@{Botan\-::\-Certificate\-\_\-\-Req}}
+}
+
+
+{\ttfamily \#include $<$tls\-\_\-messages.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Certificate\-\_\-\-Req\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1Certificate__Req}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1Certificate__Req_aa87348c626b4ca080015ab14e9155979}{Handshake\-\_\-\-Type {\bfseries type} () const }\label{classBotan_1_1Certificate__Req_aa87348c626b4ca080015ab14e9155979}
+
+\item 
+\hypertarget{classBotan_1_1Certificate__Req_a75b325c41140da5e3655bddaee3308e1}{std\-::vector$<$ Certificate\-\_\-\-Type $>$ {\bfseries acceptable\-\_\-types} () const }\label{classBotan_1_1Certificate__Req_a75b325c41140da5e3655bddaee3308e1}
+
+\item 
+\hypertarget{classBotan_1_1Certificate__Req_aa60078002be7f8a9ecf9b08945b82860}{std\-::vector$<$ \hyperlink{classBotan_1_1X509__DN}{X509\-\_\-\-D\-N} $>$ {\bfseries acceptable\-\_\-\-C\-As} () const }\label{classBotan_1_1Certificate__Req_aa60078002be7f8a9ecf9b08945b82860}
+
+\item 
+\hyperlink{classBotan_1_1Certificate__Req_a174a68d7d65a363ca4bceadee387f6ff}{Certificate\-\_\-\-Req} (\hyperlink{classBotan_1_1Record__Writer}{Record\-\_\-\-Writer} \&, \hyperlink{classBotan_1_1HandshakeHash}{Handshake\-Hash} \&, const std\-::vector$<$ \hyperlink{classBotan_1_1X509__Certificate}{X509\-\_\-\-Certificate} $>$ \&)
+\item 
+\hypertarget{classBotan_1_1Certificate__Req_ad01e5ffc73473c232b1af759860f2384}{{\bfseries Certificate\-\_\-\-Req} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&buf)}\label{classBotan_1_1Certificate__Req_ad01e5ffc73473c232b1af759860f2384}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1Certificate}{Certificate} Request Message 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Certificate__Req_a174a68d7d65a363ca4bceadee387f6ff}{\index{Botan\-::\-Certificate\-\_\-\-Req@{Botan\-::\-Certificate\-\_\-\-Req}!Certificate\-\_\-\-Req@{Certificate\-\_\-\-Req}}
+\index{Certificate\-\_\-\-Req@{Certificate\-\_\-\-Req}!Botan::Certificate_Req@{Botan\-::\-Certificate\-\_\-\-Req}}
+\subsubsection[{Certificate\-\_\-\-Req}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Certificate\-\_\-\-Req\-::\-Certificate\-\_\-\-Req (
+\begin{DoxyParamCaption}
+\item[{{\bf Record\-\_\-\-Writer} \&}]{writer, }
+\item[{{\bf Handshake\-Hash} \&}]{hash, }
+\item[{const std\-::vector$<$ {\bf X509\-\_\-\-Certificate} $>$ \&}]{certs}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Certificate__Req_a174a68d7d65a363ca4bceadee387f6ff}
+Create a new \hyperlink{classBotan_1_1Certificate}{Certificate} Request message 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/ssl/tls\-\_\-messages.\-h\item 
+src/ssl/cert\-\_\-req.\-cpp\end{DoxyCompactItemize}

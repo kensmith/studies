@@ -1,0 +1,116 @@
+\hypertarget{classBotan_1_1Keccak__1600}{\section{Botan\-:\-:Keccak\-\_\-1600 Class Reference}
+\label{classBotan_1_1Keccak__1600}\index{Botan\-::\-Keccak\-\_\-1600@{Botan\-::\-Keccak\-\_\-1600}}
+}
+
+
+{\ttfamily \#include $<$keccak.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Keccak\-\_\-1600\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBotan_1_1Keccak__1600}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1Keccak__1600_a91c84f1f153077f1aef01df6a773fe80}{Keccak\-\_\-1600} (size\-\_\-t output\-\_\-bits=512)
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1Keccak__1600_a3f8aa77ff0337bbe33e68e2852ecb621}{hash\-\_\-block\-\_\-size} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1Keccak__1600_a8353576d851cf2e24b03276bff9fc7a7}{output\-\_\-length} () const 
+\item 
+\hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$ \hyperlink{classBotan_1_1Keccak__1600_ae24a6a9db123f9f55c95f646c2739f04}{clone} () const 
+\item 
+std\-::string \hyperlink{classBotan_1_1Keccak__1600_a5306ac327626fa9150f5328db38da938}{name} () const 
+\item 
+void \hyperlink{classBotan_1_1Keccak__1600_ad82cba824650d28eccf3dab44728cd58}{clear} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Keccak\mbox{[}1600\mbox{]}, a S\-H\-A-\/3 candidate 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Keccak__1600_a91c84f1f153077f1aef01df6a773fe80}{\index{Botan\-::\-Keccak\-\_\-1600@{Botan\-::\-Keccak\-\_\-1600}!Keccak\-\_\-1600@{Keccak\-\_\-1600}}
+\index{Keccak\-\_\-1600@{Keccak\-\_\-1600}!Botan::Keccak_1600@{Botan\-::\-Keccak\-\_\-1600}}
+\subsubsection[{Keccak\-\_\-1600}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Keccak\-\_\-1600\-::\-Keccak\-\_\-1600 (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{output\-\_\-bits = {\ttfamily 512}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Keccak__1600_a91c84f1f153077f1aef01df6a773fe80}
+
+\begin{DoxyParams}{Parameters}
+{\em output\-\_\-bits} & the size of the hash output; must be one of 224, 256, 384, or 512 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Keccak__1600_ad82cba824650d28eccf3dab44728cd58}{\index{Botan\-::\-Keccak\-\_\-1600@{Botan\-::\-Keccak\-\_\-1600}!clear@{clear}}
+\index{clear@{clear}!Botan::Keccak_1600@{Botan\-::\-Keccak\-\_\-1600}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Keccak\-\_\-1600\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Keccak__1600_ad82cba824650d28eccf3dab44728cd58}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1Keccak__1600_ae24a6a9db123f9f55c95f646c2739f04}{\index{Botan\-::\-Keccak\-\_\-1600@{Botan\-::\-Keccak\-\_\-1600}!clone@{clone}}
+\index{clone@{clone}!Botan::Keccak_1600@{Botan\-::\-Keccak\-\_\-1600}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hash\-Function} $\ast$ Botan\-::\-Keccak\-\_\-1600\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Keccak__1600_ae24a6a9db123f9f55c95f646c2739f04}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1HashFunction_aaa2b17b63215ae970d9b5d5044cc208a}{Botan\-::\-Hash\-Function}.
+
+\hypertarget{classBotan_1_1Keccak__1600_a3f8aa77ff0337bbe33e68e2852ecb621}{\index{Botan\-::\-Keccak\-\_\-1600@{Botan\-::\-Keccak\-\_\-1600}!hash\-\_\-block\-\_\-size@{hash\-\_\-block\-\_\-size}}
+\index{hash\-\_\-block\-\_\-size@{hash\-\_\-block\-\_\-size}!Botan::Keccak_1600@{Botan\-::\-Keccak\-\_\-1600}}
+\subsubsection[{hash\-\_\-block\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Keccak\-\_\-1600\-::hash\-\_\-block\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Keccak__1600_a3f8aa77ff0337bbe33e68e2852ecb621}
+The hash block size as defined for this algorithm 
+
+Reimplemented from \hyperlink{classBotan_1_1HashFunction_a62b12b2806f422bdacfe0e6f50918454}{Botan\-::\-Hash\-Function}.
+
+\hypertarget{classBotan_1_1Keccak__1600_a5306ac327626fa9150f5328db38da938}{\index{Botan\-::\-Keccak\-\_\-1600@{Botan\-::\-Keccak\-\_\-1600}!name@{name}}
+\index{name@{name}!Botan::Keccak_1600@{Botan\-::\-Keccak\-\_\-1600}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Keccak\-\_\-1600\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Keccak__1600_a5306ac327626fa9150f5328db38da938}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1Keccak__1600_a8353576d851cf2e24b03276bff9fc7a7}{\index{Botan\-::\-Keccak\-\_\-1600@{Botan\-::\-Keccak\-\_\-1600}!output\-\_\-length@{output\-\_\-length}}
+\index{output\-\_\-length@{output\-\_\-length}!Botan::Keccak_1600@{Botan\-::\-Keccak\-\_\-1600}}
+\subsubsection[{output\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Keccak\-\_\-1600\-::output\-\_\-length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Keccak__1600_a8353576d851cf2e24b03276bff9fc7a7}
+\begin{DoxyReturn}{Returns}
+length of the output of this function in bytes 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Buffered__Computation_a7b2e6776ea9ded2e3f9da5a760b7d34b}{Botan\-::\-Buffered\-\_\-\-Computation}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/hash/keccak/keccak.\-h\item 
+src/hash/keccak/keccak.\-cpp\end{DoxyCompactItemize}

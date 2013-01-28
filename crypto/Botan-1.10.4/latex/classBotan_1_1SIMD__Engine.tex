@@ -1,0 +1,92 @@
+\hypertarget{classBotan_1_1SIMD__Engine}{\section{Botan\-:\-:S\-I\-M\-D\-\_\-\-Engine Class Reference}
+\label{classBotan_1_1SIMD__Engine}\index{Botan\-::\-S\-I\-M\-D\-\_\-\-Engine@{Botan\-::\-S\-I\-M\-D\-\_\-\-Engine}}
+}
+
+
+{\ttfamily \#include $<$simd\-\_\-engine.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:S\-I\-M\-D\-\_\-\-Engine\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1SIMD__Engine}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1SIMD__Engine_a2ed7c5dea505dc8cf02ffe2a6084562c}{provider\-\_\-name} () const 
+\item 
+\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$ \hyperlink{classBotan_1_1SIMD__Engine_a958f9c6062872ae6d582938e1dacf54b}{find\-\_\-block\-\_\-cipher} (const \hyperlink{classBotan_1_1SCAN__Name}{S\-C\-A\-N\-\_\-\-Name} \&, \hyperlink{classBotan_1_1Algorithm__Factory}{Algorithm\-\_\-\-Factory} \&) const 
+\item 
+\hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$ \hyperlink{classBotan_1_1SIMD__Engine_af5238393c7e72ed549bf56691fbb390f}{find\-\_\-hash} (const \hyperlink{classBotan_1_1SCAN__Name}{S\-C\-A\-N\-\_\-\-Name} \&request, \hyperlink{classBotan_1_1Algorithm__Factory}{Algorithm\-\_\-\-Factory} \&) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1Engine}{Engine} for implementations that use some kind of S\-I\-M\-D 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1SIMD__Engine_a958f9c6062872ae6d582938e1dacf54b}{\index{Botan\-::\-S\-I\-M\-D\-\_\-\-Engine@{Botan\-::\-S\-I\-M\-D\-\_\-\-Engine}!find\-\_\-block\-\_\-cipher@{find\-\_\-block\-\_\-cipher}}
+\index{find\-\_\-block\-\_\-cipher@{find\-\_\-block\-\_\-cipher}!Botan::SIMD_Engine@{Botan\-::\-S\-I\-M\-D\-\_\-\-Engine}}
+\subsubsection[{find\-\_\-block\-\_\-cipher}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Cipher} $\ast$ Botan\-::\-S\-I\-M\-D\-\_\-\-Engine\-::find\-\_\-block\-\_\-cipher (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\-C\-A\-N\-\_\-\-Name} \&}]{algo\-\_\-spec, }
+\item[{{\bf Algorithm\-\_\-\-Factory} \&}]{af}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1SIMD__Engine_a958f9c6062872ae6d582938e1dacf54b}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm name/specification \\
+\hline
+{\em af} & an algorithm factory object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+newly allocated object, or N\-U\-L\-L 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1Engine_a47fd58835788badafd375554062652a2}{Botan\-::\-Engine}.
+
+\hypertarget{classBotan_1_1SIMD__Engine_af5238393c7e72ed549bf56691fbb390f}{\index{Botan\-::\-S\-I\-M\-D\-\_\-\-Engine@{Botan\-::\-S\-I\-M\-D\-\_\-\-Engine}!find\-\_\-hash@{find\-\_\-hash}}
+\index{find\-\_\-hash@{find\-\_\-hash}!Botan::SIMD_Engine@{Botan\-::\-S\-I\-M\-D\-\_\-\-Engine}}
+\subsubsection[{find\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hash\-Function} $\ast$ Botan\-::\-S\-I\-M\-D\-\_\-\-Engine\-::find\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\-C\-A\-N\-\_\-\-Name} \&}]{algo\-\_\-spec, }
+\item[{{\bf Algorithm\-\_\-\-Factory} \&}]{af}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1SIMD__Engine_af5238393c7e72ed549bf56691fbb390f}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm name/specification \\
+\hline
+{\em af} & an algorithm factory object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+newly allocated object, or N\-U\-L\-L 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1Engine_a68bc4f2f1f27610f2fec199914a2bd93}{Botan\-::\-Engine}.
+
+\hypertarget{classBotan_1_1SIMD__Engine_a2ed7c5dea505dc8cf02ffe2a6084562c}{\index{Botan\-::\-S\-I\-M\-D\-\_\-\-Engine@{Botan\-::\-S\-I\-M\-D\-\_\-\-Engine}!provider\-\_\-name@{provider\-\_\-name}}
+\index{provider\-\_\-name@{provider\-\_\-name}!Botan::SIMD_Engine@{Botan\-::\-S\-I\-M\-D\-\_\-\-Engine}}
+\subsubsection[{provider\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-S\-I\-M\-D\-\_\-\-Engine\-::provider\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1SIMD__Engine_a2ed7c5dea505dc8cf02ffe2a6084562c}
+\begin{DoxyReturn}{Returns}
+name of this engine 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Engine_a4c2c3ed7b3a2995e6cb8c238346b3a50}{Botan\-::\-Engine}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/engine/simd\-\_\-engine/simd\-\_\-engine.\-h\item 
+src/engine/simd\-\_\-engine/simd\-\_\-engine.\-cpp\end{DoxyCompactItemize}

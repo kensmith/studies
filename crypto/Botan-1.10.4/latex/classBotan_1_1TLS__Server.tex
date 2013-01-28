@@ -1,0 +1,46 @@
+\hypertarget{classBotan_1_1TLS__Server}{\section{Botan\-:\-:T\-L\-S\-\_\-\-Server Class Reference}
+\label{classBotan_1_1TLS__Server}\index{Botan\-::\-T\-L\-S\-\_\-\-Server@{Botan\-::\-T\-L\-S\-\_\-\-Server}}
+}
+
+
+{\ttfamily \#include $<$tls\-\_\-server.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:T\-L\-S\-\_\-\-Server\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1TLS__Server}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1TLS__Server_ab839720c8826f40d5813f297e36be526}{size\-\_\-t {\bfseries read} (\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} buf\mbox{[}$\,$\mbox{]}, size\-\_\-t buf\-\_\-len)}\label{classBotan_1_1TLS__Server_ab839720c8826f40d5813f297e36be526}
+
+\item 
+\hypertarget{classBotan_1_1TLS__Server_a7c083d0e35200d2f00fff09853f56f97}{void {\bfseries write} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} buf\mbox{[}$\,$\mbox{]}, size\-\_\-t buf\-\_\-len)}\label{classBotan_1_1TLS__Server_a7c083d0e35200d2f00fff09853f56f97}
+
+\item 
+\hypertarget{classBotan_1_1TLS__Server_ad262548d61102f0bfaa39cff636845f5}{std\-::vector$<$ \hyperlink{classBotan_1_1X509__Certificate}{X509\-\_\-\-Certificate} $>$ {\bfseries peer\-\_\-cert\-\_\-chain} () const }\label{classBotan_1_1TLS__Server_ad262548d61102f0bfaa39cff636845f5}
+
+\item 
+\hypertarget{classBotan_1_1TLS__Server_a82dcc8dcd14de2bfab0a93e656c6c201}{std\-::string {\bfseries requested\-\_\-hostname} () const }\label{classBotan_1_1TLS__Server_a82dcc8dcd14de2bfab0a93e656c6c201}
+
+\item 
+\hypertarget{classBotan_1_1TLS__Server_abc1a19a0388d27cd75d9e259850cecc8}{void {\bfseries close} ()}\label{classBotan_1_1TLS__Server_abc1a19a0388d27cd75d9e259850cecc8}
+
+\item 
+\hypertarget{classBotan_1_1TLS__Server_a156dba7ba26eb556253aba25b2dceca1}{bool {\bfseries is\-\_\-closed} () const }\label{classBotan_1_1TLS__Server_a156dba7ba26eb556253aba25b2dceca1}
+
+\item 
+\hypertarget{classBotan_1_1TLS__Server_a92738eda710b4b14160e87727c8e334e}{{\bfseries T\-L\-S\-\_\-\-Server} (std\-::tr1\-::function$<$ size\-\_\-t(\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)$>$ input\-\_\-fn, std\-::tr1\-::function$<$ void(const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)$>$ output\-\_\-fn, const \hyperlink{classBotan_1_1TLS__Policy}{T\-L\-S\-\_\-\-Policy} \&policy, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const \hyperlink{classBotan_1_1X509__Certificate}{X509\-\_\-\-Certificate} \&cert, const \hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} \&cert\-\_\-key)}\label{classBotan_1_1TLS__Server_a92738eda710b4b14160e87727c8e334e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\-L\-S Server 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/ssl/tls\-\_\-server.\-h\item 
+src/ssl/tls\-\_\-server.\-cpp\end{DoxyCompactItemize}

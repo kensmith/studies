@@ -1,0 +1,118 @@
+\hypertarget{classBotan_1_1Zlib__Compression}{\section{Botan\-:\-:Zlib\-\_\-\-Compression Class Reference}
+\label{classBotan_1_1Zlib__Compression}\index{Botan\-::\-Zlib\-\_\-\-Compression@{Botan\-::\-Zlib\-\_\-\-Compression}}
+}
+
+
+{\ttfamily \#include $<$zlib.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Zlib\-\_\-\-Compression\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1Zlib__Compression}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1Zlib__Compression_a909794df973d63c60f5fff6fa685891f}{name} () const 
+\item 
+void \hyperlink{classBotan_1_1Zlib__Compression_a32ee52534ab37d954063c09e9f048411}{write} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} input\mbox{[}$\,$\mbox{]}, size\-\_\-t length)
+\item 
+void \hyperlink{classBotan_1_1Zlib__Compression_a574d43112973868f5013b01d2840a6bc}{start\-\_\-msg} ()
+\item 
+void \hyperlink{classBotan_1_1Zlib__Compression_a141bf0c77e8dcdd8529a8f72635144a7}{end\-\_\-msg} ()
+\item 
+void \hyperlink{classBotan_1_1Zlib__Compression_a26dc379608656c7d22b1df9ae78928f0}{flush} ()
+\item 
+\hyperlink{classBotan_1_1Zlib__Compression_a82d6fa41af6637a5af59e1711c5fb8a7}{Zlib\-\_\-\-Compression} (size\-\_\-t level=6)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Zlib Compression \hyperlink{classBotan_1_1Filter}{Filter} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Zlib__Compression_a82d6fa41af6637a5af59e1711c5fb8a7}{\index{Botan\-::\-Zlib\-\_\-\-Compression@{Botan\-::\-Zlib\-\_\-\-Compression}!Zlib\-\_\-\-Compression@{Zlib\-\_\-\-Compression}}
+\index{Zlib\-\_\-\-Compression@{Zlib\-\_\-\-Compression}!Botan::Zlib_Compression@{Botan\-::\-Zlib\-\_\-\-Compression}}
+\subsubsection[{Zlib\-\_\-\-Compression}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Zlib\-\_\-\-Compression\-::\-Zlib\-\_\-\-Compression (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{level = {\ttfamily 6}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Zlib__Compression_a82d6fa41af6637a5af59e1711c5fb8a7}
+
+\begin{DoxyParams}{Parameters}
+{\em level} & how much effort to use on compressing (0 to 9); higher levels are slower but tend to give better compression \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Zlib__Compression_a141bf0c77e8dcdd8529a8f72635144a7}{\index{Botan\-::\-Zlib\-\_\-\-Compression@{Botan\-::\-Zlib\-\_\-\-Compression}!end\-\_\-msg@{end\-\_\-msg}}
+\index{end\-\_\-msg@{end\-\_\-msg}!Botan::Zlib_Compression@{Botan\-::\-Zlib\-\_\-\-Compression}}
+\subsubsection[{end\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Zlib\-\_\-\-Compression\-::end\-\_\-msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Zlib__Compression_a141bf0c77e8dcdd8529a8f72635144a7}
+Notify that the current message is finished; flush buffers and do end-\/of-\/message processing (if any). 
+
+Reimplemented from \hyperlink{classBotan_1_1Filter_a5378ec3bf4adf860a4cfa01cfc51e20e}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1Zlib__Compression_a26dc379608656c7d22b1df9ae78928f0}{\index{Botan\-::\-Zlib\-\_\-\-Compression@{Botan\-::\-Zlib\-\_\-\-Compression}!flush@{flush}}
+\index{flush@{flush}!Botan::Zlib_Compression@{Botan\-::\-Zlib\-\_\-\-Compression}}
+\subsubsection[{flush}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Zlib\-\_\-\-Compression\-::flush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Zlib__Compression_a26dc379608656c7d22b1df9ae78928f0}
+Flush the compressor \hypertarget{classBotan_1_1Zlib__Compression_a909794df973d63c60f5fff6fa685891f}{\index{Botan\-::\-Zlib\-\_\-\-Compression@{Botan\-::\-Zlib\-\_\-\-Compression}!name@{name}}
+\index{name@{name}!Botan::Zlib_Compression@{Botan\-::\-Zlib\-\_\-\-Compression}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Zlib\-\_\-\-Compression\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Zlib__Compression_a909794df973d63c60f5fff6fa685891f}
+\begin{DoxyReturn}{Returns}
+descriptive name for this filter 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Filter_a612efd6701e36df4902da3dc396ce62f}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1Zlib__Compression_a574d43112973868f5013b01d2840a6bc}{\index{Botan\-::\-Zlib\-\_\-\-Compression@{Botan\-::\-Zlib\-\_\-\-Compression}!start\-\_\-msg@{start\-\_\-msg}}
+\index{start\-\_\-msg@{start\-\_\-msg}!Botan::Zlib_Compression@{Botan\-::\-Zlib\-\_\-\-Compression}}
+\subsubsection[{start\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Zlib\-\_\-\-Compression\-::start\-\_\-msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Zlib__Compression_a574d43112973868f5013b01d2840a6bc}
+Start a new message. Must be closed by \hyperlink{classBotan_1_1Zlib__Compression_a141bf0c77e8dcdd8529a8f72635144a7}{end\-\_\-msg()} before another message can be started. 
+
+Reimplemented from \hyperlink{classBotan_1_1Filter_ac4f64aaf61c461e65b554f0158902a3c}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1Zlib__Compression_a32ee52534ab37d954063c09e9f048411}{\index{Botan\-::\-Zlib\-\_\-\-Compression@{Botan\-::\-Zlib\-\_\-\-Compression}!write@{write}}
+\index{write@{write}!Botan::Zlib_Compression@{Botan\-::\-Zlib\-\_\-\-Compression}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Zlib\-\_\-\-Compression\-::write (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Zlib__Compression_a32ee52534ab37d954063c09e9f048411}
+Write a portion of a message to this filter. 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input as a byte array \\
+\hline
+{\em length} & the length of the byte array input \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1Filter_ad856ce62d9bdcce8057da99cba606892}{Botan\-::\-Filter}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/filters/zlib/zlib.\-h\item 
+src/filters/zlib/zlib.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\hypertarget{classBotan_1_1CMS__Decoder}{\section{Botan\-:\-:C\-M\-S\-\_\-\-Decoder Class Reference}
+\label{classBotan_1_1CMS__Decoder}\index{Botan\-::\-C\-M\-S\-\_\-\-Decoder@{Botan\-::\-C\-M\-S\-\_\-\-Decoder}}
+}
+
+
+{\ttfamily \#include $<$cms\-\_\-dec.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Status} \{ {\bfseries G\-O\-O\-D}, 
+{\bfseries B\-A\-D}, 
+{\bfseries N\-O\-\_\-\-K\-E\-Y}, 
+{\bfseries F\-A\-I\-L\-U\-R\-E}
+ \}
+\item 
+enum {\bfseries Content\-\_\-\-Type} \{ \\*
+{\bfseries D\-A\-T\-A}, 
+{\bfseries U\-N\-K\-N\-O\-W\-N}, 
+{\bfseries C\-O\-M\-P\-R\-E\-S\-S\-E\-D}, 
+{\bfseries E\-N\-V\-E\-L\-O\-P\-E\-D}, 
+\\*
+{\bfseries S\-I\-G\-N\-E\-D}, 
+{\bfseries A\-U\-T\-H\-E\-N\-T\-I\-C\-A\-T\-E\-D}, 
+{\bfseries D\-I\-G\-E\-S\-T\-E\-D}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1CMS__Decoder_a2493f713e9a06b5d0a7e4379ef25915d}{Status {\bfseries layer\-\_\-status} () const }\label{classBotan_1_1CMS__Decoder_a2493f713e9a06b5d0a7e4379ef25915d}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Decoder_a2e6ff4f506a0d02ce9ef8c44514bd225}{Content\-\_\-\-Type {\bfseries layer\-\_\-type} () const }\label{classBotan_1_1CMS__Decoder_a2e6ff4f506a0d02ce9ef8c44514bd225}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Decoder_aa56176a6a99fea10b9eab115d01caf51}{std\-::string {\bfseries layer\-\_\-info} () const }\label{classBotan_1_1CMS__Decoder_aa56176a6a99fea10b9eab115d01caf51}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Decoder_aa335cde506f904c58f88de3fbe56b541}{std\-::string {\bfseries layer\-\_\-algo} () const }\label{classBotan_1_1CMS__Decoder_aa335cde506f904c58f88de3fbe56b541}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Decoder_a59875322905fd4e29e14081af1d25db3}{std\-::string {\bfseries get\-\_\-data} () const }\label{classBotan_1_1CMS__Decoder_a59875322905fd4e29e14081af1d25db3}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Decoder_aac844596b4e9520d87e55d739d57bf44}{std\-::vector$<$ \hyperlink{classBotan_1_1X509__Certificate}{X509\-\_\-\-Certificate} $>$ {\bfseries get\-\_\-certs} () const }\label{classBotan_1_1CMS__Decoder_aac844596b4e9520d87e55d739d57bf44}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Decoder_afc568ce38a9590926b303c9d6f705266}{std\-::vector$<$ \hyperlink{classBotan_1_1X509__CRL}{X509\-\_\-\-C\-R\-L} $>$ {\bfseries get\-\_\-crls} () const }\label{classBotan_1_1CMS__Decoder_afc568ce38a9590926b303c9d6f705266}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Decoder_a84aca2e7fbc81cb436fc0aa7bdae6235}{void {\bfseries next\-\_\-layer} ()}\label{classBotan_1_1CMS__Decoder_a84aca2e7fbc81cb436fc0aa7bdae6235}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Decoder_a5f19d12ea79727e35f75bb9ec33bb7ac}{void {\bfseries add\-\_\-key} (\hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} $\ast$)}\label{classBotan_1_1CMS__Decoder_a5f19d12ea79727e35f75bb9ec33bb7ac}
+
+\item 
+\hypertarget{classBotan_1_1CMS__Decoder_a2bc7db6d90a7a40404618c789709fa49}{{\bfseries C\-M\-S\-\_\-\-Decoder} (\hyperlink{classBotan_1_1DataSource}{Data\-Source} \&, const \hyperlink{classBotan_1_1X509__Store}{X509\-\_\-\-Store} \&, \hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} $\ast$=0)}\label{classBotan_1_1CMS__Decoder_a2bc7db6d90a7a40404618c789709fa49}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\-M\-S Decoding Operation 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/cms/cms\-\_\-dec.\-h\item 
+src/cms/cms\-\_\-comp.\-cpp\item 
+src/cms/cms\-\_\-dalg.\-cpp\item 
+src/cms/cms\-\_\-dec.\-cpp\end{DoxyCompactItemize}

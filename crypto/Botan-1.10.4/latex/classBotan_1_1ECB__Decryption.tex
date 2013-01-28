@@ -1,0 +1,90 @@
+\hypertarget{classBotan_1_1ECB__Decryption}{\section{Botan\-:\-:E\-C\-B\-\_\-\-Decryption Class Reference}
+\label{classBotan_1_1ECB__Decryption}\index{Botan\-::\-E\-C\-B\-\_\-\-Decryption@{Botan\-::\-E\-C\-B\-\_\-\-Decryption}}
+}
+
+
+{\ttfamily \#include $<$ecb.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:E\-C\-B\-\_\-\-Decryption\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBotan_1_1ECB__Decryption}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1ECB__Decryption_a7d1ac4607a34ea28bfd9b978cfa206ec}{name} () const 
+\item 
+void \hyperlink{classBotan_1_1ECB__Decryption_a81b7cb4c10b891898d2cb24eb31158e4}{set\-\_\-key} (const \hyperlink{namespaceBotan_a00c78597211d5c63b63e2a57ddb96d38}{Symmetric\-Key} \&key)
+\item 
+bool \hyperlink{classBotan_1_1ECB__Decryption_a303d73a84d84369924b802a7dadd1e38}{valid\-\_\-keylength} (size\-\_\-t key\-\_\-len) const 
+\item 
+\hypertarget{classBotan_1_1ECB__Decryption_a19074161ab7fe8a25704a218f451a1ba}{{\bfseries E\-C\-B\-\_\-\-Decryption} (\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$ciph, \hyperlink{classBotan_1_1BlockCipherModePaddingMethod}{Block\-Cipher\-Mode\-Padding\-Method} $\ast$pad)}\label{classBotan_1_1ECB__Decryption_a19074161ab7fe8a25704a218f451a1ba}
+
+\item 
+\hypertarget{classBotan_1_1ECB__Decryption_a735d59e813912e25692b9ba56982f5de}{{\bfseries E\-C\-B\-\_\-\-Decryption} (\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$ciph, \hyperlink{classBotan_1_1BlockCipherModePaddingMethod}{Block\-Cipher\-Mode\-Padding\-Method} $\ast$pad, const \hyperlink{namespaceBotan_a00c78597211d5c63b63e2a57ddb96d38}{Symmetric\-Key} \&key)}\label{classBotan_1_1ECB__Decryption_a735d59e813912e25692b9ba56982f5de}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+E\-C\-B Decryption 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1ECB__Decryption_a7d1ac4607a34ea28bfd9b978cfa206ec}{\index{Botan\-::\-E\-C\-B\-\_\-\-Decryption@{Botan\-::\-E\-C\-B\-\_\-\-Decryption}!name@{name}}
+\index{name@{name}!Botan::ECB_Decryption@{Botan\-::\-E\-C\-B\-\_\-\-Decryption}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-E\-C\-B\-\_\-\-Decryption\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1ECB__Decryption_a7d1ac4607a34ea28bfd9b978cfa206ec}
+\begin{DoxyReturn}{Returns}
+descriptive name for this filter 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Filter_a612efd6701e36df4902da3dc396ce62f}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1ECB__Decryption_a81b7cb4c10b891898d2cb24eb31158e4}{\index{Botan\-::\-E\-C\-B\-\_\-\-Decryption@{Botan\-::\-E\-C\-B\-\_\-\-Decryption}!set\-\_\-key@{set\-\_\-key}}
+\index{set\-\_\-key@{set\-\_\-key}!Botan::ECB_Decryption@{Botan\-::\-E\-C\-B\-\_\-\-Decryption}}
+\subsubsection[{set\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-E\-C\-B\-\_\-\-Decryption\-::set\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Symmetric\-Key} \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1ECB__Decryption_a81b7cb4c10b891898d2cb24eb31158e4}
+Set the key of this filter 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to use \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1Keyed__Filter_a04f210f888f2603717e75742ce620e77}{Botan\-::\-Keyed\-\_\-\-Filter}.
+
+\hypertarget{classBotan_1_1ECB__Decryption_a303d73a84d84369924b802a7dadd1e38}{\index{Botan\-::\-E\-C\-B\-\_\-\-Decryption@{Botan\-::\-E\-C\-B\-\_\-\-Decryption}!valid\-\_\-keylength@{valid\-\_\-keylength}}
+\index{valid\-\_\-keylength@{valid\-\_\-keylength}!Botan::ECB_Decryption@{Botan\-::\-E\-C\-B\-\_\-\-Decryption}}
+\subsubsection[{valid\-\_\-keylength}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-E\-C\-B\-\_\-\-Decryption\-::valid\-\_\-keylength (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1ECB__Decryption_a303d73a84d84369924b802a7dadd1e38}
+Check whether a key length is valid for this filter 
+\begin{DoxyParams}{Parameters}
+{\em length} & the key length to be checked for validity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key length is valid, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Keyed__Filter_a9eaf5d9480445b85ffea8eb5474e2eb1}{Botan\-::\-Keyed\-\_\-\-Filter}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/filters/modes/ecb/ecb.\-h\item 
+src/filters/modes/ecb/ecb.\-cpp\end{DoxyCompactItemize}

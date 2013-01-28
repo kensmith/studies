@@ -1,0 +1,65 @@
+\hypertarget{structBotan_1_1BitBucket}{\section{Botan\-:\-:Bit\-Bucket Struct Reference}
+\label{structBotan_1_1BitBucket}\index{Botan\-::\-Bit\-Bucket@{Botan\-::\-Bit\-Bucket}}
+}
+
+
+{\ttfamily \#include $<$basefilt.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Bit\-Bucket\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structBotan_1_1BitBucket}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{structBotan_1_1BitBucket_af12f31d8bd6cebd9f2fbdd5c4de4fa31}{write} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)
+\item 
+std\-::string \hyperlink{structBotan_1_1BitBucket_a067a1d20339041fa434ef098ac7ac353}{name} () const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{structBotan_1_1BitBucket}{Bit\-Bucket} is a filter which simply discards all inputs 
+
+\subsection{Member Function Documentation}
+\hypertarget{structBotan_1_1BitBucket_a067a1d20339041fa434ef098ac7ac353}{\index{Botan\-::\-Bit\-Bucket@{Botan\-::\-Bit\-Bucket}!name@{name}}
+\index{name@{name}!Botan::BitBucket@{Botan\-::\-Bit\-Bucket}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Bit\-Bucket\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structBotan_1_1BitBucket_a067a1d20339041fa434ef098ac7ac353}
+\begin{DoxyReturn}{Returns}
+descriptive name for this filter 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Filter_a612efd6701e36df4902da3dc396ce62f}{Botan\-::\-Filter}.
+
+\hypertarget{structBotan_1_1BitBucket_af12f31d8bd6cebd9f2fbdd5c4de4fa31}{\index{Botan\-::\-Bit\-Bucket@{Botan\-::\-Bit\-Bucket}!write@{write}}
+\index{write@{write}!Botan::BitBucket@{Botan\-::\-Bit\-Bucket}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Bit\-Bucket\-::write (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structBotan_1_1BitBucket_af12f31d8bd6cebd9f2fbdd5c4de4fa31}
+Write a portion of a message to this filter. 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input as a byte array \\
+\hline
+{\em length} & the length of the byte array input \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1Filter_ad856ce62d9bdcce8057da99cba606892}{Botan\-::\-Filter}.
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/filters/basefilt.\-h\end{DoxyCompactItemize}

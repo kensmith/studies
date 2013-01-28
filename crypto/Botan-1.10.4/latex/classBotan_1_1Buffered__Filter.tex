@@ -1,0 +1,144 @@
+\hypertarget{classBotan_1_1Buffered__Filter}{\section{Botan\-:\-:Buffered\-\_\-\-Filter Class Reference}
+\label{classBotan_1_1Buffered__Filter}\index{Botan\-::\-Buffered\-\_\-\-Filter@{Botan\-::\-Buffered\-\_\-\-Filter}}
+}
+
+
+{\ttfamily \#include $<$buf\-\_\-filt.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Buffered\-\_\-\-Filter\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.220044cm]{classBotan_1_1Buffered__Filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1Buffered__Filter_abd3267199ce5205551c56b9ff7d01967}{write} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, size\-\_\-t length)
+\item 
+void \hyperlink{classBotan_1_1Buffered__Filter_ad43d5c445d2176f96e90e012afdb670e}{end\-\_\-msg} ()
+\item 
+\hyperlink{classBotan_1_1Buffered__Filter_a93f737bba903070d68c6ba64137f2bad}{Buffered\-\_\-\-Filter} (size\-\_\-t block\-\_\-size, size\-\_\-t final\-\_\-minimum)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classBotan_1_1Buffered__Filter_a82fc4d51467272e3845275a0b2387f7c}{buffered\-\_\-block} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} input\mbox{[}$\,$\mbox{]}, size\-\_\-t length)=0
+\item 
+virtual void \hyperlink{classBotan_1_1Buffered__Filter_ad26f32571a902205ddb3253a3b80ab84}{buffered\-\_\-final} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} input\mbox{[}$\,$\mbox{]}, size\-\_\-t length)=0
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1Buffered__Filter_ae13766116416246fc2c0fcc2cfb12def}{buffered\-\_\-block\-\_\-size} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1Buffered__Filter_a84f40803f7c900e9ac8063ea5da6ccbc}{current\-\_\-position} () const 
+\item 
+void \hyperlink{classBotan_1_1Buffered__Filter_aedfb7e6380f4c3a3a6bd9dc6be5bd179}{buffer\-\_\-reset} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1Filter}{Filter} mixin that breaks input into blocks, useful for cipher modes 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Buffered__Filter_a93f737bba903070d68c6ba64137f2bad}{\index{Botan\-::\-Buffered\-\_\-\-Filter@{Botan\-::\-Buffered\-\_\-\-Filter}!Buffered\-\_\-\-Filter@{Buffered\-\_\-\-Filter}}
+\index{Buffered\-\_\-\-Filter@{Buffered\-\_\-\-Filter}!Botan::Buffered_Filter@{Botan\-::\-Buffered\-\_\-\-Filter}}
+\subsubsection[{Buffered\-\_\-\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Buffered\-\_\-\-Filter\-::\-Buffered\-\_\-\-Filter (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{block\-\_\-size, }
+\item[{size\-\_\-t}]{final\-\_\-minimum}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Buffered__Filter_a93f737bba903070d68c6ba64137f2bad}
+Initialize a \hyperlink{classBotan_1_1Buffered__Filter}{Buffered\-\_\-\-Filter} 
+\begin{DoxyParams}{Parameters}
+{\em block\-\_\-size} & the function buffered\-\_\-block will be called with inputs which are a multiple of this size \\
+\hline
+{\em final\-\_\-minimum} & the function buffered\-\_\-final will be called with at least this many bytes. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Buffered__Filter_aedfb7e6380f4c3a3a6bd9dc6be5bd179}{\index{Botan\-::\-Buffered\-\_\-\-Filter@{Botan\-::\-Buffered\-\_\-\-Filter}!buffer\-\_\-reset@{buffer\-\_\-reset}}
+\index{buffer\-\_\-reset@{buffer\-\_\-reset}!Botan::Buffered_Filter@{Botan\-::\-Buffered\-\_\-\-Filter}}
+\subsubsection[{buffer\-\_\-reset}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Buffered\-\_\-\-Filter\-::buffer\-\_\-reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classBotan_1_1Buffered__Filter_aedfb7e6380f4c3a3a6bd9dc6be5bd179}
+Reset the buffer position \hypertarget{classBotan_1_1Buffered__Filter_a82fc4d51467272e3845275a0b2387f7c}{\index{Botan\-::\-Buffered\-\_\-\-Filter@{Botan\-::\-Buffered\-\_\-\-Filter}!buffered\-\_\-block@{buffered\-\_\-block}}
+\index{buffered\-\_\-block@{buffered\-\_\-block}!Botan::Buffered_Filter@{Botan\-::\-Buffered\-\_\-\-Filter}}
+\subsubsection[{buffered\-\_\-block}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Botan\-::\-Buffered\-\_\-\-Filter\-::buffered\-\_\-block (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classBotan_1_1Buffered__Filter_a82fc4d51467272e3845275a0b2387f7c}
+The block processor, implemented by subclasses 
+\begin{DoxyParams}{Parameters}
+{\em input} & some input bytes \\
+\hline
+{\em length} & the size of input, guaranteed to be a multiple of block\-\_\-size \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Buffered__Filter_ae13766116416246fc2c0fcc2cfb12def}{\index{Botan\-::\-Buffered\-\_\-\-Filter@{Botan\-::\-Buffered\-\_\-\-Filter}!buffered\-\_\-block\-\_\-size@{buffered\-\_\-block\-\_\-size}}
+\index{buffered\-\_\-block\-\_\-size@{buffered\-\_\-block\-\_\-size}!Botan::Buffered_Filter@{Botan\-::\-Buffered\-\_\-\-Filter}}
+\subsubsection[{buffered\-\_\-block\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Buffered\-\_\-\-Filter\-::buffered\-\_\-block\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classBotan_1_1Buffered__Filter_ae13766116416246fc2c0fcc2cfb12def}
+\begin{DoxyReturn}{Returns}
+block size of inputs 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Buffered__Filter_ad26f32571a902205ddb3253a3b80ab84}{\index{Botan\-::\-Buffered\-\_\-\-Filter@{Botan\-::\-Buffered\-\_\-\-Filter}!buffered\-\_\-final@{buffered\-\_\-final}}
+\index{buffered\-\_\-final@{buffered\-\_\-final}!Botan::Buffered_Filter@{Botan\-::\-Buffered\-\_\-\-Filter}}
+\subsubsection[{buffered\-\_\-final}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Botan\-::\-Buffered\-\_\-\-Filter\-::buffered\-\_\-final (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classBotan_1_1Buffered__Filter_ad26f32571a902205ddb3253a3b80ab84}
+The final block, implemented by subclasses 
+\begin{DoxyParams}{Parameters}
+{\em input} & some input bytes \\
+\hline
+{\em length} & the size of input, guaranteed to be at least final\-\_\-minimum bytes \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Buffered__Filter_a84f40803f7c900e9ac8063ea5da6ccbc}{\index{Botan\-::\-Buffered\-\_\-\-Filter@{Botan\-::\-Buffered\-\_\-\-Filter}!current\-\_\-position@{current\-\_\-position}}
+\index{current\-\_\-position@{current\-\_\-position}!Botan::Buffered_Filter@{Botan\-::\-Buffered\-\_\-\-Filter}}
+\subsubsection[{current\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Buffered\-\_\-\-Filter\-::current\-\_\-position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classBotan_1_1Buffered__Filter_a84f40803f7c900e9ac8063ea5da6ccbc}
+\begin{DoxyReturn}{Returns}
+current position in the buffer 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Buffered__Filter_ad43d5c445d2176f96e90e012afdb670e}{\index{Botan\-::\-Buffered\-\_\-\-Filter@{Botan\-::\-Buffered\-\_\-\-Filter}!end\-\_\-msg@{end\-\_\-msg}}
+\index{end\-\_\-msg@{end\-\_\-msg}!Botan::Buffered_Filter@{Botan\-::\-Buffered\-\_\-\-Filter}}
+\subsubsection[{end\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Buffered\-\_\-\-Filter\-::end\-\_\-msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Buffered__Filter_ad43d5c445d2176f96e90e012afdb670e}
+Finish a message, emitting to buffered\-\_\-block and buffered\-\_\-final Will throw an exception if less than final\-\_\-minimum bytes were written into the filter. \hypertarget{classBotan_1_1Buffered__Filter_abd3267199ce5205551c56b9ff7d01967}{\index{Botan\-::\-Buffered\-\_\-\-Filter@{Botan\-::\-Buffered\-\_\-\-Filter}!write@{write}}
+\index{write@{write}!Botan::Buffered_Filter@{Botan\-::\-Buffered\-\_\-\-Filter}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Buffered\-\_\-\-Filter\-::write (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Buffered__Filter_abd3267199ce5205551c56b9ff7d01967}
+Write bytes into the buffered filter, which will them emit them in calls to buffered\-\_\-block in the subclass 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input bytes \\
+\hline
+{\em length} & of in in bytes \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/filters/buf\-\_\-filt.\-h\item 
+src/filters/buf\-\_\-filt.\-cpp\end{DoxyCompactItemize}

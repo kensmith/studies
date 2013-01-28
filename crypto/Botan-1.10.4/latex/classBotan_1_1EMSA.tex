@@ -1,0 +1,118 @@
+\hypertarget{classBotan_1_1EMSA}{\section{Botan\-:\-:E\-M\-S\-A Class Reference}
+\label{classBotan_1_1EMSA}\index{Botan\-::\-E\-M\-S\-A@{Botan\-::\-E\-M\-S\-A}}
+}
+
+
+{\ttfamily \#include $<$emsa.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:E\-M\-S\-A\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.121212cm]{classBotan_1_1EMSA}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classBotan_1_1EMSA_a98fe587cf5efb2cb4d98fb308bd2c6f3}{update} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} input\mbox{[}$\,$\mbox{]}, size\-\_\-t length)=0
+\item 
+virtual \hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1EMSA_ab639f2052ba36dc665b0e987f5428586}{raw\-\_\-data} ()=0
+\item 
+virtual \hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1EMSA_a38f33f7c70298ff8da1d0e82e674503f}{encoding\-\_\-of} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&msg, size\-\_\-t output\-\_\-bits, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)=0
+\item 
+virtual bool \hyperlink{classBotan_1_1EMSA_ac8462800c17e8e81bcd99dbf79337d3a}{verify} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&coded, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&raw, size\-\_\-t key\-\_\-bits)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Encoding Method for Signatures, Appendix 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1EMSA_a38f33f7c70298ff8da1d0e82e674503f}{\index{Botan\-::\-E\-M\-S\-A@{Botan\-::\-E\-M\-S\-A}!encoding\-\_\-of@{encoding\-\_\-of}}
+\index{encoding\-\_\-of@{encoding\-\_\-of}!Botan::EMSA@{Botan\-::\-E\-M\-S\-A}}
+\subsubsection[{encoding\-\_\-of}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Secure\-Vector}$<${\bf byte}$>$ Botan\-::\-E\-M\-S\-A\-::encoding\-\_\-of (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{msg, }
+\item[{size\-\_\-t}]{output\-\_\-bits, }
+\item[{{\bf Random\-Number\-Generator} \&}]{rng}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1EMSA_a38f33f7c70298ff8da1d0e82e674503f}
+Return the encoding of a message 
+\begin{DoxyParams}{Parameters}
+{\em msg} & the result of \hyperlink{classBotan_1_1EMSA_ab639f2052ba36dc665b0e987f5428586}{raw\-\_\-data()} \\
+\hline
+{\em output\-\_\-bits} & the desired output bit size \\
+\hline
+{\em rng} & a random number generator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encoded signature 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classBotan_1_1EMSA3__Raw_a8136838bbf0a2f00a9c67929e84c5f87}{Botan\-::\-E\-M\-S\-A3\-\_\-\-Raw}, and \hyperlink{classBotan_1_1EMSA3_afc7ecdffc20c6a88b44d64df0502b47d}{Botan\-::\-E\-M\-S\-A3}.
+
+\hypertarget{classBotan_1_1EMSA_ab639f2052ba36dc665b0e987f5428586}{\index{Botan\-::\-E\-M\-S\-A@{Botan\-::\-E\-M\-S\-A}!raw\-\_\-data@{raw\-\_\-data}}
+\index{raw\-\_\-data@{raw\-\_\-data}!Botan::EMSA@{Botan\-::\-E\-M\-S\-A}}
+\subsubsection[{raw\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Secure\-Vector}$<${\bf byte}$>$ Botan\-::\-E\-M\-S\-A\-::raw\-\_\-data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1EMSA_ab639f2052ba36dc665b0e987f5428586}
+\begin{DoxyReturn}{Returns}
+raw hash 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classBotan_1_1EMSA3__Raw_a1e009505ccf237051d2e2cc7ffdc6b98}{Botan\-::\-E\-M\-S\-A3\-\_\-\-Raw}, and \hyperlink{classBotan_1_1EMSA3_a5324be4668b015b03ff8b34ab8ce0f03}{Botan\-::\-E\-M\-S\-A3}.
+
+\hypertarget{classBotan_1_1EMSA_a98fe587cf5efb2cb4d98fb308bd2c6f3}{\index{Botan\-::\-E\-M\-S\-A@{Botan\-::\-E\-M\-S\-A}!update@{update}}
+\index{update@{update}!Botan::EMSA@{Botan\-::\-E\-M\-S\-A}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Botan\-::\-E\-M\-S\-A\-::update (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1EMSA_a98fe587cf5efb2cb4d98fb308bd2c6f3}
+Add more data to the signature computation 
+\begin{DoxyParams}{Parameters}
+{\em input} & some data \\
+\hline
+{\em length} & length of input in bytes \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classBotan_1_1EMSA3__Raw_a7f3f7e2f3aebd8bf767c7dbb4d6a9577}{Botan\-::\-E\-M\-S\-A3\-\_\-\-Raw}, and \hyperlink{classBotan_1_1EMSA3_ac1089dbeb00de8fd180e3eb9ddb2ee56}{Botan\-::\-E\-M\-S\-A3}.
+
+\hypertarget{classBotan_1_1EMSA_ac8462800c17e8e81bcd99dbf79337d3a}{\index{Botan\-::\-E\-M\-S\-A@{Botan\-::\-E\-M\-S\-A}!verify@{verify}}
+\index{verify@{verify}!Botan::EMSA@{Botan\-::\-E\-M\-S\-A}}
+\subsubsection[{verify}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Botan\-::\-E\-M\-S\-A\-::verify (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{coded, }
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{raw, }
+\item[{size\-\_\-t}]{key\-\_\-bits}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1EMSA_ac8462800c17e8e81bcd99dbf79337d3a}
+Verify the encoding 
+\begin{DoxyParams}{Parameters}
+{\em coded} & the received (coded) message representative \\
+\hline
+{\em raw} & the computed (local, uncoded) message representative \\
+\hline
+{\em key\-\_\-bits} & the size of the key in bits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if coded is a valid encoding of raw, otherwise false 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classBotan_1_1EMSA3__Raw_a5c1a74cba9c601f5977eb6ac3d9cb57b}{Botan\-::\-E\-M\-S\-A3\-\_\-\-Raw}, and \hyperlink{classBotan_1_1EMSA3_aba4a2ba7df9b6165a7190ea144def95c}{Botan\-::\-E\-M\-S\-A3}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/pk\-\_\-pad/emsa.\-h\end{DoxyCompactItemize}

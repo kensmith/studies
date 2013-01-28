@@ -1,0 +1,55 @@
+\hypertarget{classBotan_1_1ECDSA__Signature}{\section{Botan\-:\-:E\-C\-D\-S\-A\-\_\-\-Signature Class Reference}
+\label{classBotan_1_1ECDSA__Signature}\index{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature@{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature}}
+}
+
+
+{\ttfamily \#include $<$ecdsa\-\_\-sig.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1ECDSA__Signature_a72bf568b2096a414e03ea847f1ee24df}{{\bfseries E\-C\-D\-S\-A\-\_\-\-Signature} (const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&r, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&s)}\label{classBotan_1_1ECDSA__Signature_a72bf568b2096a414e03ea847f1ee24df}
+
+\item 
+\hypertarget{classBotan_1_1ECDSA__Signature_a10a92fab90e73133aeca7bf9656390c1}{{\bfseries E\-C\-D\-S\-A\-\_\-\-Signature} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&ber)}\label{classBotan_1_1ECDSA__Signature_a10a92fab90e73133aeca7bf9656390c1}
+
+\item 
+\hypertarget{classBotan_1_1ECDSA__Signature_a07c11f2a64d37e035c874952c34c7c33}{const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \& {\bfseries get\-\_\-r} () const }\label{classBotan_1_1ECDSA__Signature_a07c11f2a64d37e035c874952c34c7c33}
+
+\item 
+\hypertarget{classBotan_1_1ECDSA__Signature_a1460c25c57a5dd985a41a7385cd5ef66}{const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \& {\bfseries get\-\_\-s} () const }\label{classBotan_1_1ECDSA__Signature_a1460c25c57a5dd985a41a7385cd5ef66}
+
+\item 
+\hyperlink{classBotan_1_1MemoryVector}{Memory\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1ECDSA__Signature_ad17dc27a41fb0dcd2cc5a625eb67960a}{get\-\_\-concatenation} () const 
+\item 
+\hypertarget{classBotan_1_1ECDSA__Signature_ac8a5b1f0aa539251d39cdccef702863d}{\hyperlink{classBotan_1_1MemoryVector}{Memory\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ {\bfseries D\-E\-R\-\_\-encode} () const }\label{classBotan_1_1ECDSA__Signature_ac8a5b1f0aa539251d39cdccef702863d}
+
+\item 
+\hypertarget{classBotan_1_1ECDSA__Signature_a030b4fab4c565c6d895d1a5e03e595f8}{bool {\bfseries operator==} (const \hyperlink{classBotan_1_1ECDSA__Signature}{E\-C\-D\-S\-A\-\_\-\-Signature} \&other) const }\label{classBotan_1_1ECDSA__Signature_a030b4fab4c565c6d895d1a5e03e595f8}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1ECDSA__Signature_ac2f06f246b4f07e30bbd4f30ec352c84}{class {\bfseries E\-C\-D\-S\-A\-\_\-\-Signature\-\_\-\-Decoder}}\label{classBotan_1_1ECDSA__Signature_ac2f06f246b4f07e30bbd4f30ec352c84}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing an E\-C\-D\-S\-A signature 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1ECDSA__Signature_ad17dc27a41fb0dcd2cc5a625eb67960a}{\index{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature@{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature}!get\-\_\-concatenation@{get\-\_\-concatenation}}
+\index{get\-\_\-concatenation@{get\-\_\-concatenation}!Botan::ECDSA_Signature@{Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature}}
+\subsubsection[{get\-\_\-concatenation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memory\-Vector}$<$ {\bf byte} $>$ Botan\-::\-E\-C\-D\-S\-A\-\_\-\-Signature\-::get\-\_\-concatenation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1ECDSA__Signature_ad17dc27a41fb0dcd2cc5a625eb67960a}
+return the r$|$$|$s 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/cert/cvc/ecdsa\-\_\-sig.\-h\item 
+src/cert/cvc/ecdsa\-\_\-sig.\-cpp\end{DoxyCompactItemize}

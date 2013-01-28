@@ -1,0 +1,143 @@
+\hypertarget{classBotan_1_1X509__CRL}{\section{Botan\-:\-:X509\-\_\-\-C\-R\-L Class Reference}
+\label{classBotan_1_1X509__CRL}\index{Botan\-::\-X509\-\_\-\-C\-R\-L@{Botan\-::\-X509\-\_\-\-C\-R\-L}}
+}
+
+
+{\ttfamily \#include $<$x509\-\_\-crl.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:X509\-\_\-\-C\-R\-L\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1X509__CRL}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structBotan_1_1X509__CRL_1_1X509__CRL__Error}{X509\-\_\-\-C\-R\-L\-\_\-\-Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ \hyperlink{classBotan_1_1CRL__Entry}{C\-R\-L\-\_\-\-Entry} $>$ \hyperlink{classBotan_1_1X509__CRL_a5345fb3a7ea9747421beac7c3ae5cdba}{get\-\_\-revoked} () const 
+\item 
+\hyperlink{classBotan_1_1X509__DN}{X509\-\_\-\-D\-N} \hyperlink{classBotan_1_1X509__CRL_ae97d321656a7c61beeaf12b106f49802}{issuer\-\_\-dn} () const 
+\item 
+\hyperlink{classBotan_1_1MemoryVector}{Memory\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1X509__CRL_a5c1b944f8cafefaddf6116177bb1740f}{authority\-\_\-key\-\_\-id} () const 
+\item 
+\hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} \hyperlink{classBotan_1_1X509__CRL_a869a6219a80f08fb76a72a8aab4e34ba}{crl\-\_\-number} () const 
+\item 
+\hyperlink{classBotan_1_1X509__Time}{X509\-\_\-\-Time} \hyperlink{classBotan_1_1X509__CRL_a2af4a3f0264d042a335fc28d268bee1a}{this\-\_\-update} () const 
+\item 
+\hyperlink{classBotan_1_1X509__Time}{X509\-\_\-\-Time} \hyperlink{classBotan_1_1X509__CRL_aa838f557b397118a398f4511290cbfcf}{next\-\_\-update} () const 
+\item 
+\hyperlink{classBotan_1_1X509__CRL_a85e8d4ad0c908ed74a9fcec140bdfb4f}{X509\-\_\-\-C\-R\-L} (\hyperlink{classBotan_1_1DataSource}{Data\-Source} \&source, bool throw\-\_\-on\-\_\-unknown\-\_\-critical=false)
+\item 
+\hyperlink{classBotan_1_1X509__CRL_a7136a26a420714151331feb91db1a3e0}{X509\-\_\-\-C\-R\-L} (const std\-::string \&filename, bool throw\-\_\-on\-\_\-unknown\-\_\-critical=false)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class represents X.\-509 \hyperlink{classBotan_1_1Certificate}{Certificate} Revocation Lists (C\-R\-Ls). 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1X509__CRL_a85e8d4ad0c908ed74a9fcec140bdfb4f}{\index{Botan\-::\-X509\-\_\-\-C\-R\-L@{Botan\-::\-X509\-\_\-\-C\-R\-L}!X509\-\_\-\-C\-R\-L@{X509\-\_\-\-C\-R\-L}}
+\index{X509\-\_\-\-C\-R\-L@{X509\-\_\-\-C\-R\-L}!Botan::X509_CRL@{Botan\-::\-X509\-\_\-\-C\-R\-L}}
+\subsubsection[{X509\-\_\-\-C\-R\-L}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-X509\-\_\-\-C\-R\-L\-::\-X509\-\_\-\-C\-R\-L (
+\begin{DoxyParamCaption}
+\item[{{\bf Data\-Source} \&}]{source, }
+\item[{bool}]{throw\-\_\-on\-\_\-unknown\-\_\-critical = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1X509__CRL_a85e8d4ad0c908ed74a9fcec140bdfb4f}
+Construct a C\-R\-L from a data source. 
+\begin{DoxyParams}{Parameters}
+{\em source} & the data source providing the D\-E\-R or P\-E\-M encoded C\-R\-L. \\
+\hline
+{\em throw\-\_\-on\-\_\-unknown\-\_\-critical} & should we throw an exception if an unknown C\-R\-L extension marked as critical is encountered. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1X509__CRL_a7136a26a420714151331feb91db1a3e0}{\index{Botan\-::\-X509\-\_\-\-C\-R\-L@{Botan\-::\-X509\-\_\-\-C\-R\-L}!X509\-\_\-\-C\-R\-L@{X509\-\_\-\-C\-R\-L}}
+\index{X509\-\_\-\-C\-R\-L@{X509\-\_\-\-C\-R\-L}!Botan::X509_CRL@{Botan\-::\-X509\-\_\-\-C\-R\-L}}
+\subsubsection[{X509\-\_\-\-C\-R\-L}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-X509\-\_\-\-C\-R\-L\-::\-X509\-\_\-\-C\-R\-L (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename, }
+\item[{bool}]{throw\-\_\-on\-\_\-unknown\-\_\-critical = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1X509__CRL_a7136a26a420714151331feb91db1a3e0}
+Construct a C\-R\-L from a file containing the D\-E\-R or P\-E\-M encoded C\-R\-L. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the C\-R\-L file \\
+\hline
+{\em throw\-\_\-on\-\_\-unknown\-\_\-critical} & should we throw an exception if an unknown C\-R\-L extension marked as critical is encountered. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1X509__CRL_a5c1b944f8cafefaddf6116177bb1740f}{\index{Botan\-::\-X509\-\_\-\-C\-R\-L@{Botan\-::\-X509\-\_\-\-C\-R\-L}!authority\-\_\-key\-\_\-id@{authority\-\_\-key\-\_\-id}}
+\index{authority\-\_\-key\-\_\-id@{authority\-\_\-key\-\_\-id}!Botan::X509_CRL@{Botan\-::\-X509\-\_\-\-C\-R\-L}}
+\subsubsection[{authority\-\_\-key\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memory\-Vector}$<$ {\bf byte} $>$ Botan\-::\-X509\-\_\-\-C\-R\-L\-::authority\-\_\-key\-\_\-id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__CRL_a5c1b944f8cafefaddf6116177bb1740f}
+Get the Authority\-Key\-Identifier of this C\-R\-L. \begin{DoxyReturn}{Returns}
+this C\-R\-Ls Authority\-Key\-Identifier 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__CRL_a869a6219a80f08fb76a72a8aab4e34ba}{\index{Botan\-::\-X509\-\_\-\-C\-R\-L@{Botan\-::\-X509\-\_\-\-C\-R\-L}!crl\-\_\-number@{crl\-\_\-number}}
+\index{crl\-\_\-number@{crl\-\_\-number}!Botan::X509_CRL@{Botan\-::\-X509\-\_\-\-C\-R\-L}}
+\subsubsection[{crl\-\_\-number}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32bit} Botan\-::\-X509\-\_\-\-C\-R\-L\-::crl\-\_\-number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__CRL_a869a6219a80f08fb76a72a8aab4e34ba}
+Get the serial number of this C\-R\-L. \begin{DoxyReturn}{Returns}
+C\-R\-Ls serial number 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__CRL_a5345fb3a7ea9747421beac7c3ae5cdba}{\index{Botan\-::\-X509\-\_\-\-C\-R\-L@{Botan\-::\-X509\-\_\-\-C\-R\-L}!get\-\_\-revoked@{get\-\_\-revoked}}
+\index{get\-\_\-revoked@{get\-\_\-revoked}!Botan::X509_CRL@{Botan\-::\-X509\-\_\-\-C\-R\-L}}
+\subsubsection[{get\-\_\-revoked}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf C\-R\-L\-\_\-\-Entry} $>$ Botan\-::\-X509\-\_\-\-C\-R\-L\-::get\-\_\-revoked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__CRL_a5345fb3a7ea9747421beac7c3ae5cdba}
+Get the entries of this C\-R\-L in the form of a vector. \begin{DoxyReturn}{Returns}
+vector containing the entries of this C\-R\-L. 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__CRL_ae97d321656a7c61beeaf12b106f49802}{\index{Botan\-::\-X509\-\_\-\-C\-R\-L@{Botan\-::\-X509\-\_\-\-C\-R\-L}!issuer\-\_\-dn@{issuer\-\_\-dn}}
+\index{issuer\-\_\-dn@{issuer\-\_\-dn}!Botan::X509_CRL@{Botan\-::\-X509\-\_\-\-C\-R\-L}}
+\subsubsection[{issuer\-\_\-dn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X509\-\_\-\-D\-N} Botan\-::\-X509\-\_\-\-C\-R\-L\-::issuer\-\_\-dn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__CRL_ae97d321656a7c61beeaf12b106f49802}
+Get the issuer D\-N of this C\-R\-L. \begin{DoxyReturn}{Returns}
+C\-R\-Ls issuer D\-N 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__CRL_aa838f557b397118a398f4511290cbfcf}{\index{Botan\-::\-X509\-\_\-\-C\-R\-L@{Botan\-::\-X509\-\_\-\-C\-R\-L}!next\-\_\-update@{next\-\_\-update}}
+\index{next\-\_\-update@{next\-\_\-update}!Botan::X509_CRL@{Botan\-::\-X509\-\_\-\-C\-R\-L}}
+\subsubsection[{next\-\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X509\-\_\-\-Time} Botan\-::\-X509\-\_\-\-C\-R\-L\-::next\-\_\-update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__CRL_aa838f557b397118a398f4511290cbfcf}
+Get the C\-R\-L's next\-Update value. \begin{DoxyReturn}{Returns}
+C\-R\-Ls nextd\-Update 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__CRL_a2af4a3f0264d042a335fc28d268bee1a}{\index{Botan\-::\-X509\-\_\-\-C\-R\-L@{Botan\-::\-X509\-\_\-\-C\-R\-L}!this\-\_\-update@{this\-\_\-update}}
+\index{this\-\_\-update@{this\-\_\-update}!Botan::X509_CRL@{Botan\-::\-X509\-\_\-\-C\-R\-L}}
+\subsubsection[{this\-\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X509\-\_\-\-Time} Botan\-::\-X509\-\_\-\-C\-R\-L\-::this\-\_\-update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__CRL_a2af4a3f0264d042a335fc28d268bee1a}
+Get the C\-R\-L's this\-Update value. \begin{DoxyReturn}{Returns}
+C\-R\-Ls this\-Update 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/cert/x509crl/x509\-\_\-crl.\-h\item 
+src/cert/x509crl/x509\-\_\-crl.\-cpp\end{DoxyCompactItemize}

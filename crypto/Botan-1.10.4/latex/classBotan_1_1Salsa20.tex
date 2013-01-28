@@ -1,0 +1,152 @@
+\hypertarget{classBotan_1_1Salsa20}{\section{Botan\-:\-:Salsa20 Class Reference}
+\label{classBotan_1_1Salsa20}\index{Botan\-::\-Salsa20@{Botan\-::\-Salsa20}}
+}
+
+
+{\ttfamily \#include $<$salsa20.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Salsa20\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classBotan_1_1Salsa20}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1Salsa20_ac100bcf5883f84b102231ed749c770fc}{cipher} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t length)
+\item 
+void \hyperlink{classBotan_1_1Salsa20_a9c1b26b03d601ebabe8873e0c1155824}{set\-\_\-iv} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} iv\mbox{[}$\,$\mbox{]}, size\-\_\-t iv\-\_\-len)
+\item 
+bool \hyperlink{classBotan_1_1Salsa20_a2a33127742dc2ace54e9d7e7d7c68b23}{valid\-\_\-iv\-\_\-length} (size\-\_\-t iv\-\_\-len) const 
+\item 
+\hyperlink{classBotan_1_1Key__Length__Specification}{Key\-\_\-\-Length\-\_\-\-Specification} \hyperlink{classBotan_1_1Salsa20_ae2b19a252eefd91f143fcf7ad3d65baa}{key\-\_\-spec} () const 
+\item 
+void \hyperlink{classBotan_1_1Salsa20_a9894f616ea764f299efea1c0a43fec42}{clear} ()
+\item 
+std\-::string \hyperlink{classBotan_1_1Salsa20_a74f08494fa054fdd9613891187a5812b}{name} () const 
+\item 
+\hyperlink{classBotan_1_1StreamCipher}{Stream\-Cipher} $\ast$ \hyperlink{classBotan_1_1Salsa20_ac973d0e968a8877460de781a32c96b86}{clone} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\-J\-B's \hyperlink{classBotan_1_1Salsa20}{Salsa20} (and X\-Salsa20) 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Salsa20_ac100bcf5883f84b102231ed749c770fc}{\index{Botan\-::\-Salsa20@{Botan\-::\-Salsa20}!cipher@{cipher}}
+\index{cipher@{cipher}!Botan::Salsa20@{Botan\-::\-Salsa20}}
+\subsubsection[{cipher}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Salsa20\-::cipher (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Salsa20_ac100bcf5883f84b102231ed749c770fc}
+Encrypt or decrypt a message 
+\begin{DoxyParams}{Parameters}
+{\em in} & the plaintext \\
+\hline
+{\em out} & the byte array to hold the output, i.\-e. the ciphertext \\
+\hline
+{\em len} & the length of both in and out in bytes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1StreamCipher_a447f265ece48d9af46f6947495ce3aeb}{Botan\-::\-Stream\-Cipher}.
+
+\hypertarget{classBotan_1_1Salsa20_a9894f616ea764f299efea1c0a43fec42}{\index{Botan\-::\-Salsa20@{Botan\-::\-Salsa20}!clear@{clear}}
+\index{clear@{clear}!Botan::Salsa20@{Botan\-::\-Salsa20}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Salsa20\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Salsa20_a9894f616ea764f299efea1c0a43fec42}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1Salsa20_ac973d0e968a8877460de781a32c96b86}{\index{Botan\-::\-Salsa20@{Botan\-::\-Salsa20}!clone@{clone}}
+\index{clone@{clone}!Botan::Salsa20@{Botan\-::\-Salsa20}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stream\-Cipher}$\ast$ Botan\-::\-Salsa20\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Salsa20_ac973d0e968a8877460de781a32c96b86}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1StreamCipher_aa25d9ce72725e8bb0cf6c36540412397}{Botan\-::\-Stream\-Cipher}.
+
+\hypertarget{classBotan_1_1Salsa20_ae2b19a252eefd91f143fcf7ad3d65baa}{\index{Botan\-::\-Salsa20@{Botan\-::\-Salsa20}!key\-\_\-spec@{key\-\_\-spec}}
+\index{key\-\_\-spec@{key\-\_\-spec}!Botan::Salsa20@{Botan\-::\-Salsa20}}
+\subsubsection[{key\-\_\-spec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key\-\_\-\-Length\-\_\-\-Specification} Botan\-::\-Salsa20\-::key\-\_\-spec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Salsa20_ae2b19a252eefd91f143fcf7ad3d65baa}
+\begin{DoxyReturn}{Returns}
+object describing limits on key size 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1SymmetricAlgorithm_aea45c0d248b3116d7a1ebbd086f14e1b}{Botan\-::\-Symmetric\-Algorithm}.
+
+\hypertarget{classBotan_1_1Salsa20_a74f08494fa054fdd9613891187a5812b}{\index{Botan\-::\-Salsa20@{Botan\-::\-Salsa20}!name@{name}}
+\index{name@{name}!Botan::Salsa20@{Botan\-::\-Salsa20}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Salsa20\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Salsa20_a74f08494fa054fdd9613891187a5812b}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1Salsa20_a9c1b26b03d601ebabe8873e0c1155824}{\index{Botan\-::\-Salsa20@{Botan\-::\-Salsa20}!set\-\_\-iv@{set\-\_\-iv}}
+\index{set\-\_\-iv@{set\-\_\-iv}!Botan::Salsa20@{Botan\-::\-Salsa20}}
+\subsubsection[{set\-\_\-iv}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Salsa20\-::set\-\_\-iv (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{iv\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{iv\-\_\-len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Salsa20_a9c1b26b03d601ebabe8873e0c1155824}
+Resync the cipher using the I\-V 
+\begin{DoxyParams}{Parameters}
+{\em iv} & the initialization vector \\
+\hline
+{\em iv\-\_\-len} & the length of the I\-V in bytes \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classBotan_1_1StreamCipher_a787dea4f477ea27e8ba0ed7e1da9120d}{Botan\-::\-Stream\-Cipher}.
+
+\hypertarget{classBotan_1_1Salsa20_a2a33127742dc2ace54e9d7e7d7c68b23}{\index{Botan\-::\-Salsa20@{Botan\-::\-Salsa20}!valid\-\_\-iv\-\_\-length@{valid\-\_\-iv\-\_\-length}}
+\index{valid\-\_\-iv\-\_\-length@{valid\-\_\-iv\-\_\-length}!Botan::Salsa20@{Botan\-::\-Salsa20}}
+\subsubsection[{valid\-\_\-iv\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-Salsa20\-::valid\-\_\-iv\-\_\-length (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{iv\-\_\-len}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Salsa20_a2a33127742dc2ace54e9d7e7d7c68b23}
+
+\begin{DoxyParams}{Parameters}
+{\em iv\-\_\-len} & the length of the I\-V in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if the length is valid for this algorithm 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1StreamCipher_aeb0aaa9c4248e22c8302b99b2dfa9e8d}{Botan\-::\-Stream\-Cipher}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/stream/salsa20/salsa20.\-h\item 
+src/stream/salsa20/salsa20.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,106 @@
+\hypertarget{classBotan_1_1IDEA__SSE2}{\section{Botan\-:\-:I\-D\-E\-A\-\_\-\-S\-S\-E2 Class Reference}
+\label{classBotan_1_1IDEA__SSE2}\index{Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2@{Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2}}
+}
+
+
+{\ttfamily \#include $<$idea\-\_\-sse2.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:I\-D\-E\-A\-\_\-\-S\-S\-E2\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classBotan_1_1IDEA__SSE2}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1IDEA__SSE2_abdddb2c041e84106060c9f07f0091e80}{parallelism} () const 
+\item 
+void \hyperlink{classBotan_1_1IDEA__SSE2_ab2b838764b9bf11185f5ecfd1c693b76}{encrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+void \hyperlink{classBotan_1_1IDEA__SSE2_aefefdc1ba1d684f9a9a1cb099a20b109}{decrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$ \hyperlink{classBotan_1_1IDEA__SSE2_aa084a70118299c0a4c32a9d5ac35e870}{clone} () const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1IDEA}{I\-D\-E\-A} in S\-S\-E2 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1IDEA__SSE2_aa084a70118299c0a4c32a9d5ac35e870}{\index{Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2@{Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2}!clone@{clone}}
+\index{clone@{clone}!Botan::IDEA_SSE2@{Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Cipher}$\ast$ Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1IDEA__SSE2_aa084a70118299c0a4c32a9d5ac35e870}
+Get a new object representing the same algorithm as $\ast$this 
+
+Reimplemented from \hyperlink{classBotan_1_1IDEA_a2404d5630f341640aa8b18d044e53603}{Botan\-::\-I\-D\-E\-A}.
+
+\hypertarget{classBotan_1_1IDEA__SSE2_aefefdc1ba1d684f9a9a1cb099a20b109}{\index{Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2@{Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2}!decrypt\-\_\-n@{decrypt\-\_\-n}}
+\index{decrypt\-\_\-n@{decrypt\-\_\-n}!Botan::IDEA_SSE2@{Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2}}
+\subsubsection[{decrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2\-::decrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1IDEA__SSE2_aefefdc1ba1d684f9a9a1cb099a20b109}
+Decrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classBotan_1_1IDEA_aaf4f7808abd1e7f2072b32a0bcfa58c2}{Botan\-::\-I\-D\-E\-A}.
+
+\hypertarget{classBotan_1_1IDEA__SSE2_ab2b838764b9bf11185f5ecfd1c693b76}{\index{Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2@{Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2}!encrypt\-\_\-n@{encrypt\-\_\-n}}
+\index{encrypt\-\_\-n@{encrypt\-\_\-n}!Botan::IDEA_SSE2@{Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2}}
+\subsubsection[{encrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2\-::encrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1IDEA__SSE2_ab2b838764b9bf11185f5ecfd1c693b76}
+Encrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classBotan_1_1IDEA_afafb299de70de2d1421124320f60786d}{Botan\-::\-I\-D\-E\-A}.
+
+\hypertarget{classBotan_1_1IDEA__SSE2_abdddb2c041e84106060c9f07f0091e80}{\index{Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2@{Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2}!parallelism@{parallelism}}
+\index{parallelism@{parallelism}!Botan::IDEA_SSE2@{Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2}}
+\subsubsection[{parallelism}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-I\-D\-E\-A\-\_\-\-S\-S\-E2\-::parallelism (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1IDEA__SSE2_abdddb2c041e84106060c9f07f0091e80}
+\begin{DoxyReturn}{Returns}
+native parallelism of this cipher in blocks 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1BlockCipher_a635a1c3ed1084be78cf1b9e655ab1465}{Botan\-::\-Block\-Cipher}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/block/idea\-\_\-sse2/idea\-\_\-sse2.\-h\item 
+src/block/idea\-\_\-sse2/idea\-\_\-sse2.\-cpp\end{DoxyCompactItemize}

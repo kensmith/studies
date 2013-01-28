@@ -1,0 +1,111 @@
+\hypertarget{classBotan_1_1Key__Length__Specification}{\section{Botan\-:\-:Key\-\_\-\-Length\-\_\-\-Specification Class Reference}
+\label{classBotan_1_1Key__Length__Specification}\index{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification@{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification}}
+}
+
+
+{\ttfamily \#include $<$key\-\_\-spec.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1Key__Length__Specification_a00f3f1f47f839368149d98d876ebcd8f}{Key\-\_\-\-Length\-\_\-\-Specification} (size\-\_\-t keylen)
+\item 
+\hyperlink{classBotan_1_1Key__Length__Specification_a06b458b450a9b16c100cfed800a59d73}{Key\-\_\-\-Length\-\_\-\-Specification} (size\-\_\-t min\-\_\-k, size\-\_\-t max\-\_\-k, size\-\_\-t k\-\_\-mod=1)
+\item 
+bool \hyperlink{classBotan_1_1Key__Length__Specification_a23a79e5eb3ebeec4eafb56e7a50d9d6f}{valid\-\_\-keylength} (size\-\_\-t length) const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1Key__Length__Specification_a492ebec5a2ea22bd81f74bbad1b56014}{minimum\-\_\-keylength} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1Key__Length__Specification_a2526da7b3bf42bb723e192bd481c1326}{maximum\-\_\-keylength} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1Key__Length__Specification_a5e3b8f7945a9e4d0e2b1bfa483388ff9}{keylength\-\_\-multiple} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents the length requirements on an algorithm key 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Key__Length__Specification_a00f3f1f47f839368149d98d876ebcd8f}{\index{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification@{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification}!Key\-\_\-\-Length\-\_\-\-Specification@{Key\-\_\-\-Length\-\_\-\-Specification}}
+\index{Key\-\_\-\-Length\-\_\-\-Specification@{Key\-\_\-\-Length\-\_\-\-Specification}!Botan::Key_Length_Specification@{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification}}
+\subsubsection[{Key\-\_\-\-Length\-\_\-\-Specification}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification\-::\-Key\-\_\-\-Length\-\_\-\-Specification (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{keylen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1Key__Length__Specification_a00f3f1f47f839368149d98d876ebcd8f}
+Constructor for fixed length keys 
+\begin{DoxyParams}{Parameters}
+{\em keylen} & the supported key length \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Key__Length__Specification_a06b458b450a9b16c100cfed800a59d73}{\index{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification@{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification}!Key\-\_\-\-Length\-\_\-\-Specification@{Key\-\_\-\-Length\-\_\-\-Specification}}
+\index{Key\-\_\-\-Length\-\_\-\-Specification@{Key\-\_\-\-Length\-\_\-\-Specification}!Botan::Key_Length_Specification@{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification}}
+\subsubsection[{Key\-\_\-\-Length\-\_\-\-Specification}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification\-::\-Key\-\_\-\-Length\-\_\-\-Specification (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{min\-\_\-k, }
+\item[{size\-\_\-t}]{max\-\_\-k, }
+\item[{size\-\_\-t}]{k\-\_\-mod = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1Key__Length__Specification_a06b458b450a9b16c100cfed800a59d73}
+Constructor for variable length keys 
+\begin{DoxyParams}{Parameters}
+{\em min\-\_\-k} & the smallest supported key length \\
+\hline
+{\em max\-\_\-k} & the largest supported key length \\
+\hline
+{\em k\-\_\-mod} & the number of bytes the key must be a multiple of \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Key__Length__Specification_a5e3b8f7945a9e4d0e2b1bfa483388ff9}{\index{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification@{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification}!keylength\-\_\-multiple@{keylength\-\_\-multiple}}
+\index{keylength\-\_\-multiple@{keylength\-\_\-multiple}!Botan::Key_Length_Specification@{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification}}
+\subsubsection[{keylength\-\_\-multiple}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification\-::keylength\-\_\-multiple (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1Key__Length__Specification_a5e3b8f7945a9e4d0e2b1bfa483388ff9}
+\begin{DoxyReturn}{Returns}
+key length multiple in bytes 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Key__Length__Specification_a2526da7b3bf42bb723e192bd481c1326}{\index{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification@{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification}!maximum\-\_\-keylength@{maximum\-\_\-keylength}}
+\index{maximum\-\_\-keylength@{maximum\-\_\-keylength}!Botan::Key_Length_Specification@{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification}}
+\subsubsection[{maximum\-\_\-keylength}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification\-::maximum\-\_\-keylength (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1Key__Length__Specification_a2526da7b3bf42bb723e192bd481c1326}
+\begin{DoxyReturn}{Returns}
+maximum key length in bytes 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Key__Length__Specification_a492ebec5a2ea22bd81f74bbad1b56014}{\index{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification@{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification}!minimum\-\_\-keylength@{minimum\-\_\-keylength}}
+\index{minimum\-\_\-keylength@{minimum\-\_\-keylength}!Botan::Key_Length_Specification@{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification}}
+\subsubsection[{minimum\-\_\-keylength}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification\-::minimum\-\_\-keylength (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1Key__Length__Specification_a492ebec5a2ea22bd81f74bbad1b56014}
+\begin{DoxyReturn}{Returns}
+minimum key length in bytes 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Key__Length__Specification_a23a79e5eb3ebeec4eafb56e7a50d9d6f}{\index{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification@{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification}!valid\-\_\-keylength@{valid\-\_\-keylength}}
+\index{valid\-\_\-keylength@{valid\-\_\-keylength}!Botan::Key_Length_Specification@{Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification}}
+\subsubsection[{valid\-\_\-keylength}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-Key\-\_\-\-Length\-\_\-\-Specification\-::valid\-\_\-keylength (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1Key__Length__Specification_a23a79e5eb3ebeec4eafb56e7a50d9d6f}
+
+\begin{DoxyParams}{Parameters}
+{\em length} & is a key length in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff this length is a valid length for this algo 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/algo\-\_\-base/key\-\_\-spec.\-h\end{DoxyCompactItemize}

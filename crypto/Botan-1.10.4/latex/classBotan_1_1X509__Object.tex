@@ -1,0 +1,206 @@
+\hypertarget{classBotan_1_1X509__Object}{\section{Botan\-:\-:X509\-\_\-\-Object Class Reference}
+\label{classBotan_1_1X509__Object}\index{Botan\-::\-X509\-\_\-\-Object@{Botan\-::\-X509\-\_\-\-Object}}
+}
+
+
+{\ttfamily \#include $<$x509\-\_\-obj.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:X509\-\_\-\-Object\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1X509__Object}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1MemoryVector}{Memory\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1X509__Object_a8dd1e49b0e0cd42418e659cfc6c960d7}{tbs\-\_\-data} () const 
+\item 
+\hyperlink{classBotan_1_1MemoryVector}{Memory\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1X509__Object_aee0ac3d797e197ade6e382713cd61e07}{signature} () const 
+\item 
+\hyperlink{classBotan_1_1AlgorithmIdentifier}{Algorithm\-Identifier} \hyperlink{classBotan_1_1X509__Object_aed269ac74ef4ebc9075740db772ff7bc}{signature\-\_\-algorithm} () const 
+\item 
+std\-::string \hyperlink{classBotan_1_1X509__Object_a79bbb29b968e7512f00481ce8592caf9}{hash\-\_\-used\-\_\-for\-\_\-signature} () const 
+\item 
+bool \hyperlink{classBotan_1_1X509__Object_af161996575d2b367197c3a31e1adbe3c}{check\-\_\-signature} (class \hyperlink{classBotan_1_1Public__Key}{Public\-\_\-\-Key} \&key) const 
+\item 
+bool \hyperlink{classBotan_1_1X509__Object_aee81119dfbab3e9de4d54fd0a55fab2b}{check\-\_\-signature} (class \hyperlink{classBotan_1_1Public__Key}{Public\-\_\-\-Key} $\ast$key) const 
+\item 
+\hyperlink{classBotan_1_1MemoryVector}{Memory\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1X509__Object_af46d35d8d29be94f46b331e0e766bcdb}{B\-E\-R\-\_\-encode} () const 
+\item 
+std\-::string \hyperlink{classBotan_1_1X509__Object_abd15da7bae56fcae47606e313d508a7b}{P\-E\-M\-\_\-encode} () const 
+\item 
+void \hyperlink{classBotan_1_1X509__Object_a8a225c978af2a377c2939d2334112374}{encode} (\hyperlink{classBotan_1_1Pipe}{Pipe} \&out, \hyperlink{namespaceBotan_a53759b4ed1fb93549f307fcf68729d2f}{X509\-\_\-\-Encoding} encoding=P\-E\-M) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classBotan_1_1MemoryVector}{Memory\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1X509__Object_a0388b935a82def1ee59cf3b25312f4e6}{make\-\_\-signed} (class \hyperlink{classBotan_1_1PK__Signer}{P\-K\-\_\-\-Signer} $\ast$signer, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const \hyperlink{classBotan_1_1AlgorithmIdentifier}{Algorithm\-Identifier} \&alg\-\_\-id, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&tbs)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1X509__Object_a2a7a5caafb1d6b45c8745d0d8c66c44a}{{\bfseries X509\-\_\-\-Object} (\hyperlink{classBotan_1_1DataSource}{Data\-Source} \&src, const std\-::string \&pem\-\_\-labels)}\label{classBotan_1_1X509__Object_a2a7a5caafb1d6b45c8745d0d8c66c44a}
+
+\item 
+\hypertarget{classBotan_1_1X509__Object_a56ca2d6a5faf7d59d65242ad9783ed3c}{{\bfseries X509\-\_\-\-Object} (const std\-::string \&file, const std\-::string \&pem\-\_\-labels)}\label{classBotan_1_1X509__Object_a56ca2d6a5faf7d59d65242ad9783ed3c}
+
+\item 
+\hypertarget{classBotan_1_1X509__Object_a0fa4b4549be3aec5b13056623575e62f}{void {\bfseries do\-\_\-decode} ()}\label{classBotan_1_1X509__Object_a0fa4b4549be3aec5b13056623575e62f}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1X509__Object_a7cbfaa8d796e35e80abb9fc2dfa4df4e}{\hyperlink{classBotan_1_1AlgorithmIdentifier}{Algorithm\-Identifier} {\bfseries sig\-\_\-algo}}\label{classBotan_1_1X509__Object_a7cbfaa8d796e35e80abb9fc2dfa4df4e}
+
+\item 
+\hypertarget{classBotan_1_1X509__Object_ad3c725a005949b231f11334c40f20bce}{\hyperlink{classBotan_1_1MemoryVector}{Memory\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ {\bfseries tbs\-\_\-bits}}\label{classBotan_1_1X509__Object_ad3c725a005949b231f11334c40f20bce}
+
+\item 
+\hypertarget{classBotan_1_1X509__Object_a1bd5e3f7c5ef56d7d1b9be2e9e9a6db7}{\hyperlink{classBotan_1_1MemoryVector}{Memory\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ {\bfseries sig}}\label{classBotan_1_1X509__Object_a1bd5e3f7c5ef56d7d1b9be2e9e9a6db7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents abstract X.\-509 signed objects as in the X.\-500 S\-I\-G\-N\-E\-D macro 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1X509__Object_af46d35d8d29be94f46b331e0e766bcdb}{\index{Botan\-::\-X509\-\_\-\-Object@{Botan\-::\-X509\-\_\-\-Object}!B\-E\-R\-\_\-encode@{B\-E\-R\-\_\-encode}}
+\index{B\-E\-R\-\_\-encode@{B\-E\-R\-\_\-encode}!Botan::X509_Object@{Botan\-::\-X509\-\_\-\-Object}}
+\subsubsection[{B\-E\-R\-\_\-encode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memory\-Vector}$<$ {\bf byte} $>$ Botan\-::\-X509\-\_\-\-Object\-::\-B\-E\-R\-\_\-encode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__Object_af46d35d8d29be94f46b331e0e766bcdb}
+\begin{DoxyReturn}{Returns}
+\hyperlink{namespaceBotan_1_1BER}{B\-E\-R} encoding of this 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__Object_af161996575d2b367197c3a31e1adbe3c}{\index{Botan\-::\-X509\-\_\-\-Object@{Botan\-::\-X509\-\_\-\-Object}!check\-\_\-signature@{check\-\_\-signature}}
+\index{check\-\_\-signature@{check\-\_\-signature}!Botan::X509_Object@{Botan\-::\-X509\-\_\-\-Object}}
+\subsubsection[{check\-\_\-signature}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-X509\-\_\-\-Object\-::check\-\_\-signature (
+\begin{DoxyParamCaption}
+\item[{class {\bf Public\-\_\-\-Key} \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__Object_af161996575d2b367197c3a31e1adbe3c}
+Check the signature on this data 
+\begin{DoxyParams}{Parameters}
+{\em key} & the public key purportedly used to sign this data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the signature is valid, otherwise false 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__Object_aee81119dfbab3e9de4d54fd0a55fab2b}{\index{Botan\-::\-X509\-\_\-\-Object@{Botan\-::\-X509\-\_\-\-Object}!check\-\_\-signature@{check\-\_\-signature}}
+\index{check\-\_\-signature@{check\-\_\-signature}!Botan::X509_Object@{Botan\-::\-X509\-\_\-\-Object}}
+\subsubsection[{check\-\_\-signature}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-X509\-\_\-\-Object\-::check\-\_\-signature (
+\begin{DoxyParamCaption}
+\item[{class {\bf Public\-\_\-\-Key} $\ast$}]{key}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__Object_aee81119dfbab3e9de4d54fd0a55fab2b}
+Check the signature on this data 
+\begin{DoxyParams}{Parameters}
+{\em key} & the public key purportedly used to sign this data the pointer will be deleted after use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the signature is valid, otherwise false 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__Object_a8a225c978af2a377c2939d2334112374}{\index{Botan\-::\-X509\-\_\-\-Object@{Botan\-::\-X509\-\_\-\-Object}!encode@{encode}}
+\index{encode@{encode}!Botan::X509_Object@{Botan\-::\-X509\-\_\-\-Object}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-X509\-\_\-\-Object\-::encode (
+\begin{DoxyParamCaption}
+\item[{{\bf Pipe} \&}]{out, }
+\item[{{\bf X509\-\_\-\-Encoding}}]{encoding = {\ttfamily PEM}}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__Object_a8a225c978af2a377c2939d2334112374}
+Encode this to a pipe \begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000002}{Deprecated}]use B\-E\-R\-\_\-encode or P\-E\-M\-\_\-encode instead \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em out} & the pipe to write to \\
+\hline
+{\em encoding} & the encoding to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1X509__Object_a79bbb29b968e7512f00481ce8592caf9}{\index{Botan\-::\-X509\-\_\-\-Object@{Botan\-::\-X509\-\_\-\-Object}!hash\-\_\-used\-\_\-for\-\_\-signature@{hash\-\_\-used\-\_\-for\-\_\-signature}}
+\index{hash\-\_\-used\-\_\-for\-\_\-signature@{hash\-\_\-used\-\_\-for\-\_\-signature}!Botan::X509_Object@{Botan\-::\-X509\-\_\-\-Object}}
+\subsubsection[{hash\-\_\-used\-\_\-for\-\_\-signature}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-X509\-\_\-\-Object\-::hash\-\_\-used\-\_\-for\-\_\-signature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__Object_a79bbb29b968e7512f00481ce8592caf9}
+\begin{DoxyReturn}{Returns}
+hash algorithm that was used to generate signature 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__Object_a0388b935a82def1ee59cf3b25312f4e6}{\index{Botan\-::\-X509\-\_\-\-Object@{Botan\-::\-X509\-\_\-\-Object}!make\-\_\-signed@{make\-\_\-signed}}
+\index{make\-\_\-signed@{make\-\_\-signed}!Botan::X509_Object@{Botan\-::\-X509\-\_\-\-Object}}
+\subsubsection[{make\-\_\-signed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memory\-Vector}$<$ {\bf byte} $>$ Botan\-::\-X509\-\_\-\-Object\-::make\-\_\-signed (
+\begin{DoxyParamCaption}
+\item[{class {\bf P\-K\-\_\-\-Signer} $\ast$}]{signer, }
+\item[{{\bf Random\-Number\-Generator} \&}]{rng, }
+\item[{const {\bf Algorithm\-Identifier} \&}]{alg\-\_\-id, }
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{tbs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classBotan_1_1X509__Object_a0388b935a82def1ee59cf3b25312f4e6}
+Create a signed \hyperlink{namespaceBotan_1_1X509}{X509} object. 
+\begin{DoxyParams}{Parameters}
+{\em signer} & the signer used to sign the object \\
+\hline
+{\em rng} & the random number generator to use \\
+\hline
+{\em alg\-\_\-id} & the algorithm identifier of the signature scheme \\
+\hline
+{\em tbs} & the tbs bits to be signed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+signed \hyperlink{namespaceBotan_1_1X509}{X509} object 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__Object_abd15da7bae56fcae47606e313d508a7b}{\index{Botan\-::\-X509\-\_\-\-Object@{Botan\-::\-X509\-\_\-\-Object}!P\-E\-M\-\_\-encode@{P\-E\-M\-\_\-encode}}
+\index{P\-E\-M\-\_\-encode@{P\-E\-M\-\_\-encode}!Botan::X509_Object@{Botan\-::\-X509\-\_\-\-Object}}
+\subsubsection[{P\-E\-M\-\_\-encode}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-X509\-\_\-\-Object\-::\-P\-E\-M\-\_\-encode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__Object_abd15da7bae56fcae47606e313d508a7b}
+\begin{DoxyReturn}{Returns}
+P\-E\-M encoding of this 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__Object_aee0ac3d797e197ade6e382713cd61e07}{\index{Botan\-::\-X509\-\_\-\-Object@{Botan\-::\-X509\-\_\-\-Object}!signature@{signature}}
+\index{signature@{signature}!Botan::X509_Object@{Botan\-::\-X509\-\_\-\-Object}}
+\subsubsection[{signature}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memory\-Vector}$<$ {\bf byte} $>$ Botan\-::\-X509\-\_\-\-Object\-::signature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__Object_aee0ac3d797e197ade6e382713cd61e07}
+\begin{DoxyReturn}{Returns}
+signature on \hyperlink{classBotan_1_1X509__Object_a8dd1e49b0e0cd42418e659cfc6c960d7}{tbs\-\_\-data()} 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__Object_aed269ac74ef4ebc9075740db772ff7bc}{\index{Botan\-::\-X509\-\_\-\-Object@{Botan\-::\-X509\-\_\-\-Object}!signature\-\_\-algorithm@{signature\-\_\-algorithm}}
+\index{signature\-\_\-algorithm@{signature\-\_\-algorithm}!Botan::X509_Object@{Botan\-::\-X509\-\_\-\-Object}}
+\subsubsection[{signature\-\_\-algorithm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Algorithm\-Identifier} Botan\-::\-X509\-\_\-\-Object\-::signature\-\_\-algorithm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__Object_aed269ac74ef4ebc9075740db772ff7bc}
+\begin{DoxyReturn}{Returns}
+signature algorithm that was used to generate signature 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__Object_a8dd1e49b0e0cd42418e659cfc6c960d7}{\index{Botan\-::\-X509\-\_\-\-Object@{Botan\-::\-X509\-\_\-\-Object}!tbs\-\_\-data@{tbs\-\_\-data}}
+\index{tbs\-\_\-data@{tbs\-\_\-data}!Botan::X509_Object@{Botan\-::\-X509\-\_\-\-Object}}
+\subsubsection[{tbs\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memory\-Vector}$<$ {\bf byte} $>$ Botan\-::\-X509\-\_\-\-Object\-::tbs\-\_\-data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__Object_a8dd1e49b0e0cd42418e659cfc6c960d7}
+The underlying data that is to be or was signed \begin{DoxyReturn}{Returns}
+data that is or was signed 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/cert/x509cert/x509\-\_\-obj.\-h\item 
+src/cert/x509cert/x509\-\_\-obj.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,59 @@
+\hypertarget{classBotan_1_1Certificate__Verify}{\section{Botan\-:\-:Certificate\-\_\-\-Verify Class Reference}
+\label{classBotan_1_1Certificate__Verify}\index{Botan\-::\-Certificate\-\_\-\-Verify@{Botan\-::\-Certificate\-\_\-\-Verify}}
+}
+
+
+{\ttfamily \#include $<$tls\-\_\-messages.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Certificate\-\_\-\-Verify\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1Certificate__Verify}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1Certificate__Verify_aa990f430fdd7fb64b1b44697e5ae1d96}{Handshake\-\_\-\-Type {\bfseries type} () const }\label{classBotan_1_1Certificate__Verify_aa990f430fdd7fb64b1b44697e5ae1d96}
+
+\item 
+bool \hyperlink{classBotan_1_1Certificate__Verify_a207634a4c3f3842729f8a67342067284}{verify} (const \hyperlink{classBotan_1_1X509__Certificate}{X509\-\_\-\-Certificate} \&, \hyperlink{classBotan_1_1HandshakeHash}{Handshake\-Hash} \&)
+\item 
+\hyperlink{classBotan_1_1Certificate__Verify_afbe0f247789a908efe0bce68aa70715f}{Certificate\-\_\-\-Verify} (\hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, \hyperlink{classBotan_1_1Record__Writer}{Record\-\_\-\-Writer} \&, \hyperlink{classBotan_1_1HandshakeHash}{Handshake\-Hash} \&, const \hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} $\ast$)
+\item 
+\hypertarget{classBotan_1_1Certificate__Verify_a8d42e753790210e741f24559067a8ee7}{{\bfseries Certificate\-\_\-\-Verify} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&buf)}\label{classBotan_1_1Certificate__Verify_a8d42e753790210e741f24559067a8ee7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1Certificate}{Certificate} Verify Message 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Certificate__Verify_afbe0f247789a908efe0bce68aa70715f}{\index{Botan\-::\-Certificate\-\_\-\-Verify@{Botan\-::\-Certificate\-\_\-\-Verify}!Certificate\-\_\-\-Verify@{Certificate\-\_\-\-Verify}}
+\index{Certificate\-\_\-\-Verify@{Certificate\-\_\-\-Verify}!Botan::Certificate_Verify@{Botan\-::\-Certificate\-\_\-\-Verify}}
+\subsubsection[{Certificate\-\_\-\-Verify}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Certificate\-\_\-\-Verify\-::\-Certificate\-\_\-\-Verify (
+\begin{DoxyParamCaption}
+\item[{{\bf Random\-Number\-Generator} \&}]{rng, }
+\item[{{\bf Record\-\_\-\-Writer} \&}]{writer, }
+\item[{{\bf Handshake\-Hash} \&}]{hash, }
+\item[{const {\bf Private\-\_\-\-Key} $\ast$}]{priv\-\_\-key}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Certificate__Verify_afbe0f247789a908efe0bce68aa70715f}
+Create a new \hyperlink{classBotan_1_1Certificate}{Certificate} Verify message 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Certificate__Verify_a207634a4c3f3842729f8a67342067284}{\index{Botan\-::\-Certificate\-\_\-\-Verify@{Botan\-::\-Certificate\-\_\-\-Verify}!verify@{verify}}
+\index{verify@{verify}!Botan::Certificate_Verify@{Botan\-::\-Certificate\-\_\-\-Verify}}
+\subsubsection[{verify}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-Certificate\-\_\-\-Verify\-::verify (
+\begin{DoxyParamCaption}
+\item[{const {\bf X509\-\_\-\-Certificate} \&}]{cert, }
+\item[{{\bf Handshake\-Hash} \&}]{hash}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Certificate__Verify_a207634a4c3f3842729f8a67342067284}
+Verify a \hyperlink{classBotan_1_1Certificate}{Certificate} Verify message 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/ssl/tls\-\_\-messages.\-h\item 
+src/ssl/cert\-\_\-ver.\-cpp\end{DoxyCompactItemize}

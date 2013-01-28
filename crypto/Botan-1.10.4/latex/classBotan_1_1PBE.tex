@@ -1,0 +1,94 @@
+\hypertarget{classBotan_1_1PBE}{\section{Botan\-:\-:P\-B\-E Class Reference}
+\label{classBotan_1_1PBE}\index{Botan\-::\-P\-B\-E@{Botan\-::\-P\-B\-E}}
+}
+
+
+{\ttfamily \#include $<$pbe.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:P\-B\-E\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBotan_1_1PBE}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classBotan_1_1PBE_abe575e1e215dccf4ebeadc9c4600158d}{set\-\_\-key} (const std\-::string \&pw)=0
+\item 
+virtual void \hyperlink{classBotan_1_1PBE_a21f8bf021ca78ea6a8807c0eef78f034}{new\-\_\-params} (\hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)=0
+\item 
+virtual \hyperlink{classBotan_1_1MemoryVector}{Memory\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1PBE_a787277e0c23c082edc64a6c0f3599035}{encode\-\_\-params} () const =0
+\item 
+virtual void \hyperlink{classBotan_1_1PBE_a334f3f1e844704e017c7fa5757e1f6af}{decode\-\_\-params} (\hyperlink{classBotan_1_1DataSource}{Data\-Source} \&src)=0
+\item 
+virtual \hyperlink{classBotan_1_1OID}{O\-I\-D} \hyperlink{classBotan_1_1PBE_a93f7e1d028e37f1b9bc2f593ad1f4ded}{get\-\_\-oid} () const =0
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Password Based Encryption (\hyperlink{classBotan_1_1PBE}{P\-B\-E}) \hyperlink{classBotan_1_1Filter}{Filter}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1PBE_a334f3f1e844704e017c7fa5757e1f6af}{\index{Botan\-::\-P\-B\-E@{Botan\-::\-P\-B\-E}!decode\-\_\-params@{decode\-\_\-params}}
+\index{decode\-\_\-params@{decode\-\_\-params}!Botan::PBE@{Botan\-::\-P\-B\-E}}
+\subsubsection[{decode\-\_\-params}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Botan\-::\-P\-B\-E\-::decode\-\_\-params (
+\begin{DoxyParamCaption}
+\item[{{\bf Data\-Source} \&}]{src}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1PBE_a334f3f1e844704e017c7fa5757e1f6af}
+Decode params and use them inside this \hyperlink{classBotan_1_1Filter}{Filter}. 
+\begin{DoxyParams}{Parameters}
+{\em src} & a data source to read the encoded params from \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1PBE_a787277e0c23c082edc64a6c0f3599035}{\index{Botan\-::\-P\-B\-E@{Botan\-::\-P\-B\-E}!encode\-\_\-params@{encode\-\_\-params}}
+\index{encode\-\_\-params@{encode\-\_\-params}!Botan::PBE@{Botan\-::\-P\-B\-E}}
+\subsubsection[{encode\-\_\-params}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Memory\-Vector}$<${\bf byte}$>$ Botan\-::\-P\-B\-E\-::encode\-\_\-params (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1PBE_a787277e0c23c082edc64a6c0f3599035}
+D\-E\-R encode the params (the number of iterations and the salt value) \begin{DoxyReturn}{Returns}
+encoded params 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1PBE_a93f7e1d028e37f1b9bc2f593ad1f4ded}{\index{Botan\-::\-P\-B\-E@{Botan\-::\-P\-B\-E}!get\-\_\-oid@{get\-\_\-oid}}
+\index{get\-\_\-oid@{get\-\_\-oid}!Botan::PBE@{Botan\-::\-P\-B\-E}}
+\subsubsection[{get\-\_\-oid}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf O\-I\-D} Botan\-::\-P\-B\-E\-::get\-\_\-oid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1PBE_a93f7e1d028e37f1b9bc2f593ad1f4ded}
+Get this \hyperlink{classBotan_1_1PBE}{P\-B\-E}'s \hyperlink{classBotan_1_1OID}{O\-I\-D}. \begin{DoxyReturn}{Returns}
+object identifier 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1PBE_a21f8bf021ca78ea6a8807c0eef78f034}{\index{Botan\-::\-P\-B\-E@{Botan\-::\-P\-B\-E}!new\-\_\-params@{new\-\_\-params}}
+\index{new\-\_\-params@{new\-\_\-params}!Botan::PBE@{Botan\-::\-P\-B\-E}}
+\subsubsection[{new\-\_\-params}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Botan\-::\-P\-B\-E\-::new\-\_\-params (
+\begin{DoxyParamCaption}
+\item[{{\bf Random\-Number\-Generator} \&}]{rng}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1PBE_a21f8bf021ca78ea6a8807c0eef78f034}
+Create a new random salt value and set the default iterations value. 
+\begin{DoxyParams}{Parameters}
+{\em rng} & a random number generator \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1PBE_abe575e1e215dccf4ebeadc9c4600158d}{\index{Botan\-::\-P\-B\-E@{Botan\-::\-P\-B\-E}!set\-\_\-key@{set\-\_\-key}}
+\index{set\-\_\-key@{set\-\_\-key}!Botan::PBE@{Botan\-::\-P\-B\-E}}
+\subsubsection[{set\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Botan\-::\-P\-B\-E\-::set\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{pw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1PBE_abe575e1e215dccf4ebeadc9c4600158d}
+Set this filter's key. 
+\begin{DoxyParams}{Parameters}
+{\em pw} & the password to be used for the encryption \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/pbe/pbe.\-h\end{DoxyCompactItemize}

@@ -1,0 +1,218 @@
+\hypertarget{classBotan_1_1OctetString}{\section{Botan\-:\-:Octet\-String Class Reference}
+\label{classBotan_1_1OctetString}\index{Botan\-::\-Octet\-String@{Botan\-::\-Octet\-String}}
+}
+
+
+{\ttfamily \#include $<$symkey.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1OctetString_a26259a99efb6b38c9ce3af7e6a51e55c}{length} () const 
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1OctetString_a97c70995fa345c1ea307fa28b0225ca9}{bits\-\_\-of} () const 
+\item 
+const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $\ast$ \hyperlink{classBotan_1_1OctetString_aab1a7fb8b18c309d0d8047b986ebf880}{begin} () const 
+\item 
+const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $\ast$ \hyperlink{classBotan_1_1OctetString_a3b84195f8766997dad8173431e0e14c5}{end} () const 
+\item 
+std\-::string \hyperlink{classBotan_1_1OctetString_a79cee0259b9590c9fd5607be3e267565}{as\-\_\-string} () const 
+\item 
+\hyperlink{classBotan_1_1OctetString}{Octet\-String} \& \hyperlink{classBotan_1_1OctetString_a328cd8c2c14bd97636bca0b4730ab7f5}{operator$^\wedge$=} (const \hyperlink{classBotan_1_1OctetString}{Octet\-String} \&other)
+\item 
+void \hyperlink{classBotan_1_1OctetString_a0e61484ad57061a6db7747ffd463b713}{set\-\_\-odd\-\_\-parity} ()
+\item 
+void \hyperlink{classBotan_1_1OctetString_a8ae294bf500bf27d202fb26292f08826}{change} (const std\-::string \&hex\-\_\-string)
+\item 
+void \hyperlink{classBotan_1_1OctetString_ac947c3c32841ca615c2c825818a5e404}{change} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, size\-\_\-t \hyperlink{classBotan_1_1OctetString_a26259a99efb6b38c9ce3af7e6a51e55c}{length})
+\item 
+void \hyperlink{classBotan_1_1OctetString_a5c4335c43eb7618cec315f1af8155152}{change} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&in)
+\item 
+\hyperlink{classBotan_1_1OctetString_a0ecab245e028c5ab2b5b76a9cb3d2481}{Octet\-String} (class \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, size\-\_\-t len)
+\item 
+\hyperlink{classBotan_1_1OctetString_a29a6f6047cfe6051a9af6da7555336a6}{Octet\-String} (const std\-::string \&str=\char`\"{}\char`\"{})
+\item 
+\hyperlink{classBotan_1_1OctetString_a9857d33fd891d7284f42c42a00a523ce}{Octet\-String} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, size\-\_\-t len)
+\item 
+\hyperlink{classBotan_1_1OctetString_ade9b11d6d47ea1f0f0fd11f3f6d295b2}{Octet\-String} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&in)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Octet String 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1OctetString_a0ecab245e028c5ab2b5b76a9cb3d2481}{\index{Botan\-::\-Octet\-String@{Botan\-::\-Octet\-String}!Octet\-String@{Octet\-String}}
+\index{Octet\-String@{Octet\-String}!Botan::OctetString@{Botan\-::\-Octet\-String}}
+\subsubsection[{Octet\-String}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Octet\-String\-::\-Octet\-String (
+\begin{DoxyParamCaption}
+\item[{class {\bf Random\-Number\-Generator} \&}]{rng, }
+\item[{size\-\_\-t}]{len}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1OctetString_a0ecab245e028c5ab2b5b76a9cb3d2481}
+Create a new random \hyperlink{classBotan_1_1OctetString}{Octet\-String} 
+\begin{DoxyParams}{Parameters}
+{\em rng} & is a random number generator \\
+\hline
+{\em len} & is the desired length in bytes \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1OctetString_a29a6f6047cfe6051a9af6da7555336a6}{\index{Botan\-::\-Octet\-String@{Botan\-::\-Octet\-String}!Octet\-String@{Octet\-String}}
+\index{Octet\-String@{Octet\-String}!Botan::OctetString@{Botan\-::\-Octet\-String}}
+\subsubsection[{Octet\-String}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Octet\-String\-::\-Octet\-String (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1OctetString_a29a6f6047cfe6051a9af6da7555336a6}
+Create a new \hyperlink{classBotan_1_1OctetString}{Octet\-String} 
+\begin{DoxyParams}{Parameters}
+{\em str} & is a hex encoded string \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1OctetString_a9857d33fd891d7284f42c42a00a523ce}{\index{Botan\-::\-Octet\-String@{Botan\-::\-Octet\-String}!Octet\-String@{Octet\-String}}
+\index{Octet\-String@{Octet\-String}!Botan::OctetString@{Botan\-::\-Octet\-String}}
+\subsubsection[{Octet\-String}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Octet\-String\-::\-Octet\-String (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1OctetString_a9857d33fd891d7284f42c42a00a523ce}
+Create a new \hyperlink{classBotan_1_1OctetString}{Octet\-String} 
+\begin{DoxyParams}{Parameters}
+{\em in} & is an array \\
+\hline
+{\em len} & is the length of in in bytes \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1OctetString_ade9b11d6d47ea1f0f0fd11f3f6d295b2}{\index{Botan\-::\-Octet\-String@{Botan\-::\-Octet\-String}!Octet\-String@{Octet\-String}}
+\index{Octet\-String@{Octet\-String}!Botan::OctetString@{Botan\-::\-Octet\-String}}
+\subsubsection[{Octet\-String}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Octet\-String\-::\-Octet\-String (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1OctetString_ade9b11d6d47ea1f0f0fd11f3f6d295b2}
+Create a new \hyperlink{classBotan_1_1OctetString}{Octet\-String} 
+\begin{DoxyParams}{Parameters}
+{\em in} & a bytestring \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1OctetString_a79cee0259b9590c9fd5607be3e267565}{\index{Botan\-::\-Octet\-String@{Botan\-::\-Octet\-String}!as\-\_\-string@{as\-\_\-string}}
+\index{as\-\_\-string@{as\-\_\-string}!Botan::OctetString@{Botan\-::\-Octet\-String}}
+\subsubsection[{as\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Octet\-String\-::as\-\_\-string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1OctetString_a79cee0259b9590c9fd5607be3e267565}
+\begin{DoxyReturn}{Returns}
+this encoded as hex 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1OctetString_aab1a7fb8b18c309d0d8047b986ebf880}{\index{Botan\-::\-Octet\-String@{Botan\-::\-Octet\-String}!begin@{begin}}
+\index{begin@{begin}!Botan::OctetString@{Botan\-::\-Octet\-String}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf byte}$\ast$ Botan\-::\-Octet\-String\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1OctetString_aab1a7fb8b18c309d0d8047b986ebf880}
+\begin{DoxyReturn}{Returns}
+start of this string 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1OctetString_a97c70995fa345c1ea307fa28b0225ca9}{\index{Botan\-::\-Octet\-String@{Botan\-::\-Octet\-String}!bits\-\_\-of@{bits\-\_\-of}}
+\index{bits\-\_\-of@{bits\-\_\-of}!Botan::OctetString@{Botan\-::\-Octet\-String}}
+\subsubsection[{bits\-\_\-of}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<${\bf byte}$>$ Botan\-::\-Octet\-String\-::bits\-\_\-of (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1OctetString_a97c70995fa345c1ea307fa28b0225ca9}
+\begin{DoxyReturn}{Returns}
+this object as a \hyperlink{classBotan_1_1SecureVector}{Secure\-Vector$<$byte$>$} 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1OctetString_a8ae294bf500bf27d202fb26292f08826}{\index{Botan\-::\-Octet\-String@{Botan\-::\-Octet\-String}!change@{change}}
+\index{change@{change}!Botan::OctetString@{Botan\-::\-Octet\-String}}
+\subsubsection[{change}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Octet\-String\-::change (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{hex\-\_\-string}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1OctetString_a8ae294bf500bf27d202fb26292f08826}
+Change the contents of this octet string 
+\begin{DoxyParams}{Parameters}
+{\em hex\-\_\-string} & a hex encoded bytestring \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1OctetString_ac947c3c32841ca615c2c825818a5e404}{\index{Botan\-::\-Octet\-String@{Botan\-::\-Octet\-String}!change@{change}}
+\index{change@{change}!Botan::OctetString@{Botan\-::\-Octet\-String}}
+\subsubsection[{change}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Octet\-String\-::change (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1OctetString_ac947c3c32841ca615c2c825818a5e404}
+Change the contents of this octet string 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input \\
+\hline
+{\em length} & of in in bytes \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1OctetString_a5c4335c43eb7618cec315f1af8155152}{\index{Botan\-::\-Octet\-String@{Botan\-::\-Octet\-String}!change@{change}}
+\index{change@{change}!Botan::OctetString@{Botan\-::\-Octet\-String}}
+\subsubsection[{change}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Octet\-String\-::change (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1OctetString_a5c4335c43eb7618cec315f1af8155152}
+Change the contents of this octet string 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1OctetString_a3b84195f8766997dad8173431e0e14c5}{\index{Botan\-::\-Octet\-String@{Botan\-::\-Octet\-String}!end@{end}}
+\index{end@{end}!Botan::OctetString@{Botan\-::\-Octet\-String}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf byte}$\ast$ Botan\-::\-Octet\-String\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1OctetString_a3b84195f8766997dad8173431e0e14c5}
+\begin{DoxyReturn}{Returns}
+end of this string 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1OctetString_a26259a99efb6b38c9ce3af7e6a51e55c}{\index{Botan\-::\-Octet\-String@{Botan\-::\-Octet\-String}!length@{length}}
+\index{length@{length}!Botan::OctetString@{Botan\-::\-Octet\-String}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Octet\-String\-::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1OctetString_a26259a99efb6b38c9ce3af7e6a51e55c}
+\begin{DoxyReturn}{Returns}
+size of this octet string in bytes 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1OctetString_a328cd8c2c14bd97636bca0b4730ab7f5}{\index{Botan\-::\-Octet\-String@{Botan\-::\-Octet\-String}!operator$^\wedge$=@{operator$^\wedge$=}}
+\index{operator$^\wedge$=@{operator$^\wedge$=}!Botan::OctetString@{Botan\-::\-Octet\-String}}
+\subsubsection[{operator$^\wedge$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Octet\-String} \& Botan\-::\-Octet\-String\-::operator$^\wedge$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Octet\-String} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1OctetString_a328cd8c2c14bd97636bca0b4730ab7f5}
+X\-O\-R the contents of another octet string into this one 
+\begin{DoxyParams}{Parameters}
+{\em other} & octet string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to this 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1OctetString_a0e61484ad57061a6db7747ffd463b713}{\index{Botan\-::\-Octet\-String@{Botan\-::\-Octet\-String}!set\-\_\-odd\-\_\-parity@{set\-\_\-odd\-\_\-parity}}
+\index{set\-\_\-odd\-\_\-parity@{set\-\_\-odd\-\_\-parity}!Botan::OctetString@{Botan\-::\-Octet\-String}}
+\subsubsection[{set\-\_\-odd\-\_\-parity}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Octet\-String\-::set\-\_\-odd\-\_\-parity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1OctetString_a0e61484ad57061a6db7747ffd463b713}
+Force to have odd parity 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/algo\-\_\-base/symkey.\-h\item 
+src/algo\-\_\-base/symkey.\-cpp\end{DoxyCompactItemize}

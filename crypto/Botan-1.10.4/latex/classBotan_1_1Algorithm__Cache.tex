@@ -1,0 +1,123 @@
+\hypertarget{classBotan_1_1Algorithm__Cache}{\section{Botan\-:\-:Algorithm\-\_\-\-Cache$<$ T $>$ Class Template Reference}
+\label{classBotan_1_1Algorithm__Cache}\index{Botan\-::\-Algorithm\-\_\-\-Cache$<$ T $>$@{Botan\-::\-Algorithm\-\_\-\-Cache$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$algo\-\_\-cache.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const T $\ast$ \hyperlink{classBotan_1_1Algorithm__Cache_a7cc4676a7576c1dc921ca5564fe637e0}{get} (const std\-::string \&algo\-\_\-spec, const std\-::string \&pref\-\_\-provider)
+\item 
+void \hyperlink{classBotan_1_1Algorithm__Cache_a9dd5c9af1667e3d9e56d7985ed58a17c}{add} (T $\ast$algo, const std\-::string \&requested\-\_\-name, const std\-::string \&provider\-\_\-name)
+\item 
+void \hyperlink{classBotan_1_1Algorithm__Cache_a8be5ad1ad3c0aea9cbfd766c6f84a325}{set\-\_\-preferred\-\_\-provider} (const std\-::string \&algo\-\_\-spec, const std\-::string \&provider)
+\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{classBotan_1_1Algorithm__Cache_a5cc15c771e4f045b257af0f3997aa33f}{providers\-\_\-of} (const std\-::string \&algo\-\_\-name)
+\item 
+void \hyperlink{classBotan_1_1Algorithm__Cache_a51a201e3a73394738c00a189520641b8}{clear\-\_\-cache} ()
+\item 
+\hyperlink{classBotan_1_1Algorithm__Cache_ace8eaefcb3a4aac5c12f747ccc5f5ef1}{Algorithm\-\_\-\-Cache} (\hyperlink{classBotan_1_1Mutex}{Mutex} $\ast$m)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class Botan\-::\-Algorithm\-\_\-\-Cache$<$ T $>$}
+
+\hyperlink{classBotan_1_1Algorithm__Cache}{Algorithm\-\_\-\-Cache} (used by \hyperlink{classBotan_1_1Algorithm__Factory}{Algorithm\-\_\-\-Factory}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Algorithm__Cache_ace8eaefcb3a4aac5c12f747ccc5f5ef1}{\index{Botan\-::\-Algorithm\-\_\-\-Cache@{Botan\-::\-Algorithm\-\_\-\-Cache}!Algorithm\-\_\-\-Cache@{Algorithm\-\_\-\-Cache}}
+\index{Algorithm\-\_\-\-Cache@{Algorithm\-\_\-\-Cache}!Botan::Algorithm_Cache@{Botan\-::\-Algorithm\-\_\-\-Cache}}
+\subsubsection[{Algorithm\-\_\-\-Cache}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Botan\-::\-Algorithm\-\_\-\-Cache}$<$ T $>$\-::{\bf Algorithm\-\_\-\-Cache} (
+\begin{DoxyParamCaption}
+\item[{{\bf Mutex} $\ast$}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1Algorithm__Cache_ace8eaefcb3a4aac5c12f747ccc5f5ef1}
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em m} & a mutex to serialize internal access \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Algorithm__Cache_a9dd5c9af1667e3d9e56d7985ed58a17c}{\index{Botan\-::\-Algorithm\-\_\-\-Cache@{Botan\-::\-Algorithm\-\_\-\-Cache}!add@{add}}
+\index{add@{add}!Botan::Algorithm_Cache@{Botan\-::\-Algorithm\-\_\-\-Cache}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Botan\-::\-Algorithm\-\_\-\-Cache}$<$ T $>$\-::add (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{algo, }
+\item[{const std\-::string \&}]{requested\-\_\-name, }
+\item[{const std\-::string \&}]{provider\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Cache_a9dd5c9af1667e3d9e56d7985ed58a17c}
+Add a new algorithm implementation to the cache 
+\begin{DoxyParams}{Parameters}
+{\em algo} & the algorithm prototype object \\
+\hline
+{\em requested\-\_\-name} & how this name will be requested \\
+\hline
+{\em provider\-\_\-name} & is the name of the provider of this prototype \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Algorithm__Cache_a51a201e3a73394738c00a189520641b8}{\index{Botan\-::\-Algorithm\-\_\-\-Cache@{Botan\-::\-Algorithm\-\_\-\-Cache}!clear\-\_\-cache@{clear\-\_\-cache}}
+\index{clear\-\_\-cache@{clear\-\_\-cache}!Botan::Algorithm_Cache@{Botan\-::\-Algorithm\-\_\-\-Cache}}
+\subsubsection[{clear\-\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Botan\-::\-Algorithm\-\_\-\-Cache}$<$ T $>$\-::clear\-\_\-cache (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Cache_a51a201e3a73394738c00a189520641b8}
+Clear the cache \hypertarget{classBotan_1_1Algorithm__Cache_a7cc4676a7576c1dc921ca5564fe637e0}{\index{Botan\-::\-Algorithm\-\_\-\-Cache@{Botan\-::\-Algorithm\-\_\-\-Cache}!get@{get}}
+\index{get@{get}!Botan::Algorithm_Cache@{Botan\-::\-Algorithm\-\_\-\-Cache}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const T $\ast$ {\bf Botan\-::\-Algorithm\-\_\-\-Cache}$<$ T $>$\-::get (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{algo\-\_\-spec, }
+\item[{const std\-::string \&}]{pref\-\_\-provider}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Cache_a7cc4676a7576c1dc921ca5564fe637e0}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & names the requested algorithm \\
+\hline
+{\em pref\-\_\-provider} & suggests a preferred provider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+prototype object, or N\-U\-L\-L 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Algorithm__Cache_a5cc15c771e4f045b257af0f3997aa33f}{\index{Botan\-::\-Algorithm\-\_\-\-Cache@{Botan\-::\-Algorithm\-\_\-\-Cache}!providers\-\_\-of@{providers\-\_\-of}}
+\index{providers\-\_\-of@{providers\-\_\-of}!Botan::Algorithm_Cache@{Botan\-::\-Algorithm\-\_\-\-Cache}}
+\subsubsection[{providers\-\_\-of}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::vector$<$ std\-::string $>$ {\bf Botan\-::\-Algorithm\-\_\-\-Cache}$<$ T $>$\-::providers\-\_\-of (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{algo\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Cache_a5cc15c771e4f045b257af0f3997aa33f}
+Return the list of providers of this algorithm 
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-name} & names the algorithm \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of providers of this algorithm 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Algorithm__Cache_a8be5ad1ad3c0aea9cbfd766c6f84a325}{\index{Botan\-::\-Algorithm\-\_\-\-Cache@{Botan\-::\-Algorithm\-\_\-\-Cache}!set\-\_\-preferred\-\_\-provider@{set\-\_\-preferred\-\_\-provider}}
+\index{set\-\_\-preferred\-\_\-provider@{set\-\_\-preferred\-\_\-provider}!Botan::Algorithm_Cache@{Botan\-::\-Algorithm\-\_\-\-Cache}}
+\subsubsection[{set\-\_\-preferred\-\_\-provider}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Botan\-::\-Algorithm\-\_\-\-Cache}$<$ T $>$\-::set\-\_\-preferred\-\_\-provider (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{algo\-\_\-spec, }
+\item[{const std\-::string \&}]{provider}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Algorithm__Cache_a8be5ad1ad3c0aea9cbfd766c6f84a325}
+Set the preferred provider 
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & names the algorithm \\
+\hline
+{\em provider} & names the preferred provider \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/algo\-\_\-factory/algo\-\_\-cache.\-h\end{DoxyCompactItemize}

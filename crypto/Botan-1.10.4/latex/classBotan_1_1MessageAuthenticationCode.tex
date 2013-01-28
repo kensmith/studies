@@ -1,0 +1,81 @@
+\hypertarget{classBotan_1_1MessageAuthenticationCode}{\section{Botan\-:\-:Message\-Authentication\-Code Class Reference}
+\label{classBotan_1_1MessageAuthenticationCode}\index{Botan\-::\-Message\-Authentication\-Code@{Botan\-::\-Message\-Authentication\-Code}}
+}
+
+
+{\ttfamily \#include $<$mac.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Message\-Authentication\-Code\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.045662cm]{classBotan_1_1MessageAuthenticationCode}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classBotan_1_1MessageAuthenticationCode_a976f69645f9af1f99edb93912218497e}{verify\-\_\-mac} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, size\-\_\-t length)
+\item 
+virtual \hyperlink{classBotan_1_1MessageAuthenticationCode}{Message\-Authentication\-Code} $\ast$ \hyperlink{classBotan_1_1MessageAuthenticationCode_aa5b3c755f4f1732b9c239abbc0a78b9c}{clone} () const =0
+\item 
+virtual std\-::string \hyperlink{classBotan_1_1MessageAuthenticationCode_ad55f85c233b06772d43a5115c7f2fc64}{name} () const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents Message Authentication Code (M\-A\-C) objects. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1MessageAuthenticationCode_aa5b3c755f4f1732b9c239abbc0a78b9c}{\index{Botan\-::\-Message\-Authentication\-Code@{Botan\-::\-Message\-Authentication\-Code}!clone@{clone}}
+\index{clone@{clone}!Botan::MessageAuthenticationCode@{Botan\-::\-Message\-Authentication\-Code}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Message\-Authentication\-Code}$\ast$ Botan\-::\-Message\-Authentication\-Code\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1MessageAuthenticationCode_aa5b3c755f4f1732b9c239abbc0a78b9c}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implemented in \hyperlink{classBotan_1_1ANSI__X919__MAC_a2112de3be3b9c23417c93b11e7969657}{Botan\-::\-A\-N\-S\-I\-\_\-\-X919\-\_\-\-M\-A\-C}, \hyperlink{classBotan_1_1CMAC_a379d3b431220b7372384f1447b153348}{Botan\-::\-C\-M\-A\-C}, \hyperlink{classBotan_1_1HMAC_a51b4925f8c7da7545759c3d1c9dd15ce}{Botan\-::\-H\-M\-A\-C}, \hyperlink{classBotan_1_1SSL3__MAC_a195a02ee9068a8653c1d7e3b0aea5fc6}{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C}, and \hyperlink{classBotan_1_1CBC__MAC_a6b9a12f092faf4d3639c96c20efe57c7}{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C}.
+
+\hypertarget{classBotan_1_1MessageAuthenticationCode_ad55f85c233b06772d43a5115c7f2fc64}{\index{Botan\-::\-Message\-Authentication\-Code@{Botan\-::\-Message\-Authentication\-Code}!name@{name}}
+\index{name@{name}!Botan::MessageAuthenticationCode@{Botan\-::\-Message\-Authentication\-Code}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string Botan\-::\-Message\-Authentication\-Code\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1MessageAuthenticationCode_ad55f85c233b06772d43a5115c7f2fc64}
+Get the name of this algorithm. \begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+
+
+Implemented in \hyperlink{classBotan_1_1HMAC_a91084b8a46c47a7f589008039a48669e}{Botan\-::\-H\-M\-A\-C}, \hyperlink{classBotan_1_1ANSI__X919__MAC_a659553433b921b5712acdec71f324a53}{Botan\-::\-A\-N\-S\-I\-\_\-\-X919\-\_\-\-M\-A\-C}, \hyperlink{classBotan_1_1CBC__MAC_ac81c88175ee94ce6c8f10f0a18a5be21}{Botan\-::\-C\-B\-C\-\_\-\-M\-A\-C}, \hyperlink{classBotan_1_1CMAC_a50ac5f7889034db2f20366ece8d3270e}{Botan\-::\-C\-M\-A\-C}, and \hyperlink{classBotan_1_1SSL3__MAC_aba5b648fefb35c752b8765064be6576d}{Botan\-::\-S\-S\-L3\-\_\-\-M\-A\-C}.
+
+\hypertarget{classBotan_1_1MessageAuthenticationCode_a976f69645f9af1f99edb93912218497e}{\index{Botan\-::\-Message\-Authentication\-Code@{Botan\-::\-Message\-Authentication\-Code}!verify\-\_\-mac@{verify\-\_\-mac}}
+\index{verify\-\_\-mac@{verify\-\_\-mac}!Botan::MessageAuthenticationCode@{Botan\-::\-Message\-Authentication\-Code}}
+\subsubsection[{verify\-\_\-mac}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-Message\-Authentication\-Code\-::verify\-\_\-mac (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1MessageAuthenticationCode_a976f69645f9af1f99edb93912218497e}
+Verify a M\-A\-C. 
+\begin{DoxyParams}{Parameters}
+{\em in} & the M\-A\-C to verify as a byte array \\
+\hline
+{\em length} & the length of param in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the M\-A\-C is valid, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/mac/mac.\-h\item 
+src/mac/mac.\-cpp\end{DoxyCompactItemize}

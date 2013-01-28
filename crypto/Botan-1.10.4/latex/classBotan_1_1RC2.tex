@@ -1,0 +1,139 @@
+\hypertarget{classBotan_1_1RC2}{\section{Botan\-:\-:R\-C2 Class Reference}
+\label{classBotan_1_1RC2}\index{Botan\-::\-R\-C2@{Botan\-::\-R\-C2}}
+}
+
+
+{\ttfamily \#include $<$rc2.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:R\-C2\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classBotan_1_1RC2}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1RC2_ab44b8601d594d4e5502d0b4cf01f0440}{encrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+void \hyperlink{classBotan_1_1RC2_ac6135fcb2c2258de5bd06f48def26dca}{decrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+void \hyperlink{classBotan_1_1RC2_a1b2b1f42ed9af1ef5a9957ff2f9f8e3a}{clear} ()
+\item 
+std\-::string \hyperlink{classBotan_1_1RC2_a221b3e799b06b26ef59b701c6b7cfa26}{name} () const 
+\item 
+\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$ \hyperlink{classBotan_1_1RC2_a49061d3f7e52c0e2c66dca7a5768651f}{clone} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} \hyperlink{classBotan_1_1RC2_a98f8e9280df39e368daa9a50ca21e1bd}{E\-K\-B\-\_\-code} (size\-\_\-t bits)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1RC2}{R\-C2} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1RC2_a1b2b1f42ed9af1ef5a9957ff2f9f8e3a}{\index{Botan\-::\-R\-C2@{Botan\-::\-R\-C2}!clear@{clear}}
+\index{clear@{clear}!Botan::RC2@{Botan\-::\-R\-C2}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-R\-C2\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1RC2_a1b2b1f42ed9af1ef5a9957ff2f9f8e3a}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1RC2_a49061d3f7e52c0e2c66dca7a5768651f}{\index{Botan\-::\-R\-C2@{Botan\-::\-R\-C2}!clone@{clone}}
+\index{clone@{clone}!Botan::RC2@{Botan\-::\-R\-C2}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Cipher}$\ast$ Botan\-::\-R\-C2\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1RC2_a49061d3f7e52c0e2c66dca7a5768651f}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a9feaf7c1bfb5279a1652c849054e033c}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1RC2_ac6135fcb2c2258de5bd06f48def26dca}{\index{Botan\-::\-R\-C2@{Botan\-::\-R\-C2}!decrypt\-\_\-n@{decrypt\-\_\-n}}
+\index{decrypt\-\_\-n@{decrypt\-\_\-n}!Botan::RC2@{Botan\-::\-R\-C2}}
+\subsubsection[{decrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-R\-C2\-::decrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1RC2_ac6135fcb2c2258de5bd06f48def26dca}
+Decrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a6ea709632f78d833484a4d67de25e1a8}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1RC2_a98f8e9280df39e368daa9a50ca21e1bd}{\index{Botan\-::\-R\-C2@{Botan\-::\-R\-C2}!E\-K\-B\-\_\-code@{E\-K\-B\-\_\-code}}
+\index{E\-K\-B\-\_\-code@{E\-K\-B\-\_\-code}!Botan::RC2@{Botan\-::\-R\-C2}}
+\subsubsection[{E\-K\-B\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} Botan\-::\-R\-C2\-::\-E\-K\-B\-\_\-code (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{bits}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classBotan_1_1RC2_a98f8e9280df39e368daa9a50ca21e1bd}
+Return the code of the effective key bits 
+\begin{DoxyParams}{Parameters}
+{\em bits} & key length \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-K\-B code 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1RC2_ab44b8601d594d4e5502d0b4cf01f0440}{\index{Botan\-::\-R\-C2@{Botan\-::\-R\-C2}!encrypt\-\_\-n@{encrypt\-\_\-n}}
+\index{encrypt\-\_\-n@{encrypt\-\_\-n}!Botan::RC2@{Botan\-::\-R\-C2}}
+\subsubsection[{encrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-R\-C2\-::encrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1RC2_ab44b8601d594d4e5502d0b4cf01f0440}
+Encrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a16a7005967a910407703c2899bd73ccf}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1RC2_a221b3e799b06b26ef59b701c6b7cfa26}{\index{Botan\-::\-R\-C2@{Botan\-::\-R\-C2}!name@{name}}
+\index{name@{name}!Botan::RC2@{Botan\-::\-R\-C2}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-R\-C2\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1RC2_a221b3e799b06b26ef59b701c6b7cfa26}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/block/rc2/rc2.\-h\item 
+src/block/rc2/rc2.\-cpp\end{DoxyCompactItemize}

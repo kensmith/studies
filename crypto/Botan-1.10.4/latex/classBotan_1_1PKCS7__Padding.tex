@@ -1,0 +1,110 @@
+\hypertarget{classBotan_1_1PKCS7__Padding}{\section{Botan\-:\-:P\-K\-C\-S7\-\_\-\-Padding Class Reference}
+\label{classBotan_1_1PKCS7__Padding}\index{Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding@{Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding}}
+}
+
+
+{\ttfamily \#include $<$mode\-\_\-pad.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:P\-K\-C\-S7\-\_\-\-Padding\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1PKCS7__Padding}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1PKCS7__Padding_affba3107036108263906e0e704c02143}{pad} (\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t, size\-\_\-t) const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1PKCS7__Padding_a64ad1c901d16cc7179b7f3c35c8e1de0}{unpad} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t) const 
+\item 
+bool \hyperlink{classBotan_1_1PKCS7__Padding_aa2dfd809e5501597ccf084565c854e42}{valid\-\_\-blocksize} (size\-\_\-t) const 
+\item 
+std\-::string \hyperlink{classBotan_1_1PKCS7__Padding_a2ff0d658e6ff44c72f21becd195a9b0a}{name} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\-K\-C\-S\#7 Padding 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1PKCS7__Padding_a2ff0d658e6ff44c72f21becd195a9b0a}{\index{Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding@{Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding}!name@{name}}
+\index{name@{name}!Botan::PKCS7_Padding@{Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1PKCS7__Padding_a2ff0d658e6ff44c72f21becd195a9b0a}
+\begin{DoxyReturn}{Returns}
+name of the mode 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipherModePaddingMethod_a02d1dd1cbc869bf78e241c5c7613e4a7}{Botan\-::\-Block\-Cipher\-Mode\-Padding\-Method}.
+
+\hypertarget{classBotan_1_1PKCS7__Padding_affba3107036108263906e0e704c02143}{\index{Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding@{Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding}!pad@{pad}}
+\index{pad@{pad}!Botan::PKCS7_Padding@{Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding}}
+\subsubsection[{pad}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding\-::pad (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{block\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{size, }
+\item[{size\-\_\-t}]{current\-\_\-position}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1PKCS7__Padding_affba3107036108263906e0e704c02143}
+
+\begin{DoxyParams}{Parameters}
+{\em block} & output buffer \\
+\hline
+{\em size} & of the block \\
+\hline
+{\em current\-\_\-position} & in the last block \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipherModePaddingMethod_a75f5e0766e4b8489ca1ac652a3adc737}{Botan\-::\-Block\-Cipher\-Mode\-Padding\-Method}.
+
+\hypertarget{classBotan_1_1PKCS7__Padding_a64ad1c901d16cc7179b7f3c35c8e1de0}{\index{Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding@{Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding}!unpad@{unpad}}
+\index{unpad@{unpad}!Botan::PKCS7_Padding@{Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding}}
+\subsubsection[{unpad}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding\-::unpad (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{block\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1PKCS7__Padding_a64ad1c901d16cc7179b7f3c35c8e1de0}
+
+\begin{DoxyParams}{Parameters}
+{\em block} & the last block \\
+\hline
+{\em size} & the of the block \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipherModePaddingMethod_a122aa6c16ca4ce44667f7d6b8141fa73}{Botan\-::\-Block\-Cipher\-Mode\-Padding\-Method}.
+
+\hypertarget{classBotan_1_1PKCS7__Padding_aa2dfd809e5501597ccf084565c854e42}{\index{Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding@{Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding}!valid\-\_\-blocksize@{valid\-\_\-blocksize}}
+\index{valid\-\_\-blocksize@{valid\-\_\-blocksize}!Botan::PKCS7_Padding@{Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding}}
+\subsubsection[{valid\-\_\-blocksize}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-P\-K\-C\-S7\-\_\-\-Padding\-::valid\-\_\-blocksize (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{block\-\_\-size}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1PKCS7__Padding_aa2dfd809e5501597ccf084565c854e42}
+
+\begin{DoxyParams}{Parameters}
+{\em block\-\_\-size} & of the cipher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valid block size for this padding mode 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipherModePaddingMethod_a49f6743ae35a39d462de148c05202227}{Botan\-::\-Block\-Cipher\-Mode\-Padding\-Method}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/filters/modes/mode\-\_\-pad/mode\-\_\-pad.\-h\item 
+src/filters/modes/mode\-\_\-pad/mode\-\_\-pad.\-cpp\end{DoxyCompactItemize}

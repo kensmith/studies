@@ -1,0 +1,148 @@
+\hypertarget{classBotan_1_1MD4}{\section{Botan\-:\-:M\-D4 Class Reference}
+\label{classBotan_1_1MD4}\index{Botan\-::\-M\-D4@{Botan\-::\-M\-D4}}
+}
+
+
+{\ttfamily \#include $<$md4.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:M\-D4\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classBotan_1_1MD4}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1MD4_ad49d2a78c001437c42166c1f60aeaee5}{name} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1MD4_a85cd805e6b212e83946e0d92eb9ad68c}{output\-\_\-length} () const 
+\item 
+\hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$ \hyperlink{classBotan_1_1MD4_a2d84197fe3b3b547f1e2cd3ecf22c60b}{clone} () const 
+\item 
+void \hyperlink{classBotan_1_1MD4_a076e596492b7a4cb943ea554128274d7}{clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1MD4_a243bacd798bd7bffef7ba8064473d78a}{compress\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} input\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks)
+\item 
+void \hyperlink{classBotan_1_1MD4_a9241c112ba5e0e1c0a54831846dc0be1}{copy\-\_\-out} (\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} $>$ \hyperlink{classBotan_1_1MD4_a5a6cd85b1feadc4fc9b48ee83b421106}{M}
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} $>$ \hyperlink{classBotan_1_1MD4_a7bd4eab380df0076c137fefdbedf2121}{digest}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1MD4}{M\-D4} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1MD4_a076e596492b7a4cb943ea554128274d7}{\index{Botan\-::\-M\-D4@{Botan\-::\-M\-D4}!clear@{clear}}
+\index{clear@{clear}!Botan::MD4@{Botan\-::\-M\-D4}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-M\-D4\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1MD4_a076e596492b7a4cb943ea554128274d7}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1MD4_a2d84197fe3b3b547f1e2cd3ecf22c60b}{\index{Botan\-::\-M\-D4@{Botan\-::\-M\-D4}!clone@{clone}}
+\index{clone@{clone}!Botan::MD4@{Botan\-::\-M\-D4}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hash\-Function}$\ast$ Botan\-::\-M\-D4\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1MD4_a2d84197fe3b3b547f1e2cd3ecf22c60b}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1HashFunction_aaa2b17b63215ae970d9b5d5044cc208a}{Botan\-::\-Hash\-Function}.
+
+
+
+Reimplemented in \hyperlink{classBotan_1_1MD4__X86__32_a8f248a91d448175ba3d7c426cc6a03cb}{Botan\-::\-M\-D4\-\_\-\-X86\-\_\-32}.
+
+\hypertarget{classBotan_1_1MD4_a243bacd798bd7bffef7ba8064473d78a}{\index{Botan\-::\-M\-D4@{Botan\-::\-M\-D4}!compress\-\_\-n@{compress\-\_\-n}}
+\index{compress\-\_\-n@{compress\-\_\-n}!Botan::MD4@{Botan\-::\-M\-D4}}
+\subsubsection[{compress\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-M\-D4\-::compress\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{blocks\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{block\-\_\-n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classBotan_1_1MD4_a243bacd798bd7bffef7ba8064473d78a}
+Run the hash's compression function over a set of blocks 
+\begin{DoxyParams}{Parameters}
+{\em blocks} & the input \\
+\hline
+{\em block\-\_\-n} & the number of blocks \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1MDx__HashFunction_a6b8d4468c51210a8b4686eb1a2d63bdb}{Botan\-::\-M\-Dx\-\_\-\-Hash\-Function}.
+
+\hypertarget{classBotan_1_1MD4_a9241c112ba5e0e1c0a54831846dc0be1}{\index{Botan\-::\-M\-D4@{Botan\-::\-M\-D4}!copy\-\_\-out@{copy\-\_\-out}}
+\index{copy\-\_\-out@{copy\-\_\-out}!Botan::MD4@{Botan\-::\-M\-D4}}
+\subsubsection[{copy\-\_\-out}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-M\-D4\-::copy\-\_\-out (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{buffer\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classBotan_1_1MD4_a9241c112ba5e0e1c0a54831846dc0be1}
+Copy the output to the buffer 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & to put the output into \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1MDx__HashFunction_ab2f1da9783cfcf5970e468f846196686}{Botan\-::\-M\-Dx\-\_\-\-Hash\-Function}.
+
+\hypertarget{classBotan_1_1MD4_ad49d2a78c001437c42166c1f60aeaee5}{\index{Botan\-::\-M\-D4@{Botan\-::\-M\-D4}!name@{name}}
+\index{name@{name}!Botan::MD4@{Botan\-::\-M\-D4}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-M\-D4\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1MD4_ad49d2a78c001437c42166c1f60aeaee5}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1MD4_a85cd805e6b212e83946e0d92eb9ad68c}{\index{Botan\-::\-M\-D4@{Botan\-::\-M\-D4}!output\-\_\-length@{output\-\_\-length}}
+\index{output\-\_\-length@{output\-\_\-length}!Botan::MD4@{Botan\-::\-M\-D4}}
+\subsubsection[{output\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-M\-D4\-::output\-\_\-length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1MD4_a85cd805e6b212e83946e0d92eb9ad68c}
+\begin{DoxyReturn}{Returns}
+length of the output of this function in bytes 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Buffered__Computation_a7b2e6776ea9ded2e3f9da5a760b7d34b}{Botan\-::\-Buffered\-\_\-\-Computation}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classBotan_1_1MD4_a7bd4eab380df0076c137fefdbedf2121}{\index{Botan\-::\-M\-D4@{Botan\-::\-M\-D4}!digest@{digest}}
+\index{digest@{digest}!Botan::MD4@{Botan\-::\-M\-D4}}
+\subsubsection[{digest}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<${\bf u32bit}$>$ Botan\-::\-M\-D4\-::digest\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBotan_1_1MD4_a7bd4eab380df0076c137fefdbedf2121}
+The digest value, exposed for use by subclasses (x86 asm) \hypertarget{classBotan_1_1MD4_a5a6cd85b1feadc4fc9b48ee83b421106}{\index{Botan\-::\-M\-D4@{Botan\-::\-M\-D4}!M@{M}}
+\index{M@{M}!Botan::MD4@{Botan\-::\-M\-D4}}
+\subsubsection[{M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<${\bf u32bit}$>$ Botan\-::\-M\-D4\-::\-M\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBotan_1_1MD4_a5a6cd85b1feadc4fc9b48ee83b421106}
+The message buffer, exposed for use by subclasses (x86 asm) 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/hash/md4/md4.\-h\item 
+src/hash/md4/md4.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,116 @@
+\hypertarget{classBotan_1_1Hash__Filter}{\section{Botan\-:\-:Hash\-\_\-\-Filter Class Reference}
+\label{classBotan_1_1Hash__Filter}\index{Botan\-::\-Hash\-\_\-\-Filter@{Botan\-::\-Hash\-\_\-\-Filter}}
+}
+
+
+{\ttfamily \#include $<$filters.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Hash\-\_\-\-Filter\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1Hash__Filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1Hash__Filter_a601f395b680e3bdb04977da8b6cd9d6a}{write} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} input\mbox{[}$\,$\mbox{]}, size\-\_\-t len)
+\item 
+void \hyperlink{classBotan_1_1Hash__Filter_a83140a5d46d7826b448b4f9e05fb8a5f}{end\-\_\-msg} ()
+\item 
+std\-::string \hyperlink{classBotan_1_1Hash__Filter_a22e47b9b2857439231a21079b0735288}{name} () const 
+\item 
+\hyperlink{classBotan_1_1Hash__Filter_a863b7d94f99235b018bc05c16822b69c}{Hash\-\_\-\-Filter} (\hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$hash\-\_\-fun, size\-\_\-t len=0)
+\item 
+\hyperlink{classBotan_1_1Hash__Filter_a748c7ed5f126ec67e8a24a6956d0e233}{Hash\-\_\-\-Filter} (const std\-::string \&request, size\-\_\-t len=0)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Hash \hyperlink{classBotan_1_1Filter}{Filter}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Hash__Filter_a863b7d94f99235b018bc05c16822b69c}{\index{Botan\-::\-Hash\-\_\-\-Filter@{Botan\-::\-Hash\-\_\-\-Filter}!Hash\-\_\-\-Filter@{Hash\-\_\-\-Filter}}
+\index{Hash\-\_\-\-Filter@{Hash\-\_\-\-Filter}!Botan::Hash_Filter@{Botan\-::\-Hash\-\_\-\-Filter}}
+\subsubsection[{Hash\-\_\-\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Hash\-\_\-\-Filter\-::\-Hash\-\_\-\-Filter (
+\begin{DoxyParamCaption}
+\item[{{\bf Hash\-Function} $\ast$}]{hash\-\_\-fun, }
+\item[{size\-\_\-t}]{len = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1Hash__Filter_a863b7d94f99235b018bc05c16822b69c}
+Construct a hash filter. 
+\begin{DoxyParams}{Parameters}
+{\em hash\-\_\-fun} & the hash function to use \\
+\hline
+{\em len} & the output length of this filter. Leave the default value 0 if you want to use the full output of the hashfunction hash. Otherwise, specify a smaller value here so that the output of the hash algorithm will be cut off. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1Hash__Filter_a748c7ed5f126ec67e8a24a6956d0e233}{\index{Botan\-::\-Hash\-\_\-\-Filter@{Botan\-::\-Hash\-\_\-\-Filter}!Hash\-\_\-\-Filter@{Hash\-\_\-\-Filter}}
+\index{Hash\-\_\-\-Filter@{Hash\-\_\-\-Filter}!Botan::Hash_Filter@{Botan\-::\-Hash\-\_\-\-Filter}}
+\subsubsection[{Hash\-\_\-\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Hash\-\_\-\-Filter\-::\-Hash\-\_\-\-Filter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{request, }
+\item[{size\-\_\-t}]{len = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Hash__Filter_a748c7ed5f126ec67e8a24a6956d0e233}
+Construct a hash filter. 
+\begin{DoxyParams}{Parameters}
+{\em request} & the name of the hash algorithm to use \\
+\hline
+{\em len} & the output length of this filter. Leave the default value 0 if you want to use the full output of the hashfunction hash. Otherwise, specify a smaller value here so that the output of the hash algorithm will be cut off. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Hash__Filter_a83140a5d46d7826b448b4f9e05fb8a5f}{\index{Botan\-::\-Hash\-\_\-\-Filter@{Botan\-::\-Hash\-\_\-\-Filter}!end\-\_\-msg@{end\-\_\-msg}}
+\index{end\-\_\-msg@{end\-\_\-msg}!Botan::Hash_Filter@{Botan\-::\-Hash\-\_\-\-Filter}}
+\subsubsection[{end\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Hash\-\_\-\-Filter\-::end\-\_\-msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Hash__Filter_a83140a5d46d7826b448b4f9e05fb8a5f}
+Notify that the current message is finished; flush buffers and do end-\/of-\/message processing (if any). 
+
+Reimplemented from \hyperlink{classBotan_1_1Filter_a5378ec3bf4adf860a4cfa01cfc51e20e}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1Hash__Filter_a22e47b9b2857439231a21079b0735288}{\index{Botan\-::\-Hash\-\_\-\-Filter@{Botan\-::\-Hash\-\_\-\-Filter}!name@{name}}
+\index{name@{name}!Botan::Hash_Filter@{Botan\-::\-Hash\-\_\-\-Filter}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Hash\-\_\-\-Filter\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Hash__Filter_a22e47b9b2857439231a21079b0735288}
+\begin{DoxyReturn}{Returns}
+descriptive name for this filter 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Filter_a612efd6701e36df4902da3dc396ce62f}{Botan\-::\-Filter}.
+
+\hypertarget{classBotan_1_1Hash__Filter_a601f395b680e3bdb04977da8b6cd9d6a}{\index{Botan\-::\-Hash\-\_\-\-Filter@{Botan\-::\-Hash\-\_\-\-Filter}!write@{write}}
+\index{write@{write}!Botan::Hash_Filter@{Botan\-::\-Hash\-\_\-\-Filter}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Hash\-\_\-\-Filter\-::write (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Hash__Filter_a601f395b680e3bdb04977da8b6cd9d6a}
+Write a portion of a message to this filter. 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input as a byte array \\
+\hline
+{\em length} & the length of the byte array input \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1Filter_ad856ce62d9bdcce8057da99cba606892}{Botan\-::\-Filter}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/filters/filters.\-h\item 
+src/filters/algo\-\_\-filt.\-cpp\end{DoxyCompactItemize}

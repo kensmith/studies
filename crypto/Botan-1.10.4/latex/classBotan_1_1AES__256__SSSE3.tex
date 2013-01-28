@@ -1,0 +1,119 @@
+\hypertarget{classBotan_1_1AES__256__SSSE3}{\section{Botan\-:\-:A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3 Class Reference}
+\label{classBotan_1_1AES__256__SSSE3}\index{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3@{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3}}
+}
+
+
+{\ttfamily \#include $<$aes\-\_\-ssse3.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classBotan_1_1AES__256__SSSE3}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1AES__256__SSSE3_a791648bc9a95502728f77ba4693f633d}{encrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+void \hyperlink{classBotan_1_1AES__256__SSSE3_adc7c212e6853b5410f18d137e3664d0b}{decrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+void \hyperlink{classBotan_1_1AES__256__SSSE3_afb5b90c19f22dfc26a230b0413f70ba9}{clear} ()
+\item 
+std\-::string \hyperlink{classBotan_1_1AES__256__SSSE3_a02db8d0f406ec392c419cf64655de779}{name} () const 
+\item 
+\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$ \hyperlink{classBotan_1_1AES__256__SSSE3_a03c09d155e2c83d5d164e18837816c24}{clone} () const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A\-E\-S-\/256 using S\-S\-S\-E3 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1AES__256__SSSE3_afb5b90c19f22dfc26a230b0413f70ba9}{\index{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3@{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3}!clear@{clear}}
+\index{clear@{clear}!Botan::AES_256_SSSE3@{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1AES__256__SSSE3_afb5b90c19f22dfc26a230b0413f70ba9}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1AES__256__SSSE3_a03c09d155e2c83d5d164e18837816c24}{\index{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3@{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3}!clone@{clone}}
+\index{clone@{clone}!Botan::AES_256_SSSE3@{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Cipher}$\ast$ Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1AES__256__SSSE3_a03c09d155e2c83d5d164e18837816c24}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a9feaf7c1bfb5279a1652c849054e033c}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1AES__256__SSSE3_adc7c212e6853b5410f18d137e3664d0b}{\index{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3@{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3}!decrypt\-\_\-n@{decrypt\-\_\-n}}
+\index{decrypt\-\_\-n@{decrypt\-\_\-n}!Botan::AES_256_SSSE3@{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3}}
+\subsubsection[{decrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3\-::decrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1AES__256__SSSE3_adc7c212e6853b5410f18d137e3664d0b}
+Decrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a6ea709632f78d833484a4d67de25e1a8}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1AES__256__SSSE3_a791648bc9a95502728f77ba4693f633d}{\index{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3@{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3}!encrypt\-\_\-n@{encrypt\-\_\-n}}
+\index{encrypt\-\_\-n@{encrypt\-\_\-n}!Botan::AES_256_SSSE3@{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3}}
+\subsubsection[{encrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3\-::encrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1AES__256__SSSE3_a791648bc9a95502728f77ba4693f633d}
+Encrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a16a7005967a910407703c2899bd73ccf}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1AES__256__SSSE3_a02db8d0f406ec392c419cf64655de779}{\index{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3@{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3}!name@{name}}
+\index{name@{name}!Botan::AES_256_SSSE3@{Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-A\-E\-S\-\_\-256\-\_\-\-S\-S\-S\-E3\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1AES__256__SSSE3_a02db8d0f406ec392c419cf64655de779}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/block/aes\-\_\-ssse3/aes\-\_\-ssse3.\-h\item 
+src/block/aes\-\_\-ssse3/aes\-\_\-ssse3.\-cpp\end{DoxyCompactItemize}

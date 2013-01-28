@@ -1,0 +1,61 @@
+\hypertarget{classBotan_1_1EntropySource}{\section{Botan\-:\-:Entropy\-Source Class Reference}
+\label{classBotan_1_1EntropySource}\index{Botan\-::\-Entropy\-Source@{Botan\-::\-Entropy\-Source}}
+}
+
+
+{\ttfamily \#include $<$entropy\-\_\-src.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Entropy\-Source\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.000000cm]{classBotan_1_1EntropySource}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\-::string \hyperlink{classBotan_1_1EntropySource_a05e5c296e7fadca55ebed155a60db297}{name} () const =0
+\item 
+virtual void \hyperlink{classBotan_1_1EntropySource_a9730bd3f9cdd114057f600096bb2ab8a}{poll} (\hyperlink{classBotan_1_1Entropy__Accumulator}{Entropy\-\_\-\-Accumulator} \&accum)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract interface to a source of (hopefully unpredictable) system entropy 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1EntropySource_a05e5c296e7fadca55ebed155a60db297}{\index{Botan\-::\-Entropy\-Source@{Botan\-::\-Entropy\-Source}!name@{name}}
+\index{name@{name}!Botan::EntropySource@{Botan\-::\-Entropy\-Source}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string Botan\-::\-Entropy\-Source\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1EntropySource_a05e5c296e7fadca55ebed155a60db297}
+\begin{DoxyReturn}{Returns}
+name identifying this entropy source 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classBotan_1_1High__Resolution__Timestamp_a72688ecec1b9100b49c7081384d69319}{Botan\-::\-High\-\_\-\-Resolution\-\_\-\-Timestamp}, \hyperlink{classBotan_1_1Device__EntropySource_a52d6e8095bb7bbe32284543b271a0204}{Botan\-::\-Device\-\_\-\-Entropy\-Source}, \hyperlink{classBotan_1_1EGD__EntropySource_a0b6d83076cc4517d2f20db88797f97f3}{Botan\-::\-E\-G\-D\-\_\-\-Entropy\-Source}, \hyperlink{classBotan_1_1Unix__EntropySource_a50c443e54a8594111e193be7c9d81086}{Botan\-::\-Unix\-\_\-\-Entropy\-Source}, \hyperlink{classBotan_1_1Win32__CAPI__EntropySource_a8a0966105296ea2fb01dadef797f6243}{Botan\-::\-Win32\-\_\-\-C\-A\-P\-I\-\_\-\-Entropy\-Source}, \hyperlink{classBotan_1_1Intel__Rdrand_a81ba8f723a5c87f21ed5715839f82175}{Botan\-::\-Intel\-\_\-\-Rdrand}, \hyperlink{classBotan_1_1FTW__EntropySource_ab198a491ee74f9351b32bc1ef49c2ace}{Botan\-::\-F\-T\-W\-\_\-\-Entropy\-Source}, and \hyperlink{classBotan_1_1Win32__EntropySource_a594a9dce2314fb1bb79f36894c6cffa5}{Botan\-::\-Win32\-\_\-\-Entropy\-Source}.
+
+\hypertarget{classBotan_1_1EntropySource_a9730bd3f9cdd114057f600096bb2ab8a}{\index{Botan\-::\-Entropy\-Source@{Botan\-::\-Entropy\-Source}!poll@{poll}}
+\index{poll@{poll}!Botan::EntropySource@{Botan\-::\-Entropy\-Source}}
+\subsubsection[{poll}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Botan\-::\-Entropy\-Source\-::poll (
+\begin{DoxyParamCaption}
+\item[{{\bf Entropy\-\_\-\-Accumulator} \&}]{accum}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1EntropySource_a9730bd3f9cdd114057f600096bb2ab8a}
+Perform an entropy gathering poll 
+\begin{DoxyParams}{Parameters}
+{\em accum} & is an accumulator object that will be given entropy \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classBotan_1_1Device__EntropySource_aea1e559bf1f176bf589faa052b4a4967}{Botan\-::\-Device\-\_\-\-Entropy\-Source}, \hyperlink{classBotan_1_1EGD__EntropySource_aa3d9a662f231f35a9aa7cc2f597d1d3c}{Botan\-::\-E\-G\-D\-\_\-\-Entropy\-Source}, \hyperlink{classBotan_1_1High__Resolution__Timestamp_af11b30a6909a998d7ad247f8b865805e}{Botan\-::\-High\-\_\-\-Resolution\-\_\-\-Timestamp}, \hyperlink{classBotan_1_1Unix__EntropySource_aff421933d70529310e2252ad005bf94f}{Botan\-::\-Unix\-\_\-\-Entropy\-Source}, \hyperlink{classBotan_1_1Win32__CAPI__EntropySource_a28990f4de199417e0ff5a57a9ae84361}{Botan\-::\-Win32\-\_\-\-C\-A\-P\-I\-\_\-\-Entropy\-Source}, \hyperlink{classBotan_1_1FTW__EntropySource_a57f39214376a724599ae42b6180a4a04}{Botan\-::\-F\-T\-W\-\_\-\-Entropy\-Source}, \hyperlink{classBotan_1_1Intel__Rdrand_a3b0c523334fa62e9c8ccdb6f3e5b3e84}{Botan\-::\-Intel\-\_\-\-Rdrand}, and \hyperlink{classBotan_1_1Win32__EntropySource_ac7fbb123fa2f913cfcb546b5235c0d82}{Botan\-::\-Win32\-\_\-\-Entropy\-Source}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/entropy/entropy\-\_\-src.\-h\end{DoxyCompactItemize}

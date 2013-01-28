@@ -1,0 +1,79 @@
+\hypertarget{classBotan_1_1Attribute}{\section{Botan\-:\-:Attribute Class Reference}
+\label{classBotan_1_1Attribute}\index{Botan\-::\-Attribute@{Botan\-::\-Attribute}}
+}
+
+
+{\ttfamily \#include $<$asn1\-\_\-obj.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Attribute\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1Attribute}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1Attribute_a186a46b20e753ee3469d6781ea10f4d6}{encode\-\_\-into} (class \hyperlink{classBotan_1_1DER__Encoder}{D\-E\-R\-\_\-\-Encoder} \&to) const 
+\item 
+void \hyperlink{classBotan_1_1Attribute_a441478a5609e2b323fb3c5d7d7f60b75}{decode\-\_\-from} (class \hyperlink{classBotan_1_1BER__Decoder}{B\-E\-R\-\_\-\-Decoder} \&from)
+\item 
+\hypertarget{classBotan_1_1Attribute_ad1324ce247e1a44e38e298b16233443f}{{\bfseries Attribute} (const \hyperlink{classBotan_1_1OID}{O\-I\-D} \&, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&)}\label{classBotan_1_1Attribute_ad1324ce247e1a44e38e298b16233443f}
+
+\item 
+\hypertarget{classBotan_1_1Attribute_a8117dea698735f6275af7e89fce75fd5}{{\bfseries Attribute} (const std\-::string \&, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&)}\label{classBotan_1_1Attribute_a8117dea698735f6275af7e89fce75fd5}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1Attribute_aa0575ed338ff76b9b6956a76684ad589}{\hyperlink{classBotan_1_1OID}{O\-I\-D} {\bfseries oid}}\label{classBotan_1_1Attribute_aa0575ed338ff76b9b6956a76684ad589}
+
+\item 
+\hypertarget{classBotan_1_1Attribute_a73e121b087c0a33f76b0f284cb96d051}{\hyperlink{classBotan_1_1MemoryVector}{Memory\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ {\bfseries parameters}}\label{classBotan_1_1Attribute_a73e121b087c0a33f76b0f284cb96d051}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1Attribute}{Attribute} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Attribute_a441478a5609e2b323fb3c5d7d7f60b75}{\index{Botan\-::\-Attribute@{Botan\-::\-Attribute}!decode\-\_\-from@{decode\-\_\-from}}
+\index{decode\-\_\-from@{decode\-\_\-from}!Botan::Attribute@{Botan\-::\-Attribute}}
+\subsubsection[{decode\-\_\-from}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Attribute\-::decode\-\_\-from (
+\begin{DoxyParamCaption}
+\item[{class {\bf B\-E\-R\-\_\-\-Decoder} \&}]{from}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Attribute_a441478a5609e2b323fb3c5d7d7f60b75}
+Decode whatever this object is from from 
+\begin{DoxyParams}{Parameters}
+{\em from} & the \hyperlink{classBotan_1_1BER__Decoder}{B\-E\-R\-\_\-\-Decoder} that will be read from \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1ASN1__Object_a9623f0d0f09c3ab4fb3ff44f1d42290f}{Botan\-::\-A\-S\-N1\-\_\-\-Object}.
+
+\hypertarget{classBotan_1_1Attribute_a186a46b20e753ee3469d6781ea10f4d6}{\index{Botan\-::\-Attribute@{Botan\-::\-Attribute}!encode\-\_\-into@{encode\-\_\-into}}
+\index{encode\-\_\-into@{encode\-\_\-into}!Botan::Attribute@{Botan\-::\-Attribute}}
+\subsubsection[{encode\-\_\-into}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Attribute\-::encode\-\_\-into (
+\begin{DoxyParamCaption}
+\item[{class {\bf D\-E\-R\-\_\-\-Encoder} \&}]{to}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Attribute_a186a46b20e753ee3469d6781ea10f4d6}
+Encode whatever this object is into to 
+\begin{DoxyParams}{Parameters}
+{\em to} & the \hyperlink{classBotan_1_1DER__Encoder}{D\-E\-R\-\_\-\-Encoder} that will be written to \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1ASN1__Object_a05db1180efe5c3acc30266d0032823ea}{Botan\-::\-A\-S\-N1\-\_\-\-Object}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/asn1/asn1\-\_\-obj.\-h\item 
+src/asn1/asn1\-\_\-att.\-cpp\end{DoxyCompactItemize}

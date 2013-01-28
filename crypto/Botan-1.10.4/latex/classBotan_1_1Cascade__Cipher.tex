@@ -1,0 +1,170 @@
+\hypertarget{classBotan_1_1Cascade__Cipher}{\section{Botan\-:\-:Cascade\-\_\-\-Cipher Class Reference}
+\label{classBotan_1_1Cascade__Cipher}\index{Botan\-::\-Cascade\-\_\-\-Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}}
+}
+
+
+{\ttfamily \#include $<$cascade.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Cascade\-\_\-\-Cipher\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classBotan_1_1Cascade__Cipher}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1Cascade__Cipher_a5fc588adf477308dd996f93b94c764b6}{encrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+void \hyperlink{classBotan_1_1Cascade__Cipher_a0360fec1e807147001ab788e670d4588}{decrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1Cascade__Cipher_a5e6616c2a03c21732f1ac33ac4a2da34}{block\-\_\-size} () const 
+\item 
+\hyperlink{classBotan_1_1Key__Length__Specification}{Key\-\_\-\-Length\-\_\-\-Specification} \hyperlink{classBotan_1_1Cascade__Cipher_af886740ca6c3b271730e89fbcce1828f}{key\-\_\-spec} () const 
+\item 
+void \hyperlink{classBotan_1_1Cascade__Cipher_aa448403e9ae89bf477028f8bafc2f6a3}{clear} ()
+\item 
+std\-::string \hyperlink{classBotan_1_1Cascade__Cipher_af1cda06df8e4ff4f92279af87c0f496e}{name} () const 
+\item 
+\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$ \hyperlink{classBotan_1_1Cascade__Cipher_a6a4196bdefe12d3bf20ba015160a1759}{clone} () const 
+\item 
+\hyperlink{classBotan_1_1Cascade__Cipher_a7203bbe1064b5ec656775d8e84b13834}{Cascade\-\_\-\-Cipher} (\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$cipher1, \hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$cipher2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Block Cipher Cascade 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Cascade__Cipher_a7203bbe1064b5ec656775d8e84b13834}{\index{Botan\-::\-Cascade\-\_\-\-Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}!Cascade\-\_\-\-Cipher@{Cascade\-\_\-\-Cipher}}
+\index{Cascade\-\_\-\-Cipher@{Cascade\-\_\-\-Cipher}!Botan::Cascade_Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}}
+\subsubsection[{Cascade\-\_\-\-Cipher}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Cascade\-\_\-\-Cipher\-::\-Cascade\-\_\-\-Cipher (
+\begin{DoxyParamCaption}
+\item[{{\bf Block\-Cipher} $\ast$}]{cipher1, }
+\item[{{\bf Block\-Cipher} $\ast$}]{cipher2}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Cascade__Cipher_a7203bbe1064b5ec656775d8e84b13834}
+Create a cascade of two block ciphers 
+\begin{DoxyParams}{Parameters}
+{\em cipher1} & the first cipher \\
+\hline
+{\em cipher2} & the second cipher \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Cascade__Cipher_a5e6616c2a03c21732f1ac33ac4a2da34}{\index{Botan\-::\-Cascade\-\_\-\-Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}!block\-\_\-size@{block\-\_\-size}}
+\index{block\-\_\-size@{block\-\_\-size}!Botan::Cascade_Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}}
+\subsubsection[{block\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Cascade\-\_\-\-Cipher\-::block\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Cascade__Cipher_a5e6616c2a03c21732f1ac33ac4a2da34}
+\begin{DoxyReturn}{Returns}
+block size of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_ae5e91c5b169252e67f466f6b6321a41e}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1Cascade__Cipher_aa448403e9ae89bf477028f8bafc2f6a3}{\index{Botan\-::\-Cascade\-\_\-\-Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}!clear@{clear}}
+\index{clear@{clear}!Botan::Cascade_Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Cascade\-\_\-\-Cipher\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Cascade__Cipher_aa448403e9ae89bf477028f8bafc2f6a3}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1Cascade__Cipher_a6a4196bdefe12d3bf20ba015160a1759}{\index{Botan\-::\-Cascade\-\_\-\-Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}!clone@{clone}}
+\index{clone@{clone}!Botan::Cascade_Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Cipher} $\ast$ Botan\-::\-Cascade\-\_\-\-Cipher\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Cascade__Cipher_a6a4196bdefe12d3bf20ba015160a1759}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a9feaf7c1bfb5279a1652c849054e033c}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1Cascade__Cipher_a0360fec1e807147001ab788e670d4588}{\index{Botan\-::\-Cascade\-\_\-\-Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}!decrypt\-\_\-n@{decrypt\-\_\-n}}
+\index{decrypt\-\_\-n@{decrypt\-\_\-n}!Botan::Cascade_Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}}
+\subsubsection[{decrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Cascade\-\_\-\-Cipher\-::decrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Cascade__Cipher_a0360fec1e807147001ab788e670d4588}
+Decrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Cascade__Cipher_a5e6616c2a03c21732f1ac33ac4a2da34}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a6ea709632f78d833484a4d67de25e1a8}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1Cascade__Cipher_a5fc588adf477308dd996f93b94c764b6}{\index{Botan\-::\-Cascade\-\_\-\-Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}!encrypt\-\_\-n@{encrypt\-\_\-n}}
+\index{encrypt\-\_\-n@{encrypt\-\_\-n}!Botan::Cascade_Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}}
+\subsubsection[{encrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Cascade\-\_\-\-Cipher\-::encrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Cascade__Cipher_a5fc588adf477308dd996f93b94c764b6}
+Encrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Cascade__Cipher_a5e6616c2a03c21732f1ac33ac4a2da34}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a16a7005967a910407703c2899bd73ccf}{Botan\-::\-Block\-Cipher}.
+
+\hypertarget{classBotan_1_1Cascade__Cipher_af886740ca6c3b271730e89fbcce1828f}{\index{Botan\-::\-Cascade\-\_\-\-Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}!key\-\_\-spec@{key\-\_\-spec}}
+\index{key\-\_\-spec@{key\-\_\-spec}!Botan::Cascade_Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}}
+\subsubsection[{key\-\_\-spec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key\-\_\-\-Length\-\_\-\-Specification} Botan\-::\-Cascade\-\_\-\-Cipher\-::key\-\_\-spec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Cascade__Cipher_af886740ca6c3b271730e89fbcce1828f}
+\begin{DoxyReturn}{Returns}
+object describing limits on key size 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1SymmetricAlgorithm_aea45c0d248b3116d7a1ebbd086f14e1b}{Botan\-::\-Symmetric\-Algorithm}.
+
+\hypertarget{classBotan_1_1Cascade__Cipher_af1cda06df8e4ff4f92279af87c0f496e}{\index{Botan\-::\-Cascade\-\_\-\-Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}!name@{name}}
+\index{name@{name}!Botan::Cascade_Cipher@{Botan\-::\-Cascade\-\_\-\-Cipher}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Cascade\-\_\-\-Cipher\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Cascade__Cipher_af1cda06df8e4ff4f92279af87c0f496e}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/block/cascade/cascade.\-h\item 
+src/block/cascade/cascade.\-cpp\end{DoxyCompactItemize}

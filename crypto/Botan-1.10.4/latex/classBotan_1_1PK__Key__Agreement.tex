@@ -1,0 +1,51 @@
+\hypertarget{classBotan_1_1PK__Key__Agreement}{\section{Botan\-:\-:P\-K\-\_\-\-Key\-\_\-\-Agreement Class Reference}
+\label{classBotan_1_1PK__Key__Agreement}\index{Botan\-::\-P\-K\-\_\-\-Key\-\_\-\-Agreement@{Botan\-::\-P\-K\-\_\-\-Key\-\_\-\-Agreement}}
+}
+
+
+{\ttfamily \#include $<$pubkey.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1PK__Key__Agreement_a74ee54d2e7180928a96a9368fca889d2}{\hyperlink{namespaceBotan_a00c78597211d5c63b63e2a57ddb96d38}{Symmetric\-Key} {\bfseries derive\-\_\-key} (size\-\_\-t key\-\_\-len, const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, size\-\_\-t in\-\_\-len, const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} params\mbox{[}$\,$\mbox{]}, size\-\_\-t params\-\_\-len) const }\label{classBotan_1_1PK__Key__Agreement_a74ee54d2e7180928a96a9368fca889d2}
+
+\item 
+\hypertarget{classBotan_1_1PK__Key__Agreement_ae57905b9fdd7bb3bfe95bcdcaa303881}{\hyperlink{namespaceBotan_a00c78597211d5c63b63e2a57ddb96d38}{Symmetric\-Key} {\bfseries derive\-\_\-key} (size\-\_\-t key\-\_\-len, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&in, const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} params\mbox{[}$\,$\mbox{]}, size\-\_\-t params\-\_\-len) const }\label{classBotan_1_1PK__Key__Agreement_ae57905b9fdd7bb3bfe95bcdcaa303881}
+
+\item 
+\hypertarget{classBotan_1_1PK__Key__Agreement_a8f532b4103913f27d50fa8e1ed05e07d}{\hyperlink{namespaceBotan_a00c78597211d5c63b63e2a57ddb96d38}{Symmetric\-Key} {\bfseries derive\-\_\-key} (size\-\_\-t key\-\_\-len, const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, size\-\_\-t in\-\_\-len, const std\-::string \&params=\char`\"{}\char`\"{}) const }\label{classBotan_1_1PK__Key__Agreement_a8f532b4103913f27d50fa8e1ed05e07d}
+
+\item 
+\hypertarget{classBotan_1_1PK__Key__Agreement_af912a6e26c95032c82079bd91cb32df5}{\hyperlink{namespaceBotan_a00c78597211d5c63b63e2a57ddb96d38}{Symmetric\-Key} {\bfseries derive\-\_\-key} (size\-\_\-t key\-\_\-len, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&in, const std\-::string \&params=\char`\"{}\char`\"{}) const }\label{classBotan_1_1PK__Key__Agreement_af912a6e26c95032c82079bd91cb32df5}
+
+\item 
+\hyperlink{classBotan_1_1PK__Key__Agreement_a6c9b64916dc1e43502e9c1df3af7a944}{P\-K\-\_\-\-Key\-\_\-\-Agreement} (const \hyperlink{classBotan_1_1PK__Key__Agreement__Key}{P\-K\-\_\-\-Key\-\_\-\-Agreement\-\_\-\-Key} \&key, const std\-::string \&kdf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Key used for key agreement 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1PK__Key__Agreement_a6c9b64916dc1e43502e9c1df3af7a944}{\index{Botan\-::\-P\-K\-\_\-\-Key\-\_\-\-Agreement@{Botan\-::\-P\-K\-\_\-\-Key\-\_\-\-Agreement}!P\-K\-\_\-\-Key\-\_\-\-Agreement@{P\-K\-\_\-\-Key\-\_\-\-Agreement}}
+\index{P\-K\-\_\-\-Key\-\_\-\-Agreement@{P\-K\-\_\-\-Key\-\_\-\-Agreement}!Botan::PK_Key_Agreement@{Botan\-::\-P\-K\-\_\-\-Key\-\_\-\-Agreement}}
+\subsubsection[{P\-K\-\_\-\-Key\-\_\-\-Agreement}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-P\-K\-\_\-\-Key\-\_\-\-Agreement\-::\-P\-K\-\_\-\-Key\-\_\-\-Agreement (
+\begin{DoxyParamCaption}
+\item[{const {\bf P\-K\-\_\-\-Key\-\_\-\-Agreement\-\_\-\-Key} \&}]{key, }
+\item[{const std\-::string \&}]{kdf}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1PK__Key__Agreement_a6c9b64916dc1e43502e9c1df3af7a944}
+Construct a P\-K Key Agreement. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to use \\
+\hline
+{\em kdf} & name of the \hyperlink{classBotan_1_1KDF}{K\-D\-F} to use (or 'Raw' for no \hyperlink{classBotan_1_1KDF}{K\-D\-F}) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/pubkey/pubkey.\-h\item 
+src/pubkey/pubkey.\-cpp\end{DoxyCompactItemize}

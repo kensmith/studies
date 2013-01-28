@@ -1,0 +1,141 @@
+\hypertarget{classBotan_1_1EME}{\section{Botan\-:\-:E\-M\-E Class Reference}
+\label{classBotan_1_1EME}\index{Botan\-::\-E\-M\-E@{Botan\-::\-E\-M\-E}}
+}
+
+
+{\ttfamily \#include $<$eme.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:E\-M\-E\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1EME}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual size\-\_\-t \hyperlink{classBotan_1_1EME_a7eefa778e39ec3226f5749be54ca2d90}{maximum\-\_\-input\-\_\-size} (size\-\_\-t keybits) const =0
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1EME_aebdf4330d41ad65fae1545a7ba976d45}{encode} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, size\-\_\-t in\-\_\-length, size\-\_\-t key\-\_\-length, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng) const 
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1EME_a5eeca0bc1901c57ccdb10cc837c39f84}{encode} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&in, size\-\_\-t key\-\_\-length, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng) const 
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1EME_ad1184f82a0362488cc2d15e54b9144d2}{decode} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, size\-\_\-t in\-\_\-length, size\-\_\-t key\-\_\-length) const 
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1EME_ab861b376a96d78b4ce383abcda58264f}{decode} (const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&in, size\-\_\-t key\-\_\-length) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Encoding Method for Encryption 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1EME_ad1184f82a0362488cc2d15e54b9144d2}{\index{Botan\-::\-E\-M\-E@{Botan\-::\-E\-M\-E}!decode@{decode}}
+\index{decode@{decode}!Botan::EME@{Botan\-::\-E\-M\-E}}
+\subsubsection[{decode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<$ {\bf byte} $>$ Botan\-::\-E\-M\-E\-::decode (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{in\-\_\-length, }
+\item[{size\-\_\-t}]{key\-\_\-length}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1EME_ad1184f82a0362488cc2d15e54b9144d2}
+Decode an input 
+\begin{DoxyParams}{Parameters}
+{\em in} & the encoded plaintext \\
+\hline
+{\em in\-\_\-length} & length of encoded plaintext in bytes \\
+\hline
+{\em key\-\_\-length} & length of the key in bits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+plaintext 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EME_ab861b376a96d78b4ce383abcda58264f}{\index{Botan\-::\-E\-M\-E@{Botan\-::\-E\-M\-E}!decode@{decode}}
+\index{decode@{decode}!Botan::EME@{Botan\-::\-E\-M\-E}}
+\subsubsection[{decode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<$ {\bf byte} $>$ Botan\-::\-E\-M\-E\-::decode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{in, }
+\item[{size\-\_\-t}]{key\-\_\-length}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1EME_ab861b376a96d78b4ce383abcda58264f}
+Decode an input 
+\begin{DoxyParams}{Parameters}
+{\em in} & the encoded plaintext \\
+\hline
+{\em key\-\_\-length} & length of the key in bits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+plaintext 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EME_aebdf4330d41ad65fae1545a7ba976d45}{\index{Botan\-::\-E\-M\-E@{Botan\-::\-E\-M\-E}!encode@{encode}}
+\index{encode@{encode}!Botan::EME@{Botan\-::\-E\-M\-E}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<$ {\bf byte} $>$ Botan\-::\-E\-M\-E\-::encode (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{in\-\_\-length, }
+\item[{size\-\_\-t}]{key\-\_\-length, }
+\item[{{\bf Random\-Number\-Generator} \&}]{rng}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1EME_aebdf4330d41ad65fae1545a7ba976d45}
+Encode an input 
+\begin{DoxyParams}{Parameters}
+{\em in} & the plaintext \\
+\hline
+{\em in\-\_\-length} & length of plaintext in bytes \\
+\hline
+{\em key\-\_\-length} & length of the key in bits \\
+\hline
+{\em rng} & a random number generator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encoded plaintext 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EME_a5eeca0bc1901c57ccdb10cc837c39f84}{\index{Botan\-::\-E\-M\-E@{Botan\-::\-E\-M\-E}!encode@{encode}}
+\index{encode@{encode}!Botan::EME@{Botan\-::\-E\-M\-E}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<$ {\bf byte} $>$ Botan\-::\-E\-M\-E\-::encode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{in, }
+\item[{size\-\_\-t}]{key\-\_\-length, }
+\item[{{\bf Random\-Number\-Generator} \&}]{rng}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1EME_a5eeca0bc1901c57ccdb10cc837c39f84}
+Encode an input 
+\begin{DoxyParams}{Parameters}
+{\em in} & the plaintext \\
+\hline
+{\em key\-\_\-length} & length of the key in bits \\
+\hline
+{\em rng} & a random number generator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+encoded plaintext 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EME_a7eefa778e39ec3226f5749be54ca2d90}{\index{Botan\-::\-E\-M\-E@{Botan\-::\-E\-M\-E}!maximum\-\_\-input\-\_\-size@{maximum\-\_\-input\-\_\-size}}
+\index{maximum\-\_\-input\-\_\-size@{maximum\-\_\-input\-\_\-size}!Botan::EME@{Botan\-::\-E\-M\-E}}
+\subsubsection[{maximum\-\_\-input\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\-\_\-t Botan\-::\-E\-M\-E\-::maximum\-\_\-input\-\_\-size (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{keybits}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1EME_a7eefa778e39ec3226f5749be54ca2d90}
+Return the maximum input size in bytes we can support 
+\begin{DoxyParams}{Parameters}
+{\em keybits} & the size of the key in bits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+upper bound of input in bytes 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classBotan_1_1EME1_a903cba1e97584079379c7c380c6e9e56}{Botan\-::\-E\-M\-E1}, and \hyperlink{classBotan_1_1EME__PKCS1v15_ab95f5296efc7b88956625ad705c5672b}{Botan\-::\-E\-M\-E\-\_\-\-P\-K\-C\-S1v15}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/pk\-\_\-pad/eme.\-h\item 
+src/pk\-\_\-pad/eme.\-cpp\end{DoxyCompactItemize}

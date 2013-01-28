@@ -1,0 +1,96 @@
+\hypertarget{classBotan_1_1Record__Writer}{\section{Botan\-:\-:Record\-\_\-\-Writer Class Reference}
+\label{classBotan_1_1Record__Writer}\index{Botan\-::\-Record\-\_\-\-Writer@{Botan\-::\-Record\-\_\-\-Writer}}
+}
+
+
+{\ttfamily \#include $<$tls\-\_\-record.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1Record__Writer_a0397074109aa9d57397373a3a9c4ab8b}{send} (\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} type, const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} input\mbox{[}$\,$\mbox{]}, size\-\_\-t length)
+\item 
+\hypertarget{classBotan_1_1Record__Writer_a1d48181476d8ed0547603d52ee07c9d5}{void {\bfseries send} (\hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} type, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} val)}\label{classBotan_1_1Record__Writer_a1d48181476d8ed0547603d52ee07c9d5}
+
+\item 
+void \hyperlink{classBotan_1_1Record__Writer_a80240ff7098ab3c1df34048fcc41c018}{flush} ()
+\item 
+void \hyperlink{classBotan_1_1Record__Writer_ad0da616fe7c52dffbaad4119189a48f0}{alert} (Alert\-\_\-\-Level, Alert\-\_\-\-Type)
+\item 
+void \hyperlink{classBotan_1_1Record__Writer_a7dd736ea107775402a2f022fb67c38df}{set\-\_\-keys} (const \hyperlink{classBotan_1_1CipherSuite}{Cipher\-Suite} \&, const \hyperlink{classBotan_1_1SessionKeys}{Session\-Keys} \&, Connection\-\_\-\-Side)
+\item 
+void \hyperlink{classBotan_1_1Record__Writer_aef13abcc9222c543b73d4753366c8b03}{set\-\_\-version} (Version\-\_\-\-Code)
+\item 
+void \hyperlink{classBotan_1_1Record__Writer_a2e5eeb560e6350bc9481fe052165899c}{reset} ()
+\item 
+\hyperlink{classBotan_1_1Record__Writer_aa07b8f211aeefc9b86b14ea4c49d9ec0}{Record\-\_\-\-Writer} (std\-::tr1\-::function$<$ void(const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)$>$ output\-\_\-fn)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\-L\-S Record Writer 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Record__Writer_aa07b8f211aeefc9b86b14ea4c49d9ec0}{\index{Botan\-::\-Record\-\_\-\-Writer@{Botan\-::\-Record\-\_\-\-Writer}!Record\-\_\-\-Writer@{Record\-\_\-\-Writer}}
+\index{Record\-\_\-\-Writer@{Record\-\_\-\-Writer}!Botan::Record_Writer@{Botan\-::\-Record\-\_\-\-Writer}}
+\subsubsection[{Record\-\_\-\-Writer}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Record\-\_\-\-Writer\-::\-Record\-\_\-\-Writer (
+\begin{DoxyParamCaption}
+\item[{std\-::tr1\-::function$<$ void(const {\bf byte}\mbox{[}$\,$\mbox{]}, size\-\_\-t)$>$}]{out}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Record__Writer_aa07b8f211aeefc9b86b14ea4c49d9ec0}
+\hyperlink{classBotan_1_1Record__Writer}{Record\-\_\-\-Writer} Constructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Record__Writer_ad0da616fe7c52dffbaad4119189a48f0}{\index{Botan\-::\-Record\-\_\-\-Writer@{Botan\-::\-Record\-\_\-\-Writer}!alert@{alert}}
+\index{alert@{alert}!Botan::Record_Writer@{Botan\-::\-Record\-\_\-\-Writer}}
+\subsubsection[{alert}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Record\-\_\-\-Writer\-::alert (
+\begin{DoxyParamCaption}
+\item[{Alert\-\_\-\-Level}]{level, }
+\item[{Alert\-\_\-\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Record__Writer_ad0da616fe7c52dffbaad4119189a48f0}
+Send an alert \hypertarget{classBotan_1_1Record__Writer_a80240ff7098ab3c1df34048fcc41c018}{\index{Botan\-::\-Record\-\_\-\-Writer@{Botan\-::\-Record\-\_\-\-Writer}!flush@{flush}}
+\index{flush@{flush}!Botan::Record_Writer@{Botan\-::\-Record\-\_\-\-Writer}}
+\subsubsection[{flush}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Record\-\_\-\-Writer\-::flush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Record__Writer_a80240ff7098ab3c1df34048fcc41c018}
+Split buffer into records, and send them all \hypertarget{classBotan_1_1Record__Writer_a2e5eeb560e6350bc9481fe052165899c}{\index{Botan\-::\-Record\-\_\-\-Writer@{Botan\-::\-Record\-\_\-\-Writer}!reset@{reset}}
+\index{reset@{reset}!Botan::Record_Writer@{Botan\-::\-Record\-\_\-\-Writer}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Record\-\_\-\-Writer\-::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Record__Writer_a2e5eeb560e6350bc9481fe052165899c}
+Reset the state \hypertarget{classBotan_1_1Record__Writer_a0397074109aa9d57397373a3a9c4ab8b}{\index{Botan\-::\-Record\-\_\-\-Writer@{Botan\-::\-Record\-\_\-\-Writer}!send@{send}}
+\index{send@{send}!Botan::Record_Writer@{Botan\-::\-Record\-\_\-\-Writer}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Record\-\_\-\-Writer\-::send (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{type, }
+\item[{const {\bf byte}}]{input\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Record__Writer_a0397074109aa9d57397373a3a9c4ab8b}
+Send one or more records to the other side \hypertarget{classBotan_1_1Record__Writer_a7dd736ea107775402a2f022fb67c38df}{\index{Botan\-::\-Record\-\_\-\-Writer@{Botan\-::\-Record\-\_\-\-Writer}!set\-\_\-keys@{set\-\_\-keys}}
+\index{set\-\_\-keys@{set\-\_\-keys}!Botan::Record_Writer@{Botan\-::\-Record\-\_\-\-Writer}}
+\subsubsection[{set\-\_\-keys}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Record\-\_\-\-Writer\-::set\-\_\-keys (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cipher\-Suite} \&}]{suite, }
+\item[{const {\bf Session\-Keys} \&}]{keys, }
+\item[{Connection\-\_\-\-Side}]{side}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Record__Writer_a7dd736ea107775402a2f022fb67c38df}
+Set the keys for writing \hypertarget{classBotan_1_1Record__Writer_aef13abcc9222c543b73d4753366c8b03}{\index{Botan\-::\-Record\-\_\-\-Writer@{Botan\-::\-Record\-\_\-\-Writer}!set\-\_\-version@{set\-\_\-version}}
+\index{set\-\_\-version@{set\-\_\-version}!Botan::Record_Writer@{Botan\-::\-Record\-\_\-\-Writer}}
+\subsubsection[{set\-\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Record\-\_\-\-Writer\-::set\-\_\-version (
+\begin{DoxyParamCaption}
+\item[{Version\-\_\-\-Code}]{version}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Record__Writer_aef13abcc9222c543b73d4753366c8b03}
+Set the version to use 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/ssl/tls\-\_\-record.\-h\item 
+src/ssl/rec\-\_\-wri.\-cpp\end{DoxyCompactItemize}

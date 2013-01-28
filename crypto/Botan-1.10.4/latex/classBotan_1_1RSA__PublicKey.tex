@@ -1,0 +1,62 @@
+\hypertarget{classBotan_1_1RSA__PublicKey}{\section{Botan\-:\-:R\-S\-A\-\_\-\-Public\-Key Class Reference}
+\label{classBotan_1_1RSA__PublicKey}\index{Botan\-::\-R\-S\-A\-\_\-\-Public\-Key@{Botan\-::\-R\-S\-A\-\_\-\-Public\-Key}}
+}
+
+
+{\ttfamily \#include $<$rsa.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:R\-S\-A\-\_\-\-Public\-Key\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classBotan_1_1RSA__PublicKey}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1RSA__PublicKey_a1810770b443edc3c36319cfe3f1c8ec4}{algo\-\_\-name} () const 
+\item 
+\hypertarget{classBotan_1_1RSA__PublicKey_a05df1f84d2dfe0cf37d903260cb3b223}{{\bfseries R\-S\-A\-\_\-\-Public\-Key} (const \hyperlink{classBotan_1_1AlgorithmIdentifier}{Algorithm\-Identifier} \&alg\-\_\-id, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&key\-\_\-bits)}\label{classBotan_1_1RSA__PublicKey_a05df1f84d2dfe0cf37d903260cb3b223}
+
+\item 
+\hyperlink{classBotan_1_1RSA__PublicKey_a67c61db5adfdf8ae7428e42c6f9e2e06}{R\-S\-A\-\_\-\-Public\-Key} (const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&n, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&e)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+R\-S\-A Public Key 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1RSA__PublicKey_a67c61db5adfdf8ae7428e42c6f9e2e06}{\index{Botan\-::\-R\-S\-A\-\_\-\-Public\-Key@{Botan\-::\-R\-S\-A\-\_\-\-Public\-Key}!R\-S\-A\-\_\-\-Public\-Key@{R\-S\-A\-\_\-\-Public\-Key}}
+\index{R\-S\-A\-\_\-\-Public\-Key@{R\-S\-A\-\_\-\-Public\-Key}!Botan::RSA_PublicKey@{Botan\-::\-R\-S\-A\-\_\-\-Public\-Key}}
+\subsubsection[{R\-S\-A\-\_\-\-Public\-Key}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-R\-S\-A\-\_\-\-Public\-Key\-::\-R\-S\-A\-\_\-\-Public\-Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Big\-Int} \&}]{n, }
+\item[{const {\bf Big\-Int} \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1RSA__PublicKey_a67c61db5adfdf8ae7428e42c6f9e2e06}
+Create a \hyperlink{classBotan_1_1RSA__PublicKey}{R\-S\-A\-\_\-\-Public\-Key} \begin{DoxyItemize}
+\item n the modulus \item e the exponent \end{DoxyItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1RSA__PublicKey_a1810770b443edc3c36319cfe3f1c8ec4}{\index{Botan\-::\-R\-S\-A\-\_\-\-Public\-Key@{Botan\-::\-R\-S\-A\-\_\-\-Public\-Key}!algo\-\_\-name@{algo\-\_\-name}}
+\index{algo\-\_\-name@{algo\-\_\-name}!Botan::RSA_PublicKey@{Botan\-::\-R\-S\-A\-\_\-\-Public\-Key}}
+\subsubsection[{algo\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-R\-S\-A\-\_\-\-Public\-Key\-::algo\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1RSA__PublicKey_a1810770b443edc3c36319cfe3f1c8ec4}
+Get the name of the underlying public key scheme. \begin{DoxyReturn}{Returns}
+name of the public key scheme 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Public__Key_aec4ee42d508712e05388eaa9200c630b}{Botan\-::\-Public\-\_\-\-Key}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/pubkey/rsa/rsa.\-h\end{DoxyCompactItemize}

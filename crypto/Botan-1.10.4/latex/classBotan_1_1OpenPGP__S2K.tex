@@ -1,0 +1,107 @@
+\hypertarget{classBotan_1_1OpenPGP__S2K}{\section{Botan\-:\-:Open\-P\-G\-P\-\_\-\-S2\-K Class Reference}
+\label{classBotan_1_1OpenPGP__S2K}\index{Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K@{Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K}}
+}
+
+
+{\ttfamily \#include $<$pgp\-\_\-s2k.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Open\-P\-G\-P\-\_\-\-S2\-K\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBotan_1_1OpenPGP__S2K}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1OpenPGP__S2K_a332ec66e433c4a4d606cb7656f0de94e}{Open\-P\-G\-P\-\_\-\-S2\-K} (\hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$hash\-\_\-in)
+\item 
+std\-::string \hyperlink{classBotan_1_1OpenPGP__S2K_ab0990558ddcbdd8f3dea1646346c7051}{name} () const 
+\item 
+\hyperlink{classBotan_1_1PBKDF}{P\-B\-K\-D\-F} $\ast$ \hyperlink{classBotan_1_1OpenPGP__S2K_a726246049a5e4291eb0235a56731a75f}{clone} () const 
+\item 
+\hyperlink{classBotan_1_1OctetString}{Octet\-String} \hyperlink{classBotan_1_1OpenPGP__S2K_ae0c2428844165631e291cb2a03d89c4a}{derive\-\_\-key} (size\-\_\-t output\-\_\-len, const std\-::string \&passphrase, const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} salt\mbox{[}$\,$\mbox{]}, size\-\_\-t salt\-\_\-len, size\-\_\-t iterations) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Open\-P\-G\-P's S2\-K 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1OpenPGP__S2K_a332ec66e433c4a4d606cb7656f0de94e}{\index{Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K@{Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K}!Open\-P\-G\-P\-\_\-\-S2\-K@{Open\-P\-G\-P\-\_\-\-S2\-K}}
+\index{Open\-P\-G\-P\-\_\-\-S2\-K@{Open\-P\-G\-P\-\_\-\-S2\-K}!Botan::OpenPGP_S2K@{Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K}}
+\subsubsection[{Open\-P\-G\-P\-\_\-\-S2\-K}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K\-::\-Open\-P\-G\-P\-\_\-\-S2\-K (
+\begin{DoxyParamCaption}
+\item[{{\bf Hash\-Function} $\ast$}]{hash\-\_\-in}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1OpenPGP__S2K_a332ec66e433c4a4d606cb7656f0de94e}
+
+\begin{DoxyParams}{Parameters}
+{\em hash\-\_\-in} & the hash function to use \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1OpenPGP__S2K_a726246049a5e4291eb0235a56731a75f}{\index{Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K@{Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K}!clone@{clone}}
+\index{clone@{clone}!Botan::OpenPGP_S2K@{Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-B\-K\-D\-F}$\ast$ Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1OpenPGP__S2K_a726246049a5e4291eb0235a56731a75f}
+\begin{DoxyReturn}{Returns}
+new instance of this same algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1PBKDF_a50a31eb39181bca41bf078adf4bc68e0}{Botan\-::\-P\-B\-K\-D\-F}.
+
+\hypertarget{classBotan_1_1OpenPGP__S2K_ae0c2428844165631e291cb2a03d89c4a}{\index{Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K@{Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K}!derive\-\_\-key@{derive\-\_\-key}}
+\index{derive\-\_\-key@{derive\-\_\-key}!Botan::OpenPGP_S2K@{Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K}}
+\subsubsection[{derive\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Octet\-String} Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K\-::derive\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{output\-\_\-len, }
+\item[{const std\-::string \&}]{passphrase, }
+\item[{const {\bf byte}}]{salt\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{salt\-\_\-len, }
+\item[{size\-\_\-t}]{iterations}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1OpenPGP__S2K_ae0c2428844165631e291cb2a03d89c4a}
+Derive a key from a passphrase 
+\begin{DoxyParams}{Parameters}
+{\em output\-\_\-len} & the desired length of the key to produce \\
+\hline
+{\em passphrase} & the password to derive the key from \\
+\hline
+{\em salt} & a randomly chosen salt \\
+\hline
+{\em salt\-\_\-len} & length of salt in bytes \\
+\hline
+{\em iterations} & the number of iterations to use (use 10\-K or more) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1PBKDF_a717debec0e2f3c7b2ab929f9cda91565}{Botan\-::\-P\-B\-K\-D\-F}.
+
+\hypertarget{classBotan_1_1OpenPGP__S2K_ab0990558ddcbdd8f3dea1646346c7051}{\index{Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K@{Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K}!name@{name}}
+\index{name@{name}!Botan::OpenPGP_S2K@{Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Open\-P\-G\-P\-\_\-\-S2\-K\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1OpenPGP__S2K_ab0990558ddcbdd8f3dea1646346c7051}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/pbkdf/pgps2k/pgp\-\_\-s2k.\-h\item 
+src/pbkdf/pgps2k/pgp\-\_\-s2k.\-cpp\end{DoxyCompactItemize}

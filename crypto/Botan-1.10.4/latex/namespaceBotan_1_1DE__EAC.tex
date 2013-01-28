@@ -1,0 +1,137 @@
+\hypertarget{namespaceBotan_1_1DE__EAC}{\section{Botan\-:\-:D\-E\-\_\-\-E\-A\-C Namespace Reference}
+\label{namespaceBotan_1_1DE__EAC}\index{Botan\-::\-D\-E\-\_\-\-E\-A\-C@{Botan\-::\-D\-E\-\_\-\-E\-A\-C}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1EAC1__1__CVC}{E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C} \hyperlink{namespaceBotan_1_1DE__EAC_aafd6f91b47c9188f32c7f3e1780e5e08}{create\-\_\-cvca} (\hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} const \&key, std\-::string const \&hash, \hyperlink{classBotan_1_1ASN1__Car}{A\-S\-N1\-\_\-\-Car} const \&car, bool iris, bool fingerpr, \hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} cvca\-\_\-validity\-\_\-months, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)
+\item 
+\hyperlink{classBotan_1_1EAC1__1__CVC}{E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C} \hyperlink{namespaceBotan_1_1DE__EAC_a5832d9cd287b553f1387802a4788e1f7}{link\-\_\-cvca} (\hyperlink{classBotan_1_1EAC1__1__CVC}{E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C} const \&signer, \hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} const \&key, \hyperlink{classBotan_1_1EAC1__1__CVC}{E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C} const \&signee, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)
+\item 
+\hyperlink{classBotan_1_1EAC1__1__CVC}{E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C} \hyperlink{namespaceBotan_1_1DE__EAC_af1e13a03f618491870c49a04c3d5fd7d}{sign\-\_\-request} (\hyperlink{classBotan_1_1EAC1__1__CVC}{E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C} const \&signer\-\_\-cert, \hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} const \&key, \hyperlink{classBotan_1_1EAC1__1__Req}{E\-A\-C1\-\_\-1\-\_\-\-Req} const \&signee, \hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} seqnr, \hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} seqnr\-\_\-len, bool domestic, \hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} dvca\-\_\-validity\-\_\-months, \hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} ca\-\_\-is\-\_\-validity\-\_\-months, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)
+\item 
+\hyperlink{classBotan_1_1EAC1__1__Req}{E\-A\-C1\-\_\-1\-\_\-\-Req} \hyperlink{namespaceBotan_1_1DE__EAC_afb0b8265aa40ba4509e3f8b292dcc6e7}{create\-\_\-cvc\-\_\-req} (\hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} const \&prkey, \hyperlink{classBotan_1_1ASN1__Chr}{A\-S\-N1\-\_\-\-Chr} const \&chr, std\-::string const \&hash\-\_\-alg, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This namespace represents E\-A\-C 1.\-1 C\-V\-C convenience functions following the specific german requirements. 
+
+\subsection{Function Documentation}
+\hypertarget{namespaceBotan_1_1DE__EAC_afb0b8265aa40ba4509e3f8b292dcc6e7}{\index{Botan\-::\-D\-E\-\_\-\-E\-A\-C@{Botan\-::\-D\-E\-\_\-\-E\-A\-C}!create\-\_\-cvc\-\_\-req@{create\-\_\-cvc\-\_\-req}}
+\index{create\-\_\-cvc\-\_\-req@{create\-\_\-cvc\-\_\-req}!Botan::DE_EAC@{Botan\-::\-D\-E\-\_\-\-E\-A\-C}}
+\subsubsection[{create\-\_\-cvc\-\_\-req}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-A\-C1\-\_\-1\-\_\-\-Req} B\-O\-T\-A\-N\-\_\-\-D\-L\-L Botan\-::\-D\-E\-\_\-\-E\-A\-C\-::create\-\_\-cvc\-\_\-req (
+\begin{DoxyParamCaption}
+\item[{Private\-\_\-\-Key const \&}]{priv\-\_\-key, }
+\item[{A\-S\-N1\-\_\-\-Chr const \&}]{chr, }
+\item[{std\-::string const \&}]{hash\-\_\-alg, }
+\item[{Random\-Number\-Generator \&}]{rng}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1DE__EAC_afb0b8265aa40ba4509e3f8b292dcc6e7}
+Create a C\-V\-C request. The key encoding will be implicit\-C\-A. 
+\begin{DoxyParams}{Parameters}
+{\em priv\-\_\-key} & the private key associated with the requesting entity \\
+\hline
+{\em chr} & the chr to appear in the certificate (to be provided without sequence number) \\
+\hline
+{\em hash\-\_\-alg} & the string defining the hash algorithm to be used for the creation of the signature \\
+\hline
+{\em rng} & a random number generator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new request 
+\end{DoxyReturn}
+\hypertarget{namespaceBotan_1_1DE__EAC_aafd6f91b47c9188f32c7f3e1780e5e08}{\index{Botan\-::\-D\-E\-\_\-\-E\-A\-C@{Botan\-::\-D\-E\-\_\-\-E\-A\-C}!create\-\_\-cvca@{create\-\_\-cvca}}
+\index{create\-\_\-cvca@{create\-\_\-cvca}!Botan::DE_EAC@{Botan\-::\-D\-E\-\_\-\-E\-A\-C}}
+\subsubsection[{create\-\_\-cvca}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C} B\-O\-T\-A\-N\-\_\-\-D\-L\-L Botan\-::\-D\-E\-\_\-\-E\-A\-C\-::create\-\_\-cvca (
+\begin{DoxyParamCaption}
+\item[{Private\-\_\-\-Key const \&}]{priv\-\_\-key, }
+\item[{std\-::string const \&}]{hash, }
+\item[{A\-S\-N1\-\_\-\-Car const \&}]{car, }
+\item[{bool}]{iris, }
+\item[{bool}]{fingerpr, }
+\item[{u32bit}]{cvca\-\_\-validity\-\_\-months, }
+\item[{Random\-Number\-Generator \&}]{rng}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1DE__EAC_aafd6f91b47c9188f32c7f3e1780e5e08}
+Create a C\-V\-C\-A certificate. 
+\begin{DoxyParams}{Parameters}
+{\em priv\-\_\-key} & the private key associated with the C\-V\-C\-A certificate to be created \\
+\hline
+{\em hash} & the string identifying the hash algorithm to be used for signing the certificate to be created \\
+\hline
+{\em car} & the C\-A\-R of the certificate to be created \\
+\hline
+{\em iris} & indicates whether the entity associated with the certificate shall be entitled to read the biometrical iris image \\
+\hline
+{\em fingerpr} & indicates whether the entity associated with the certificate shall be entitled to read the biometrical fingerprint image \\
+\hline
+{\em cvca\-\_\-validity\-\_\-months} & length of time in months this will be valid \\
+\hline
+{\em rng} & a random number generator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the C\-V\-C\-A certificate created 
+\end{DoxyReturn}
+\hypertarget{namespaceBotan_1_1DE__EAC_a5832d9cd287b553f1387802a4788e1f7}{\index{Botan\-::\-D\-E\-\_\-\-E\-A\-C@{Botan\-::\-D\-E\-\_\-\-E\-A\-C}!link\-\_\-cvca@{link\-\_\-cvca}}
+\index{link\-\_\-cvca@{link\-\_\-cvca}!Botan::DE_EAC@{Botan\-::\-D\-E\-\_\-\-E\-A\-C}}
+\subsubsection[{link\-\_\-cvca}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C} B\-O\-T\-A\-N\-\_\-\-D\-L\-L Botan\-::\-D\-E\-\_\-\-E\-A\-C\-::link\-\_\-cvca (
+\begin{DoxyParamCaption}
+\item[{E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C const \&}]{signer, }
+\item[{Private\-\_\-\-Key const \&}]{priv\-\_\-key, }
+\item[{E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C const \&}]{to\-\_\-be\-\_\-signed, }
+\item[{Random\-Number\-Generator \&}]{rng}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1DE__EAC_a5832d9cd287b553f1387802a4788e1f7}
+Create a link certificate between two C\-V\-C\-A certificates. The key encoding will be implicit\-C\-A. 
+\begin{DoxyParams}{Parameters}
+{\em signer} & the cvca certificate associated with the signing entity \\
+\hline
+{\em priv\-\_\-key} & the private key associated with the signer \\
+\hline
+{\em to\-\_\-be\-\_\-signed} & the certificate which whose C\-A\-R/\-C\-H\-R will be the holder of the link certificate \\
+\hline
+{\em rng} & a random number generator \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespaceBotan_1_1DE__EAC_af1e13a03f618491870c49a04c3d5fd7d}{\index{Botan\-::\-D\-E\-\_\-\-E\-A\-C@{Botan\-::\-D\-E\-\_\-\-E\-A\-C}!sign\-\_\-request@{sign\-\_\-request}}
+\index{sign\-\_\-request@{sign\-\_\-request}!Botan::DE_EAC@{Botan\-::\-D\-E\-\_\-\-E\-A\-C}}
+\subsubsection[{sign\-\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C} B\-O\-T\-A\-N\-\_\-\-D\-L\-L Botan\-::\-D\-E\-\_\-\-E\-A\-C\-::sign\-\_\-request (
+\begin{DoxyParamCaption}
+\item[{E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C const \&}]{signer\-\_\-cert, }
+\item[{Private\-\_\-\-Key const \&}]{priv\-\_\-key, }
+\item[{E\-A\-C1\-\_\-1\-\_\-\-Req const \&}]{req, }
+\item[{u32bit}]{seqnr, }
+\item[{u32bit}]{seqnr\-\_\-len, }
+\item[{bool}]{domestic, }
+\item[{u32bit}]{dvca\-\_\-validity\-\_\-months, }
+\item[{u32bit}]{ca\-\_\-is\-\_\-validity\-\_\-months, }
+\item[{Random\-Number\-Generator \&}]{rng}
+\end{DoxyParamCaption}
+)}}\label{namespaceBotan_1_1DE__EAC_af1e13a03f618491870c49a04c3d5fd7d}
+Sign a C\-V\-C request. 
+\begin{DoxyParams}{Parameters}
+{\em signer\-\_\-cert} & the certificate of the signing entity \\
+\hline
+{\em priv\-\_\-key} & the private key of the signing entity \\
+\hline
+{\em req} & the request to be signed \\
+\hline
+{\em seqnr} & the sequence number of the certificate to be created \\
+\hline
+{\em seqnr\-\_\-len} & the number of digits the sequence number will be encoded in \\
+\hline
+{\em domestic} & indicates whether to sign a domestic or a foreign certificate\-: set to true for domestic \\
+\hline
+{\em dvca\-\_\-validity\-\_\-months} & validity period in months \\
+\hline
+{\em ca\-\_\-is\-\_\-validity\-\_\-months} & validity period in months \\
+\hline
+{\em rng} & a random number generator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new certificate 
+\end{DoxyReturn}

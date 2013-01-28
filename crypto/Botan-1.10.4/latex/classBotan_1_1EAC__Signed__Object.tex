@@ -1,0 +1,158 @@
+\hypertarget{classBotan_1_1EAC__Signed__Object}{\section{Botan\-:\-:E\-A\-C\-\_\-\-Signed\-\_\-\-Object Class Reference}
+\label{classBotan_1_1EAC__Signed__Object}\index{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object@{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}}
+}
+
+
+{\ttfamily \#include $<$signed\-\_\-obj.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:E\-A\-C\-\_\-\-Signed\-\_\-\-Object\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.058824cm]{classBotan_1_1EAC__Signed__Object}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1EAC__Signed__Object_a024f30b08d7a83b328ec76d75e3c18a2}{tbs\-\_\-data} () const =0
+\item 
+virtual \hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1EAC__Signed__Object_abdccc2793d07b85bdba0b20733d569c8}{get\-\_\-concat\-\_\-sig} () const =0
+\item 
+\hyperlink{classBotan_1_1AlgorithmIdentifier}{Algorithm\-Identifier} \hyperlink{classBotan_1_1EAC__Signed__Object_a7abc66229971791494e203a744634be7}{signature\-\_\-algorithm} () const 
+\item 
+bool \hyperlink{classBotan_1_1EAC__Signed__Object_a404334683880964094f879f10504cc6c}{check\-\_\-signature} (class \hyperlink{classBotan_1_1Public__Key}{Public\-\_\-\-Key} \&key, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&sig) const 
+\item 
+virtual void \hyperlink{classBotan_1_1EAC__Signed__Object_af96951a0a562640e45ed2bc08edf6205}{encode} (\hyperlink{classBotan_1_1Pipe}{Pipe} \&pipe, \hyperlink{namespaceBotan_a53759b4ed1fb93549f307fcf68729d2f}{X509\-\_\-\-Encoding} encoding=P\-E\-M) const =0
+\item 
+\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \hyperlink{classBotan_1_1EAC__Signed__Object_a49b5cff327a12558a96b7cecf73d62c4}{B\-E\-R\-\_\-encode} () const 
+\item 
+std\-::string \hyperlink{classBotan_1_1EAC__Signed__Object_accf002425faa1c05074e9776d3718304}{P\-E\-M\-\_\-encode} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1EAC__Signed__Object_a6e937d948f759665562f9bb02d56c536}{void {\bfseries do\-\_\-decode} ()}\label{classBotan_1_1EAC__Signed__Object_a6e937d948f759665562f9bb02d56c536}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1EAC__Signed__Object_a59bcdd644872c91c044e15339cda9a06}{\hyperlink{classBotan_1_1AlgorithmIdentifier}{Algorithm\-Identifier} {\bfseries sig\-\_\-algo}}\label{classBotan_1_1EAC__Signed__Object_a59bcdd644872c91c044e15339cda9a06}
+
+\item 
+\hypertarget{classBotan_1_1EAC__Signed__Object_a49fb92b3cb9d6a6bf8156ca5a4ecda27}{\hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ {\bfseries tbs\-\_\-bits}}\label{classBotan_1_1EAC__Signed__Object_a49fb92b3cb9d6a6bf8156ca5a4ecda27}
+
+\item 
+\hypertarget{classBotan_1_1EAC__Signed__Object_ad9f1bbc6ebfc38f4ecede8bda913f2ac}{std\-::string {\bfseries P\-E\-M\-\_\-label\-\_\-pref}}\label{classBotan_1_1EAC__Signed__Object_ad9f1bbc6ebfc38f4ecede8bda913f2ac}
+
+\item 
+\hypertarget{classBotan_1_1EAC__Signed__Object_a103f10043aaa8dcf5c85de6ed27fd8a0}{std\-::vector$<$ std\-::string $>$ {\bfseries P\-E\-M\-\_\-labels\-\_\-allowed}}\label{classBotan_1_1EAC__Signed__Object_a103f10043aaa8dcf5c85de6ed27fd8a0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents abstract signed E\-A\-C object 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1EAC__Signed__Object_a49b5cff327a12558a96b7cecf73d62c4}{\index{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object@{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}!B\-E\-R\-\_\-encode@{B\-E\-R\-\_\-encode}}
+\index{B\-E\-R\-\_\-encode@{B\-E\-R\-\_\-encode}!Botan::EAC_Signed_Object@{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}}
+\subsubsection[{B\-E\-R\-\_\-encode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Secure\-Vector}$<$ {\bf byte} $>$ Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object\-::\-B\-E\-R\-\_\-encode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1EAC__Signed__Object_a49b5cff327a12558a96b7cecf73d62c4}
+\hyperlink{namespaceBotan_1_1BER}{B\-E\-R} encode this object. \begin{DoxyReturn}{Returns}
+result containing the \hyperlink{namespaceBotan_1_1BER}{B\-E\-R} representation of this object. 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EAC__Signed__Object_a404334683880964094f879f10504cc6c}{\index{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object@{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}!check\-\_\-signature@{check\-\_\-signature}}
+\index{check\-\_\-signature@{check\-\_\-signature}!Botan::EAC_Signed_Object@{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}}
+\subsubsection[{check\-\_\-signature}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object\-::check\-\_\-signature (
+\begin{DoxyParamCaption}
+\item[{class {\bf Public\-\_\-\-Key} \&}]{key, }
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{sig}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1EAC__Signed__Object_a404334683880964094f879f10504cc6c}
+Check the signature of this object. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the public key associated with this signed object \\
+\hline
+{\em sig} & the signature we are checking \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the signature was created by the private key associated with this public key 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EAC__Signed__Object_af96951a0a562640e45ed2bc08edf6205}{\index{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object@{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}!encode@{encode}}
+\index{encode@{encode}!Botan::EAC_Signed_Object@{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object\-::encode (
+\begin{DoxyParamCaption}
+\item[{{\bf Pipe} \&}]{pipe, }
+\item[{{\bf X509\-\_\-\-Encoding}}]{encoding = {\ttfamily PEM}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1EAC__Signed__Object_af96951a0a562640e45ed2bc08edf6205}
+Write this object D\-E\-R encoded into a specified pipe. 
+\begin{DoxyParams}{Parameters}
+{\em pipe} & the pipe to write the encoded object to \\
+\hline
+{\em encoding} & the encoding type to use \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classBotan_1_1EAC1__1__ADO_a0f22dc8fcbe3c1f4f5e89e090224d2fc}{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}, \hyperlink{classBotan_1_1EAC1__1__gen__CVC_a94dbfc92c545d9d04404c14be1732177}{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-gen\-\_\-\-C\-V\-C$<$ Derived $>$}, \hyperlink{classBotan_1_1EAC1__1__gen__CVC_a94dbfc92c545d9d04404c14be1732177}{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-gen\-\_\-\-C\-V\-C$<$ E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C $>$}, and \hyperlink{classBotan_1_1EAC1__1__gen__CVC_a94dbfc92c545d9d04404c14be1732177}{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-gen\-\_\-\-C\-V\-C$<$ E\-A\-C1\-\_\-1\-\_\-\-Req $>$}.
+
+\hypertarget{classBotan_1_1EAC__Signed__Object_abdccc2793d07b85bdba0b20733d569c8}{\index{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object@{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}!get\-\_\-concat\-\_\-sig@{get\-\_\-concat\-\_\-sig}}
+\index{get\-\_\-concat\-\_\-sig@{get\-\_\-concat\-\_\-sig}!Botan::EAC_Signed_Object@{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}}
+\subsubsection[{get\-\_\-concat\-\_\-sig}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Secure\-Vector}$<${\bf byte}$>$ Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object\-::get\-\_\-concat\-\_\-sig (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1EAC__Signed__Object_abdccc2793d07b85bdba0b20733d569c8}
+Get the signature of this object as a concatenation, i.\-e. if the signature consists of multiple parts (like in the case of E\-C\-D\-S\-A) these will be concatenated. \begin{DoxyReturn}{Returns}
+signature as a concatenation of its parts 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classBotan_1_1EAC1__1__obj_a347597a2f94777b4694d03fb17d98862}{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-obj$<$ Derived $>$}, \hyperlink{classBotan_1_1EAC1__1__obj_a347597a2f94777b4694d03fb17d98862}{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-obj$<$ E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O $>$}, \hyperlink{classBotan_1_1EAC1__1__obj_a347597a2f94777b4694d03fb17d98862}{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-obj$<$ E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C $>$}, and \hyperlink{classBotan_1_1EAC1__1__obj_a347597a2f94777b4694d03fb17d98862}{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-obj$<$ E\-A\-C1\-\_\-1\-\_\-\-Req $>$}.
+
+\hypertarget{classBotan_1_1EAC__Signed__Object_accf002425faa1c05074e9776d3718304}{\index{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object@{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}!P\-E\-M\-\_\-encode@{P\-E\-M\-\_\-encode}}
+\index{P\-E\-M\-\_\-encode@{P\-E\-M\-\_\-encode}!Botan::EAC_Signed_Object@{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}}
+\subsubsection[{P\-E\-M\-\_\-encode}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object\-::\-P\-E\-M\-\_\-encode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1EAC__Signed__Object_accf002425faa1c05074e9776d3718304}
+P\-E\-M encode this object. \begin{DoxyReturn}{Returns}
+result containing the P\-E\-M representation of this object. 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EAC__Signed__Object_a7abc66229971791494e203a744634be7}{\index{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object@{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}!signature\-\_\-algorithm@{signature\-\_\-algorithm}}
+\index{signature\-\_\-algorithm@{signature\-\_\-algorithm}!Botan::EAC_Signed_Object@{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}}
+\subsubsection[{signature\-\_\-algorithm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Algorithm\-Identifier} Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object\-::signature\-\_\-algorithm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1EAC__Signed__Object_a7abc66229971791494e203a744634be7}
+Get the signature algorithm identifier used to sign this object. \begin{DoxyReturn}{Returns}
+the signature algorithm identifier 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1EAC__Signed__Object_a024f30b08d7a83b328ec76d75e3c18a2}{\index{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object@{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}!tbs\-\_\-data@{tbs\-\_\-data}}
+\index{tbs\-\_\-data@{tbs\-\_\-data}!Botan::EAC_Signed_Object@{Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object}}
+\subsubsection[{tbs\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Secure\-Vector}$<${\bf byte}$>$ Botan\-::\-E\-A\-C\-\_\-\-Signed\-\_\-\-Object\-::tbs\-\_\-data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1EAC__Signed__Object_a024f30b08d7a83b328ec76d75e3c18a2}
+Get the T\-B\-S (to-\/be-\/signed) data in this object. \begin{DoxyReturn}{Returns}
+D\-E\-R encoded T\-B\-S data of this object 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classBotan_1_1EAC1__1__ADO_a04ba7c24bf6e7385fc73fe0d48496a2f}{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-\-A\-D\-O}, \hyperlink{classBotan_1_1EAC1__1__gen__CVC_af41f854bcf3ab05584e2d4f0c01ee5f0}{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-gen\-\_\-\-C\-V\-C$<$ Derived $>$}, \hyperlink{classBotan_1_1EAC1__1__gen__CVC_af41f854bcf3ab05584e2d4f0c01ee5f0}{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-gen\-\_\-\-C\-V\-C$<$ E\-A\-C1\-\_\-1\-\_\-\-C\-V\-C $>$}, and \hyperlink{classBotan_1_1EAC1__1__gen__CVC_af41f854bcf3ab05584e2d4f0c01ee5f0}{Botan\-::\-E\-A\-C1\-\_\-1\-\_\-gen\-\_\-\-C\-V\-C$<$ E\-A\-C1\-\_\-1\-\_\-\-Req $>$}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/cert/cvc/signed\-\_\-obj.\-h\item 
+src/cert/cvc/signed\-\_\-obj.\-cpp\end{DoxyCompactItemize}

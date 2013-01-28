@@ -1,0 +1,119 @@
+\hypertarget{classBotan_1_1Comb4P}{\section{Botan\-:\-:Comb4\-P Class Reference}
+\label{classBotan_1_1Comb4P}\index{Botan\-::\-Comb4\-P@{Botan\-::\-Comb4\-P}}
+}
+
+
+{\ttfamily \#include $<$comb4p.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Comb4\-P\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBotan_1_1Comb4P}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1Comb4P_a4951145ded6d173e2d4cefe8ac96ff09}{Comb4\-P} (\hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$h1, \hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$h2)
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1Comb4P_ac532c8612908ba299222e628f4c12ab7}{hash\-\_\-block\-\_\-size} () const 
+\item 
+size\-\_\-t \hyperlink{classBotan_1_1Comb4P_ae594f9cf1e331b5df1451664001bdce1}{output\-\_\-length} () const 
+\item 
+\hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$ \hyperlink{classBotan_1_1Comb4P_aa3bba25b9b37e6c553bf24ec1ac03239}{clone} () const 
+\item 
+std\-::string \hyperlink{classBotan_1_1Comb4P_a245d3dd9c5ac55eed7b5a0f7e8794c33}{name} () const 
+\item 
+void \hyperlink{classBotan_1_1Comb4P_ae9fd424ddd6a8d9bb1d1a7047a2e9009}{clear} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Combines two hash functions using a Feistel scheme. Described in \char`\"{}\-On the Security of Hash Function Combiners\char`\"{}, Anja Lehmann 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1Comb4P_a4951145ded6d173e2d4cefe8ac96ff09}{\index{Botan\-::\-Comb4\-P@{Botan\-::\-Comb4\-P}!Comb4\-P@{Comb4\-P}}
+\index{Comb4\-P@{Comb4\-P}!Botan::Comb4P@{Botan\-::\-Comb4\-P}}
+\subsubsection[{Comb4\-P}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-Comb4\-P\-::\-Comb4\-P (
+\begin{DoxyParamCaption}
+\item[{{\bf Hash\-Function} $\ast$}]{h1, }
+\item[{{\bf Hash\-Function} $\ast$}]{h2}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1Comb4P_a4951145ded6d173e2d4cefe8ac96ff09}
+
+\begin{DoxyParams}{Parameters}
+{\em h1} & the first hash \\
+\hline
+{\em h2} & the second hash \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Comb4P_ae9fd424ddd6a8d9bb1d1a7047a2e9009}{\index{Botan\-::\-Comb4\-P@{Botan\-::\-Comb4\-P}!clear@{clear}}
+\index{clear@{clear}!Botan::Comb4P@{Botan\-::\-Comb4\-P}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Comb4\-P\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Comb4P_ae9fd424ddd6a8d9bb1d1a7047a2e9009}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1Comb4P_aa3bba25b9b37e6c553bf24ec1ac03239}{\index{Botan\-::\-Comb4\-P@{Botan\-::\-Comb4\-P}!clone@{clone}}
+\index{clone@{clone}!Botan::Comb4P@{Botan\-::\-Comb4\-P}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hash\-Function}$\ast$ Botan\-::\-Comb4\-P\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Comb4P_aa3bba25b9b37e6c553bf24ec1ac03239}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1HashFunction_aaa2b17b63215ae970d9b5d5044cc208a}{Botan\-::\-Hash\-Function}.
+
+\hypertarget{classBotan_1_1Comb4P_ac532c8612908ba299222e628f4c12ab7}{\index{Botan\-::\-Comb4\-P@{Botan\-::\-Comb4\-P}!hash\-\_\-block\-\_\-size@{hash\-\_\-block\-\_\-size}}
+\index{hash\-\_\-block\-\_\-size@{hash\-\_\-block\-\_\-size}!Botan::Comb4P@{Botan\-::\-Comb4\-P}}
+\subsubsection[{hash\-\_\-block\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Comb4\-P\-::hash\-\_\-block\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Comb4P_ac532c8612908ba299222e628f4c12ab7}
+The hash block size as defined for this algorithm 
+
+Reimplemented from \hyperlink{classBotan_1_1HashFunction_a62b12b2806f422bdacfe0e6f50918454}{Botan\-::\-Hash\-Function}.
+
+\hypertarget{classBotan_1_1Comb4P_a245d3dd9c5ac55eed7b5a0f7e8794c33}{\index{Botan\-::\-Comb4\-P@{Botan\-::\-Comb4\-P}!name@{name}}
+\index{name@{name}!Botan::Comb4P@{Botan\-::\-Comb4\-P}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Comb4\-P\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Comb4P_a245d3dd9c5ac55eed7b5a0f7e8794c33}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1Comb4P_ae594f9cf1e331b5df1451664001bdce1}{\index{Botan\-::\-Comb4\-P@{Botan\-::\-Comb4\-P}!output\-\_\-length@{output\-\_\-length}}
+\index{output\-\_\-length@{output\-\_\-length}!Botan::Comb4P@{Botan\-::\-Comb4\-P}}
+\subsubsection[{output\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Botan\-::\-Comb4\-P\-::output\-\_\-length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Comb4P_ae594f9cf1e331b5df1451664001bdce1}
+\begin{DoxyReturn}{Returns}
+length of the output of this function in bytes 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Buffered__Computation_a7b2e6776ea9ded2e3f9da5a760b7d34b}{Botan\-::\-Buffered\-\_\-\-Computation}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/hash/comb4p/comb4p.\-h\item 
+src/hash/comb4p/comb4p.\-cpp\end{DoxyCompactItemize}

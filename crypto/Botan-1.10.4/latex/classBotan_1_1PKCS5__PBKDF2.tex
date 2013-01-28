@@ -1,0 +1,116 @@
+\hypertarget{classBotan_1_1PKCS5__PBKDF2}{\section{Botan\-:\-:P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2 Class Reference}
+\label{classBotan_1_1PKCS5__PBKDF2}\index{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2@{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}}
+}
+
+
+{\ttfamily \#include $<$pbkdf2.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classBotan_1_1PKCS5__PBKDF2}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1PKCS5__PBKDF2_af422ef3bbc7d0b053fe46a61c310fc0b}{name} () const 
+\item 
+\hyperlink{classBotan_1_1PBKDF}{P\-B\-K\-D\-F} $\ast$ \hyperlink{classBotan_1_1PKCS5__PBKDF2_a01646d05018139cc33ffca758caae423}{clone} () const 
+\item 
+\hyperlink{classBotan_1_1OctetString}{Octet\-String} \hyperlink{classBotan_1_1PKCS5__PBKDF2_ae40d8cd687ed0eb081ced526c56cfab4}{derive\-\_\-key} (size\-\_\-t output\-\_\-len, const std\-::string \&passphrase, const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} salt\mbox{[}$\,$\mbox{]}, size\-\_\-t salt\-\_\-len, size\-\_\-t iterations) const 
+\item 
+\hyperlink{classBotan_1_1PKCS5__PBKDF2_a7a4e1fb9647f71307db348cb6a166d44}{P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2} (\hyperlink{classBotan_1_1MessageAuthenticationCode}{Message\-Authentication\-Code} $\ast$mac\-\_\-fn)
+\item 
+\hyperlink{classBotan_1_1PKCS5__PBKDF2_a5199749f1b7f6b2b667013a437d26f37}{$\sim$\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+P\-K\-C\-S \#5 P\-B\-K\-D\-F2 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1PKCS5__PBKDF2_a7a4e1fb9647f71307db348cb6a166d44}{\index{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2@{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}!P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2@{P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}}
+\index{P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2@{P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}!Botan::PKCS5_PBKDF2@{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}}
+\subsubsection[{P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Message\-Authentication\-Code} $\ast$}]{mac\-\_\-fn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1PKCS5__PBKDF2_a7a4e1fb9647f71307db348cb6a166d44}
+Create a P\-K\-C\-S \#5 instance using the specified message auth code 
+\begin{DoxyParams}{Parameters}
+{\em mac\-\_\-fn} & the M\-A\-C to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBotan_1_1PKCS5__PBKDF2_a5199749f1b7f6b2b667013a437d26f37}{\index{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2@{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}!$\sim$\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2@{$\sim$\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}}
+\index{$\sim$\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2@{$\sim$\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}!Botan::PKCS5_PBKDF2@{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}}
+\subsubsection[{$\sim$\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2\-::$\sim$\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBotan_1_1PKCS5__PBKDF2_a5199749f1b7f6b2b667013a437d26f37}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1PKCS5__PBKDF2_a01646d05018139cc33ffca758caae423}{\index{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2@{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}!clone@{clone}}
+\index{clone@{clone}!Botan::PKCS5_PBKDF2@{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-B\-K\-D\-F}$\ast$ Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1PKCS5__PBKDF2_a01646d05018139cc33ffca758caae423}
+\begin{DoxyReturn}{Returns}
+new instance of this same algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1PBKDF_a50a31eb39181bca41bf078adf4bc68e0}{Botan\-::\-P\-B\-K\-D\-F}.
+
+\hypertarget{classBotan_1_1PKCS5__PBKDF2_ae40d8cd687ed0eb081ced526c56cfab4}{\index{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2@{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}!derive\-\_\-key@{derive\-\_\-key}}
+\index{derive\-\_\-key@{derive\-\_\-key}!Botan::PKCS5_PBKDF2@{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}}
+\subsubsection[{derive\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Octet\-String} Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2\-::derive\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{output\-\_\-len, }
+\item[{const std\-::string \&}]{passphrase, }
+\item[{const {\bf byte}}]{salt\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{salt\-\_\-len, }
+\item[{size\-\_\-t}]{iterations}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1PKCS5__PBKDF2_ae40d8cd687ed0eb081ced526c56cfab4}
+Derive a key from a passphrase 
+\begin{DoxyParams}{Parameters}
+{\em output\-\_\-len} & the desired length of the key to produce \\
+\hline
+{\em passphrase} & the password to derive the key from \\
+\hline
+{\em salt} & a randomly chosen salt \\
+\hline
+{\em salt\-\_\-len} & length of salt in bytes \\
+\hline
+{\em iterations} & the number of iterations to use (use 10\-K or more) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1PBKDF_a717debec0e2f3c7b2ab929f9cda91565}{Botan\-::\-P\-B\-K\-D\-F}.
+
+\hypertarget{classBotan_1_1PKCS5__PBKDF2_af422ef3bbc7d0b053fe46a61c310fc0b}{\index{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2@{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}!name@{name}}
+\index{name@{name}!Botan::PKCS5_PBKDF2@{Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-P\-K\-C\-S5\-\_\-\-P\-B\-K\-D\-F2\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1PKCS5__PBKDF2_af422ef3bbc7d0b053fe46a61c310fc0b}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/pbkdf/pbkdf2/pbkdf2.\-h\item 
+src/pbkdf/pbkdf2/pbkdf2.\-cpp\end{DoxyCompactItemize}

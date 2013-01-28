@@ -1,0 +1,62 @@
+\hypertarget{classBotan_1_1RW__PrivateKey}{\section{Botan\-:\-:R\-W\-\_\-\-Private\-Key Class Reference}
+\label{classBotan_1_1RW__PrivateKey}\index{Botan\-::\-R\-W\-\_\-\-Private\-Key@{Botan\-::\-R\-W\-\_\-\-Private\-Key}}
+}
+
+
+{\ttfamily \#include $<$rw.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:R\-W\-\_\-\-Private\-Key\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.929825cm]{classBotan_1_1RW__PrivateKey}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBotan_1_1RW__PrivateKey_ac484862f2de2de327129cae34195b634}{{\bfseries R\-W\-\_\-\-Private\-Key} (const \hyperlink{classBotan_1_1AlgorithmIdentifier}{Algorithm\-Identifier} \&alg\-\_\-id, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&key\-\_\-bits, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng)}\label{classBotan_1_1RW__PrivateKey_ac484862f2de2de327129cae34195b634}
+
+\item 
+\hypertarget{classBotan_1_1RW__PrivateKey_a4f59c46f1c9bbd81c9d8311622d6839c}{{\bfseries R\-W\-\_\-\-Private\-Key} (\hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&p, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&q, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&e, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&d=0, const \hyperlink{classBotan_1_1BigInt}{Big\-Int} \&n=0)}\label{classBotan_1_1RW__PrivateKey_a4f59c46f1c9bbd81c9d8311622d6839c}
+
+\item 
+\hypertarget{classBotan_1_1RW__PrivateKey_a5276eb13228d57f46d4a55931930fa9d}{{\bfseries R\-W\-\_\-\-Private\-Key} (\hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, size\-\_\-t bits, size\-\_\-t=2)}\label{classBotan_1_1RW__PrivateKey_a5276eb13228d57f46d4a55931930fa9d}
+
+\item 
+bool \hyperlink{classBotan_1_1RW__PrivateKey_a6985335b2b61044870cd94162347e4c3}{check\-\_\-key} (\hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, bool) const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Rabin-\/\-Williams Private Key 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1RW__PrivateKey_a6985335b2b61044870cd94162347e4c3}{\index{Botan\-::\-R\-W\-\_\-\-Private\-Key@{Botan\-::\-R\-W\-\_\-\-Private\-Key}!check\-\_\-key@{check\-\_\-key}}
+\index{check\-\_\-key@{check\-\_\-key}!Botan::RW_PrivateKey@{Botan\-::\-R\-W\-\_\-\-Private\-Key}}
+\subsubsection[{check\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}bool Botan\-::\-R\-W\-\_\-\-Private\-Key\-::check\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{{\bf Random\-Number\-Generator} \&}]{rng, }
+\item[{bool}]{strong}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1RW__PrivateKey_a6985335b2b61044870cd94162347e4c3}
+Test the key values for consistency. 
+\begin{DoxyParams}{Parameters}
+{\em rng} & rng to use \\
+\hline
+{\em strong} & whether to perform strong and lengthy version of the test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the test is passed 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1IF__Scheme__PrivateKey_a42567a60cd7dd299e3f9781404f3203d}{Botan\-::\-I\-F\-\_\-\-Scheme\-\_\-\-Private\-Key}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/pubkey/rw/rw.\-h\item 
+src/pubkey/rw/rw.\-cpp\end{DoxyCompactItemize}

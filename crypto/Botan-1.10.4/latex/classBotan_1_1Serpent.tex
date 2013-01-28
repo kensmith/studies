@@ -1,0 +1,160 @@
+\hypertarget{classBotan_1_1Serpent}{\section{Botan\-:\-:Serpent Class Reference}
+\label{classBotan_1_1Serpent}\index{Botan\-::\-Serpent@{Botan\-::\-Serpent}}
+}
+
+
+{\ttfamily \#include $<$serpent.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Serpent\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.233645cm]{classBotan_1_1Serpent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBotan_1_1Serpent_a108c16f4dfc0925ded52eba795cd5153}{encrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+void \hyperlink{classBotan_1_1Serpent_a3eb047c3299fb267312d8663107a843e}{decrypt\-\_\-n} (const \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} in\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} out\mbox{[}$\,$\mbox{]}, size\-\_\-t blocks) const 
+\item 
+void \hyperlink{classBotan_1_1Serpent_a111d701c83bd18ddebf39a2091b71e28}{clear} ()
+\item 
+std\-::string \hyperlink{classBotan_1_1Serpent_a4dde28f8077264dbe78346321f387e81}{name} () const 
+\item 
+\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$ \hyperlink{classBotan_1_1Serpent_a37e5782d114c027f1db73898a8b96070}{clone} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classBotan_1_1SecureVector}{Secure\-Vector}$<$ \hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} $>$ \& \hyperlink{classBotan_1_1Serpent_a3c6eb008721dd748df61b7fa0f0e891b}{get\-\_\-round\-\_\-keys} () const 
+\item 
+void \hyperlink{classBotan_1_1Serpent_a8f6e192ddb9d7a63e53966ddf3d32c8c}{set\-\_\-round\-\_\-keys} (const \hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} ks\mbox{[}132\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1Serpent}{Serpent}, an A\-E\-S finalist 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1Serpent_a111d701c83bd18ddebf39a2091b71e28}{\index{Botan\-::\-Serpent@{Botan\-::\-Serpent}!clear@{clear}}
+\index{clear@{clear}!Botan::Serpent@{Botan\-::\-Serpent}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Serpent\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Serpent_a111d701c83bd18ddebf39a2091b71e28}
+Zeroize internal state 
+
+Implements \hyperlink{classBotan_1_1Algorithm_abb0788be8424be88050c83fd7867cba5}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1Serpent_a37e5782d114c027f1db73898a8b96070}{\index{Botan\-::\-Serpent@{Botan\-::\-Serpent}!clone@{clone}}
+\index{clone@{clone}!Botan::Serpent@{Botan\-::\-Serpent}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Cipher}$\ast$ Botan\-::\-Serpent\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Serpent_a37e5782d114c027f1db73898a8b96070}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a9feaf7c1bfb5279a1652c849054e033c}{Botan\-::\-Block\-Cipher}.
+
+
+
+Reimplemented in \hyperlink{classBotan_1_1Serpent__SIMD_a5f6c6089e6598a2bf2a26caef87fdcea}{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D}, and \hyperlink{classBotan_1_1Serpent__X86__32_aa27d5bf6b6c49ac9ae231d7795470651}{Botan\-::\-Serpent\-\_\-\-X86\-\_\-32}.
+
+\hypertarget{classBotan_1_1Serpent_a3eb047c3299fb267312d8663107a843e}{\index{Botan\-::\-Serpent@{Botan\-::\-Serpent}!decrypt\-\_\-n@{decrypt\-\_\-n}}
+\index{decrypt\-\_\-n@{decrypt\-\_\-n}!Botan::Serpent@{Botan\-::\-Serpent}}
+\subsubsection[{decrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Serpent\-::decrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Serpent_a3eb047c3299fb267312d8663107a843e}
+Decrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a6ea709632f78d833484a4d67de25e1a8}{Botan\-::\-Block\-Cipher}.
+
+
+
+Reimplemented in \hyperlink{classBotan_1_1Serpent__SIMD_a62ef06bb09d5b78042285602786cb8b2}{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D}, and \hyperlink{classBotan_1_1Serpent__X86__32_aef4bc55a214e70c337730eb55c854cac}{Botan\-::\-Serpent\-\_\-\-X86\-\_\-32}.
+
+\hypertarget{classBotan_1_1Serpent_a108c16f4dfc0925ded52eba795cd5153}{\index{Botan\-::\-Serpent@{Botan\-::\-Serpent}!encrypt\-\_\-n@{encrypt\-\_\-n}}
+\index{encrypt\-\_\-n@{encrypt\-\_\-n}!Botan::Serpent@{Botan\-::\-Serpent}}
+\subsubsection[{encrypt\-\_\-n}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Serpent\-::encrypt\-\_\-n (
+\begin{DoxyParamCaption}
+\item[{const {\bf byte}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf byte}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{size\-\_\-t}]{blocks}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1Serpent_a108c16f4dfc0925ded52eba795cd5153}
+Encrypt one or more blocks 
+\begin{DoxyParams}{Parameters}
+{\em in} & the input buffer (multiple of \hyperlink{classBotan_1_1Block__Cipher__Fixed__Params_a2827f84e563c3cabe7b337492fac46c6}{block\-\_\-size()}) \\
+\hline
+{\em out} & the output buffer (same size as in) \\
+\hline
+{\em blocks} & the number of blocks to process \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classBotan_1_1BlockCipher_a16a7005967a910407703c2899bd73ccf}{Botan\-::\-Block\-Cipher}.
+
+
+
+Reimplemented in \hyperlink{classBotan_1_1Serpent__SIMD_a2b8c97fb8da84ca6c606083746840e1a}{Botan\-::\-Serpent\-\_\-\-S\-I\-M\-D}, and \hyperlink{classBotan_1_1Serpent__X86__32_a38cef04655217eb9024f8df040c1d232}{Botan\-::\-Serpent\-\_\-\-X86\-\_\-32}.
+
+\hypertarget{classBotan_1_1Serpent_a3c6eb008721dd748df61b7fa0f0e891b}{\index{Botan\-::\-Serpent@{Botan\-::\-Serpent}!get\-\_\-round\-\_\-keys@{get\-\_\-round\-\_\-keys}}
+\index{get\-\_\-round\-\_\-keys@{get\-\_\-round\-\_\-keys}!Botan::Serpent@{Botan\-::\-Serpent}}
+\subsubsection[{get\-\_\-round\-\_\-keys}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Secure\-Vector}$<${\bf u32bit}$>$\& Botan\-::\-Serpent\-::get\-\_\-round\-\_\-keys (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classBotan_1_1Serpent_a3c6eb008721dd748df61b7fa0f0e891b}
+For use by subclasses using S\-I\-M\-D, asm, etc \begin{DoxyReturn}{Returns}
+const reference to the key schedule 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1Serpent_a4dde28f8077264dbe78346321f387e81}{\index{Botan\-::\-Serpent@{Botan\-::\-Serpent}!name@{name}}
+\index{name@{name}!Botan::Serpent@{Botan\-::\-Serpent}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-Serpent\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1Serpent_a4dde28f8077264dbe78346321f387e81}
+\begin{DoxyReturn}{Returns}
+name of this algorithm 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Algorithm_a42d3ee39e051eba01ecace201fe1e6fd}{Botan\-::\-Algorithm}.
+
+\hypertarget{classBotan_1_1Serpent_a8f6e192ddb9d7a63e53966ddf3d32c8c}{\index{Botan\-::\-Serpent@{Botan\-::\-Serpent}!set\-\_\-round\-\_\-keys@{set\-\_\-round\-\_\-keys}}
+\index{set\-\_\-round\-\_\-keys@{set\-\_\-round\-\_\-keys}!Botan::Serpent@{Botan\-::\-Serpent}}
+\subsubsection[{set\-\_\-round\-\_\-keys}]{\setlength{\rightskip}{0pt plus 5cm}void Botan\-::\-Serpent\-::set\-\_\-round\-\_\-keys (
+\begin{DoxyParamCaption}
+\item[{const {\bf u32bit}}]{ks\mbox{[}132\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classBotan_1_1Serpent_a8f6e192ddb9d7a63e53966ddf3d32c8c}
+For use by subclasses that implement the key schedule 
+\begin{DoxyParams}{Parameters}
+{\em ks} & is the new key schedule value to set \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/block/serpent/serpent.\-h\item 
+src/block/serpent/serpent.\-cpp\end{DoxyCompactItemize}

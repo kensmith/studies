@@ -1,0 +1,170 @@
+\hypertarget{classBotan_1_1X509__CA}{\section{Botan\-:\-:X509\-\_\-\-C\-A Class Reference}
+\label{classBotan_1_1X509__CA}\index{Botan\-::\-X509\-\_\-\-C\-A@{Botan\-::\-X509\-\_\-\-C\-A}}
+}
+
+
+{\ttfamily \#include $<$x509\-\_\-ca.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBotan_1_1X509__Certificate}{X509\-\_\-\-Certificate} \hyperlink{classBotan_1_1X509__CA_a2a74d0e0060ef3bd71f8ac7dfe3cb08c}{sign\-\_\-request} (const \hyperlink{classBotan_1_1PKCS10__Request}{P\-K\-C\-S10\-\_\-\-Request} \&req, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const \hyperlink{classBotan_1_1X509__Time}{X509\-\_\-\-Time} \&not\-\_\-before, const \hyperlink{classBotan_1_1X509__Time}{X509\-\_\-\-Time} \&not\-\_\-after)
+\item 
+\hyperlink{classBotan_1_1X509__Certificate}{X509\-\_\-\-Certificate} \hyperlink{classBotan_1_1X509__CA_a78ee3a57f79a5297b56b47c39d31cf1e}{ca\-\_\-certificate} () const 
+\item 
+\hyperlink{classBotan_1_1X509__CRL}{X509\-\_\-\-C\-R\-L} \hyperlink{classBotan_1_1X509__CA_aacef32db4c9d4398c7ac321bdece4752}{new\-\_\-crl} (\hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, \hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} next\-\_\-update=0) const 
+\item 
+\hyperlink{classBotan_1_1X509__CRL}{X509\-\_\-\-C\-R\-L} \hyperlink{classBotan_1_1X509__CA_a4a738b3ce5d8203c6878dee33a62420d}{update\-\_\-crl} (const \hyperlink{classBotan_1_1X509__CRL}{X509\-\_\-\-C\-R\-L} \&last\-\_\-crl, const std\-::vector$<$ \hyperlink{classBotan_1_1CRL__Entry}{C\-R\-L\-\_\-\-Entry} $>$ \&new\-\_\-entries, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, \hyperlink{namespaceBotan_aacc7d03c95e97e76168fc1c819031830}{u32bit} next\-\_\-update=0) const 
+\item 
+\hyperlink{classBotan_1_1X509__CA_a07a9ec809251e971c20e9df294f8d0a5}{X509\-\_\-\-C\-A} (const \hyperlink{classBotan_1_1X509__Certificate}{X509\-\_\-\-Certificate} \&\hyperlink{classBotan_1_1X509__CA_a78ee3a57f79a5297b56b47c39d31cf1e}{ca\-\_\-certificate}, const \hyperlink{classBotan_1_1Private__Key}{Private\-\_\-\-Key} \&key, const std\-::string \&hash\-\_\-fn)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classBotan_1_1X509__Certificate}{X509\-\_\-\-Certificate} \hyperlink{classBotan_1_1X509__CA_ab1781cae7b0c62d391259ca57a7b60ce}{make\-\_\-cert} (\hyperlink{classBotan_1_1PK__Signer}{P\-K\-\_\-\-Signer} $\ast$signer, \hyperlink{classBotan_1_1RandomNumberGenerator}{Random\-Number\-Generator} \&rng, const \hyperlink{classBotan_1_1AlgorithmIdentifier}{Algorithm\-Identifier} \&sig\-\_\-algo, const \hyperlink{classBotan_1_1MemoryRegion}{Memory\-Region}$<$ \hyperlink{namespaceBotan_a7d793989d801281df48c6b19616b8b84}{byte} $>$ \&pub\-\_\-key, const \hyperlink{classBotan_1_1X509__Time}{X509\-\_\-\-Time} \&not\-\_\-before, const \hyperlink{classBotan_1_1X509__Time}{X509\-\_\-\-Time} \&not\-\_\-after, const \hyperlink{classBotan_1_1X509__DN}{X509\-\_\-\-D\-N} \&issuer\-\_\-dn, const \hyperlink{classBotan_1_1X509__DN}{X509\-\_\-\-D\-N} \&subject\-\_\-dn, const \hyperlink{classBotan_1_1Extensions}{Extensions} \&extensions)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents X.\-509 \hyperlink{classBotan_1_1Certificate}{Certificate} Authorities (C\-As). 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBotan_1_1X509__CA_a07a9ec809251e971c20e9df294f8d0a5}{\index{Botan\-::\-X509\-\_\-\-C\-A@{Botan\-::\-X509\-\_\-\-C\-A}!X509\-\_\-\-C\-A@{X509\-\_\-\-C\-A}}
+\index{X509\-\_\-\-C\-A@{X509\-\_\-\-C\-A}!Botan::X509_CA@{Botan\-::\-X509\-\_\-\-C\-A}}
+\subsubsection[{X509\-\_\-\-C\-A}]{\setlength{\rightskip}{0pt plus 5cm}Botan\-::\-X509\-\_\-\-C\-A\-::\-X509\-\_\-\-C\-A (
+\begin{DoxyParamCaption}
+\item[{const {\bf X509\-\_\-\-Certificate} \&}]{ca\-\_\-certificate, }
+\item[{const {\bf Private\-\_\-\-Key} \&}]{key, }
+\item[{const std\-::string \&}]{hash\-\_\-fn}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1X509__CA_a07a9ec809251e971c20e9df294f8d0a5}
+Create a new C\-A object. 
+\begin{DoxyParams}{Parameters}
+{\em ca\-\_\-certificate} & the certificate of the C\-A \\
+\hline
+{\em key} & the private key of the C\-A \\
+\hline
+{\em hash\-\_\-fn} & name of a hash function to use for signing \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1X509__CA_a78ee3a57f79a5297b56b47c39d31cf1e}{\index{Botan\-::\-X509\-\_\-\-C\-A@{Botan\-::\-X509\-\_\-\-C\-A}!ca\-\_\-certificate@{ca\-\_\-certificate}}
+\index{ca\-\_\-certificate@{ca\-\_\-certificate}!Botan::X509_CA@{Botan\-::\-X509\-\_\-\-C\-A}}
+\subsubsection[{ca\-\_\-certificate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X509\-\_\-\-Certificate} Botan\-::\-X509\-\_\-\-C\-A\-::ca\-\_\-certificate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__CA_a78ee3a57f79a5297b56b47c39d31cf1e}
+Get the certificate of this C\-A. \begin{DoxyReturn}{Returns}
+C\-A certificate 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__CA_ab1781cae7b0c62d391259ca57a7b60ce}{\index{Botan\-::\-X509\-\_\-\-C\-A@{Botan\-::\-X509\-\_\-\-C\-A}!make\-\_\-cert@{make\-\_\-cert}}
+\index{make\-\_\-cert@{make\-\_\-cert}!Botan::X509_CA@{Botan\-::\-X509\-\_\-\-C\-A}}
+\subsubsection[{make\-\_\-cert}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X509\-\_\-\-Certificate} Botan\-::\-X509\-\_\-\-C\-A\-::make\-\_\-cert (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-K\-\_\-\-Signer} $\ast$}]{signer, }
+\item[{{\bf Random\-Number\-Generator} \&}]{rng, }
+\item[{const {\bf Algorithm\-Identifier} \&}]{sig\-\_\-algo, }
+\item[{const {\bf Memory\-Region}$<$ {\bf byte} $>$ \&}]{pub\-\_\-key, }
+\item[{const {\bf X509\-\_\-\-Time} \&}]{not\-\_\-before, }
+\item[{const {\bf X509\-\_\-\-Time} \&}]{not\-\_\-after, }
+\item[{const {\bf X509\-\_\-\-D\-N} \&}]{issuer\-\_\-dn, }
+\item[{const {\bf X509\-\_\-\-D\-N} \&}]{subject\-\_\-dn, }
+\item[{const {\bf Extensions} \&}]{extensions}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classBotan_1_1X509__CA_ab1781cae7b0c62d391259ca57a7b60ce}
+Interface for creating new certificates 
+\begin{DoxyParams}{Parameters}
+{\em signer} & a signing object \\
+\hline
+{\em rng} & a random number generator \\
+\hline
+{\em sig\-\_\-algo} & the signature algorithm identifier \\
+\hline
+{\em pub\-\_\-key} & the serialized public key \\
+\hline
+{\em not\-\_\-before} & the start time of the certificate \\
+\hline
+{\em not\-\_\-after} & the end time of the certificate \\
+\hline
+{\em issuer\-\_\-dn} & the D\-N of the issuer \\
+\hline
+{\em subject\-\_\-dn} & the D\-N of the subject \\
+\hline
+{\em extensions} & an optional list of certificate extensions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+newly minted certificate 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__CA_aacef32db4c9d4398c7ac321bdece4752}{\index{Botan\-::\-X509\-\_\-\-C\-A@{Botan\-::\-X509\-\_\-\-C\-A}!new\-\_\-crl@{new\-\_\-crl}}
+\index{new\-\_\-crl@{new\-\_\-crl}!Botan::X509_CA@{Botan\-::\-X509\-\_\-\-C\-A}}
+\subsubsection[{new\-\_\-crl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X509\-\_\-\-C\-R\-L} Botan\-::\-X509\-\_\-\-C\-A\-::new\-\_\-crl (
+\begin{DoxyParamCaption}
+\item[{{\bf Random\-Number\-Generator} \&}]{rng, }
+\item[{{\bf u32bit}}]{next\-\_\-update = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__CA_aacef32db4c9d4398c7ac321bdece4752}
+Create a new and empty C\-R\-L for this C\-A. 
+\begin{DoxyParams}{Parameters}
+{\em rng} & the random number generator to use \\
+\hline
+{\em next\-\_\-update} & the time to set in next update in seconds as the offset from the current time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new C\-R\-L 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__CA_a2a74d0e0060ef3bd71f8ac7dfe3cb08c}{\index{Botan\-::\-X509\-\_\-\-C\-A@{Botan\-::\-X509\-\_\-\-C\-A}!sign\-\_\-request@{sign\-\_\-request}}
+\index{sign\-\_\-request@{sign\-\_\-request}!Botan::X509_CA@{Botan\-::\-X509\-\_\-\-C\-A}}
+\subsubsection[{sign\-\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X509\-\_\-\-Certificate} Botan\-::\-X509\-\_\-\-C\-A\-::sign\-\_\-request (
+\begin{DoxyParamCaption}
+\item[{const {\bf P\-K\-C\-S10\-\_\-\-Request} \&}]{req, }
+\item[{{\bf Random\-Number\-Generator} \&}]{rng, }
+\item[{const {\bf X509\-\_\-\-Time} \&}]{not\-\_\-before, }
+\item[{const {\bf X509\-\_\-\-Time} \&}]{not\-\_\-after}
+\end{DoxyParamCaption}
+)}}\label{classBotan_1_1X509__CA_a2a74d0e0060ef3bd71f8ac7dfe3cb08c}
+Sign a P\-K\-C\-S\#10 Request. 
+\begin{DoxyParams}{Parameters}
+{\em req} & the request to sign \\
+\hline
+{\em rng} & the rng to use \\
+\hline
+{\em not\-\_\-before} & the starting time for the certificate \\
+\hline
+{\em not\-\_\-after} & the expiration time for the certificate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resulting certificate 
+\end{DoxyReturn}
+\hypertarget{classBotan_1_1X509__CA_a4a738b3ce5d8203c6878dee33a62420d}{\index{Botan\-::\-X509\-\_\-\-C\-A@{Botan\-::\-X509\-\_\-\-C\-A}!update\-\_\-crl@{update\-\_\-crl}}
+\index{update\-\_\-crl@{update\-\_\-crl}!Botan::X509_CA@{Botan\-::\-X509\-\_\-\-C\-A}}
+\subsubsection[{update\-\_\-crl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X509\-\_\-\-C\-R\-L} Botan\-::\-X509\-\_\-\-C\-A\-::update\-\_\-crl (
+\begin{DoxyParamCaption}
+\item[{const {\bf X509\-\_\-\-C\-R\-L} \&}]{last\-\_\-crl, }
+\item[{const std\-::vector$<$ {\bf C\-R\-L\-\_\-\-Entry} $>$ \&}]{new\-\_\-entries, }
+\item[{{\bf Random\-Number\-Generator} \&}]{rng, }
+\item[{{\bf u32bit}}]{next\-\_\-update = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}}\label{classBotan_1_1X509__CA_a4a738b3ce5d8203c6878dee33a62420d}
+Create a new C\-R\-L by with additional entries. 
+\begin{DoxyParams}{Parameters}
+{\em last\-\_\-crl} & the last C\-R\-L of this C\-A to add the new entries to \\
+\hline
+{\em new\-\_\-entries} & contains the new C\-R\-L entries to be added to the C\-R\-L \\
+\hline
+{\em rng} & the random number generator to use \\
+\hline
+{\em next\-\_\-update} & the time to set in next update in seconds as the offset from the current time \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/cert/x509ca/x509\-\_\-ca.\-h\item 
+src/cert/x509ca/x509\-\_\-ca.\-cpp\end{DoxyCompactItemize}

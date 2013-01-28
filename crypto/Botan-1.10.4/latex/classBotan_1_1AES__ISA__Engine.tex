@@ -1,0 +1,68 @@
+\hypertarget{classBotan_1_1AES__ISA__Engine}{\section{Botan\-:\-:A\-E\-S\-\_\-\-I\-S\-A\-\_\-\-Engine Class Reference}
+\label{classBotan_1_1AES__ISA__Engine}\index{Botan\-::\-A\-E\-S\-\_\-\-I\-S\-A\-\_\-\-Engine@{Botan\-::\-A\-E\-S\-\_\-\-I\-S\-A\-\_\-\-Engine}}
+}
+
+
+{\ttfamily \#include $<$aes\-\_\-isa\-\_\-engine.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:A\-E\-S\-\_\-\-I\-S\-A\-\_\-\-Engine\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBotan_1_1AES__ISA__Engine}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classBotan_1_1AES__ISA__Engine_a81315d87a28d7ca9952483a5c757be4c}{provider\-\_\-name} () const 
+\item 
+\hyperlink{classBotan_1_1BlockCipher}{Block\-Cipher} $\ast$ \hyperlink{classBotan_1_1AES__ISA__Engine_a076f58d05865f318402d84c4cf0160bb}{find\-\_\-block\-\_\-cipher} (const \hyperlink{classBotan_1_1SCAN__Name}{S\-C\-A\-N\-\_\-\-Name} \&, \hyperlink{classBotan_1_1Algorithm__Factory}{Algorithm\-\_\-\-Factory} \&) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBotan_1_1Engine}{Engine} for implementations that hook into C\-P\-U-\/specific A\-E\-S implementations (eg A\-E\-S-\/\-N\-I, V\-I\-A C7, or A\-M\-D Geode) 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1AES__ISA__Engine_a076f58d05865f318402d84c4cf0160bb}{\index{Botan\-::\-A\-E\-S\-\_\-\-I\-S\-A\-\_\-\-Engine@{Botan\-::\-A\-E\-S\-\_\-\-I\-S\-A\-\_\-\-Engine}!find\-\_\-block\-\_\-cipher@{find\-\_\-block\-\_\-cipher}}
+\index{find\-\_\-block\-\_\-cipher@{find\-\_\-block\-\_\-cipher}!Botan::AES_ISA_Engine@{Botan\-::\-A\-E\-S\-\_\-\-I\-S\-A\-\_\-\-Engine}}
+\subsubsection[{find\-\_\-block\-\_\-cipher}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block\-Cipher} $\ast$ Botan\-::\-A\-E\-S\-\_\-\-I\-S\-A\-\_\-\-Engine\-::find\-\_\-block\-\_\-cipher (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\-C\-A\-N\-\_\-\-Name} \&}]{algo\-\_\-spec, }
+\item[{{\bf Algorithm\-\_\-\-Factory} \&}]{af}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBotan_1_1AES__ISA__Engine_a076f58d05865f318402d84c4cf0160bb}
+
+\begin{DoxyParams}{Parameters}
+{\em algo\-\_\-spec} & the algorithm name/specification \\
+\hline
+{\em af} & an algorithm factory object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+newly allocated object, or N\-U\-L\-L 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classBotan_1_1Engine_a47fd58835788badafd375554062652a2}{Botan\-::\-Engine}.
+
+\hypertarget{classBotan_1_1AES__ISA__Engine_a81315d87a28d7ca9952483a5c757be4c}{\index{Botan\-::\-A\-E\-S\-\_\-\-I\-S\-A\-\_\-\-Engine@{Botan\-::\-A\-E\-S\-\_\-\-I\-S\-A\-\_\-\-Engine}!provider\-\_\-name@{provider\-\_\-name}}
+\index{provider\-\_\-name@{provider\-\_\-name}!Botan::AES_ISA_Engine@{Botan\-::\-A\-E\-S\-\_\-\-I\-S\-A\-\_\-\-Engine}}
+\subsubsection[{provider\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Botan\-::\-A\-E\-S\-\_\-\-I\-S\-A\-\_\-\-Engine\-::provider\-\_\-name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1AES__ISA__Engine_a81315d87a28d7ca9952483a5c757be4c}
+\begin{DoxyReturn}{Returns}
+name of this engine 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classBotan_1_1Engine_a4c2c3ed7b3a2995e6cb8c238346b3a50}{Botan\-::\-Engine}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/engine/aes\-\_\-isa\-\_\-eng/aes\-\_\-isa\-\_\-engine.\-h\item 
+src/engine/aes\-\_\-isa\-\_\-eng/aes\-\_\-isa\-\_\-engine.\-cpp\end{DoxyCompactItemize}

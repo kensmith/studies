@@ -1,0 +1,53 @@
+\hypertarget{classBotan_1_1HashFunction}{\section{Botan\-:\-:Hash\-Function Class Reference}
+\label{classBotan_1_1HashFunction}\index{Botan\-::\-Hash\-Function@{Botan\-::\-Hash\-Function}}
+}
+
+
+{\ttfamily \#include $<$hash.\-h$>$}
+
+Inheritance diagram for Botan\-:\-:Hash\-Function\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classBotan_1_1HashFunction}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classBotan_1_1HashFunction}{Hash\-Function} $\ast$ \hyperlink{classBotan_1_1HashFunction_aaa2b17b63215ae970d9b5d5044cc208a}{clone} () const =0
+\item 
+virtual size\-\_\-t \hyperlink{classBotan_1_1HashFunction_a62b12b2806f422bdacfe0e6f50918454}{hash\-\_\-block\-\_\-size} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents hash function (message digest) objects 
+
+\subsection{Member Function Documentation}
+\hypertarget{classBotan_1_1HashFunction_aaa2b17b63215ae970d9b5d5044cc208a}{\index{Botan\-::\-Hash\-Function@{Botan\-::\-Hash\-Function}!clone@{clone}}
+\index{clone@{clone}!Botan::HashFunction@{Botan\-::\-Hash\-Function}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Hash\-Function}$\ast$ Botan\-::\-Hash\-Function\-::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classBotan_1_1HashFunction_aaa2b17b63215ae970d9b5d5044cc208a}
+Get a new object representing the same algorithm as $\ast$this 
+
+Implemented in \hyperlink{classBotan_1_1SHA__256_a95a627a94778e19733fc693697a6d0a8}{Botan\-::\-S\-H\-A\-\_\-256}, \hyperlink{classBotan_1_1SHA__512_aac41280891a0b8f36721d57b47b56ca2}{Botan\-::\-S\-H\-A\-\_\-512}, \hyperlink{classBotan_1_1Comb4P_aa3bba25b9b37e6c553bf24ec1ac03239}{Botan\-::\-Comb4\-P}, \hyperlink{classBotan_1_1Skein__512_a47c7a6576753143091d25901ed83827e}{Botan\-::\-Skein\-\_\-512}, \hyperlink{classBotan_1_1Keccak__1600_ae24a6a9db123f9f55c95f646c2739f04}{Botan\-::\-Keccak\-\_\-1600}, \hyperlink{classBotan_1_1GOST__34__11_a7981811e04d494fbba91f862b04d3112}{Botan\-::\-G\-O\-S\-T\-\_\-34\-\_\-11}, \hyperlink{classBotan_1_1Tiger_ab77a25d5b3e4b3de08ab9cda3209d21f}{Botan\-::\-Tiger}, \hyperlink{classBotan_1_1HAS__160_af5d92647f9a80833d75dee62a6c15f99}{Botan\-::\-H\-A\-S\-\_\-160}, \hyperlink{classBotan_1_1MD2_a0ea56932737b54792c455b99fee48adc}{Botan\-::\-M\-D2}, \hyperlink{classBotan_1_1Parallel_aa38a81e2f6d6be5c84b868db5cae83fc}{Botan\-::\-Parallel}, \hyperlink{classBotan_1_1SHA__224_a2da76a5275d1c96be3ce4934562aab5d}{Botan\-::\-S\-H\-A\-\_\-224}, \hyperlink{classBotan_1_1Adler32_a3c3799b5023207d8e32bb416e06e1990}{Botan\-::\-Adler32}, \hyperlink{classBotan_1_1CRC24_aaa2cf9e62f8196c421243ae82ac9323d}{Botan\-::\-C\-R\-C24}, \hyperlink{classBotan_1_1CRC32_a3d6be5ed09cf169218936da7769f11fd}{Botan\-::\-C\-R\-C32}, \hyperlink{classBotan_1_1BMW__512_a8e679c73bcf6cc7cd19f088fdfc1a3ac}{Botan\-::\-B\-M\-W\-\_\-512}, \hyperlink{classBotan_1_1MD4_a2d84197fe3b3b547f1e2cd3ecf22c60b}{Botan\-::\-M\-D4}, \hyperlink{classBotan_1_1MD5_a9a3f1641bbcbad160432dfb58c6c65b8}{Botan\-::\-M\-D5}, \hyperlink{classBotan_1_1RIPEMD__128_a3be4ecadfa51ddc02fbab852bb386e02}{Botan\-::\-R\-I\-P\-E\-M\-D\-\_\-128}, \hyperlink{classBotan_1_1RIPEMD__160_a93e5ee0a9eb425f5193cbc8acd60e774}{Botan\-::\-R\-I\-P\-E\-M\-D\-\_\-160}, \hyperlink{classBotan_1_1SHA__160_a7303294d56fb49893385bbf3afe959ef}{Botan\-::\-S\-H\-A\-\_\-160}, \hyperlink{classBotan_1_1SHA__384_a5dc1d6c8c35a884c67355e3361ef557c}{Botan\-::\-S\-H\-A\-\_\-384}, \hyperlink{classBotan_1_1Whirlpool_a95d7868fa7c55e1eb4a8cf19688ca806}{Botan\-::\-Whirlpool}, \hyperlink{classBotan_1_1MD4__X86__32_a8f248a91d448175ba3d7c426cc6a03cb}{Botan\-::\-M\-D4\-\_\-\-X86\-\_\-32}, \hyperlink{classBotan_1_1MD5__X86__32_a9d12c19a6879bfc3c9c10e9df6d3c2e9}{Botan\-::\-M\-D5\-\_\-\-X86\-\_\-32}, \hyperlink{classBotan_1_1SHA__160__SSE2_aeadcb7e662c26203cc4ec79062fe0e59}{Botan\-::\-S\-H\-A\-\_\-160\-\_\-\-S\-S\-E2}, \hyperlink{classBotan_1_1SHA__160__X86__32_ae8aa92f0b32c56c9640ff430dab217f2}{Botan\-::\-S\-H\-A\-\_\-160\-\_\-\-X86\-\_\-32}, and \hyperlink{classBotan_1_1SHA__160__X86__64_af48aa48e23048debdfddcada1b5146e2}{Botan\-::\-S\-H\-A\-\_\-160\-\_\-\-X86\-\_\-64}.
+
+\hypertarget{classBotan_1_1HashFunction_a62b12b2806f422bdacfe0e6f50918454}{\index{Botan\-::\-Hash\-Function@{Botan\-::\-Hash\-Function}!hash\-\_\-block\-\_\-size@{hash\-\_\-block\-\_\-size}}
+\index{hash\-\_\-block\-\_\-size@{hash\-\_\-block\-\_\-size}!Botan::HashFunction@{Botan\-::\-Hash\-Function}}
+\subsubsection[{hash\-\_\-block\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\-\_\-t Botan\-::\-Hash\-Function\-::hash\-\_\-block\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBotan_1_1HashFunction_a62b12b2806f422bdacfe0e6f50918454}
+The hash block size as defined for this algorithm 
+
+Reimplemented in \hyperlink{classBotan_1_1MDx__HashFunction_ad58254596b3240aef475e3e9e93932db}{Botan\-::\-M\-Dx\-\_\-\-Hash\-Function}, \hyperlink{classBotan_1_1Skein__512_a64599ba58ecf174639e25f6d382650fe}{Botan\-::\-Skein\-\_\-512}, \hyperlink{classBotan_1_1Comb4P_ac532c8612908ba299222e628f4c12ab7}{Botan\-::\-Comb4\-P}, \hyperlink{classBotan_1_1Keccak__1600_a3f8aa77ff0337bbe33e68e2852ecb621}{Botan\-::\-Keccak\-\_\-1600}, \hyperlink{classBotan_1_1GOST__34__11_a7af3ecbfd4cbc4580554c46353b31cce}{Botan\-::\-G\-O\-S\-T\-\_\-34\-\_\-11}, and \hyperlink{classBotan_1_1MD2_ab02015a91d95208797c5437eae4b5610}{Botan\-::\-M\-D2}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/hash/hash.\-h\end{DoxyCompactItemize}
