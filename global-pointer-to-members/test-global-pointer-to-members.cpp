@@ -15,4 +15,12 @@ TEST(basic)
    // wacky
    EQ(-5, i.*id);
    CL(3.14, i.*value, 1e-5);
+
+   id_value p;
+   p.*id = -7;
+   p.*value = 2.718;
+   EQ(-5, i.*id);
+   CL(3.14, i.*value, 1e-5);
+   EQ(-7, p.*id);
+   CL(2.718, p.*value, 1e-5);
 }
