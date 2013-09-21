@@ -20,6 +20,9 @@
 #include <string>
 #include <vector>
 #include "stream_saver_t.hpp"
+#define BOOST_TEST_DYN_LINK
+#define BOOST_TEST_MAIN
+#include <boost/test/unit_test.hpp>
 
 inline std::string vecstr(const std::vector<char>& rhs)
 {
