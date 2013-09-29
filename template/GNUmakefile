@@ -22,7 +22,7 @@ t := $(patsubst %.o,%,$(filter .test-%.o,$(o)))
 :$(t)\
  $(o)
 
-$(prog)\
+prog\
 :$(p) $(addsuffix .passed,$(t))\
 ;$(l) -o $@ $(p) -lluabind
 
@@ -44,11 +44,11 @@ $(prog)\
  install
 
 install\
-:$(prog)\
-;cp $(prog) $(prefix)/bin
+:prog\
+;install -m 755 prog $(prefix)/bin/$(prog)
 
 clean\
 :\
-;rm -Rf $(prog) $(t) .*.o .*.d .*.passed html latex
+;rm -Rf prog $(t) .*.o .*.d .*.passed html latex
 
 -include $(d)
