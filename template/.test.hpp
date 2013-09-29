@@ -12,6 +12,7 @@
 #define TEST BOOST_AUTO_TEST_CASE
 #define FTST BOOST_FIXTURE_TEST_CASE
 #define EQ BOOST_REQUIRE_EQUAL
+#define EQC(lhs, rhs) BOOST_REQUIRE_EQUAL_COLLECTIONS((lhs).begin(), (lhs).end(), (rhs).begin(), (rhs).end())
 #define NE BOOST_REQUIRE_NE
 #define THROW BOOST_REQUIRE_THROW
 #define NO_THROW BOOST_REQUIRE_NO_THROW
