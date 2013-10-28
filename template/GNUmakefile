@@ -24,7 +24,7 @@ t := $(patsubst %.o,%,$(filter .test-%.o,$(o)))
 
 prog\
 :$(p) $(addsuffix .passed,$(t))\
-;$(l) -o $@ $(p) -lluabind
+;$(l) -o $@ $(p)
 
 .%.o\
 :%.cpp $(MAKEFILE_LIST)\
