@@ -1,0 +1,9 @@
+Running 1 test case...
+iii,1380468481,60234,904173317,test-condition-variable.cpp,10,startup_task,starting up
+iii,1380468481,60234,904129935,test-condition-variable.cpp,26,operator(),id = 1
+iii,1380468481,60234,904264075,test-condition-variable.cpp,15,startup_task,startup finished
+iii,1380468481,60234,904178053,test-condition-variable.cpp,26,operator(),id = 3
+iii,1380468481,60234,904108083,test-condition-variable.cpp,26,operator(),id = 0
+iii,1380468481,60234,904126124,test-condition-variable.cpp,26,operator(),id = 2
+iii,1380468481,60234,904294980,test-condition-variable.cpp,39,operator(),thread 1 started
+iii,1380468481,60234,904317986,test-condition-variable.cpp,39,operator(),thread 0 started
