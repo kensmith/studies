@@ -1,0 +1,5 @@
+build
+cscope.*
+.*.swp
+core*
+.gdb_history

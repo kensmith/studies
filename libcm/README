@@ -1,0 +1,11 @@
+ARM - ARMv7-M Architecture Reference Manual
+TRM - Cortex-M3 Revision r2p1 Technical Reference Manual
+
+Features
+- running backwards
+- profiling
+-- pipeline efficiency
+- snapshotting, playback
+- peripheral emulation
+
+fetch/decode/execute

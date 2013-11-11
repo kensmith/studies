@@ -1,0 +1,10 @@
+*.o
+*.d
+*.E
+*.S
+app.*
+core*
+cscope*
+html
+latex
+doxygen.out

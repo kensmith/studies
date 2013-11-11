@@ -1,0 +1,169 @@
+#include "cpu_t.hpp"
+#define BOOST_TEST_DYN_LINK
+#define BOOST_TEST_MAIN
+#include <boost/test/unit_test.hpp>
+
+struct fixture_t
+{
+   fixture_t()
+      :cpu("data/app.bin")
+   {
+   }
+
+   cpu_t cpu;
+};
+
+FTST(construction, fixture_t)
+{
+   for (int i = 0; i < 13; i++)
+   {
+      EQ(0, cpu.r[i]);
+   }
+
+   EQ(0x10007ff0, cpu.sp());
+   EQ(0x5b3, cpu.pc());
+}
+
+FTST(sp, fixture_t)
+{
+   cpu.r[13] = 1000;
+   EQ(1000, cpu.sp());
+   cpu.sp() = 1500;
+   EQ(1500, cpu.sp());
+}
+
+FTST(lr, fixture_t)
+{
+   cpu.r[14] = 2000;
+   EQ(2000, cpu.lr());
+   cpu.lr() = 2500;
+   EQ(2500, cpu.lr());
+}
+
+FTST(pc, fixture_t)
+{
+   cpu.r[15] = 3000;
+   EQ(3000, cpu.pc());
+   cpu.pc() = 3500;
+   EQ(3500, cpu.pc());
+}
+
+FTST(fetch, fixture_t)
+{
+   pi_t pi = cpu.fetch();
+   EQ("mov.n r0, sp", pi->to_string());
+   cpu.r[0] = 1;
+   cpu.sp() = 2;
+   NE(cpu.r[0], cpu.sp());
+   cpu.exec(pi);
+   EQ(cpu.r[0], cpu.sp());
+   pi = cpu.fetch();
+   EQ("bic.w r1, r0, #7", pi->to_string());
+}
+
+FTST(stepi_to_mov_r0_sp, fixture_t)
+{
+   for (int i = 0; i < 15; i++)
+   {
+      cpu.r[i] = i;
+   }
+
+   NE(cpu.r[0], cpu.sp());
+   for (int i = 0; i < pipeline_t::size; i++)
+   {
+      cpu.stepi();
+   }
+   EQ(cpu.r[0], cpu.sp());
+}
+
+#if 1
+FTST(run, fixture_t)
+{
+   for (int i = 0; i < 4; i++)
+   {
+      cpu.stepi();
+   }
+}
+#else
+#endif
+
+FTST(thumb_expand_imm_c, fixture_t)
+{
+   imm_carry_t result;
+   for (u32_t imm8 = 0; imm8 < 256; imm8++)
+   {
+      // 00000000 00000000 00000000 abcdefgh
+      imm_carry_t e0 {imm8, 0};
+      result = cpu.thumb_expand_imm_c(0, 0, imm8, 0);
+      EQ(e0, result);
+
+      if (imm8 != 0)
+      {
+         // 00000000 abcdefgh 00000000 abcdefgh (b)
+         imm_carry_t e1 {(imm8 << 16) | imm8, 0};
+         result = cpu.thumb_expand_imm_c(0, 1, imm8, 0);
+         EQ(e1, result);
+
+         // abcdefgh 00000000 abcdefgh 00000000 (b)
+         imm_carry_t e2 {(imm8 << 24) | (imm8 << 8), 0};
+         result = cpu.thumb_expand_imm_c(0, 2, imm8, 0);
+         EQ(e2, result);
+
+         // abcdefgh abcdefgh abcdefgh abcdefgh (b)
+         imm_carry_t e3 {(imm8 << 24) | (imm8 << 16) | (imm8 << 8) | imm8};
+         result = cpu.thumb_expand_imm_c(0, 3, imm8, 0);
+         EQ(e3, result);
+      }
+      // 1bcdefgh 00000000 00000000 00000000
+      // 01bcdefg h0000000 00000000 00000000
+      // 001bcdef gh000000 00000000 00000000
+      // 0001bcde fgh00000 00000000 00000000
+      // 00001bcd efgh0000 00000000 00000000
+      // 000001bc defgh000 00000000 00000000
+      // 0000001b cdefgh00 00000000 00000000
+      // 00000001 bcdefgh0 00000000 00000000
+      // 00000000 1bcdefgh 00000000 00000000
+      // 00000000 01bcdefg h0000000 00000000
+      // 00000000 001bcdef gh000000 00000000
+      // 00000000 0001bcde fgh00000 00000000
+      // 00000000 00001bcd efgh0000 00000000
+      // 00000000 000001bc defgh000 00000000
+      // 00000000 0000001b cdefgh00 00000000
+      // 00000000 00000001 bcdefgh0 00000000
+      // 00000000 00000000 1bcdefgh 00000000
+      // 00000000 00000000 01bcdefg h0000000
+      // 00000000 00000000 001bcdef gh000000
+      // 00000000 00000000 0001bcde fgh00000
+      // 00000000 00000000 00001bcd efgh0000
+      // 00000000 00000000 000001bc defgh000
+      // 00000000 00000000 0000001b cdefgh00
+      // 00000000 00000000 00000001 bcdefgh0
+      for (u32_t iimm3x = 8; iimm3x < 32; iimm3x += 2)
+      {
+         u32_t a = 1 & (imm8 >> 7);
+         imm_carry_t e4 {(0x80 | imm8) << (32 - (iimm3x + a)), 0};
+         if (0 != (e4.imm32 & 0x80000000))
+         {
+            e4.c = 1;
+         }
+         result = 
+            cpu.thumb_expand_imm_c(
+               iimm3x >> 4,
+               (iimm3x >> 1) & 7,
+               imm8,
+               0
+            );
+
+#if 0
+         std::cout
+            << "imm8 = "
+            << imm8
+            << ", iimm3x = "
+            << iimm3x
+            << std::endl;
+#endif
+
+         EQ(e4, result);
+      }
+   }
+}

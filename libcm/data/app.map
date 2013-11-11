@@ -1,0 +1,203 @@
+
+Discarded input sections
+
+ .comment       0x0000000000000000       0x12 main.o
+ .comment       0x0000000000000000       0x12 isr_vectors.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000000000000 0x0000000000080000 xr
+SRAM             0x0000000010000000 0x0000000000008000 xrw
+AHBRAM0          0x000000002007c000 0x0000000000004000
+AHBRAM1          0x0000000020080000 0x0000000000004000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD main.o
+LOAD isr_vectors.o
+LOAD /usr/local/lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/libstdc++.a
+LOAD /usr/local/lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/libm.a
+START GROUP
+LOAD /usr/local/lib/gcc/arm-none-eabi/4.7.1/thumb/libgcc.a
+LOAD /usr/local/lib/gcc/arm-none-eabi/4.7.1/../../../../arm-none-eabi/lib/thumb/libc.a
+END GROUP
+                0x0000000010008000                __ram_top = (ORIGIN (SRAM) + 0x8000)
+                0x0000000010007ff0                __initial_sp = (__ram_top - 0x10)
+                0x0000000000000000                . = ALIGN (0x4)
+
+.text           0x0000000000000000      0x5c2
+                0x0000000000000000                . = 0x0
+                0x0000000000000000        0x4 LONG 0x10007ff0 __initial_sp
+ *(.isr_vector_first_six)
+ .isr_vector_first_six
+                0x0000000000000004       0x18 isr_vectors.o
+                0x0000000000000004                isr_vectors
+                0x000000000000001c        0x4 LONG 0xffffffffefff65e0 - ((((((((__initial_sp + reset_handler) + nmi_handler) + hard_fault_handler) + memory_management_fault_handler) + bus_fault_handler) + usage_fault_handler) + 0x6))
+                0x000000000000002c                . = 0x2c
+ *fill*         0x0000000000000020        0xc 00
+ *(.isr_sv_call)
+ .isr_sv_call   0x000000000000002c        0x4 isr_vectors.o
+                0x000000000000002c                isr_sv_call
+                0x000000000000003c                . = 0x3c
+ *fill*         0x0000000000000030        0xc 00
+ *(.isr_vector_rest)
+ .isr_vector_rest
+                0x000000000000003c       0x94 isr_vectors.o
+                0x000000000000003c                isr_vector_rest
+                0x0000000000000400                . = 0x400
+ *fill*         0x00000000000000d0      0x330 00
+ *(.text*)
+ .text          0x0000000000000400        0x0 main.o
+ .text.startup  0x0000000000000400        0x4 main.o
+                0x0000000000000400                main
+ .text          0x0000000000000404      0x1be isr_vectors.o
+                0x0000000000000404                nmi_handler
+                0x000000000000040e                hard_fault_handler
+                0x0000000000000418                memory_management_fault_handler
+                0x0000000000000422                bus_fault_handler
+                0x000000000000042c                usage_fault_handler
+                0x0000000000000436                sv_call_handler
+                0x0000000000000440                pend_sv_handler
+                0x000000000000044a                sys_tick_handler
+                0x0000000000000454                wdt_handler
+                0x000000000000045e                timer0_handler
+                0x0000000000000468                timer1_handler
+                0x0000000000000472                timer2_handler
+                0x000000000000047c                timer3_handler
+                0x0000000000000486                uart0_handler
+                0x0000000000000490                uart1_handler
+                0x000000000000049a                uart2_handler
+                0x00000000000004a4                uart3_handler
+                0x00000000000004ae                pwm1_handler
+                0x00000000000004b8                i2c0_handler
+                0x00000000000004c2                i2c1_handler
+                0x00000000000004cc                i2c2_handler
+                0x00000000000004d6                spi_handler
+                0x00000000000004e0                ssp0_handler
+                0x00000000000004ea                ssp1_handler
+                0x00000000000004f4                pll0_handler
+                0x00000000000004fe                rtc_handler
+                0x0000000000000508                eint0_handler
+                0x0000000000000512                eint1_handler
+                0x000000000000051c                eint2_handler
+                0x0000000000000526                eint3_handler
+                0x0000000000000530                adc_handler
+                0x000000000000053a                bod_handler
+                0x0000000000000544                usb_handler
+                0x000000000000054e                can_handler
+                0x0000000000000558                dma_handler
+                0x0000000000000562                i2s_handler
+                0x000000000000056c                emac_handler
+                0x0000000000000576                rit_handler
+                0x0000000000000580                mc_pwm_handler
+                0x000000000000058a                qei_handler
+                0x0000000000000594                pll1_handler
+                0x000000000000059e                usb_activity_handler
+                0x00000000000005a8                can_activity_handler
+                0x00000000000005b2                reset_handler
+ *(.init*)
+ *(.fini*)
+ *(.rodata*)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ .ARM.extab.text.startup
+                0x00000000000005c2        0x0 main.o
+ *(.eh_frame)
+
+.glue_7         0x00000000000005c4        0x0
+ .glue_7        0x0000000000000000        0x0 linker stubs
+
+.glue_7t        0x00000000000005c4        0x0
+ .glue_7t       0x0000000000000000        0x0 linker stubs
+
+.vfp11_veneer   0x00000000000005c4        0x0
+ .vfp11_veneer  0x0000000000000000        0x0 linker stubs
+
+.v4_bx          0x00000000000005c4        0x0
+ .v4_bx         0x0000000000000000        0x0 linker stubs
+
+.iplt           0x00000000000005c4        0x0
+ .iplt          0x0000000000000000        0x0 main.o
+                0x00000000000005c4                . = ALIGN (0x4)
+                0x00000000000005c4                __exidx_start = .
+                [0x00000000000005c4]                PROVIDE (__exidx_start, __exidx_start)
+
+.ARM.exidx      0x00000000000005c4        0x8
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx.text.startup
+                0x00000000000005c4        0x8 main.o
+                0x00000000000005cc                __end_of_flash = .
+
+.rel.dyn        0x00000000000005cc        0x0
+ .rel.iplt      0x0000000000000000        0x0 main.o
+                0x00000000000005cc                . = ALIGN (0x4)
+                0x00000000000005cc                __exidx_end = .
+                [0x00000000000005cc]                PROVIDE (__exidx_end, __exidx_end)
+
+.bss            0x0000000010000000        0x0
+                0x0000000010000000                __bss_start__ = .
+ *(.bss*)
+ .bss           0x0000000010000000        0x0 main.o
+ .bss           0x0000000010000000        0x0 isr_vectors.o
+                0x0000000010000000                __bss_end__ = .
+
+.data           0x0000000010000000        0x0 load address 0x00000000000005cc
+                0x0000000010000000                __data_start = .
+ *(vtable)
+ *(.data*)
+ .data          0x0000000010000000        0x0 main.o
+ .data          0x0000000010000000        0x0 isr_vectors.o
+                0x0000000010000000                __data_end = .
+                0x0000000000002000                __stack_size = 0x2000
+                0x0000000010000000                __heap_start = .
+                0x0000000010006000                __heap_end = (__heap_start + (0x8000 - __stack_size))
+                0x0000000010006000                PROVIDE (end, __heap_end)
+                0x0000000010006000                PROVIDE (__end__, __heap_end)
+
+.igot.plt       0x0000000010000000        0x0 load address 0x00000000000005cc
+ .igot.plt      0x0000000000000000        0x0 main.o
+
+/DISCARD/
+ *(.comment)
+OUTPUT(app.elf elf32-littlearm)
+
+.ARM.attributes
+                0x0000000000000000       0x33
+ .ARM.attributes
+                0x0000000000000000       0x33 main.o
+ .ARM.attributes
+                0x0000000000000033       0x33 isr_vectors.o
+
+.debug_info     0x0000000000000000      0x4fe
+ .debug_info    0x0000000000000000       0x8a main.o
+ .debug_info    0x000000000000008a      0x474 isr_vectors.o
+
+.debug_abbrev   0x0000000000000000      0x150
+ .debug_abbrev  0x0000000000000000       0x7f main.o
+ .debug_abbrev  0x000000000000007f       0xd1 isr_vectors.o
+
+.debug_aranges  0x0000000000000000       0x40
+ .debug_aranges
+                0x0000000000000000       0x20 main.o
+ .debug_aranges
+                0x0000000000000020       0x20 isr_vectors.o
+
+.debug_ranges   0x0000000000000000       0x10
+ .debug_ranges  0x0000000000000000       0x10 main.o
+
+.debug_line     0x0000000000000000      0x112
+ .debug_line    0x0000000000000000       0x6e main.o
+ .debug_line    0x000000000000006e       0xa4 isr_vectors.o
+
+.debug_str      0x0000000000000000      0x331
+ .debug_str     0x0000000000000000       0x64 main.o
+ .debug_str     0x0000000000000064      0x2cd isr_vectors.o
+                                        0x2f4 (size before relaxing)
+
+.debug_frame    0x0000000000000000      0x3a8
+ .debug_frame   0x0000000000000000       0x20 main.o
+ .debug_frame   0x0000000000000020      0x388 isr_vectors.o
+
+.debug_loc      0x0000000000000000       0x20
+ .debug_loc     0x0000000000000000       0x20 isr_vectors.o
