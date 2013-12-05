@@ -72,5 +72,15 @@ function wireless_strength()
     contents = contents:match('.*wlan%d*: *%d* *(%d*)')
 end
 
+function pandora()
+  have_artist, artist = cat_file('/tmp/pandora-song-artist', '*l')
+  have_title, title = cat_file('/tmp/pandora-song-title', '*l')
+  if have_artist and have_title then
+    return artist .. ', ' .. title
+  else
+    return ''
+  end
+end
+
 --wireless_strength()
-print((states[status] or function() end)())
+print((states[status] or function() return '' end)() .. ' ' .. pandora())
