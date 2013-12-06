@@ -73,13 +73,22 @@ function wireless_strength()
 end
 
 function pandora()
-  have_artist, artist = cat_file('/tmp/pandora-song-artist', '*l')
-  have_title, title = cat_file('/tmp/pandora-song-title', '*l')
+  local have_artist, artist = cat_file('/tmp/pandora-song-artist', '*l')
+  local have_title, title = cat_file('/tmp/pandora-song-title', '*l')
+  local have_song_status, song_status = cat_file('/tmp/pandora-song-status', '*l')
+  local result = ''
+
   if have_artist and have_title then
-    return artist .. ', ' .. title
+    result = artist .. ', ' .. title
   else
-    return ''
+    result = ''
   end
+
+  if have_song_status and #song_status > 0 then
+    result = result .. ' ' .. song_status
+  end
+
+  return result
 end
 
 --wireless_strength()
