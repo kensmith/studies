@@ -92,4 +92,9 @@ function pandora()
 end
 
 --wireless_strength()
-print((states[status] or function() return '' end)() .. ' ' .. pandora())
+local p = pandora()
+if #p > 0 then
+  p = ' ' .. p
+end
+
+print((states[status] or function() return '' end)() .. p)
