@@ -1,5 +1,14 @@
 #!/usr/bin/env lua
 
+local function cat_command(command)
+    local f = io.popen(command, 'r')
+    if f then
+        return true, f:read('*l')
+    else
+        return false
+    end
+end
+
 local function cat_file(filename, amount)
     amount = amount or '*l'
     local f = io.open(filename)
@@ -94,7 +103,12 @@ end
 --wireless_strength()
 local p = pandora()
 if #p > 0 then
-  p = ' ' .. p
+  p = p .. ' '
 end
 
-print((states[status] or function() return '' end)() .. p)
+local success, uptime = cat_command("uptime | tr ',' ' ' | awk '{print $8}'")
+if not success then
+    uptime = ''
+end
+
+print(p .. uptime .. ' - ' .. (states[status] or function() return '' end)())
