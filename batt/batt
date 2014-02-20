@@ -106,7 +106,7 @@ if #p > 0 then
   p = p .. ' '
 end
 
-local success, uptime = cat_command("uptime | tr ',' ' ' | awk '{print $8}'")
+local success, uptime = cat_command("uptime | tr ',' ' ' | awk '{print $10}'")
 if not success then
     uptime = ''
 end
