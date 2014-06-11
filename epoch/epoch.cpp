@@ -25,5 +25,10 @@ int main(int argc, char* const * argv)
    (void) strftime(buf, MAX_BUF, "%m-%d-%Y %H:%M:%S", &ts);
    std::cout << buf << std::endl;
 
+   std::cout << std::endl;
+
+   (void) strftime(buf, MAX_BUF, "%Y.%d.%m-%H.%M.%S", &ts);
+   std::cout << buf << std::endl;
+
    return 0;
 }
