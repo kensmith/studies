@@ -106,7 +106,7 @@ if #p > 0 then
   p = p .. ' '
 end
 
-local success, uptime = cat_command("uptime | tr ',' ' ' | awk '{print $10}'")
+local success, uptime = cat_command("uptime | sed -e 's/.*average://'| tr ',' ' ' | awk '{print $1}'")
 if not success then
     uptime = ''
 end
