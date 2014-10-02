@@ -9,7 +9,7 @@ prog := $(notdir $(CURDIR))
 
 # Implementation
 MAKEFLAGS := j$(cpus)
-g := g++ -flto -g -std=c++1y -Wall -Werror -pedantic
+g := g++ -flto -g -std=c++11 -Wall -Werror -pedantic
 c := $(g) -c -MMD
 l := $(g)
 s := $(wildcard *.cpp)

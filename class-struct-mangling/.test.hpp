@@ -24,8 +24,6 @@
 #define BOOST_TEST_DYN_LINK
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
-#include "log_t.hpp"
-#include "debug.hpp"
 
 inline std::string vecstr(const std::vector<char>& rhs)
 {
