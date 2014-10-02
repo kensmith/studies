@@ -1,4 +1,5 @@
 #include ".test.hpp"
+#include <memory>
 
 enum class minmax_choice_t {min, max};
 
@@ -101,4 +102,29 @@ TEST(extreme_val_ref_test)
    auto values = std::vector<big_t>{big_t(1000), big_t(2000), big_t(100)};
    auto least = extreme_val_ref(begin(values), end(values), minmax_choice_t::min);
    EQ(100, least.vec_.size());
+}
+
+auto make_biggie()
+{
+   sentinel();
+   auto del_big_t = [](big_t* biggie)
+   {
+      ooo(iii) << "deleting big_t";
+      delete biggie;
+   };
+
+   // can't use make_unique because make_unique doesn't
+   // allow specifying the deleter
+   ooo(iii)
+      << "constructing biggie";
+   std::unique_ptr<big_t, decltype(del_big_t)> biggie(nullptr, del_big_t);
+   biggie.reset(new big_t(12345));
+
+   return biggie;
+}
+
+TEST(test_make_biggie)
+{
+   auto biggie = make_biggie();
+   (void) biggie;
 }

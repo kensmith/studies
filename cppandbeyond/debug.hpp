@@ -21,3 +21,50 @@
       << #x\
       << " = "\
       << x
+
+#define pp_concatenate_impl(s1, s2) s1##s2
+#define pp_concatenate(s1, s2) pp_concatenate_impl(s1, s2)
+
+#define av_uniquifier __LINE__
+#ifdef __COUNTER__
+#  undef av_uniquifier
+#  define av_uniquifier __COUNTER__
+#endif
+
+#define anonymous_variable(prefix) pp_concatenate(prefix, av_uniquifier)
+
+struct sentinel_t
+{
+   sentinel_t(const char* file, int line, const char* function)
+   :file_(file)
+   ,function_(function)
+   {
+      ooo(iii)
+         << "entering "
+         << file_
+         << ":"
+         << line
+         << ":"
+         << function_;
+   }
+
+   ~sentinel_t()
+   {
+      ooo(iii)
+         << "leaving "
+         << file_
+         << ":"
+         << function_;
+   }
+private:
+   const char* const file_;
+   const char* const function_;
+};
+
+#define sentinel() \
+   volatile sentinel_t \
+   anonymous_variable(anonymous_sentinel)(\
+      __FILE__,\
+      __LINE__,\
+      __PRETTY_FUNCTION__\
+   )
