@@ -54,6 +54,6 @@ install\
 
 clean\
 :\
-;rm -Rf prog $(t) .*.o .*.d .*.passed html latex
+;rm -Rf prog $(t) .*.o .*.d .*.S *.S .*.passed html latex
 
 -include $(d)
