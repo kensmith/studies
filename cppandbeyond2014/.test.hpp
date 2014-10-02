@@ -20,6 +20,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <memory>
 #include "stream_saver_t.hpp"
 #define BOOST_TEST_DYN_LINK
 #define BOOST_TEST_MAIN

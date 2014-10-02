@@ -106,7 +106,7 @@ TEST(extreme_val_ref_test)
 
 auto make_biggie()
 {
-   sentinel();
+   sentinel("");
    auto del_big_t = [](big_t* biggie)
    {
       ooo(iii) << "deleting big_t";

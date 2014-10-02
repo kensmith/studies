@@ -35,9 +35,10 @@
 
 struct sentinel_t
 {
-   sentinel_t(const char* file, int line, const char* function)
+   sentinel_t(const char* file, int line, const char* function, const char* name = "")
    :file_(file)
    ,function_(function)
+   ,name_(name)
    {
       ooo(iii)
          << "entering "
@@ -45,7 +46,9 @@ struct sentinel_t
          << ":"
          << line
          << ":"
-         << function_;
+         << function_
+         << ":"
+         << name_;
    }
 
    ~sentinel_t()
@@ -54,17 +57,29 @@ struct sentinel_t
          << "leaving "
          << file_
          << ":"
-         << function_;
+         << function_
+         << ":"
+         << name_;
    }
 private:
    const char* const file_;
    const char* const function_;
+   const char* const name_;
 };
 
-#define sentinel() \
-   volatile sentinel_t \
+#define sentinel(name)\
+   volatile sentinel_t\
    anonymous_variable(anonymous_sentinel)(\
       __FILE__,\
       __LINE__,\
-      __PRETTY_FUNCTION__\
+      __PRETTY_FUNCTION__,\
+      name\
+   )
+
+#define unique_sentinel(name)\
+   std::make_unique<sentinel_t>(\
+      __FILE__,\
+      __LINE__,\
+      __PRETTY_FUNCTION__,\
+      name\
    )
