@@ -4,11 +4,11 @@
 
 # User configurable portion.
 prefix := /usr/local
-cpus := 4
+cpus := 8
 prog := $(notdir $(CURDIR))
 
 # Implementation
-MAKEFLAGS := j$(cpus)
+MAKEFLAGS := rj$(cpus)
 g := g++ -flto -g -Og -std=c++1y -Wall -Werror -pedantic
 c := $(g) -c -MMD
 l := $(g)
@@ -22,21 +22,32 @@ t := $(patsubst %.o,%,$(filter .test-%.o,$(o)))
 :$(t)\
  $(o)
 
+all\
+:prog prog.S $(addsuffix .passed,$(t)) $(addsuffix .S,$(t))
+
 prog.S\
 :prog\
-;objdump -S $< > $@
 
 prog\
-:$(p) $(addsuffix .passed,$(t))\
+:$(p)\
 ;$(l) -o $@ $(p)
 
 .%.o\
 :%.cpp $(MAKEFILE_LIST)\
 ;$(c) -o $@ $<
 
+.PHONY: test
+test\
+:\
+;rm -f .test-*.passed\
+;$(MAKE)
+
+%.S\
+:%\
+;objdump -S $< > $@
+
 .test-%.passed\
 :.test-%\
-;objdump -S $< > $<.S\
 ;./$< --random\
 && touch $@
 
