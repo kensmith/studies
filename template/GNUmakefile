@@ -9,7 +9,7 @@ prog := $(notdir $(CURDIR))
 
 # Implementation
 MAKEFLAGS := j$(cpus)
-g := g++ -flto -g -std=c++1y -Wall -Werror -pedantic
+g := g++ -flto -g -Og -std=c++1y -Wall -Werror -pedantic
 c := $(g) -c -MMD
 l := $(g)
 s := $(wildcard *.cpp)
@@ -22,6 +22,10 @@ t := $(patsubst %.o,%,$(filter .test-%.o,$(o)))
 :$(t)\
  $(o)
 
+prog.S\
+:prog\
+;objdump -S $< > $@
+
 prog\
 :$(p) $(addsuffix .passed,$(t))\
 ;$(l) -o $@ $(p)
@@ -32,6 +36,7 @@ prog\
 
 .test-%.passed\
 :.test-%\
+;objdump -S $< > $<.S\
 ;./$< --random\
 && touch $@
 
@@ -49,6 +54,6 @@ install\
 
 clean\
 :\
-;rm -Rf prog $(t) .*.o .*.d .*.passed html latex
+;rm -Rf prog $(t) .*.o .*.d .*.S *.S .*.passed html latex
 
 -include $(d)
