@@ -6,7 +6,7 @@
 prefix := /usr/local
 cpus := 8
 prog := $(notdir $(CURDIR))
-comp ?= g++
+comp ?= clang
 
 # Implementation
 MAKEFLAGS := rj$(cpus)
@@ -46,6 +46,7 @@ prog\
 ||mv $< $@
 
 .PHONY: .compiler-sentinel
+.INTERMEDIATE: .compiler-sentinel
 .compiler-sentinel\
 :\
 ;echo $(comp) > $@
