@@ -6,12 +6,16 @@
 prefix := /usr/local
 cpus := 8
 prog := $(notdir $(CURDIR))
+comp ?= g++
 
 # Implementation
 MAKEFLAGS := rj$(cpus)
-g := g++ -flto -g -Og -std=c++1y -Wall -Werror -pedantic
+g++-flags := -flto -g -Og -std=c++1y -Wall -Werror -pedantic
+clang-flags := -g -std=c++1y -Wall -Werror -pedantic
+g := $(comp) $($(comp)-flags)
 c := $(g) -c -MMD
 l := $(g)
+clang-l := -lstdc++
 s := $(wildcard *.cpp)
 o := $(addprefix .,$(patsubst %.cpp,%.o,$(s)))
 d := $(o:o=d)
@@ -30,11 +34,21 @@ prog.S\
 
 prog\
 :$(p)\
-;$(l) -o $@ $(p)
+;$(l) -o $@ $(p) $($(comp)-l)
 
 .%.o\
-:%.cpp $(MAKEFILE_LIST)\
+:%.cpp $(MAKEFILE_LIST) .compiler\
 ;$(c) -o $@ $<
+
+.compiler\
+:.compiler-sentinel\
+;diff -qN $< $@ > /dev/null 2>&1\
+||mv $< $@
+
+.PHONY: .compiler-sentinel
+.compiler-sentinel\
+:\
+;echo $(comp) > $@
 
 .PHONY: test
 test\
@@ -53,7 +67,7 @@ test\
 
 .test-%\
 :.test-%.o\
-;$(l) -o $@ $< -lboost_unit_test_framework
+;$(l) -o $@ $< -lboost_unit_test_framework $($(comp)-l)
 
 .PHONY\
 :clean\

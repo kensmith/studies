@@ -26,9 +26,13 @@ struct B {};
 
 void foo(int x, B y) {std::cout << "foo" << std::endl;}
 
-int a = 10;
-B b;
-auto capturing_closure = [=, b = std::move(B(b))]() {foo(a, b);};
+TEST(more_capture)
+{
+   int a = 10;
+   B b;
+   auto capturing_closure = [=, b = std::move(B(b))]() {foo(a, b);};
+   capturing_closure();
+}
 
 TEST(capturing_closure_test)
 {
