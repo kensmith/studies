@@ -62,7 +62,7 @@ $(foreach test-program,$(t),\
   $(eval .PHONY: $(target-name))\
   $(eval\
     $(target-name)\
-    :\
+    :$(test-program)\
     ;rm -f $(test-program).passed\
     ;$(MAKE)\
    )\
