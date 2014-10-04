@@ -57,6 +57,17 @@ test\
 ;rm -f .test-*.passed\
 ;$(MAKE)
 
+$(foreach test-program,$(t),\
+  $(eval target-name := $(patsubst .%,%,$(test-program)))\
+  $(eval .PHONY: $(target-name))\
+  $(eval\
+    $(target-name)\
+    :\
+    ;rm -f $(test-program).passed\
+    ;$(MAKE)\
+   )\
+ )
+
 %.S\
 :%\
 ;objdump -S $< > $@
