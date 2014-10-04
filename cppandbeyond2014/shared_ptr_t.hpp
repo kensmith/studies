@@ -88,4 +88,3 @@ std::ostream& operator<<(std::ostream& lhs, const shared_ptr_t<t>& rhs)
 
    return lhs;
 }
-
