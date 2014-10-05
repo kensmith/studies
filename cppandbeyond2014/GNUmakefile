@@ -7,11 +7,12 @@ prefix := /usr/local
 cpus := 8
 prog := $(notdir $(CURDIR))
 comp ?= clang
+san ?= address
 
 # Implementation
 MAKEFLAGS := rj$(cpus)
 g++-flags := -flto -g -Og -std=c++1y -Wall -Werror -pedantic
-clang-flags := -g -std=c++1y -Wall -Werror -pedantic
+clang-flags := -g -std=c++1y -Wall -Werror -pedantic -fsanitize=$(san)
 g := $(comp) $($(comp)-flags)
 c := $(g) -c -MMD
 l := $(g)
@@ -49,7 +50,7 @@ prog\
 .INTERMEDIATE: .compiler-sentinel
 .compiler-sentinel\
 :\
-;echo $(comp) > $@
+;echo "$(comp), sanitize $(san), flags are $($(comp)-flags)" > $@
 
 .PHONY: test
 test\
