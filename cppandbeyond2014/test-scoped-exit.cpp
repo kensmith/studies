@@ -10,12 +10,14 @@ struct scoped_exit_t
 
 void foo()
 {
+#if 0
    sentinel("");
    scoped_exit()
    {
       ooo(iii)
          << "scoped exit finished";
    };
+#endif
 }
    
 

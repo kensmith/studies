@@ -39,7 +39,7 @@ prog\
 
 .%.o\
 :%.cpp $(MAKEFILE_LIST) .compiler\
-;$(c) -o $@ $<
+;ccache $(c) -o $@ $<
 
 .compiler\
 :.compiler-sentinel\
