@@ -4,14 +4,19 @@
 
 # User configurable portion.
 prefix := /usr/local
-cpus := 4
+cpus := 8
 prog := $(notdir $(CURDIR))
+comp ?= clang
+san ?= address
 
 # Implementation
-MAKEFLAGS := j$(cpus)
-g := g++ -flto -g -Og -std=c++1y -Wall -Werror -pedantic
+MAKEFLAGS := rj$(cpus)
+g++-flags := -flto -g -Og -std=c++1y -Wall -Werror -pedantic
+clang-flags := -g -std=c++1y -Wall -Werror -pedantic -fsanitize=$(san)
+g := $(comp) $($(comp)-flags)
 c := $(g) -c -MMD
 l := $(g)
+clang-l := -lstdc++
 s := $(wildcard *.cpp)
 o := $(addprefix .,$(patsubst %.cpp,%.o,$(s)))
 d := $(o:o=d)
@@ -22,27 +27,60 @@ t := $(patsubst %.o,%,$(filter .test-%.o,$(o)))
 :$(t)\
  $(o)
 
+all\
+:prog prog.S $(addsuffix .passed,$(t)) $(addsuffix .S,$(t))
+
 prog.S\
 :prog\
-;objdump -S $< > $@
 
 prog\
-:$(p) $(addsuffix .passed,$(t))\
-;$(l) -o $@ $(p)
+:$(p)\
+;$(l) -o $@ $(p) $($(comp)-l)
 
 .%.o\
-:%.cpp $(MAKEFILE_LIST)\
+:%.cpp $(MAKEFILE_LIST) .compiler\
 ;$(c) -o $@ $<
+
+.compiler\
+:.compiler-sentinel\
+;diff -qN $< $@ > /dev/null 2>&1\
+||mv $< $@
+
+.PHONY: .compiler-sentinel
+.INTERMEDIATE: .compiler-sentinel
+.compiler-sentinel\
+:\
+;echo "$(comp), sanitize $(san), flags are $($(comp)-flags)" > $@
+
+.PHONY: test
+test\
+:\
+;rm -f .test-*.passed\
+;$(MAKE)
+
+$(foreach test-program,$(t),\
+  $(eval target-name := $(patsubst .%,%,$(test-program)))\
+  $(eval .PHONY: $(target-name))\
+  $(eval\
+    $(target-name)\
+    :$(test-program)\
+    ;rm -f $(test-program).passed\
+    ;$(MAKE)\
+   )\
+ )
+
+%.S\
+:%\
+;objdump -S $< > $@
 
 .test-%.passed\
 :.test-%\
-;objdump -S $< > $<.S\
 ;./$< --random\
 && touch $@
 
 .test-%\
 :.test-%.o\
-;$(l) -o $@ $< -lboost_unit_test_framework
+;$(l) -o $@ $< -lboost_unit_test_framework $($(comp)-l)
 
 .PHONY\
 :clean\

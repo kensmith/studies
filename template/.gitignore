@@ -3,3 +3,5 @@
 *.S
 .test-*
 prog
+.compiler
+.compiler-sentinel
