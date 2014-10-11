@@ -21,4 +21,7 @@ TEST(basic)
       << p;
    ooo(iii)
       << m;
+
+   auto q = shared_ptr2_t<int>(new int(12));
+   m = q;
 }

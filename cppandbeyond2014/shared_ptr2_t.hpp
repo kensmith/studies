@@ -37,6 +37,42 @@ struct shared_ptr2_t
       }
    }
 
+   shared_ptr2_t& operator=(const shared_ptr2_t& rhs)
+   {
+      if (p_)
+      {
+         if (!c_)
+         {
+            ooo(iii) << "c is null in operator=";
+so_sue_me_again:
+            delete p_;
+         }
+         else if (*c_ == 0)
+         {
+            ooo(iii) << "c reached zero in operator=";
+            delete c_;
+            goto so_sue_me_again;
+         }
+         else
+         {
+            ooo(iii) << "decrementing c in operator=";
+            c_->fetch_sub(1, std::memory_order_relaxed);
+         }
+      }
+      p_ = rhs.p_;
+      c_ = rhs.c_;
+      if (!c_)
+      {
+         rhs.c_ = c_ = new std::atomic_int(1);
+      }
+      else
+      {
+         c_->fetch_add(1, std::memory_order_relaxed);
+      }
+      show(c_);
+      return *this;
+   }
+
    shared_ptr2_t(shared_ptr2_t&& rhs)
    :p_(rhs.p_)
    ,c_(rhs.c_)
