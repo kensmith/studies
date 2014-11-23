@@ -1,0 +1,7 @@
+*.d
+*.o
+*.S
+.test-*
+prog
+.compiler
+.compiler-sentinel
