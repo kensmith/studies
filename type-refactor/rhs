@@ -1,0 +1,19 @@
+void JengaHandler::getDependencies(iface::GetDependenciesResult& result, unique_ptr<string> serviceHandle) {
+  RWGuard guard(graph_->getLock(), false);
+  enforce_graph_has_node_by_value(graph_, *serviceHandle);
+  const Node& node = graph_->getNodeByValue(*serviceHandle);
+  auto edges = node.getEdges();
+  for (auto& edge : edges) {
+    iface::Edge iedge;
+    iface::Node inode;
+
+    auto dep = edge.getSrc();
+    inode.handle = dep.getValue();
+    iedge.calleeHandle = *serviceHandle;
+    iedge.callerHandle = edge.getDst().getValue();
+    iedge.weights.values["requests"] = edge.getRequestCount();
+    iedge.weights.values["errors"] = edge.getErrorCount();
+    result.edges.push_back(iedge);
+    result.nodes.push_back(inode);
+  }
+}

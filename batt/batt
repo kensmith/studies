@@ -1,5 +1,14 @@
 #!/usr/bin/env lua
 
+local function cat_command(command)
+    local f = io.popen(command, 'r')
+    if f then
+        return true, f:read('*l')
+    else
+        return false
+    end
+end
+
 local function cat_file(filename, amount)
     amount = amount or '*l'
     local f = io.open(filename)
@@ -72,5 +81,34 @@ function wireless_strength()
     contents = contents:match('.*wlan%d*: *%d* *(%d*)')
 end
 
+function pandora()
+  local have_artist, artist = cat_file('/tmp/pandora-song-artist', '*l')
+  local have_title, title = cat_file('/tmp/pandora-song-title', '*l')
+  local have_song_status, song_status = cat_file('/tmp/pandora-song-status', '*l')
+  local result = ''
+
+  if have_artist and have_title then
+    result = artist .. ', ' .. title
+  else
+    result = ''
+  end
+
+  if have_song_status and #song_status > 0 then
+    result = result .. ' ' .. song_status
+  end
+
+  return result
+end
+
 --wireless_strength()
-print((states[status] or function() end)())
+local p = pandora()
+if #p > 0 then
+  p = p .. ' '
+end
+
+local success, uptime = cat_command("uptime | sed -e 's/.*average://'| tr ',' ' ' | awk '{print $1}'")
+if not success then
+    uptime = ''
+end
+
+print(p .. uptime .. ' - ' .. (states[status] or function() return '' end)())
