@@ -76,6 +76,10 @@ function states.Discharging()
     return states.Common('{', hours_remaining, '}')
 end
 
+function states.Full()
+    return ''
+end
+
 function wireless_strength()
     local contents = cat_wireless_proc()
     contents = contents:match('.*wlan%d*: *%d* *(%d*)')
