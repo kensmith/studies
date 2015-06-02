@@ -61,7 +61,7 @@ local states = {}
 function states.Common(left_brace, hours_remaining, right_brace)
     local seconds_remaining = 3600 * hours_remaining
     local epoch_now = os.time()
-    local epoch_end = epoch_now + seconds_remaining
+    local epoch_end = math.floor(epoch_now + seconds_remaining)
     local time_end = os.date('%H:%M', epoch_end)
     return left_brace .. time_end .. right_brace
 end
