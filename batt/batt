@@ -41,19 +41,25 @@ local _, status = cat_battery_proc('status')
 local result, rate_now = cat_battery_proc('power_now')
 if not result then
     result, rate_now = cat_battery_proc('current_now')
-    assert(result, 'failed to get current rate')
+    if not result then
+      os.exit(0)
+    end
 end
 
 local result, capacity_now = cat_battery_proc('energy_now')
 if not result then
     result, capacity_now = cat_battery_proc('charge_now')
-    assert(result, 'failed to get current capacity')
+    if not result then
+      os.exit(0)
+    end
 end
 
 local result, capacity_full = cat_battery_proc('energy_full')
 if not result then
     result, capacity_full = cat_battery_proc('charge_full')
-    assert(result, 'failed to get total capacity')
+    if not result then
+      os.exit(0)
+    end
 end
 
 local states = {}
