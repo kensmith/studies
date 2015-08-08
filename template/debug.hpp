@@ -35,3 +35,18 @@ struct showt_t;
       << #x\
       << " = "\
       << x
+
+std::ostream& operator<<(std::ostream& lhs, const std::vector<int>& rhs)
+{
+    lhs << "{";
+    for (std::size_t i = 0; i < rhs.size(); ++i)
+    {
+        lhs << rhs[i];
+        if (i + 1 < rhs.size())
+        {
+            lhs << ",";
+        }
+    }
+    lhs << "}";
+    return lhs;
+}
