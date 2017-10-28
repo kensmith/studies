@@ -1,7 +1,15 @@
 #!/bin/sh
 
-base_dir=/sys/bus/acpi/drivers/battery
-energy_now=$(cat $base_dir/PNP0C0A:0*/power_supply/*/energy_now | paste -d + -s | bc)
-energy_full=$(cat $base_dir/PNP0C0A:0*/power_supply/*/energy_full | paste -d + -s | bc)
-echo -n $(uptime | tr ',' ' ' | sed -e 's/.*average://'|awk '{print $1,$2,$3}')"  "
-echo "scale=3; 100 * ($energy_now / $energy_full)" | bc | sed -e "s/\..*/\%/"
+base_dir=/sys/bus/acpi/drivers/battery/PNP0C0A:0*/power_supply/*
+energy_now=$(cat $base_dir/energy_now | paste -d + -s | bc)
+energy_full=$(cat $base_dir/energy_full | paste -d + -s | bc)
+uptime=$(echo -n $(uptime | tr ',' ' ' | sed -e 's/.*average://'|awk '{print $1,$2,$3}'))
+lb="["
+rb="]"
+if cat $base_dir/status|grep Discharging > /dev/null 2>&1
+then
+  lb="{"
+  rb="}"
+fi
+percent_remaining=$(echo "scale=3; 100 * ($energy_now / $energy_full)" | bc | sed -e "s/\..*/\%/")
+echo "$uptime  $lb$percent_remaining$rb"
