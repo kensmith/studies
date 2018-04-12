@@ -3,6 +3,11 @@
 #include <cstdlib>
 #include <iostream>
 
+/**
+ * No warranty. Public domain. Don't judge the code. It is a
+ * quick and dirty hack.
+ */
+
 namespace im = Magick;
 
 const int image_height = 1080;
