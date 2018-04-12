@@ -22,22 +22,26 @@ int px_from_moa(double moa)
   return pixels;
 }
 
-void draw_square(im::Image& image, int x, int y, int width)
+void draw_square(im::Image& image, int x, int y, int width, im::Color color)
 {
   if (width == 0)
   {
-    image.pixelColor(x, y, "black");
+    image.pixelColor(x, y, color);
   }
   else
   {
     auto square = im::DrawableRectangle(x, y, x+width, y+width);
+    image.strokeColor(color);
+    image.fillColor(color);
     image.draw(square);
+    image.strokeColor("black");
+    image.fillColor("black");
   }
 }
 
 void draw_target(im::Image& image, int x, int y, double moa)
 {
-  draw_square(image, x, y, px_from_moa(moa));
+  draw_square(image, x, y, px_from_moa(moa), "black");
 }
 
 void draw_calibration_image(im::Image& image)
@@ -47,7 +51,12 @@ void draw_calibration_image(im::Image& image)
   int width = 0;
   while (y + width < image_height)
   {
-    draw_square(image, x, y, width);
+    im::Color color{"black"};
+    if (fabs(static_cast<double>(width) - one_mil_subtends_px) < 0.25)
+    {
+      color = im::Color("red");
+    }
+    draw_square(image, x, y, width, color);
     x += width+1;
     y += width+1;
     ++width;

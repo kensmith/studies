@@ -35,4 +35,9 @@ cutting a circular hole in a piece of cardboard with an
 aperture of about one inch and tape it to your scope if you
 don't have an IOTA.
 
+If you move closer to or away from the display, you'll want
+to recalibrate and use the image that corresponds to the
+number of pixels which one mil subtends at that new
+position.
+
 vim:tw=60:
