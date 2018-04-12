@@ -64,7 +64,7 @@ void draw_calibration_image(im::Image& image)
 void draw_targets(im::Image& image)
 {
   int x = image_width / 2;
-  int y = image_height - 100;
+  int y = image_height * 3 / 4;
   double moa = 0.5;
   while (y - px_from_moa(moa) > 0)
   {
