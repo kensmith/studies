@@ -95,6 +95,7 @@ install\
 
 clean\
 :\
-;rm -Rf prog $(t) .*.o .*.d .*.S *.S .*.passed html latex
+;rm -Rf prog $(t) .*.o .*.d .*.S *.S .*.passed html latex \
+ *.gif
 
 -include $(d)
