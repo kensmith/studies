@@ -1,6 +1,5 @@
 #include <Magick++.h>
 #include <cmath>
-#include <cassert>
 #include <cstdlib>
 
 namespace im = Magick;
@@ -76,10 +75,11 @@ void draw_targets(im::Image& image)
 
 int main(int argc, char* const * argv)
 {
-#if 0
-  std::assert(argc == 2);
-  double one_mil_subtends_px = std::strtod(argv[1]);
-#endif
+  if (argc != 2)
+  {
+    return 1;
+  }
+  double one_mil_subtends_px = std::strtod(argv[1], nullptr);
   im::Image base(im::Geometry(image_width, image_height), "white");
   base.magick("GIF");
   base.strokeAntiAlias(false);
