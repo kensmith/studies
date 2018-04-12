@@ -14,18 +14,6 @@ const int image_height = 1080;
 const int image_width = 1920;
 double one_mil_subtends_px = 7.0;
 
-double minute_from_mil(double mils)
-{
-  double moa = mils * 3.43775;
-  return moa;
-}
-
-double mil_from_minute(double moa)
-{
-  double mils = moa * 0.290888;
-  return mils;
-}
-
 int px_from_moa(double moa)
 {
   int pixels =
