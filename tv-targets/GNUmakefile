@@ -11,8 +11,9 @@ san ?= address
 
 # Implementation
 MAKEFLAGS := rj$(cpus)
-g++-flags := -flto -g -Og -std=c++1y -Wall -Werror -pedantic
-clang-flags := -g -std=c++1y -Wall -Werror -pedantic -fsanitize=$(san)
+common-cxx-flags := $(shell Magick++-config --cxxflags) -Wall
+g++-flags := $(common-cxx-flags) -flto -g -Og -std=c++1y -Wall -pedantic
+clang-flags := $(common-cxx-flags) -g -std=c++1y -Wall -pedantic -fsanitize=$(san)
 g := $(comp) $($(comp)-flags)
 c := $(g) -c -MMD
 l := $(g)
