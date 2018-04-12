@@ -2,44 +2,43 @@
 
 namespace im = Magick;
 
-const int height = 1080;
-const int width = 1920;
+const int image_height = 1080;
+const int image_width = 1920;
 
-void draw_vert(im::Image& image, int x, im::Color color)
+void draw_square(im::Image& image, int x, int y, int width)
 {
-#if 0
-  for (int i = 0; i < height; ++i)
+  if (width == 0)
   {
-    image.pixelColor(x, i, color);
+    image.pixelColor(x, y, "black");
   }
-#else
-  auto line = im::DrawableLine(x, 0, x, height);
-  image.draw(line);
-#endif
+  else
+  {
+    auto square = im::DrawableRectangle(x, y, x+width, y+width);
+    image.draw(square);
+  }
 }
 
 void draw_calibration_image(im::Image& image)
 {
-  auto black = im::Color("black");
-  auto red = im::Color("red");
-  auto yellow = im::Color("yellow");
-  const int skip = 2;
-  for (int x = 0; x < width/skip; ++x)
+  int x = 10;
+  int y = 10;
+  int width = 0;
+  while (y + width < image_height)
   {
-    auto color = black;
-    if (x % skip == 0)
-    {
-      color = yellow;
-    }
-    draw_vert(image, x*skip, color);
+    draw_square(image, x, y, width);
+    x += width+1;
+    y += width+1;
+    ++width;
   }
 }
 
 int main()
 {
-  im::Image base(im::Geometry(width, height), "white");
+  im::Image base(im::Geometry(image_width, image_height), "white");
   base.magick("GIF");
   base.strokeAntiAlias(false);
+  base.strokeColor("black");
+  base.fillColor("black");
   draw_calibration_image(base);
   base.write("calibration.gif");
   return 0;
