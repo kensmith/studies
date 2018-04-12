@@ -1,12 +1,13 @@
 #include <Magick++.h>
 #include <cmath>
 #include <cstdlib>
+#include <iostream>
 
 namespace im = Magick;
 
 const int image_height = 1080;
 const int image_width = 1920;
-const double one_mil_subtends_px = 7.0;
+double one_mil_subtends_px = 7.0;
 
 double minute_from_mil(double mils)
 {
@@ -79,7 +80,8 @@ int main(int argc, char* const * argv)
   {
     return 1;
   }
-  double one_mil_subtends_px = std::strtod(argv[1], nullptr);
+  one_mil_subtends_px = std::strtod(argv[1], nullptr);
+
   im::Image base(im::Geometry(image_width, image_height), "white");
   base.magick("GIF");
   base.strokeAntiAlias(false);
