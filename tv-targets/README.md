@@ -20,6 +20,12 @@ Now the squares in the middle of the screen are moa accurate
 from 0.5, increasing in size by 0.5 (the next larger target
 is 1.0 moa, the one above that is 1.5 moa and so on).
 
+Make sure you download the image and display it full screen
+in order for everything to line up correctly. Definitely
+don't just use the image preview that is displayed in your
+browser for calibration. The math might not work out right
+if you try that.
+
 # Notes
 
 In order to be able to distinctly see the pixels through
