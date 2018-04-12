@@ -14,10 +14,12 @@ MAKEFLAGS := rj$(cpus)
 common-cxx-flags := $(shell Magick++-config --cxxflags) -Wall
 g++-flags := $(common-cxx-flags) -flto -g -Og -std=c++1y -Wall -pedantic
 clang-flags := $(common-cxx-flags) -g -std=c++1y -Wall -pedantic -fsanitize=$(san)
+common-ldd-flags := $(shell Magick++-config --ldflags)
 g := $(comp) $($(comp)-flags)
 c := $(g) -c -MMD
 l := $(g)
-clang-l := -lstdc++
+g++-l := $(common-ldd-flags)
+clang-l := $(common-ldd-flags) -lstdc++
 s := $(wildcard *.cpp)
 o := $(addprefix .,$(patsubst %.cpp,%.o,$(s)))
 d := $(o:o=d)
