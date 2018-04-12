@@ -20,4 +20,13 @@ Now the squares in the middle of the screen are moa accurate
 from 0.5, increasing in size by 0.5 (the next larger target
 is 1.0 moa, the one above that is 1.5 moa and so on).
 
+# Notes
+
+In order to be able to distinctly see the pixels through
+your scope, you will probably need an IOTA (indoor optical
+training aid) or similar device. You can create one by just
+cutting a circular hole in a piece of cardboard with an
+aperture of about one inch and tape it to your scope if you
+don't have an IOTA.
+
 vim:tw=60:
