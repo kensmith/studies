@@ -1,3 +1,0 @@
-#!/bin/zsh
-
-exec screen -t dbgu /dev/serial/by-id/usb-Olimex_Olimex_OpenOCD_JTAG-if01-port0 115200
