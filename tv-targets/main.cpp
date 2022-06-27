@@ -18,6 +18,7 @@ double one_mil_subtends_px = 7.0;
 static const std::string background_color = "black";
 static const std::string foreground_color = "white";
 static const std::string highlight_color = "red";
+static const std::string alternate_color = "green";
 
 int px_from_moa(double moa)
 {
@@ -44,9 +45,9 @@ void draw_square(im::Image& image, int x, int y, int width, im::Color color)
   }
 }
 
-void draw_target(im::Image& image, int x, int y, double moa)
+void draw_target(im::Image& image, int x, int y, double moa, const std::string& color)
 {
-  draw_square(image, x, y, px_from_moa(moa), foreground_color);
+  draw_square(image, x, y, px_from_moa(moa), color);
 }
 
 void draw_calibration_image(im::Image& image)
@@ -73,11 +74,20 @@ void draw_targets(im::Image& image)
   int x = image_width / 2;
   int y = image_height * 3 / 4;
   double moa = 0.5;
+  bool is_primary_color = true;
   while (y - px_from_moa(moa) > 0)
   {
-    draw_target(image, x, y, moa);
+    if (is_primary_color)
+    {
+      draw_target(image, x, y, moa, foreground_color);
+    }
+    else
+    {
+      draw_target(image, x, y, moa, alternate_color);
+    }
     y -= 100;
     moa += 0.5;
+    is_primary_color = !is_primary_color;
   }
 }
 
