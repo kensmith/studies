@@ -1,7 +1,7 @@
 #!/bin/sh
 
-for i in $(seq 1 30)
+for i in $(seq 0 30)
 do
-  ./prog $i
-  mv calibration.gif $(printf "%02d" $i).gif
-done
+  echo ./prog $i
+  #mv calibration.gif $(printf "%02d" $i).gif
+done | parallel -P 100% --bar

@@ -2,6 +2,8 @@
 #include <cmath>
 #include <cstdlib>
 #include <iostream>
+#include <sstream>
+#include <iomanip>
 
 /**
  * No warranty. Public domain. Don't judge the code. It is a
@@ -13,6 +15,9 @@ namespace im = Magick;
 const int image_height = 1080;
 const int image_width = 1920;
 double one_mil_subtends_px = 7.0;
+static const std::string background_color = "black";
+static const std::string foreground_color = "white";
+static const std::string highlight_color = "red";
 
 int px_from_moa(double moa)
 {
@@ -34,14 +39,14 @@ void draw_square(im::Image& image, int x, int y, int width, im::Color color)
     image.strokeColor(color);
     image.fillColor(color);
     image.draw(square);
-    image.strokeColor("black");
-    image.fillColor("black");
+    image.strokeColor(foreground_color);
+    image.fillColor(foreground_color);
   }
 }
 
 void draw_target(im::Image& image, int x, int y, double moa)
 {
-  draw_square(image, x, y, px_from_moa(moa), "black");
+  draw_square(image, x, y, px_from_moa(moa), foreground_color);
 }
 
 void draw_calibration_image(im::Image& image)
@@ -51,10 +56,10 @@ void draw_calibration_image(im::Image& image)
   int width = 0;
   while (y + width < image_height)
   {
-    im::Color color{"black"};
+    im::Color color{foreground_color};
     if (fabs(static_cast<double>(width) - one_mil_subtends_px) < 0.25)
     {
-      color = im::Color("red");
+      color = im::Color(highlight_color);
     }
     draw_square(image, x, y, width, color);
     x += width+1;
@@ -84,13 +89,22 @@ int main(int argc, char* const * argv)
   }
   one_mil_subtends_px = std::strtod(argv[1], nullptr);
 
-  im::Image base(im::Geometry(image_width, image_height), "white");
+  im::Image base(im::Geometry(image_width, image_height), background_color);
   base.magick("GIF");
   base.strokeAntiAlias(false);
-  base.strokeColor("black");
-  base.fillColor("black");
-  draw_calibration_image(base);
-  draw_targets(base);
-  base.write("calibration.gif");
+  base.strokeColor(foreground_color);
+  base.fillColor(foreground_color);
+  if (one_mil_subtends_px == 0)
+  {
+    draw_calibration_image(base);
+    base.write("calibration.gif");
+  }
+  else
+  {
+    draw_targets(base);
+    std::stringstream ss;
+    ss << std::setfill('0') << std::setw(2) << one_mil_subtends_px << ".gif";
+    base.write(ss.str());
+  }
   return 0;
 }
