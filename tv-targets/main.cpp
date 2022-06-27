@@ -14,6 +14,7 @@ namespace im = Magick;
 
 const int image_height = 1080;
 const int image_width = 1920;
+const double one_moa_in_mils = 0.290888;
 double one_mil_subtends_px = 7.0;
 static const std::string background_color = "black";
 static const std::string foreground_color = "white";
@@ -24,7 +25,7 @@ int px_from_moa(double moa)
 {
   int pixels =
     static_cast<int>(
-        std::round(moa * one_mil_subtends_px * .290888));
+        std::round(moa * one_mil_subtends_px * one_moa_in_mils));
   return pixels;
 }
 
