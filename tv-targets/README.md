@@ -12,12 +12,14 @@ your display through it. Display calibration.gif fullscreen
 on your TV or monitor and line your reticle up with one of
 the squares that descends from the upper left corner of the
 screen and count its position from the first square. They go
-in order of 1 pixel, 2px, 3px, and so on. Once you find the
-square that most closely matches 1 full milliradian in your
-scope, you can use the gif that matches that number. For
-example, if one mil in your reticle subtends 7 pixels, then
-use 07.gif. The white targets are the half MOA targets and
-the green targets are whole MOA targets.
+in order of 1 pixel, 2px, 3px, and so on. The squares
+alternate from white to green with green squares being an
+even number of pixels on a side. Once you find the square
+that most closely matches 1 full milliradian in your scope,
+you can use the gif that matches that number. For
+example, if one mil in your reticle subtends 7 pixels,
+then use 07.gif. The white targets are the half MOA
+targets and the green targets are whole MOA targets.
 
 Now the squares in the middle of the screen are moa accurate
 from 0.5, increasing in size by 0.5 (the next larger target

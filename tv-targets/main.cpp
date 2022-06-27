@@ -17,7 +17,7 @@ const int image_width = 1920;
 double one_mil_subtends_px = 7.0;
 static const std::string background_color = "black";
 static const std::string foreground_color = "white";
-static const std::string highlight_color = "red";
+static const std::string highlight_color = "green";
 static const std::string alternate_color = "green";
 
 int px_from_moa(double moa)
@@ -55,14 +55,18 @@ void draw_calibration_image(im::Image& image)
   int x = 10;
   int y = 10;
   int width = 0;
+  bool is_primary_color = true;
   while (y + width < image_height)
-  {
-    im::Color color{foreground_color};
-    if (fabs(static_cast<double>(width) - one_mil_subtends_px) < 0.25)
+{
+    if (is_primary_color)
     {
-      color = im::Color(highlight_color);
+      draw_square(image, x, y, width, foreground_color);
     }
-    draw_square(image, x, y, width, color);
+    else
+    {
+      draw_square(image, x, y, width, highlight_color);
+    }
+    is_primary_color = !is_primary_color;
     x += width+1;
     y += width+1;
     ++width;
