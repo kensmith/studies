@@ -112,14 +112,13 @@ int main(int argc, char* const * argv)
   if (one_mil_subtends_px == 0)
   {
     draw_calibration_image(base);
-    base.write("calibration.gif");
   }
   else
   {
     draw_targets(base);
-    std::stringstream ss;
-    ss << std::setfill('0') << std::setw(2) << one_mil_subtends_px << ".gif";
-    base.write(ss.str());
   }
+  std::stringstream ss;
+  ss << std::setfill('0') << std::setw(2) << one_mil_subtends_px << ".gif";
+  base.write(ss.str());
   return 0;
 }

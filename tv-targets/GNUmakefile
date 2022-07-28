@@ -25,13 +25,25 @@ o := $(addprefix .,$(patsubst %.cpp,%.o,$(s)))
 d := $(o:o=d)
 p := $(filter-out .test-%.o,$(o))
 t := $(patsubst %.o,%,$(filter .test-%.o,$(o)))
+image-indices := $(shell seq 0 30|xargs printf "%02d\n")
+image-filenames := $(addsuffix .gif,$(image-indices))
 
 .PRECIOUS\
 :$(t)\
  $(o)
 
+.PHONY: all
+
 all\
-:prog prog.S $(addsuffix .passed,$(t)) $(addsuffix .S,$(t))
+:$(image-filenames) calibration.gif
+
+calibration.gif\
+:00.gif\
+;cp $< $@
+
+%.gif\
+:prog prog.S $(addsuffix .passed,$(t)) $(addsuffix .S,$(t))\
+;./prog $(patsubst %.gif,%,$@)
 
 prog.S\
 :prog\
