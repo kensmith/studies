@@ -26,7 +26,8 @@ d := $(o:o=d)
 p := $(filter-out .test-%.o,$(o))
 t := $(patsubst %.o,%,$(filter .test-%.o,$(o)))
 image-indices := $(shell seq 0 30|xargs printf "%02d\n")
-image-filenames := $(addsuffix .gif,$(image-indices))
+gif-filenames := $(addsuffix .gif,$(image-indices))
+jpg-filenames := $(addsuffix .jpg,$(image-indices))
 
 .PRECIOUS\
 :$(t)\
@@ -35,7 +36,11 @@ image-filenames := $(addsuffix .gif,$(image-indices))
 .PHONY: all
 
 all\
-:$(image-filenames) calibration.gif
+:$(jpg-filenames) calibration.jpg
+
+%.jpg\
+:%.gif\
+;convert $< $@
 
 calibration.gif\
 :00.gif\
