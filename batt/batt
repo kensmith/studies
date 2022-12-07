@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 uptime=$(echo -n $(uptime | tr ',' ' ' | sed -e 's/.*average://'|awk '{print $1,$2,$3}'))
 charging=1
