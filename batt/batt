@@ -12,7 +12,7 @@ then
   termux-battery-status > $battery_status_json
   status=$(cat $battery_status_json | jq ".status")
   echo $status
-  if [[ $status == "DISCHARGING" ]]
+  if [[ "$status" == "\"DISCHARGING\"" ]]
   then
     charging=0
   fi
