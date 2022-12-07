@@ -1,15 +1,34 @@
 #!/bin/sh
 
-base_dir=/sys/bus/acpi/drivers/battery/PNP0C0A:0*/power_supply/*
-energy_now=$(cat $base_dir/energy_now | paste -d + -s | bc)
-energy_full=$(cat $base_dir/energy_full | paste -d + -s | bc)
 uptime=$(echo -n $(uptime | tr ',' ' ' | sed -e 's/.*average://'|awk '{print $1,$2,$3}'))
+charging=1
+percentage_remaining=-1
 lb="["
 rb="]"
-if cat $base_dir/status|grep Discharging > /dev/null 2>&1
+
+if [[ $(uname -o) == "Android" ]]
+then
+  battery_status_json=$(mktemp)
+  termux-battery-status > $battery_status_json
+  status=$(cat $battery_status_json | jq ".status")
+  if [[ $status == "DISCHARGING" ]]
+  then
+    charging=0
+  fi
+  percentage_remaining=$(cat $battery_status_json | jq ".percentage")
+else
+  base_dir=/sys/bus/acpi/drivers/battery/PNP0C0A:0*/power_supply/*
+  energy_now=$(cat $base_dir/energy_now | paste -d + -s | bc)
+  energy_full=$(cat $base_dir/energy_full | paste -d + -s | bc)
+  percent_remaining=$(echo "scale=3; 100 * ($energy_now / $energy_full)" | bc | sed -e "s/\..*/\%/")
+
+  cat $base_dir/status|grep Discharging > /dev/null 2>&1 && charging=0
+fi
+
+if [[ charging -eq 0 ]]
 then
   lb="{"
   rb="}"
 fi
-percent_remaining=$(echo "scale=3; 100 * ($energy_now / $energy_full)" | bc | sed -e "s/\..*/\%/")
+
 echo "$uptime  $lb$percent_remaining$rb"
