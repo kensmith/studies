@@ -21,7 +21,7 @@ else
   base_dir=/sys/bus/acpi/drivers/battery/PNP0C0A:0*/power_supply/*
   energy_now=$(cat $base_dir/energy_now | paste -d + -s | bc)
   energy_full=$(cat $base_dir/energy_full | paste -d + -s | bc)
-  percentage_remaining=$(echo "scale=3; 100 * ($energy_now / $energy_full)" | bc | sed -e "s/\..*/\%/")
+  percentage_remaining=$(echo "scale=3; 100 * ($energy_now / $energy_full)" | bc | sed -e "s/\..*//")
 
   cat $base_dir/status|grep Discharging > /dev/null 2>&1 && charging=0
 fi
@@ -32,4 +32,4 @@ then
   rb="}"
 fi
 
-echo "$uptime  $lb$percentage_remaining$rb"
+echo "$uptime  $lb$percentage_remaining%$rb"
