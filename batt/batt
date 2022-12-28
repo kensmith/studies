@@ -2,7 +2,8 @@
 
 uptime=$(echo -n $(uptime | tr ',' ' ' | sed -e 's/.*average://'|awk '{print $1,$2,$3}'))
 charging=1
-percentage_remaining=-1
+percentage_remaining=""
+percentage_remaining_string=""
 lb="["
 rb="]"
 
@@ -19,11 +20,22 @@ then
   echo $percentage_remaining
 else
   base_dir=/sys/bus/acpi/drivers/battery/PNP0C0A:0*/power_supply/*
-  energy_now=$(cat $base_dir/energy_now | paste -d + -s | bc)
-  energy_full=$(cat $base_dir/energy_full | paste -d + -s | bc)
-  percentage_remaining=$(echo "scale=3; 100 * ($energy_now / $energy_full)" | bc | sed -e "s/\..*//")
 
-  cat $base_dir/status|grep Discharging > /dev/null 2>&1 && charging=0
+  energy_now_file=$base_dir/energy_now
+  test -e $energy_now_file && energy_now=$(cat $energy_now_file | paste -d + -s | bc)
+
+  energy_full_file=$base_dir/energy_full
+  test -e $energy_full_file && energy_full=$(cat $energy_full_file | paste -d + -s | bc)
+
+  test -n "$energy_now" \
+    && \
+    test -n "$energy_full" \
+    && \
+    percentage_remaining=$(echo "scale=3; 100 * ($energy_now / $energy_full)" | bc | sed -e "s/\..*//")
+
+  status_file=$base_dir/status
+  test -e $status_file && cat $status_file | grep Discharging > /dev/null 2>&1 && charging=0
+
 fi
 
 if [[ charging -eq 0 ]]
@@ -32,4 +44,6 @@ then
   rb="}"
 fi
 
-echo "$uptime  $lb$percentage_remaining%$rb"
+test -n "$percentage_remaining" && percentage_remaining_string="$lb$percentage_remaining%$rb"
+
+echo "$uptime  $percentage_remaining_string"
