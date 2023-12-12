@@ -1,4 +1,4 @@
-gmake-recipes := $(HOME)/public/gmake-recipes
+gmake-recipes := $(HOME)/code/gmake-recipes
 
 include $(gmake-recipes)/main.mk
 
