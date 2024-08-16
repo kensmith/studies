@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+progdir=$(dirname 0)
+ds=$(date +"%Y-%m-%dT%H:%M:%S")
+
+$progdir/prs-rankings.js \
+  | pup 'table.table-standings tbody tr json{}' \
+  | jq -r '.[] | [(.children[0].text), (.children[2].children[0].text), (.children[4].text)] | @csv' \
+  | tee ${ds}-prs-rankings.csv
