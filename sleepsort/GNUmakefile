@@ -1,1 +1,1 @@
-../template/go/GNUmakefile
+../templates/go/GNUmakefile

@@ -23,13 +23,21 @@ go-vet-result := $(build-dir)/go-vet.txt
 go-test-result := $(build-dir)/go-test.txt
 nilaway := $(GOPATH)/bin/nilaway
 nilaway-result := $(build-dir)/nilaway.txt
+govulncheck := $(GOPATH)/bin/govulncheck
+govulncheck-result := $(build-dir)/govulncheck.txt
 
 .PHONY: build
-build: $(binary-fullpath) $(go-vet-result) $(go-test-result) $(scc-result) $(nilaway-result) fail-on-missing-tests
+build: $(binary-fullpath) $(go-vet-result) $(go-test-result) $(scc-result) $(nilaway-result) $(govulncheck-result) fail-on-missing-tests
 	cat $(scc-result)
 	cat $(nilaway-result)
 	cat $(go-vet-result)
 	cat $(go-test-result)
+
+$(govulncheck-result): $(govulncheck) $(sources) $(MAKEFILE_LIST) | $(build-dir)
+	$(govulncheck) > $@ 2>&1
+
+$(govulncheck):
+	go install golang.org/x/vuln/cmd/govulncheck@latest
 
 $(nilaway-result): $(nilaway) $(sources) $(MAKEFILE_LIST) | $(build-dir)
 	$(nilaway) ./... > $@ 2>&1
