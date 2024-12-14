@@ -32,6 +32,7 @@ build: $(binary-fullpath) $(go-vet-result) $(go-test-result) $(scc-result) $(nil
 	cat $(nilaway-result)
 	cat $(go-vet-result)
 	cat $(go-test-result)
+	cat $(govulncheck-result)
 
 $(govulncheck-result): $(govulncheck) $(sources) $(MAKEFILE_LIST) | $(build-dir)
 	$(govulncheck) > $@ 2>&1
