@@ -1,1 +1,1 @@
-../nato/GNUmakefile
+../template/go/GNUmakefile
