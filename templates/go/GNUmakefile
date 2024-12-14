@@ -74,7 +74,7 @@ $(build-dir):
 	mkdir -p $@
 
 .PHONY: fail-on-missing-tests
-fail-on-missing-tests: $(go-test-files)
+fail-on-missing-tests: | $(go-test-files)
 
 .PHONY: clean
 clean:
