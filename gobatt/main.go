@@ -86,11 +86,12 @@ func main() {
 		percentage := math.Round(ratio * 100)
 		msg := fmt.Sprintf("%v%%", percentage)
 		if discharging {
-			msg = fmt.Sprintf("{%v}\n", msg)
+			msg = fmt.Sprintf("{%v}", msg)
 		} else {
-			msg = fmt.Sprintf("[%v]\n", msg)
+			msg = fmt.Sprintf("[%v]", msg)
 		}
-		print(msg)
+		fmt.Println(msg)
+		os.Stdout.Sync()
 
 		if percentage <= criticalBatteryThreshold && !criticalBatteryGate {
 			if discharging {
