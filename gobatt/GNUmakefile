@@ -35,28 +35,28 @@ build: $(binary-fullpath) $(go-vet-result) $(go-test-result) $(scc-result) $(nil
 	cat $(govulncheck-result)
 
 $(govulncheck-result): $(govulncheck) $(sources) $(MAKEFILE_LIST) | $(build-dir)
-	$(govulncheck) > $@ 2>&1
+	$(govulncheck) | tee $@
 
 $(govulncheck):
 	go install golang.org/x/vuln/cmd/govulncheck@latest
 
 $(nilaway-result): $(nilaway) $(sources) $(MAKEFILE_LIST) | $(build-dir)
-	$(nilaway) ./... > $@ 2>&1
+	$(nilaway) ./... | tee $@
 
 $(nilaway):
 	go install go.uber.org/nilaway/cmd/nilaway@latest
 
 $(go-test-result): $(binary-fullpath)
-	go test ./... > $@ 2>&1
+	go test ./... | tee $@
 
 $(binary-fullpath): $(sources) $(MAKEFILE_LIST) .formatted | $(build-dir)
 	go build -o $(binary-fullpath) *.go
 
 $(go-vet-result): $(sources) $(MAKEFILE_LIST) | $(build-dir)
-	go vet -composites=false ./... > $@ 2>&1
+	go vet -composites=false ./... | tee $@
 
 $(scc-result): $(scc) $(sources) $(MAKEFILE_LIST) | $(build-dir)
-	$(scc) --no-cocomo --sort code -M json -M js -M css -M gitignore > $@ 2>&1
+	$(scc) --no-cocomo --sort code -M json -M js -M css -M gitignore | tee $@
 
 $(scc):
 	go install github.com/boyter/scc@latest
