@@ -1,16 +1,17 @@
-package main
+package sys
 
 import (
-	"log/slog"
+	"bytes"
 
 	"golang.org/x/sys/unix"
 )
 
-func main() {
+func Uname() string {
 	utsname := unix.Utsname{}
 	err := unix.Uname(&utsname)
 	if err != nil {
 		panic(err)
 	}
-	slog.Info("asdf", "Sysname", utsname.Sysname)
+	sysname := string(bytes.TrimRight(utsname.Sysname[:], "\x00"))
+	return sysname
 }

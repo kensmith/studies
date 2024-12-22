@@ -1,4 +1,4 @@
-module github.com/kensmith/studies/go
+module github.com/kensmith/gobatt
 
 go 1.23.4
 
