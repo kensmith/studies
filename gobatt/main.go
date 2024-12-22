@@ -12,7 +12,7 @@ import (
 
 	"github.com/gen2brain/beeep"
 
-	"github.com/kensmith/gobatt/sys"
+	"github.com/kensmith/studies/gobatt/sys"
 )
 
 const (
