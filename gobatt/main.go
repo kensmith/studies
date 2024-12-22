@@ -1,5 +1,18 @@
 package main
 
+/* Usage example .screenrc
+
+cat << EOF >> $HOME/.screenrc
+backtick 1 0 0 $HOME/.local/bin/gobatt
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{+b}%H %w%=%1` %c %M%d%D%{-b}"
+EFO
+
+Will send notifications at low and critical thresholds. Use with Dunst
+https://github.com/dunst-project/dunst , for example.
+*/
+
 import (
 	"fmt"
 	"log/slog"
