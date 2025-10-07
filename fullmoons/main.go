@@ -96,6 +96,45 @@ func Usage() {
 	os.Exit(1)
 }
 
+func GetMoonPhasesForOneYear(httpClient http.Client, year int) (*MoonPhasesResponse, error) {
+	startDateStr := fmt.Sprintf("%d-01-01", year)
+
+	query := url.Values{}
+	query.Set("date", startDateStr)
+	query.Set("nump", "50")
+	queryUrl, err := url.Parse(_baseUrl)
+	if err != nil {
+		return nil, err
+	}
+	queryUrl.RawQuery = query.Encode()
+	resp, err := httpClient.Get(queryUrl.String())
+	if err != nil {
+		return nil, err
+	}
+
+	if resp == nil {
+		return nil, fmt.Errorf("nil response received while err was nil")
+	}
+
+	defer resp.Body.Close()
+
+	if resp.StatusCode != 200 {
+		return nil, fmt.Errorf("received unexpected response code %d", resp.StatusCode)
+	}
+
+	bodyBytes, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, err
+	}
+
+	var moonPhasesResponse MoonPhasesResponse
+	err = json.Unmarshal(bodyBytes, &moonPhasesResponse)
+	if err != nil {
+		return nil, err
+	}
+	return &moonPhasesResponse, nil
+}
+
 func main() {
 	ConfigureLogging()
 
@@ -103,63 +142,53 @@ func main() {
 		Timeout: _httpTimeout,
 	}
 
-	queryUrl, err := url.Parse(_baseUrl)
-	if err != nil {
-		slog.Error("internal error: couldn't parse base URL", "baseUrl", _baseUrl)
-		os.Exit(1)
-	}
-
 	if len(os.Args) < 3 {
 		Usage()
 	}
 	startDateStr := os.Args[1]
-	_, err = time.Parse(time.DateOnly, startDateStr)
+	startDate, err := time.Parse(time.DateOnly, startDateStr)
 	if err != nil {
 		slog.Error("couldn't parse first argument as a date (eg. 2025-10-06)", "os.Args[1]", startDateStr)
 		os.Exit(1)
 	}
 
 	endDateStr := os.Args[2]
-	_, err = time.Parse(time.DateOnly, endDateStr)
+	endDate, err := time.Parse(time.DateOnly, endDateStr)
 	if err != nil {
 		slog.Error("couldn't parse second argument as a date (eg. 2025-11-07)", "os.Args[2]", endDateStr)
 		os.Exit(1)
 	}
 
-	query := url.Values{}
-	query.Set("date", startDateStr)
-	query.Set("nump", "50")
-	queryUrl.RawQuery = query.Encode()
-	slog.Info("queryUrl", "queryUrl", queryUrl.String(), "httpClient", httpClient)
-	resp, err := httpClient.Get(queryUrl.String())
-	if err != nil {
-		slog.Error("couldn't complete query", "err", err)
-		os.Exit(1)
+	startYear := startDate.Year()
+	endYear := endDate.Year()
+	var moonPhasesForYears []*MoonPhasesResponse
+	for year := startYear; year <= endYear; year++ {
+		resp, err := GetMoonPhasesForOneYear(httpClient, year)
+		if err != nil {
+			slog.Error("failed to get moon phases for year", "year", year, "err", err)
+			os.Exit(1)
+		}
+		moonPhasesForYears = append(moonPhasesForYears, resp)
 	}
 
-	if resp == nil {
-		slog.Error("nil response received while err was nil")
-		os.Exit(1)
+	fullmoons := 0
+	for _, moonPhaseResponse := range moonPhasesForYears {
+		for _, phaseData := range moonPhaseResponse.PhaseData {
+			if moonPhaseResponse.Year != phaseData.Year {
+				continue
+			}
+			month := time.Month(phaseData.Month)
+			phaseDate := time.Date(phaseData.Year, month, phaseData.Day, 0, 0, 0, 0, time.UTC)
+			if phaseDate.Before(startDate) {
+				continue
+			}
+			if phaseDate.After(endDate) {
+				continue
+			}
+			if phaseData.Phase == _fullMoonString {
+				fullmoons += 1
+			}
+		}
 	}
-
-	defer resp.Body.Close()
-
-	if resp.StatusCode != 200 {
-		slog.Error("received unexpected response code", "code", resp.StatusCode)
-		os.Exit(1)
-	}
-
-	bodyBytes, err := io.ReadAll(resp.Body)
-	if err != nil {
-		slog.Error("failed to receive response body", "err", err)
-		os.Exit(1)
-	}
-
-	var moonPhasesResponse MoonPhasesResponse
-	err = json.Unmarshal(bodyBytes, &moonPhasesResponse)
-	if err != nil {
-		slog.Error("failed to unmarshal response", "err", err)
-		os.Exit(1)
-	}
-	slog.Info("msg", "moonPhasesResponse", moonPhasesResponse)
+	fmt.Printf("%d full moons\n", fullmoons)
 }
