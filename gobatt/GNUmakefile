@@ -1,4 +1,4 @@
-github-usename := kensmith
+github-username := kensmith
 
 MAKEFLAGS += -j
 $(if $(strip $(GOPATH)),\
@@ -18,7 +18,7 @@ go-test-files := $(filter-out $(CURDIR)/main_test.go,$(go-test-files))
 go-mod := $(CURDIR)/go.mod
 proj := $(notdir $(CURDIR))
 studies-proj := studies/$(proj)
-pkg-name := github.com/$(github-usename)/$(studies-proj)/gobatt
+pkg-name := github.com/$(github-username)/$(studies-proj)/gobatt
 go-vet-result := $(build-dir)/go-vet.txt
 go-test-result := $(build-dir)/go-test.txt
 nilaway := $(GOPATH)/bin/nilaway
