@@ -39,7 +39,7 @@ type MoonPhasesResponse struct {
 
 /*
 
-https://aa.usno.navy.mil/api/moon/phases/date?date=1976-01-01&nump=50
+https://aa.usno.navy.mil/api/moon/phases/date?date=1976-01-01&nump=4
 
 {
   "apiversion": "4.0.1",
