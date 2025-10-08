@@ -12,12 +12,13 @@ import (
 )
 
 const (
-	_httpTimeout        = 5 * time.Second
-	_baseUrl            = "https://aa.usno.navy.mil/api/moon/phases/date"
-	_newMoonString      = "New Moon"
-	_firstQuarterString = "First Quarter"
-	_fullMoonString     = "Full Moon"
-	_lastQuarterString  = "Last Quarter"
+	_httpTimeout = 5 * time.Second
+	_baseUrl     = "https://aa.usno.navy.mil/api/moon/phases/date"
+	// _newMoonString      = "New Moon"
+	// _firstQuarterString = "First Quarter"
+	_fullMoonString = "Full Moon"
+	// _lastQuarterString  = "Last Quarter"
+	_maxMoonCyclesPerYear = "50"
 )
 
 type PhaseDataResponse struct {
@@ -101,7 +102,7 @@ func GetMoonPhasesForOneYear(httpClient http.Client, year int) (*MoonPhasesRespo
 
 	query := url.Values{}
 	query.Set("date", startDateStr)
-	query.Set("nump", "50")
+	query.Set("nump", _maxMoonCyclesPerYear)
 	queryUrl, err := url.Parse(_baseUrl)
 	if err != nil {
 		return nil, err
