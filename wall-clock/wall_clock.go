@@ -32,6 +32,10 @@ func NewWallclock() *Wallclock {
 	}
 }
 
+// Usage:
+// at the top of any closure:
+// defer debug.NewWallclock().LogDuration()
+// this will slog duration_ms during the defer (exit from closure) to measure wallclock time consumed by the closure
 func (wc *Wallclock) LogDuration() {
 	durationMs := float64(time.Since(wc.startTime).Nanoseconds()) / 1e6
 	slog.Info("Wallclock", slog.SourceKey, wc.src, "duration_ms", durationMs)
