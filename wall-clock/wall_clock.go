@@ -34,7 +34,7 @@ func NewWallclock() *Wallclock {
 
 // Usage:
 // at the top of any closure:
-// defer debug.NewWallclock().LogDuration()V
+// defer debug.NewWallclock().LogDuration()
 // this will slog duration_ms during the defer (exit from closure) to measure wallclock time consumed by the closure
 // the source file/line of the caller will be displayed, if possible, rather than of this function.
 // to isolate to a subpart of a function, just open a new closure:
