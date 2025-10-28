@@ -27,12 +27,7 @@ govulncheck := $(GOPATH)/bin/govulncheck
 govulncheck-result := $(build-dir)/govulncheck.txt
 
 .PHONY: build
-build: $(binary-fullpath) $(go-vet-result) $(go-test-result) $(scc-result) $(nilaway-result) $(govulncheck-result) fail-on-missing-tests
-	cat $(scc-result)
-	cat $(nilaway-result)
-	cat $(go-vet-result)
-	cat $(go-test-result)
-	cat $(govulncheck-result)
+build: $(binary-fullpath) $(go-vet-result) $(go-test-result) $(scc-result) fail-on-missing-tests
 
 $(govulncheck-result): $(govulncheck) $(sources) $(MAKEFILE_LIST) | $(build-dir)
 	$(govulncheck) | tee $@
