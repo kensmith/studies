@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"os"
@@ -16,6 +17,6 @@ func main() {
 
 	pronunciation := nato.NATO(string(bytes))
 	for _, p := range pronunciation {
-		print(p + "\n")
+		fmt.Println(p)
 	}
 }
